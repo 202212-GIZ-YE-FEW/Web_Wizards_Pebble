@@ -2,10 +2,10 @@
 
 ## Project information
 
--   Project name: [Project name]
--   Project description: [Project description]
+-   Project name: PebbleWork
+-   Project description: “PebbleWork” will be a platform to organize volunteer local events and gatherings to create meaningful work and an impact.
 -   Technology used: Nextjs, TailwindCSS, i18next, Husky, Prettier, Eslint, Commitlinter (Conventional Commits)
--   Team members: Member1, Member2, etc,
+-   Team members: Abdullah Binsaad, Hamad Bakeel, Adeeb Abdulsamad, Azzam Al-Sulmi, Sufyan Ba Surra
 -   Bootcamp: GIZ YE 2022
 
 ## Installation
