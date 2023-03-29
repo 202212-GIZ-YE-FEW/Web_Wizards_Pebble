@@ -1,6 +1,7 @@
 import { Noto_Sans_Arabic } from "next/font/google";
 import { appWithTranslation } from "next-i18next";
 
+import "flatifycss/dist/css/flatify-min.css";
 import "@/styles/globals.css";
 
 const notoSansArabic = Noto_Sans_Arabic({
