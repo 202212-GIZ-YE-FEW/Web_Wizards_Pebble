@@ -1,15 +1,13 @@
 import * as React from "react";
 
-export default function Layout({ children }) {
-    // Put Header or Footer around the children element
-    // Example
-    // return (
-    //     <>
-    //         <Navbar />
-    //         {children}
-    //         <Footer />
-    //     </>
-    // );
+import Navbar from "@/components/Navbar";
 
-    return <>{children}</>;
+export default function Layout({ children }) {
+    return (
+        <>
+            <Navbar />
+            {children}
+            {/* <Footer /> */}
+        </>
+    );
 }
