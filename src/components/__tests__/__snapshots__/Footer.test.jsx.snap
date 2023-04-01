@@ -2,28 +2,35 @@
 
 exports[`renders correctly 1`] = `
 <footer
-  className="h-[180px] bg-primary-200 min-w-full absolute"
+  className="sm:h-[180px] h-[449px] bg-primary-200 min-w-full absolute"
 >
   <div
-    className="container mx-auto flex flex-col md:flex-row items-center min-h-full justify-between"
+    className="container mx-auto flex flex-col md:flex-row items-center min-h-full justify-evenly sm:justify-between"
   >
-    <img
-      alt="PebbleWork Logo"
-      className="h-[32.32px] w-p[100.75px] md:h-[69.13px] md:w-[215.44px] mr-1 flex-1 md:flex-none"
-      data-nimg="1"
-      decoding="async"
-      height={40}
-      onError={[Function]}
-      onLoad={[Function]}
-      src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-      srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-      style={
-        Object {
-          "color": "transparent",
+    <a
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      <img
+        alt="PebbleWork Logo"
+        className="h-[32.32px] w-p[100.75px] md:h-[69.13px] md:w-[215.44px] undefined"
+        data-nimg="1"
+        decoding="async"
+        height={40}
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style={
+          Object {
+            "color": "transparent",
+          }
         }
-      }
-      width={40}
-    />
+        width={40}
+      />
+    </a>
     <div
       className="flex flex-col gap-y-4"
     >

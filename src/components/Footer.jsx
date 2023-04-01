@@ -1,18 +1,14 @@
-import Image from "next/image";
 import Link from "next/link";
 
-import logo from "~/logo.svg";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
     return (
-        <footer className='h-[180px] bg-primary-200 min-w-full absolute'>
-            <div className='container mx-auto flex flex-col md:flex-row items-center min-h-full justify-between'>
-                <Image
-                    src={logo}
-                    alt='PebbleWork Logo'
-                    priority
-                    className='h-[32.32px] w-p[100.75px] md:h-[69.13px] md:w-[215.44px] mr-1 flex-1 md:flex-none'
-                />
+        <footer className='sm:h-[180px] h-[449px] bg-primary-200 min-w-full absolute'>
+            <div className='container mx-auto flex flex-col md:flex-row items-center min-h-full justify-evenly sm:justify-between'>
+                <Link href='/'>
+                    <Logo />
+                </Link>
                 <div className='flex flex-col gap-y-4'>
                     <div className='flex justify-center gap-x-12'>
                         <Link
