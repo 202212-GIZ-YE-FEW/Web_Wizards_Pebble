@@ -25,11 +25,11 @@ import Logo from "@/components/Logo";
 // }
 
 function SwitchLang(props) {
-    const { router } = props;
+    const { router, lang } = props;
     return (
         <Dropdown autoClose id='lang-dropdown'>
             <DropdownButton buttonStyle={false} style={{ color: "white" }}>
-                EN
+                {lang.toUpperCase()}
             </DropdownButton>
             <DropdownBody isMenu>
                 {
@@ -50,9 +50,10 @@ function SwitchLang(props) {
     );
 }
 
-export default function Navbar() {
+export default function Navbar(props) {
     const router = useRouter();
-    const { t } = useTranslation("common");
+    const { lang } = props;
+    const { t } = useTranslation("common"); //Getting i18n from here casues errors!
 
     return (
         <nav className='bg-primary-200 h-[120px] max-w-full flex items-center'>
@@ -96,7 +97,7 @@ export default function Navbar() {
                                 fill='white'
                             />
                         </svg>
-                        <SwitchLang router={router} />
+                        <SwitchLang router={router} lang={lang} />
                         {/* <span className='text-white'>
                             {i18n.language.toUpperCase()}
                         </span> */}

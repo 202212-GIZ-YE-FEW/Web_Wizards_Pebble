@@ -8,10 +8,10 @@ const notoSansArabic = Noto_Sans_Arabic({
     variable: "--font-noto",
 });
 
-export default function Layout({ children }) {
+export default function Layout({ i18n, children }) {
     return (
         <div className={`${notoSansArabic.variable} font-sans`}>
-            <Navbar />
+            <Navbar lang={i18n.language.toUpperCase()} />
             {children}
             <Footer />
         </div>
