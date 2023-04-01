@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-import { useState } from "react";
 import {
     Button,
     Dropdown,
@@ -52,7 +51,6 @@ function SwitchLang(props) {
 }
 
 export default function Navbar() {
-    const [lang, setLang] = useState("en");
     const router = useRouter();
     const { t } = useTranslation("common");
 
