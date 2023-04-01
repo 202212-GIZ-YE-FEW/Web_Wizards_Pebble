@@ -14,24 +14,24 @@ import Logo from "@/components/Logo";
 //
 // read paths of pages dir and extract their respective name and href
 
-// const routes = [
-//     { name: "Events", href: "/events" },
-//     { name: "About", href: "/about" },
-// ];
+const routes = [
+    { name: "Events", href: "/events" },
+    { name: "About", href: "/about" },
+];
 
-// function Nav(props) {
-//     const { name, t, href } = props;
-//     return <Link href={href}>{t(name)}</Link>;
-// }
+function Nav(props) {
+    const { name, t, href } = props;
+    return <Link href={href}>{t(name)}</Link>;
+}
 
-function SwitchLang(props) {
+function SwitchLangDropDown(props) {
     const { to, lang } = props;
     return (
-        <Dropdown autoClose id='lang-dropdown'>
+        <Dropdown autoClose offsetX={-40} id='lang-dropdown'>
             <DropdownButton buttonStyle={false} style={{ color: "white" }}>
                 {lang.toUpperCase()}
             </DropdownButton>
-            <DropdownBody isMenu>
+            <DropdownBody isMenu className='rounded-none'>
                 {
                     //TODO: do dynamic languages
                 }
@@ -50,6 +50,50 @@ function SwitchLang(props) {
     );
 }
 
+function MobileDropDown(props) {
+    const { t } = props;
+    return (
+        <Dropdown
+            autoClose
+            id='lang-dropdown'
+            className='md:hidden place-self-center'
+            offsetX={65}
+        >
+            <DropdownButton buttonStyle={false} hasArrow={false}>
+                <svg
+                    width='25'
+                    height='19'
+                    viewBox='0 0 25 19'
+                    fill='none'
+                    xmlns='http://www.w3.org/2000/svg'
+                >
+                    <path
+                        fillRule='evenodd'
+                        clipRule='evenodd'
+                        d='M22.955 0.664062H1.67799C-0.348392 0.664062 -0.348392 2.69044 1.67799 2.69044H22.955C24.9813 2.69044 24.9813 0.664062 22.955 0.664062ZM1.67799 8.76958H22.955C24.9813 8.76958 24.9813 10.796 22.955 10.796H1.67799C-0.348392 10.796 -0.348392 8.76958 1.67799 8.76958ZM1.67799 16.8751H22.955C24.9813 16.8751 24.9813 18.9015 22.955 18.9015H1.67799C-0.348392 18.9015 -0.348392 16.8751 1.67799 16.8751Z'
+                        fill='white'
+                    />
+                </svg>
+            </DropdownButton>
+            <DropdownBody
+                isMenu
+                className='shadow-[2px_2px_0px_#1A1A1A;] border-2 border-[#1A1A1A] rounded-none'
+            >
+                {
+                    //TODO: do dynamic languages
+                }
+                {routes.map((route, index) => {
+                    return (
+                        <li className='menu-item' key={index}>
+                            <Nav t={t} name={route.name} href={route.href} />
+                        </li>
+                    );
+                })}
+            </DropdownBody>
+        </Dropdown>
+    );
+}
+
 export default function Navbar(props) {
     const path = usePathname();
     // const query = useSearchParams();
@@ -59,23 +103,10 @@ export default function Navbar(props) {
     return (
         <nav className='bg-primary-200 h-[120px] max-w-full flex items-center'>
             <div className='container md:mx-auto mx-4 flex md:justify-between'>
-                <div className='md:hidden place-self-center'>
-                    <svg
-                        width='25'
-                        height='19'
-                        viewBox='0 0 25 19'
-                        fill='none'
-                        xmlns='http://www.w3.org/2000/svg'
-                    >
-                        <path
-                            fillRule='evenodd'
-                            clipRule='evenodd'
-                            d='M22.955 0.664062H1.67799C-0.348392 0.664062 -0.348392 2.69044 1.67799 2.69044H22.955C24.9813 2.69044 24.9813 0.664062 22.955 0.664062ZM1.67799 8.76958H22.955C24.9813 8.76958 24.9813 10.796 22.955 10.796H1.67799C-0.348392 10.796 -0.348392 8.76958 1.67799 8.76958ZM1.67799 16.8751H22.955C24.9813 16.8751 24.9813 18.9015 22.955 18.9015H1.67799C-0.348392 18.9015 -0.348392 16.8751 1.67799 16.8751Z'
-                            fill='white'
-                        />
-                    </svg>
-                </div>
-                <Logo />
+                <MobileDropDown t={t} />
+                <Link href='/'>
+                    <Logo className='mr-1 flex-1 md:flex-none' />
+                </Link>
                 <div className='hidden md:flex gap-[10px]'>
                     <Button className='w-[113px] h-[52px] rounded-[8px] py-[11px] px-[16px] bg-white shadow-[2px_2px_0px_#1A1A1A;] border-2 border-[#1A1A1A] border-solid text-black'>
                         {t("signIn")}
@@ -98,10 +129,7 @@ export default function Navbar(props) {
                                 fill='white'
                             />
                         </svg>
-                        <SwitchLang to={path} lang={lang} />
-                        {/* <span className='text-white'>
-                            {i18n.language.toUpperCase()}
-                        </span> */}
+                        <SwitchLangDropDown to={path} lang={lang} />
                     </div>
                 </div>
             </div>
