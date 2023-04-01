@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
+import { useState } from "react";
 import {
     Button,
     Dropdown,
@@ -25,12 +26,11 @@ import Logo from "@/components/Logo";
 // }
 
 function SwitchLang(props) {
-    const { i18n, router } = props;
-    const language = i18n.language.toUpperCase();
+    const { router } = props;
     return (
         <Dropdown autoClose id='lang-dropdown'>
             <DropdownButton buttonStyle={false} style={{ color: "white" }}>
-                {language}
+                EN
             </DropdownButton>
             <DropdownBody isMenu>
                 {
@@ -52,8 +52,10 @@ function SwitchLang(props) {
 }
 
 export default function Navbar() {
+    const [lang, setLang] = useState("en");
     const router = useRouter();
-    const { t, i18n } = useTranslation("common");
+    const { t } = useTranslation("common");
+
     return (
         <nav className='bg-primary-200 h-[120px] max-w-full flex items-center'>
             <div className='container md:mx-auto mx-4 flex md:justify-between'>
@@ -96,7 +98,7 @@ export default function Navbar() {
                                 fill='white'
                             />
                         </svg>
-                        <SwitchLang i18n={i18n} router={router} />
+                        <SwitchLang router={router} />
                         {/* <span className='text-white'>
                             {i18n.language.toUpperCase()}
                         </span> */}
