@@ -1,13 +1,61 @@
-import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-import { Button } from "react-flatifycss";
+import {
+    Button,
+    Dropdown,
+    DropdownBody,
+    DropdownButton,
+} from "react-flatifycss";
 
-import logo from "../../public/logo.svg";
+import Logo from "@/components/Logo";
+
+//TODO:  do dyanmic routers
+//
+// read paths of pages dir and extract their respective name and href
+
+// const routes = [
+//     { name: "Events", href: "/events" },
+//     { name: "About", href: "/about" },
+// ];
+
+// function Nav(props) {
+//     const { name, t, href } = props;
+//     return <Link href={href}>{t(name)}</Link>;
+// }
+
+function SwitchLang(props) {
+    const { i18n, router } = props;
+    const language = i18n.language.toUpperCase();
+    return (
+        <Dropdown autoClose id='lang-dropdown'>
+            <DropdownButton buttonStyle={false} style={{ color: "white" }}>
+                {language}
+            </DropdownButton>
+            <DropdownBody isMenu>
+                {
+                    //TODO: do dynamic languages
+                }
+                <li className='menu-item'>
+                    <Link href={router.pathname} locale='en'>
+                        English
+                    </Link>
+                </li>
+                <li className='menu-item'>
+                    <Link href={router.pathname} locale='ar'>
+                        العربية
+                    </Link>
+                </li>
+            </DropdownBody>
+        </Dropdown>
+    );
+}
 
 export default function Navbar() {
+    const router = useRouter();
     const { t, i18n } = useTranslation("common");
     return (
-        <header className='bg-primary-200 h-[120px] max-w-full flex items-center'>
+        <nav className='bg-primary-200 h-[120px] max-w-full flex items-center'>
             <div className='container md:mx-auto mx-4 flex md:justify-between'>
                 <div className='md:hidden place-self-center'>
                     <svg
@@ -25,12 +73,7 @@ export default function Navbar() {
                         />
                     </svg>
                 </div>
-                <Image
-                    src={logo}
-                    alt='PebbleWork Logo'
-                    priority
-                    className='h-[32.32px] w-p[100.75px] md:h-[69.13px] md:w-[215.44px] mr-1 flex-1 md:flex-none'
-                />
+                <Logo />
                 <div className='hidden md:flex gap-[10px]'>
                     <Button className='w-[113px] h-[52px] rounded-[8px] py-[11px] px-[16px] bg-white shadow-[2px_2px_0px_#1A1A1A;] border-2 border-[#1A1A1A] border-solid text-black'>
                         {t("signIn")}
@@ -53,10 +96,13 @@ export default function Navbar() {
                                 fill='white'
                             />
                         </svg>
-                        <span className='text-white'>{i18n.language}</span>
+                        <SwitchLang i18n={i18n} router={router} />
+                        {/* <span className='text-white'>
+                            {i18n.language.toUpperCase()}
+                        </span> */}
                     </div>
                 </div>
             </div>
-        </header>
+        </nav>
     );
 }
