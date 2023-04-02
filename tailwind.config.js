@@ -15,9 +15,16 @@ module.exports = {
                     200: "#29C5E6",
                     300: "#0180AB",
                 },
+                black: {
+                    50: "#878787",
+                    100: "#1A1A1A",
+                },
             },
             fontFamily: {
-                sans: ["var(--font-noto)", ...fontFamily.sans],
+                sans: [
+                    "var(--font-rubik)",
+                    ...fontFamily.sans,
+                ],
             },
         },
     },
