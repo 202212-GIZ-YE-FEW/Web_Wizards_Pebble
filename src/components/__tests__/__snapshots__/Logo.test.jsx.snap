@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<img
+  alt="PebbleWork Logo"
+  className="h-[32.32px] w-p[100.75px] md:h-[69.13px] md:w-[215.44px]"
+  data-nimg="1"
+  decoding="async"
+  height={40}
+  onError={[Function]}
+  onLoad={[Function]}
+  src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+  srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+  style={
+    Object {
+      "color": "transparent",
+    }
+  }
+  width={40}
+/>
+`;
