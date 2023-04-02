@@ -5,6 +5,7 @@ import "flatifycss/dist/css/flatify-min.css";
 import styles from "./ButtonAuth.module.css";
 
 const ButtonAuth = (props) => {
+    const { icon, alt, width, height } = props
     return (
         <>
             <Button
@@ -12,10 +13,10 @@ const ButtonAuth = (props) => {
             >
                 <div className='relative flex items-center space-x-4 justify-center'>
                     <Image
-                        src={props.icon}
-                        alt={props.alt}
-                        width={props.width}
-                        height={props.height}
+                        src={icon}
+                        alt={alt}
+                        width={width}
+                        height={height}
                     />
                     <span className='block w-max font-medium tracking-wide text-gray-900 sm:text-base'>
                         {props.text}
