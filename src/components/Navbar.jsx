@@ -111,12 +111,17 @@ export default function Navbar(props) {
                     <Logo />
                 </Link>
                 <div className='hidden md:flex gap-[10px]'>
-                    <Button className='w-[113px] h-[52px] rounded-[8px] py-[11px] px-[16px] bg-white shadow-[2px_2px_0px_#1A1A1A;] border-2 border-[#1A1A1A] border-solid text-black'>
-                        {t("signIn")}
-                    </Button>
-                    <Button className='w-[113px] h-[52px] rounded-[8px] py-[11px] px-[16px] bg-[#2F7DA9] text-white shadow-none'>
-                        {t("signUp")}
-                    </Button>
+                    <Link href='/signin'>
+                        {" "}
+                        <Button className='w-[113px] h-[52px] rounded-[8px] py-[11px] px-[16px] bg-white shadow-[2px_2px_0px_#1A1A1A;] border-2 border-[#1A1A1A] border-solid text-black'>
+                            {t("signIn")}
+                        </Button>
+                    </Link>
+                    <Link href='/signup'>
+                        <Button className='w-[113px] h-[52px] rounded-[8px] py-[11px] px-[16px] bg-[#2F7DA9] text-white shadow-none'>
+                            {t("signUp")}
+                        </Button>
+                    </Link>
                     <div className='flex items-center gap-1'>
                         <svg
                             width='28'
