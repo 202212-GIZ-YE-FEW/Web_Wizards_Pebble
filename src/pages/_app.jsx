@@ -12,7 +12,7 @@ const notoSansArabic = Noto_Sans_Arabic({
 function MyApp({ Component, pageProps }) {
     return (
         <div className={`${notoSansArabic.variable} font-sans`}>
-            <Component {...pageProps} />;
+            <Component {...pageProps} />
         </div>
     );
 }
