@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <img
   alt="PebbleWork Logo"
-  className="h-[32.32px] w-p[100.75px] md:h-[69.13px] md:w-[215.44px] undefined"
+  className="h-[32.32px] w-p[100.75px] md:h-[69.13px] md:w-[215.44px]"
   data-nimg="1"
   decoding="async"
   height={40}

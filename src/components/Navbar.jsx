@@ -104,8 +104,11 @@ export default function Navbar(props) {
         <nav className='bg-primary-200 h-[120px] max-w-full flex items-center'>
             <div className='container md:mx-auto mx-4 flex md:justify-between'>
                 <MobileDropDown t={t} />
-                <Link href='/'>
-                    <Logo className='mr-1 flex-1 md:flex-none' />
+                <Link
+                    href='/'
+                    className='mr-1 justify-center flex flex-1 md:flex-none'
+                >
+                    <Logo />
                 </Link>
                 <div className='hidden md:flex gap-[10px]'>
                     <Button className='w-[113px] h-[52px] rounded-[8px] py-[11px] px-[16px] bg-white shadow-[2px_2px_0px_#1A1A1A;] border-2 border-[#1A1A1A] border-solid text-black'>

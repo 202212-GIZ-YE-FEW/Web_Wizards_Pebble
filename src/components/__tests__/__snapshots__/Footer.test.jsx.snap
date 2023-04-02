@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="sm:h-[180px] h-[449px] bg-primary-200 min-w-full absolute"
 >
   <div
-    className="container mx-auto flex flex-col md:flex-row items-center min-h-full justify-evenly sm:justify-between"
+    className="container mx-auto flex flex-col lg:flex-row items-center min-h-full justify-evenly sm:justify-between"
   >
     <a
       href="/"
@@ -15,7 +15,7 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt="PebbleWork Logo"
-        className="h-[32.32px] w-p[100.75px] md:h-[69.13px] md:w-[215.44px] undefined"
+        className="h-[32.32px] w-p[100.75px] md:h-[69.13px] md:w-[215.44px]"
         data-nimg="1"
         decoding="async"
         height={40}
@@ -32,7 +32,7 @@ exports[`renders correctly 1`] = `
       />
     </a>
     <div
-      className="flex flex-col gap-y-4"
+      className="flex flex-col gap-y-4 mr-1"
     >
       <div
         className="flex justify-center gap-x-12"
@@ -90,7 +90,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <div
-        className="flex gap-7 md:mr-24"
+        className="flex gap-7"
       >
         <a
           href="/api/twitter"

@@ -5,11 +5,11 @@ import Logo from "@/components/Logo";
 export default function Footer() {
     return (
         <footer className='sm:h-[180px] h-[449px] bg-primary-200 min-w-full absolute'>
-            <div className='container mx-auto flex flex-col md:flex-row items-center min-h-full justify-evenly sm:justify-between'>
+            <div className='container mx-auto flex flex-col lg:flex-row items-center min-h-full justify-evenly sm:justify-between'>
                 <Link href='/'>
                     <Logo />
                 </Link>
-                <div className='flex flex-col gap-y-4'>
+                <div className='flex flex-col gap-y-4 mr-1'>
                     <div className='flex justify-center gap-x-12'>
                         <Link
                             href='/events'
@@ -39,7 +39,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div>
-                    <div className='flex gap-7 md:mr-24'>
+                    <div className='flex gap-7'>
                         <Link href='/api/twitter'>
                             <svg
                                 width='30'
