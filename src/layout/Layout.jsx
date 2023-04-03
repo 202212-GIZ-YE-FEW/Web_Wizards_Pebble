@@ -1,15 +1,19 @@
-import * as React from "react";
+import { Noto_Sans_Arabic } from "next/font/google";
 
-export default function Layout({ children }) {
-    // Put Header or Footer around the children element
-    // Example
-    // return (
-    //     <>
-    //         <Navbar />
-    //         {children}
-    //         <Footer />
-    //     </>
-    // );
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
-    return <>{children}</>;
+const notoSansArabic = Noto_Sans_Arabic({
+    subsets: ["arabic"],
+    variable: "--font-noto",
+});
+
+export default function Layout({ i18n, children }) {
+    return (
+        <div className={`${notoSansArabic.variable} font-sans`}>
+            <Navbar lang={i18n.language.toUpperCase()} />
+            {children}
+            <Footer />
+        </div>
+    );
 }
