@@ -1,41 +1,18 @@
-import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import Layout from "@/layout/Layout";
+import Hero from "@/components/Hero";
 
 export default function HomePage() {
-    const { t, i18n } = useTranslation("common");
+    const { t } = useTranslation("landing");
 
-    return (
-        <Layout i18n={i18n}>
-            <header className='container p-4'>
-                <p>{t("test")}</p>
-                <div
-                    className='pb-96'
-                    style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        gap: "20px",
-                    }}
-                >
-                    <Link href='/' locale='en'>
-                        English
-                    </Link>
-                    <Link href='/' locale='ar'>
-                        العربية
-                    </Link>
-                </div>
-                <div className='pb-96'></div>
-            </header>
-        </Layout>
-    );
+    return <Hero t={t} />;
 }
 
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ["common"])),
+            ...(await serverSideTranslations(locale, ["common", "landing"])),
             // Will be passed to the page component as props
         },
     };
