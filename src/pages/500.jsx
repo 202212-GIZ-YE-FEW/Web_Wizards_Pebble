@@ -1,7 +1,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function ServerErrorPage() {
-    return <p className='text-center my-80 text-lg'>505</p>;
+    return <p className='text-center my-80 text-6xl'>500</p>;
 }
 
 export async function getStaticProps({ locale }) {

@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .pointer-arrow {
-    border: none !important;
+    @apply border-none !important;
 }
