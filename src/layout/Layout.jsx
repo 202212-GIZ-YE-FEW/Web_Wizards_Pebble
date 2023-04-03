@@ -14,10 +14,10 @@ const rubik = Rubik({
     variable: "--font-rubik",
 });
 
-export default function Layout({ i18n, t, children }) {
+export default function Layout({ children }) {
     return (
         <div className={`${rubik.variable} font-sans`}>
-            <Navbar lang={i18n.language.toUpperCase()} t={t} />
+            <Navbar />
             {children}
             <Footer />
         </div>
