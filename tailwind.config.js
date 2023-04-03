@@ -21,10 +21,7 @@ module.exports = {
                 },
             },
             fontFamily: {
-                sans: [
-                    "var(--font-rubik)",
-                    ...fontFamily.sans,
-                ],
+                sans: ["var(--font-rubik)", ...fontFamily.sans],
             },
         },
     },
