@@ -15,21 +15,21 @@ export default function Footer() {
                             href='/events'
                             className='font-extrabold'
                             //Overriding flatify with tailwindcss classes doesn't work
-                            style={{ color: "black" }}
+                            style={{ color: "#1A1A1A" }}
                         >
                             Event
                         </Link>
                         <Link
                             href='/about'
                             className='font-extrabold'
-                            style={{ color: "black" }}
+                            style={{ color: "#1A1A1A" }}
                         >
                             About
                         </Link>
                         <Link
                             href='#how_it_works'
                             className='font-extrabold'
-                            style={{ color: "black" }}
+                            style={{ color: "#1A1A1A" }}
                         >
                             How it works
                         </Link>
