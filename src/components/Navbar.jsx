@@ -102,7 +102,7 @@ export function Navbar(props) {
 
     return (
         <nav className='bg-primary-200 h-[120px] max-w-full flex items-center'>
-            <div className='container md:mx-auto mx-4 flex md:justify-between'>
+            <div className='container flex md:justify-between'>
                 <MobileDropDown t={t} />
                 <Link
                     href='/'

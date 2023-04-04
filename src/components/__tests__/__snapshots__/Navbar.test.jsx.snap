@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="bg-primary-200 h-[120px] max-w-full flex items-center"
 >
   <div
-    className="container md:mx-auto mx-4 flex md:justify-between"
+    className="container flex md:justify-between"
   >
     <div
       className="dropdown__DropdownWrapper-sc-clud83-0 cXRnlz dropdown-wrapper md:hidden place-self-center md:hidden place-self-center"
@@ -92,20 +92,20 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt="PebbleWork Logo"
-        className="h-[32.32px] w-p[100.75px] md:h-[69.13px] md:w-[215.44px]"
+        className="max-h-[32.32px] max-w-[100.75px] md:max-h-full md:max-w-full"
         data-nimg="1"
         decoding="async"
-        height={40}
+        height={69.13}
         onError={[Function]}
         onLoad={[Function]}
-        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-        srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
         style={
           Object {
             "color": "transparent",
           }
         }
-        width={40}
+        width={215.44}
       />
     </a>
     <div
