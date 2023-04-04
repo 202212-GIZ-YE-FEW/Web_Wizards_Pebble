@@ -45,7 +45,7 @@ exports[`renders correctly 1`] = `
           onTouchStart={[Function]}
           style={
             Object {
-              "color": "black",
+              "color": "#1A1A1A",
             }
           }
         >
@@ -59,7 +59,7 @@ exports[`renders correctly 1`] = `
           onTouchStart={[Function]}
           style={
             Object {
-              "color": "black",
+              "color": "#1A1A1A",
             }
           }
         >
@@ -73,7 +73,7 @@ exports[`renders correctly 1`] = `
           onTouchStart={[Function]}
           style={
             Object {
-              "color": "black",
+              "color": "#1A1A1A",
             }
           }
         >

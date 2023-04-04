@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTranslation } from "next-i18next";
+import { withTranslation } from "next-i18next";
 import {
     Button,
     Dropdown,
@@ -94,11 +94,11 @@ function MobileDropDown(props) {
     );
 }
 
-export default function Navbar(props) {
-    const path = usePathname();
+export function Navbar(props) {
+    const path = usePathname() || "/";
     // const query = useSearchParams();
-    const { lang } = props;
-    const { t } = useTranslation("common"); //Getting i18n from here casues errors!
+    const { t, i18n } = props;
+    const lang = i18n.language.toUpperCase();
 
     return (
         <nav className='bg-primary-200 h-[120px] max-w-full flex items-center'>
@@ -113,7 +113,7 @@ export default function Navbar(props) {
                 <div className='hidden md:flex gap-[10px]'>
                     <Link href='/signin'>
                         {" "}
-                        <Button className='w-[113px] h-[52px] rounded-[8px] py-[11px] px-[16px] bg-white shadow-[2px_2px_0px_#1A1A1A;] border-2 border-[#1A1A1A] border-solid text-black'>
+                        <Button className='w-[113px] h-[52px] rounded-[8px] py-[11px] px-[16px] bg-white shadow-[2px_2px_0px_#1A1A1A;] border-2 border-[#1A1A1A] border-solid text-black-100'>
                             {t("signIn")}
                         </Button>
                     </Link>
@@ -144,3 +144,5 @@ export default function Navbar(props) {
         </nav>
     );
 }
+
+export default withTranslation("common")(Navbar);

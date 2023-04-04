@@ -1,17 +1,23 @@
-import { Noto_Sans_Arabic } from "next/font/google";
+import { Rubik } from "next/font/google";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
-const notoSansArabic = Noto_Sans_Arabic({
-    subsets: ["arabic"],
-    variable: "--font-noto",
+// TODO: figure out why fallback doesn't work with rubik and noto.
+// const notoSansArabic = Noto_Sans_Arabic({
+//     subsets: ["arabic"],
+//     variable: "--font-noto",
+// });
+
+const rubik = Rubik({
+    subsets: ["latin"],
+    variable: "--font-rubik",
 });
 
-export default function Layout({ i18n, children }) {
+export default function Layout({ children }) {
     return (
-        <div className={`${notoSansArabic.variable} font-sans`}>
-            <Navbar lang={i18n.language.toUpperCase()} />
+        <div className={`${rubik.variable} font-sans`}>
+            <Navbar />
             {children}
             <Footer />
         </div>
