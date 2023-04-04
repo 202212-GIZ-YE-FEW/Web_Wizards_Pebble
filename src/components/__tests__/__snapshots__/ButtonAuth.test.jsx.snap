@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<button
+  className="button__ButtonWrapper-sc-1aw98b4-0 button w-full h-14 px-6 transition ButtonAuth"
+  disabled={false}
+>
+  <div
+    className="relative flex items-center space-x-4 justify-center"
+  >
+    <img
+      data-nimg="1"
+      decoding="async"
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src=""
+      style={
+        Object {
+          "color": "transparent",
+        }
+      }
+    />
+    <span
+      className="block w-max font-medium tracking-wide text-gray-900 sm:text-base"
+    />
+  </div>
+</button>
+`;

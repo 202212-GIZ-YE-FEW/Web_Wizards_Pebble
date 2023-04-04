@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="flex justify-center lg:justify-start"
+>
+  <h3
+    className="font-semibold mb-8 tracking-tight text-custom-blue lg:text-gray-800 text-3xl order-first"
+  />
+</div>
+`;
