@@ -36,12 +36,20 @@ function SwitchLangDropDown(props) {
                     //TODO: do dynamic languages
                 }
                 <li className='menu-item'>
-                    <Link href={to} locale='en'>
+                    <Link
+                        href={to}
+                        locale='en'
+                        onClick={() => (document.dir = "ltr")}
+                    >
                         English
                     </Link>
                 </li>
                 <li className='menu-item'>
-                    <Link href={to} locale='ar'>
+                    <Link
+                        href={to}
+                        locale='ar'
+                        onClick={() => (document.dir = "rtl")}
+                    >
                         العربية
                     </Link>
                 </li>
@@ -101,7 +109,7 @@ export function Navbar(props) {
     const lang = i18n.language.toUpperCase();
 
     return (
-        <nav className='bg-primary-200 h-[120px] max-w-full flex items-center'>
+        <nav className='bg-primary-200 h-[120px] max-w-full flex items-center mb-10'>
             <div className='container flex md:justify-between'>
                 <MobileDropDown t={t} />
                 <Link
