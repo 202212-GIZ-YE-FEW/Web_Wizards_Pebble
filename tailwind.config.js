@@ -4,6 +4,17 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 module.exports = {
     content: ["./src/**/*.{js,jsx}"],
     theme: {
+        container: {
+            padding: {
+                DEFAULT: "1rem",
+                sm: "2rem",
+                md: "3rem",
+                lg: "4rem",
+                xl: "5rem",
+                "2xl": "7rem",
+            },
+            center: true,
+        },
         extend: {
             colors: {
                 primary: {

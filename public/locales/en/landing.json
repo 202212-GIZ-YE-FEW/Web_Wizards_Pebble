@@ -1,5 +1,15 @@
 {
     "landingTitle": "Medium title placeholder text",
     "landingDescription": "Body placeholder for text paragraph. A paragraph is a self-contained unit of text dealing with a particular point or idea.",
-    "landingStart": "Get started"
+    "landingStart": "Get started",
+    "howItWorks": "How it works",
+    "registerTitle": "Register",
+    "registerDescription": "Body placeholder for text paragraph, a paragraph is a self-contained unit of text description.",
+    "registerButton": "Sign up",
+    "attendTitle": "Attend events",
+    "attendDescription": "Body placeholder for text paragraph, a paragraph is a self-contained unit of text description.",
+    "attendButton": "View events",
+    "organizeTitle": "Orgainze your own!",
+    "organizeDescription": "Body placeholder for text paragraph, a paragraph is a self-contained unit of text description.",
+    "organizeButton": "Get started"
 }

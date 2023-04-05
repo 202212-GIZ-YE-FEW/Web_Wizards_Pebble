@@ -1,5 +1,8 @@
 {
     "test": "مرحبا",
     "signIn": "دخول",
-    "signUp": "تسجيل"
+    "signUp": "تسجيل",
+    "events": "الأحداث",
+    "about": "عننا",
+    "howItWorks": "كيف يعمل"
 }

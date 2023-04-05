@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .container {
+        @apply max-w-full;
+    }
+}
+
 .pointer-arrow {
-    border: none !important;
+    @apply border-none !important;
 }

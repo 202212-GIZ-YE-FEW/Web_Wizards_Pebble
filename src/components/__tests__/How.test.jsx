@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer";
 
-import Footer from "@/components/Footer";
+import How from "@/components/How";
 
 it("renders correctly", () => {
-    const tree = renderer.create(<Footer t={(str) => str} />).toJSON();
+    const tree = renderer.create(<How t={(str) => str} />).toJSON();
     expect(tree).toMatchSnapshot();
 });

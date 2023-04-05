@@ -1,11 +1,13 @@
 import Link from "next/link";
+import { withTranslation } from "next-i18next";
 
 import Logo from "@/components/Logo";
 
-export default function Footer() {
+function Footer(props) {
+    const { t } = props;
     return (
-        <footer className='sm:h-[180px] h-[449px] bg-primary-200 min-w-full absolute'>
-            <div className='container mx-auto flex flex-col lg:flex-row items-center min-h-full justify-evenly sm:justify-between'>
+        <footer className='sm:h-[180px] h-[449px] bg-primary-200 min-w-full absolute mt-10'>
+            <div className='container flex flex-col lg:flex-row items-center min-h-full justify-evenly sm:justify-between'>
                 <Link href='/'>
                     <Logo />
                 </Link>
@@ -17,21 +19,21 @@ export default function Footer() {
                             //Overriding flatify with tailwindcss classes doesn't work
                             style={{ color: "#1A1A1A" }}
                         >
-                            Event
+                            {t("events")}
                         </Link>
                         <Link
                             href='/about'
                             className='font-extrabold'
                             style={{ color: "#1A1A1A" }}
                         >
-                            About
+                            {t("about")}
                         </Link>
                         <Link
                             href='#how_it_works'
                             className='font-extrabold'
                             style={{ color: "#1A1A1A" }}
                         >
-                            How it works
+                            {t("howItWorks")}
                         </Link>
                     </div>
                     <div className='text-center'>
@@ -88,3 +90,5 @@ export default function Footer() {
         </footer>
     );
 }
+
+export default withTranslation("common")(Footer);
