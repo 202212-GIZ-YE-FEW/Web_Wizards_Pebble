@@ -9,5 +9,5 @@
 }
 
 .pointer-arrow {
-    @apply border-none;
+    @apply border-none !important;
 }
