@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Button } from "react-flatifycss";
 
-
 const ButtonAuth = ({ icon, alt, width, height, text }) => {
     const styles = {
         backgroundColor: "white",

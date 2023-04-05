@@ -1,6 +1,5 @@
 import { Input } from "react-flatifycss";
 
-import "flatifycss/dist/css/flatify-min.css";
 import styles from "./InputForm.module.css";
 const InputForm = ({
     type,

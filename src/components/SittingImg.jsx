@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Sitting from "../../public/Sitting.png";
+import Sitting from "~/Sitting.png";
 
 const SittingImg = () => {
     return (
