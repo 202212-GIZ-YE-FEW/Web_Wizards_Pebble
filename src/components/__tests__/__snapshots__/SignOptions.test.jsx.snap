@@ -5,8 +5,16 @@ exports[`renders correctly 1`] = `
   className="flex flex-col-reverse order-last lg:flex-col lg:order-2"
 >
   <button
-    className="button__ButtonWrapper-sc-1aw98b4-0 button w-full h-14 px-6 transition ButtonAuth"
+    className="button__ButtonWrapper-sc-1aw98b4-0 button w-full h-14 px-6 transition"
     disabled={false}
+    style={
+      Object {
+        "backgroundColor": "white",
+        "border": "2px solid black",
+        "borderRadius": "0.5rem",
+        "boxShadow": "2px 2px #1a1a1a",
+      }
+    }
   >
     <div
       className="relative flex items-center space-x-4 justify-center"
@@ -31,13 +39,21 @@ exports[`renders correctly 1`] = `
       <span
         className="block w-max font-medium tracking-wide text-gray-900 sm:text-base"
       >
-        Continue with Twitter
+        signWithTwitter
       </span>
     </div>
   </button>
   <button
-    className="button__ButtonWrapper-sc-1aw98b4-0 button w-full h-14 px-6 transition ButtonAuth"
+    className="button__ButtonWrapper-sc-1aw98b4-0 button w-full h-14 px-6 transition"
     disabled={false}
+    style={
+      Object {
+        "backgroundColor": "white",
+        "border": "2px solid black",
+        "borderRadius": "0.5rem",
+        "boxShadow": "2px 2px #1a1a1a",
+      }
+    }
   >
     <div
       className="relative flex items-center space-x-4 justify-center"
@@ -62,7 +78,7 @@ exports[`renders correctly 1`] = `
       <span
         className="block w-max font-medium tracking-wide text-gray-900 sm:text-base"
       >
-        Continue with google
+        signWithGoogle
       </span>
     </div>
   </button>
@@ -75,7 +91,7 @@ exports[`renders correctly 1`] = `
     <label
       className="block font-medium text-sm text-gray-700 ml-6 mr-6"
     >
-      OR
+      or
     </label>
     <hr
       className=" text-gray-400 w-full"
