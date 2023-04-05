@@ -2,18 +2,18 @@
 
 exports[`renders correctly 1`] = `
 <header
-  className="lg:container flex flex-col-reverse gap-y-5 justify-center items-center my-10 lg:flex-row lg:gap-x-5 lg:gap-y-0"
+  className="container flex flex-col-reverse gap-y-5 justify-center items-center lg:flex-row lg:gap-x-5 lg:gap-y-0"
 >
   <div
-    className="flex flex-col gap-y-5"
+    className="flex flex-col items-center text-center lg:items-start rtl:lg:text-right ltr:lg:text-left gap-y-5"
   >
     <h1
-      className="text-black-100 tracking-wide leading-[50px] text-5xl font-medium font-sans h-[88px] w-[500px]"
+      className="text-black-100 tracking-wide leading-[50px] text-5xl font-medium font-sans"
     >
       landingTitle
     </h1>
     <p
-      className="text-base text-black-50 leading-7 tracking-[0.1px] w-[500px] h-[90px]"
+      className="text-2xl text-black-50 leading-7 tracking-[0.1px]"
     >
       landingDescription
     </p>
@@ -21,7 +21,7 @@ exports[`renders correctly 1`] = `
       className="button__ButtonWrapper-sc-1aw98b4-0 button text-white font-medium bg-[#2F7DA9] shadow-none h-[52px] w-[166px] rounded-lg"
       disabled={false}
     >
-      Get started
+      landingStart
     </button>
   </div>
   <img

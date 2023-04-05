@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Button } from "react-flatifycss";
 
-import heroImage from "~/hero.svg";
+import heroImage from "~/landing/hero.svg";
 
 function Title(props) {
     const { text } = props;
     return (
-        <h1 className='text-black-100 tracking-wide leading-[50px] text-5xl font-medium font-sans h-[88px] w-[500px]'>
+        <h1 className='text-black-100 tracking-wide leading-[50px] text-5xl font-medium font-sans'>
             {text}
         </h1>
     );
@@ -15,7 +15,7 @@ function Title(props) {
 function Description(props) {
     const { text } = props;
     return (
-        <p className='text-base text-black-50 leading-7 tracking-[0.1px] w-[500px] h-[90px]'>
+        <p className='text-2xl text-black-50 leading-7 tracking-[0.1px]'>
             {text}
         </p>
     );
@@ -33,11 +33,11 @@ function GetStartedButton(props) {
 export default function Hero(props) {
     const { t } = props;
     return (
-        <header className='lg:container flex flex-col-reverse gap-y-5 justify-center items-center my-10 lg:flex-row lg:gap-x-5 lg:gap-y-0'>
-            <div className='flex flex-col gap-y-5'>
+        <header className='container flex flex-col-reverse gap-y-5 justify-center items-center lg:flex-row lg:gap-x-5 lg:gap-y-0'>
+            <div className='flex flex-col items-center text-center lg:items-start rtl:lg:text-right ltr:lg:text-left gap-y-5'>
                 <Title text={t("landingTitle")} />
                 <Description text={t("landingDescription")} />
-                <GetStartedButton text='Get started' />
+                <GetStartedButton text={t("landingStart")} />
             </div>
             <Image
                 src={heroImage}

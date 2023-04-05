@@ -1,5 +1,8 @@
 {
     "test": "Hello",
     "signIn": "Sign in",
-    "signUp": "Sign up"
+    "signUp": "Sign up",
+    "events": "Events",
+    "about": "About",
+    "howItWorks": "How it works"
 }
