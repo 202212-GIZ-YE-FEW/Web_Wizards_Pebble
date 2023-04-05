@@ -1,7 +1,7 @@
 import { I18nContext } from "next-i18next";
 import renderer from "react-test-renderer";
 
-import SignOptions from "../SignOptions";
+import SignUpForm from "../SignUpForm";
 
 it("renders correctly", () => {
     const i18n = {
@@ -11,7 +11,7 @@ it("renders correctly", () => {
     const tree = renderer
         .create(
             <I18nContext.Provider value={i18n}>
-                <SignOptions t={i18n.t} />
+                <SignUpForm t={i18n.t} />
             </I18nContext.Provider>
         )
         .toJSON();
