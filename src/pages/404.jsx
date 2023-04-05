@@ -1,7 +1,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function NotFoundPage() {
-    return <p className='text-center my-80 text-6xl'>404</p>;
+    return <h1 className='text-center !my-80 text-6xl font-sans'>404</h1>;
 }
 
 export async function getStaticProps({ locale }) {
