@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer";
 
-import Footer from "@/components/Footer";
+import SittingImg from "../SittingImg";
 
 it("renders correctly", () => {
-    const tree = renderer.create(<Footer t={(str) => str} />).toJSON();
+    const tree = renderer.create(<SittingImg />).toJSON();
     expect(tree).toMatchSnapshot();
 });

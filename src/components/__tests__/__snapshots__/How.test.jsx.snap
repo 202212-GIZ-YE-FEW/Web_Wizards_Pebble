@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section
+  className="container mt-40"
+>
+  <h2
+    className="text-center text-black-100 text-4xl font-sans pb-32"
+  >
+    howItWorks
+  </h2>
+  <div
+    className="grid grid-cols-1 lg:grid-cols-3 gap-y-20 lg:gap-x-10"
+  >
+    <div
+      className="flex flex-col items-center text-center"
+    >
+      <img
+        alt="Boy with notebook."
+        className="h-full"
+        data-nimg="1"
+        decoding="async"
+        height={274}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={237.71}
+      />
+      <h3
+        className="text-black-100 font-medium mt-2 text-3xl font-sans"
+      >
+        registerTitle
+      </h3>
+      <p
+        className="text-black-50 text-xl leading-8 !my-4"
+      >
+        registerDescription
+      </p>
+      <a
+        href="/signup"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        <button
+          className="button__ButtonWrapper-sc-1aw98b4-0 button !rounded-none !text-black-100 !bg-transparent !shadow-none after:content-[url(\\"/arrow.svg\\")] after:mt-[1px] ltr:after:ml-4 after:absolute rtl:after:rotate-180 rtl:after:mr-4"
+          disabled={false}
+        >
+          registerButton
+        </button>
+      </a>
+    </div>
+    <div
+      className="flex flex-col items-center text-center"
+    >
+      <img
+        alt="People in an event."
+        className="h-full"
+        data-nimg="1"
+        decoding="async"
+        height={236.42}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=750&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=750&q=75 2x"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={326.03}
+      />
+      <h3
+        className="text-black-100 font-medium mt-2 text-3xl font-sans"
+      >
+        attendTitle
+      </h3>
+      <p
+        className="text-black-50 text-xl leading-8 !my-4"
+      >
+        attendDescription
+      </p>
+      <a
+        href="/events"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        <button
+          className="button__ButtonWrapper-sc-1aw98b4-0 button !rounded-none !text-black-100 !bg-transparent !shadow-none after:content-[url(\\"/arrow.svg\\")] after:mt-[1px] ltr:after:ml-4 after:absolute rtl:after:rotate-180 rtl:after:mr-4"
+          disabled={false}
+        >
+          attendButton
+        </button>
+      </a>
+    </div>
+    <div
+      className="flex flex-col items-center text-center"
+    >
+      <img
+        alt="Girl with a speaker"
+        className="h-full"
+        data-nimg="1"
+        decoding="async"
+        height={216}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={245.75}
+      />
+      <h3
+        className="text-black-100 font-medium mt-2 text-3xl font-sans"
+      >
+        organizeTitle
+      </h3>
+      <p
+        className="text-black-50 text-xl leading-8 !my-4"
+      >
+        organizeDescription
+      </p>
+      <a
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        <button
+          className="button__ButtonWrapper-sc-1aw98b4-0 button !rounded-none !text-black-100 !bg-transparent !shadow-none after:content-[url(\\"/arrow.svg\\")] after:mt-[1px] ltr:after:ml-4 after:absolute rtl:after:rotate-180 rtl:after:mr-4"
+          disabled={false}
+        >
+          organizeButton
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+`;
