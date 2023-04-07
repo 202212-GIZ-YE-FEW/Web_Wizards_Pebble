@@ -21,6 +21,85 @@ import goal16 from "~/landing/goal16.svg";
 import goal17 from "~/landing/goal17.svg";
 import wheel from "~/landing/wheel.svg";
 
+function getImages() {
+    return [
+        {
+            src: goal1,
+            alt: 'Family with title "No poverty"',
+        },
+        {
+            src: goal2,
+            alt: 'Cup with soup in it with title "ZERO HUNGER"',
+        },
+        {
+            src: goal3,
+            alt: 'Heart with title "GOOD HEALTH AND WELL-BEING"',
+        },
+        {
+            src: goal4,
+            alt: 'Book open with title "QUALITY EDUACTION"',
+        },
+        {
+            src: goal5,
+            alt: 'Male and female gender symbol with title "GENDER EQUITY"',
+        },
+        {
+            src: goal6,
+            alt: 'Water dripping down with title "CLEAN WATER AND SANITATION"',
+        },
+        {
+            src: goal7,
+            alt: 'Sun with shutdown symbol with title "AFFORDABLE AND CLEAN ENERGY"',
+        },
+        {
+            src: goal8,
+            alt: 'Line goning up with title "DECENT WORK AND ECONOMIC GROWTH"',
+        },
+        {
+            src: goal9,
+            alt: 'three cubes with title "INDUSTRY, INNOVATION AND INFRASTRUCTURE"',
+        },
+        {
+            src: goal10,
+            alt: 'Equal symbol with title "REDUCED INEQUALITIES"',
+        },
+        {
+            src: goal11,
+            alt: 'four buildings with title "SUSTAINABLE CITIES AND COMMUNITIES"',
+        },
+        {
+            src: goal12,
+            alt: 'Infinity arrow with title "RESPONSIBLE CONSUMPTION AND PRODUCTION"',
+        },
+        {
+            src: goal13,
+            alt: 'Eye with globe as pupil with title "CLIMATE ACTION"',
+        },
+        {
+            src: goal14,
+            alt: 'Fish with title "LIFE BELOW WATER"',
+        },
+        {
+            src: goal15,
+            alt: 'Tree with title "LIFE ON LAND"',
+        },
+        {
+            src: goal16,
+            alt: 'Bird with title "PEACE, JUSTICE and STRONG institutions"',
+        },
+        {
+            src: goal17,
+            alt: 'Circles intersection with title "Partnerships for the goals"',
+        },
+        {
+            src: wheel,
+            alt: "SDG Wheel",
+            height: 142,
+            width: 142,
+        },
+    ];
+}
+
 export default function Goals(props) {
     const { t } = props;
 
@@ -31,109 +110,15 @@ export default function Goals(props) {
                 {t("goalsDescription")}
             </Description>
             <div className='grid grid-cols-3 lg:grid-cols-6 gap-y-14'>
-                <Image
-                    src={goal1}
-                    alt='Family with title "No poverty"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal2}
-                    alt='Cup with soup in it with title "ZERO HUNGER"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal3}
-                    alt='Heart with title "GOOD HEALTH AND WELL-BEING"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal4}
-                    alt='Book open with title "QUALITY EDUACTION"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal5}
-                    alt='Male and female gender symbol with title "GENDER EQUITY"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal6}
-                    alt='Water dripping down with title "CLEAN WATER AND SANITATION"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal7}
-                    alt='Sun with shutdown symbol with title "AFFORDABLE AND CLEAN ENERGY"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal8}
-                    alt='Line goning up with title "DECENT WORK AND ECONOMIC GROWTH"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal9}
-                    alt='three cubes with title "INDUSTRY, INNOVATION AND INFRASTRUCTURE"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal10}
-                    alt='Equal symbol with title "REDUCED INEQUALITIES"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal11}
-                    alt='four buildings with title "SUSTAINABLE CITIES AND COMMUNITIES"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal12}
-                    alt='Infinity arrow with title "RESPONSIBLE CONSUMPTION AND PRODUCTION"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal13}
-                    alt='Eye with globe as pupil with title "CLIMATE ACTION"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal14}
-                    alt='Fish with title "LIFE BELOW WATER"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal15}
-                    alt='Tree with title "LIFE ON LAND"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal16}
-                    alt='Bird with title "PEACE, JUSTICE and STRONG institutions"'
-                    height={152}
-                    width={180}
-                />
-                <Image
-                    src={goal17}
-                    alt='Circles intersection with title "Partnerships for the goals"'
-                    height={152}
-                    width={180}
-                />
-                <Image src={wheel} alt='SDG Wheel' height={142} width={142} />
+                {getImages().map((goal, index) => (
+                    <Image
+                        src={goal.src}
+                        alt={goal.alt}
+                        height={goal.height || 152}
+                        width={goal.width || 180}
+                        key={index}
+                    ></Image>
+                ))}
             </div>
         </section>
     );
