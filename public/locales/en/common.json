@@ -1,3 +1,8 @@
 {
-    "test": "Hello"
+    "test": "Hello",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "events": "Events",
+    "about": "About",
+    "howItWorks": "How it works"
 }
