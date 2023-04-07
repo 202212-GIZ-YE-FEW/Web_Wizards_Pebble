@@ -1,0 +1,9 @@
+addReviewers: true
+addAssignees: author
+reviewers:
+    - iiAbady
+    - sulmi24
+    - Adeeb2022
+    - SufyanCS
+numberOfReviewers: 3
+runOnDraft: true
