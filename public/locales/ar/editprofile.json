@@ -2,5 +2,9 @@
     "editProfile": "تعديل الملف الشخصي",
     "uploadNew": "تحميل جديد",
     "chooseFromLibrary": "اختيار من المكتبة",
-    "saveChanges": "حفظ التغييرات"
+    "saveChanges": "حفظ التغييرات",
+    "nameRequired": "الاسم (مطلوب)",
+    "yourLocation": "موقعك",
+    "placeholderName": "محمد",
+    "placeholderLocation": "مثال: اليمن - حضرموت - المكلا "
 }
