@@ -4,38 +4,23 @@ import SignButton from "./SignButton";
 import SignOptions from "./SignOptions";
 import SignTitle from "./SignTitle";
 
-const SignUpForm = ({ t }) => {
+const SignInForm = ({ t }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
     };
+
     return (
         <>
-            <div className='w-full lg:w-3/5 flex-grow-1 relative px-4 lg:px-8 order-1'>
+            <div className='w-full lg:w-3/5 flex-grow-1 relative px-4 lg:px-8 max order-1 '>
                 <div className='mx-auto lg:max-w-lg md:max-w-3xl py-4 lg:py-8 flex flex-col'>
-                    <SignTitle text={t("signUp")} />
+                    <SignTitle text={t("signIn")} />
                     <SignOptions t={t} />
                     <form className='-mx-3 order-3' onSubmit={handleSubmit}>
-                        <div className='sm:flex flex-row hidden'>
-                            <InputForm
-                                placeholder={t("name")}
-                                label={t("name")}
-                                name='Name'
-                                type='text'
-                                hasFloatingLabel
-                            />
-                            <InputForm
-                                placeholder={t("surname")}
-                                label={t("surname")}
-                                name='Surname'
-                                type='text'
-                                hasFloatingLabel
-                            />
-                        </div>
                         <InputForm
                             placeholder={t("email")}
                             label={t("email")}
-                            name='email'
-                            type='email'
+                            name='Email'
+                            type='Email'
                             hasFloatingLabel
                         />
                         <InputForm
@@ -49,15 +34,14 @@ const SignUpForm = ({ t }) => {
                         />
                         <FormFooter
                             message={t("haveAccount")}
-                            linkHref='/signin'
-                            linkText={t("signIn")}
+                            linkHref='/signup'
+                            linkText={t("signUp")}
                         />
-                        <SignButton text={t("signUp")} />
+                        <SignButton text={t("signIn")} />
                     </form>
                 </div>
             </div>
         </>
     );
 };
-
-export default SignUpForm;
+export default SignInForm;

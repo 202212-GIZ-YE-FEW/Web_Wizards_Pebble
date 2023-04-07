@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="w-full lg:w-3/5 flex-grow-1 relative px-4 lg:px-8 order-1"
+  className="w-full lg:w-3/5 flex-grow-1 relative px-4 lg:px-8 max order-1 "
 >
   <div
     className="mx-auto lg:max-w-lg md:max-w-3xl py-4 lg:py-8 flex flex-col"
@@ -13,7 +13,7 @@ exports[`renders correctly 1`] = `
       <h3
         className="font-semibold mb-8 tracking-tight text-custom-blue lg:text-gray-800 text-3xl order-first"
       >
-        signUp
+        signIn
       </h3>
     </div>
     <div
@@ -118,60 +118,6 @@ exports[`renders correctly 1`] = `
       onSubmit={[Function]}
     >
       <div
-        className="sm:flex flex-row hidden"
-      >
-        <div
-          className="px-3 mb-3 w-full "
-        >
-          <div
-            className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper floating-label"
-          >
-            <input
-              autoFocus={true}
-              className="text-input InputForm"
-              id="d0736587-17a2-5b"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              placeholder="name"
-              type="text"
-              value=""
-            />
-            <label
-              className="form-label"
-              htmlFor="d0736587-17a2-5b"
-            >
-              name
-            </label>
-          </div>
-        </div>
-        <div
-          className="px-3 mb-3 w-full "
-        >
-          <div
-            className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper floating-label"
-          >
-            <input
-              autoFocus={true}
-              className="text-input InputForm"
-              id="28a6ffa1-da6d-5e"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              placeholder="surname"
-              type="text"
-              value=""
-            />
-            <label
-              className="form-label"
-              htmlFor="28a6ffa1-da6d-5e"
-            >
-              surname
-            </label>
-          </div>
-        </div>
-      </div>
-      <div
         className="px-3 mb-3 w-full "
       >
         <div
@@ -180,17 +126,17 @@ exports[`renders correctly 1`] = `
           <input
             autoFocus={true}
             className="text-input InputForm"
-            id="8c09c45d-4134-5d"
+            id="8ec3013a-05cd-50"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
             placeholder="email"
-            type="email"
+            type="Email"
             value=""
           />
           <label
             className="form-label"
-            htmlFor="8c09c45d-4134-5d"
+            htmlFor="8ec3013a-05cd-50"
           >
             email
           </label>
@@ -232,7 +178,7 @@ exports[`renders correctly 1`] = `
         <p>
           haveAccount
           <a
-            href="/signin"
+            href="/signup"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
@@ -240,7 +186,7 @@ exports[`renders correctly 1`] = `
             <span
               className="text-gray-800 underline"
             >
-              signIn
+              signUp
             </span>
           </a>
         </p>
@@ -251,7 +197,7 @@ exports[`renders correctly 1`] = `
         <button
           className="w-full lg:w-auto bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-5 py-3 "
         >
-          signUp
+          signIn
         </button>
       </div>
     </form>
