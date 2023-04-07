@@ -1,0 +1,46 @@
+:is(.rdrMonthAndYearWrapper, ) {
+    display: none !important;
+}
+
+.rdrCalendarWrapper.rdrDateRangeWrapper {
+    background-color: #ffffff !important;
+    border: 2px solid black !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    position: relative;
+    /* margin-bottom: 5rem; */
+}
+
+.rdrDateDisplayWrapper {
+    position: absolute !important;
+    width: 100%;
+    bottom: -5rem;
+    background-color: transparent !important;
+    display: none !important;
+}
+.rdrDay.rdrDayToday.rdrDayWeekend.rdrDayEndOfWeek,
+.rdrStartEdge,
+.rdrInRange,
+.rdrEndEdge {
+    color: #fbc495 !important;
+}
+
+.rdrDayHovered :is(.rdrDayStartPreview, .rdrDayEndPreview, .rdrInRangePreview) {
+    color: #fbc495 !important;
+    outline: none;
+}
+
+.rdrStartEdge,
+.rdrInRange,
+.rdrEndEdge {
+    border-radius: 0 !important;
+}
+
+.rdrDayNumber span {
+    color: black !important;
+    font-weight: bold;
+}
+
+.rdrWeekDay {
+    color: black !important;
+}
