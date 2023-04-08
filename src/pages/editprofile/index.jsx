@@ -29,6 +29,9 @@ const EditProfile = () => {
             </div>
             <EditProfileForm t={t} />
             <Interests t={t} />
+            <div className='flex flex-row justify-start py-8'>
+                <SaveButton text={t("saveChanges")} />
+            </div>
         </div>
     );
 };
