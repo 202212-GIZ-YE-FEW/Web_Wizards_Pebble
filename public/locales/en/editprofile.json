@@ -2,5 +2,9 @@
     "editProfile": "Edit Profile",
     "uploadNew": "Upload New",
     "chooseFromLibrary": "Choose From Library",
-    "saveChanges": "Save Changes"
+    "saveChanges": "Save Changes",
+    "nameRequired": "Name (Required)",
+    "yourLocation": "Your Location",
+    "placeholderName": "John",
+    "placeholderLocation": "e.g. USA - New York - Times Square "
 }
