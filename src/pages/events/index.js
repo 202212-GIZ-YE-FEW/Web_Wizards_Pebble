@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import DateRangePicker from "@/components/events/DatePicker/DateRangePicker";
 import Divider from "@/components/Divider";
 import Button from "@/components/Button";
+import EventCard from "@/components/EventCard/EventCard";
 
 const locations = ["İzmir, TR", "İzmir, TRT"];
 
@@ -109,7 +110,9 @@ function Events() {
             </div>
 
             {/* PAGE EVENTS LIST SECTION */}
-            <div className='col-span-8 text-white bg-red-400'>EVENTS LIST</div>
+            <div className='col-span-8'>
+                <EventCard />
+            </div>
         </div>
     );
 }
