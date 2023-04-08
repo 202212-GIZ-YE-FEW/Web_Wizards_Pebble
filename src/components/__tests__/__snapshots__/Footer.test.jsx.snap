@@ -38,44 +38,29 @@ exports[`renders correctly 1`] = `
         className="flex justify-center gap-x-12"
       >
         <a
-          className="font-extrabold"
+          className="font-extrabold !text-black-100"
           href="/events"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          style={
-            Object {
-              "color": "#1A1A1A",
-            }
-          }
         >
           events
         </a>
         <a
-          className="font-extrabold"
+          className="font-extrabold !text-black-100"
           href="/about"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          style={
-            Object {
-              "color": "#1A1A1A",
-            }
-          }
         >
           about
         </a>
         <a
-          className="font-extrabold"
+          className="font-extrabold !text-black-100"
           href="#how_it_works"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          style={
-            Object {
-              "color": "#1A1A1A",
-            }
-          }
         >
           howItWorks
         </a>

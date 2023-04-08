@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { BorderlessButton } from "@/components/mini";
-import { Title } from "@/components/mini";
+import { BorderlessButton, Description, Title } from "@/components/mini";
 
 import attendImage from "~/landing/attend.svg";
 import boyImage from "~/landing/boy.svg";
@@ -69,9 +68,7 @@ function Card(props) {
             <h3 className='text-black-100 font-medium mt-2 text-3xl font-sans'>
                 {title}
             </h3>
-            <p className='text-black-50 text-xl leading-8 !my-4'>
-                {description}
-            </p>
+            <Description className='!my-4'>{description}</Description>
             <Link href={buttonTo}>
                 <BorderlessButton>{buttonText}</BorderlessButton>
             </Link>
