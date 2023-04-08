@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="mt-10 "
+>
+  <div>
+    <label
+      className="font-extrabold text-2xl py-2 ml-3 text-gray-800"
+    >
+      yourInterests
+    </label>
+  </div>
+  <div
+    className="flex flex-wrap justify-evenly"
+  >
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            noPoverty
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            goodHealth
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            qualityEducation
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            genderEquality
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            cleanWater
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            affordableEnergy
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            decentWork
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            innovation
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            reducedInequalities
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            sustainableCities
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            responsibleConsumption
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            lifeBelowWater
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            lifeOnLand
+          </p>
+        </div>
+      </button>
+    </div>
+    <div
+      className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+    >
+      <button
+        className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+        disabled={false}
+        style={
+          Object {
+            "border": "2px solid black",
+            "borderRadius": "0.5rem",
+            "boxShadow": "2px 2px #1a1a1a",
+          }
+        }
+      >
+        <div
+          className="relative flex items-center justify-center "
+        >
+          <p
+            className="block w-max font-semibold text-gray-900 text-xs py-1 "
+          >
+            peaceJustice
+          </p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;

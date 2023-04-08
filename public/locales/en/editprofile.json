@@ -6,5 +6,19 @@
     "nameRequired": "Name (Required)",
     "yourLocation": "Your Location",
     "placeholderName": "John",
-    "placeholderLocation": "e.g. USA - New York - Times Square "
+    "placeholderLocation": "e.g. USA - New York - Times Square ",
+    "noPoverty": "No Poverty",
+    "goodHealth": "Good Health and Well Being",
+    "qualityEducation": "Quality Education",
+    "genderEquality": "Gender Equality",
+    "cleanWater": "Clean Water and Sanitation",
+    "affordableEnergy": "Affordable and Clean Energy",
+    "decentWork": "Decent Work and Economic Growth",
+    "innovation": "Industry, Innovation, and Infrastructure",
+    "reducedInequalities": "Reduced Inequalities",
+    "sustainableCities": "Sustainable Cities and Communities",
+    "responsibleConsumption": "Responsible Consumption and Production",
+    "lifeBelowWater": "Life Below Water",
+    "lifeOnLand": "Life on Land",
+    "peaceJustice": "Peace, Justice and Strong Institutions"
 }
