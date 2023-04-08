@@ -13,5 +13,9 @@
     "organizeDescription": "Body placeholder for text paragraph, a paragraph is a self-contained unit of text description.",
     "organizeButton": "Get started",
     "goalsTitle": "Sustainable Development Goals",
-    "goalsDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    "goalsDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    "volunteersTitle": "Hear it from volunteers",
+    "volunteerName": "Name",
+    "volunteerOccupation": "occupation",
+    "volunteerDescription": "This is some testimonial.This is some testimonial.This is some testimonial.This is some testimonial."
 }

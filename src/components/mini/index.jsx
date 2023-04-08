@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "react-flatifycss";
 
 export function BorderlessButton(props) {
@@ -26,5 +27,19 @@ export function Description(props) {
         <p className={`text-black-50 text-xl leading-8 ${className}`}>
             {children}
         </p>
+    );
+}
+
+export function RoundedImage(props) {
+    const { src, alt, height, width } = props;
+
+    return (
+        <Image
+            src={src}
+            alt={alt}
+            height={height}
+            width={width}
+            className='rounded-full'
+        />
     );
 }

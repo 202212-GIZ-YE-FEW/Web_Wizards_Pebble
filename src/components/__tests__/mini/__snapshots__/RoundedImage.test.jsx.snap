@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<img
+  className="rounded-full"
+  data-nimg="1"
+  decoding="async"
+  loading="lazy"
+  onError={[Function]}
+  onLoad={[Function]}
+  src=""
+  style={
+    Object {
+      "color": "transparent",
+    }
+  }
+/>
+`;
