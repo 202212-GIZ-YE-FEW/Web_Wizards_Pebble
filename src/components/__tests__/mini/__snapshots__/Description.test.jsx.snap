@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<p
+  className="text-black-50 text-xl leading-8 "
+/>
+`;
