@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section
+  className="container mt-40 mb-20"
+>
+  <img
+    alt="Volunteers Gallery"
+    data-nimg="1"
+    decoding="async"
+    height={790}
+    loading="lazy"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+    srcSet="/_next/image?url=%2Fimg.jpg&w=1920&q=75 1x, /_next/image?url=%2Fimg.jpg&w=3840&q=75 2x"
+    style={
+      Object {
+        "color": "transparent",
+      }
+    }
+    width={1440}
+  />
+</section>
+`;
