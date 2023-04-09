@@ -44,7 +44,28 @@ function Events() {
             setSelectedLocations([...selectedLocations, location]);
         }
     };
-    const handleInterestsFilterUpdate = (interest) => {
+
+    // const handleInterestsFilterUpdate = (interest) => {
+    //     if (selectedInterests.includes(interest)) {
+    //         setSelectedInterests(
+    //             selectedInterests.filter((l) => l !== interest)
+    //         );
+    //     } else {
+    //         setSelectedInterests([...selectedInterests, interest]);
+    //     }
+    // };
+
+    const handleInterestsFilterUpdate = (eventOrInterest) => {
+        let interest;
+
+        if (typeof eventOrInterest === "string") {
+            // This is the first case, where interest is passed directly as a string parameter
+            interest = eventOrInterest;
+        } else {
+            // This is the second case, where the function is called with an event object
+            interest = eventOrInterest.target.value;
+        }
+
         if (selectedInterests.includes(interest)) {
             setSelectedInterests(
                 selectedInterests.filter((l) => l !== interest)
@@ -52,6 +73,7 @@ function Events() {
         } else {
             setSelectedInterests([...selectedInterests, interest]);
         }
+        console.log(selectedInterests);
     };
 
     return (
@@ -73,23 +95,59 @@ function Events() {
                 <Divider />
                 <div className='flex justify-between'>
                     <Button
-                        classes='arrow-button arrow-down'
+                        dropDownButton={{
+                            controls: "offcanvasInterest",
+                            target: "#offcanvasInterest",
+                        }}
                         ariaLabel='Arrow button'
+                        classes='arrow-button arrow-down'
                     >
                         Change Interest
                     </Button>
-
-                    <Button
-                        classes='arrow-button arrow-down'
-                        ariaLabel='Arrow button'
+                    <div
+                        className='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
+                        tabIndex='-1'
+                        style={{
+                            borderRadius: "20px 20px 0px 0px",
+                            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                            borderTop: "2px solid rgba(0, 0, 0, 0.1)",
+                        }}
+                        id='offcanvasInterest'
+                        aria-labelledby='offcanvasInterestLabel'
+                        data-te-offcanvas-init
                     >
-                        Change Location
-                    </Button>
+                        <div className='flex items-center justify-between p-4'>
+                            <h3
+                                className='mb-0 font-semibold leading-normal text-center w-full text-3xl'
+                                id='offcanvasInterestLabel'
+                            >
+                                Change Interest
+                            </h3>
+                        </div>
+                        <div className='small flex-grow overflow-y-auto px-12'>
+                            {interests.map((interest, index) => (
+                                <label className='checkbox-wrapper' key={index}>
+                                    <input
+                                        id={interest}
+                                        value={interest}
+                                        name={interest}
+                                        type='checkbox'
+                                        checked={selectedInterests.includes(
+                                            interest
+                                        )}
+                                        onChange={handleInterestsFilterUpdate}
+                                    />
+                                    <span className='check'></span>
+                                    {interest}
+                                </label>
+                            ))}
+                        </div>
+                    </div>
 
                     <Button
                         dropDownButton={{
-                            controls: "offcanvasBottom",
-                            target: "#offcanvasBottom",
+                            controls: "offcanvasDate",
+                            target: "#offcanvasDate",
                         }}
                         ariaLabel='Arrow button'
                         classes='arrow-button arrow-down'
@@ -97,26 +155,26 @@ function Events() {
                         Change Date
                     </Button>
                     <div
-                        class='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
-                        tabindex='-1'
+                        className='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
+                        tabIndex='-1'
                         style={{
                             borderRadius: "20px 20px 0px 0px",
                             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
                             borderTop: "2px solid rgba(0, 0, 0, 0.1)",
                         }}
-                        id='offcanvasBottom'
-                        aria-labelledby='offcanvasBottomLabel'
+                        id='offcanvasDate'
+                        aria-labelledby='offcanvasDateLabel'
                         data-te-offcanvas-init
                     >
-                        <div class='flex items-center justify-between p-4'>
+                        <div className='flex items-center justify-between p-4'>
                             <h3
-                                class='mb-0 font-semibold leading-normal text-center w-full text-3xl'
-                                id='offcanvasBottomLabel'
+                                className='mb-0 font-semibold leading-normal text-center w-full text-3xl'
+                                id='offcanvasDateLabel'
                             >
                                 Change Date
                             </h3>
                         </div>
-                        <div class='small flex-grow overflow-y-auto px-12'>
+                        <div className='small flex-grow overflow-y-auto px-12'>
                             <DateRangePicker />
                         </div>
                     </div>
@@ -156,7 +214,7 @@ function Events() {
                 <Divider />
                 <div className=''>
                     <h4 className='text-center font-bold underline mb-3'>
-                        Change Location
+                        Change Interest
                     </h4>
                     {interests.map((interest, index) => (
                         <Button
