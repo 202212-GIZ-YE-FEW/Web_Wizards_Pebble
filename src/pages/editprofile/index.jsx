@@ -3,6 +3,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import CircleImg from "@/components/CircleImg";
 import EditprofileButton from "@/components/EditProfileButton";
+import EditProfileForm from "@/components/EditProfileForm";
+import Interests from "@/components/Interests";
 import SaveButton from "@/components/SaveButton";
 
 const EditProfile = () => {
@@ -24,6 +26,11 @@ const EditProfile = () => {
                     />
                 </div>
                 <EditprofileButton text={t("chooseFromLibrary")} />
+            </div>
+            <EditProfileForm t={t} />
+            <Interests t={t} />
+            <div className='flex flex-row justify-start py-8'>
+                <SaveButton text={t("saveChanges")} />
             </div>
         </div>
     );

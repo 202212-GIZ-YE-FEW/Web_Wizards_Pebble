@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="mt-24 w-3/4"
+>
+  <div>
+    <div>
+      <label
+        className="font-extrabold text-2xl py-2 ml-3 text-gray-800"
+      >
+        nameRequired
+      </label>
+    </div>
+    <div
+      className="px-3 mb-3 w-4/5 "
+    >
+      <div
+        className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper"
+      >
+        <input
+          autoFocus={true}
+          className="text-input InputForm"
+          id="23cac36d-9b93-55"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="placeholderName"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-2 lg:mt-8"
+  >
+    <div>
+      <label
+        className="font-extrabold text-2xl py-2 ml-3 text-gray-800"
+      >
+        yourLocation
+      </label>
+    </div>
+    <div
+      className="px-3 mb-3 w-4/5 "
+    >
+      <div
+        className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper"
+      >
+        <input
+          autoFocus={true}
+          className="text-input InputForm"
+          id="060f87ae-bff9-5e"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="placeholderLocation"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

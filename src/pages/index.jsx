@@ -1,8 +1,10 @@
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import Goals from "@/components/Goals";
 import Hero from "@/components/Hero";
 import How from "@/components/How";
+import Volunteers from "@/components/Volunteers";
 
 export default function HomePage() {
     const { t } = useTranslation("landing");
@@ -11,6 +13,8 @@ export default function HomePage() {
         <>
             <Hero t={t} />
             <How t={t} />
+            <Goals t={t} />
+            <Volunteers t={t} />
         </>
     );
 }

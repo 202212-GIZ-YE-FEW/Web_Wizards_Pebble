@@ -15,23 +15,19 @@ function Footer(props) {
                     <div className='flex justify-center gap-x-12'>
                         <Link
                             href='/events'
-                            className='font-extrabold'
-                            //Overriding flatify with tailwindcss classes doesn't work
-                            style={{ color: "#1A1A1A" }}
+                            className='font-extrabold !text-black-100'
                         >
                             {t("events")}
                         </Link>
                         <Link
                             href='/about'
-                            className='font-extrabold'
-                            style={{ color: "#1A1A1A" }}
+                            className='font-extrabold !text-black-100'
                         >
                             {t("about")}
                         </Link>
                         <Link
                             href='#how_it_works'
-                            className='font-extrabold'
-                            style={{ color: "#1A1A1A" }}
+                            className='font-extrabold !text-black-100'
                         >
                             {t("howItWorks")}
                         </Link>
