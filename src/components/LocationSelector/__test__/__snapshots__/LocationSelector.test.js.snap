@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="bg-white"
+>
+  <div
+    className="w-full md:w-2/3 mx-auto bg-white rounded-lg p-8 flex flex-col md:flex-row"
+  >
+    <div
+      className="w-full md:w-1/2 flex flex-col justify-between"
+    >
+      <div
+        className="mb-4"
+      >
+        <h4
+          className="text-2xl md:text-1xl font-rubik font-bold mb-2 text-black"
+          style={
+            Object {
+              "color": "#1A1A1A",
+            }
+          }
+        />
+        <p
+          className="text-gray-700"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+          style={
+            Object {
+              "color": "#878787",
+            }
+          }
+        />
+      </div>
+      <input
+        className="w-full border border-gray-400 rounded-lg py-2 px-4 text-sm font-rubik"
+        id="location"
+        onChange={[Function]}
+        placeholder="locationPlaceholder"
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#000000",
+            "borderRadius": "8px",
+            "borderWidth": "2px",
+            "boxShadow": "none",
+            "boxSizing": "border-box",
+            "fontFamily": "Rubik",
+            "fontSize": "14px",
+            "height": "48px",
+            "maxWidth": "370px",
+            "outline": "none",
+            "padding": "10px",
+            "width": "100%",
+          }
+        }
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="w-full md:w-1/2 flex flex-col justify-between md:ml-4 mt-4 md:mt-0"
+    >
+      <div
+        className="flex flex-col mb-4"
+      >
+        <label
+          className="text-3xl md:text-6xl font-bold mb-2 text-black"
+          htmlFor="location"
+          style={
+            Object {
+              "color": "#1A1A1A",
+            }
+          }
+        >
+          Some label
+        </label>
+        <a
+          className="text-xl md:text-2x1 text-blue-500 hover:text-blue-700 font-rubik"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "#0000FF",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
