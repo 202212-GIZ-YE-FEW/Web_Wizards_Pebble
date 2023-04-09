@@ -6,7 +6,8 @@ import React, { useState } from "react";
 import DateRangePicker from "@/components/events/DatePicker/DateRangePicker";
 import Divider from "@/components/Divider";
 import Button from "@/components/Button";
-import EventCard from "@/components/EventCard/EventCard";
+import EventCard from "@/components/events/EventCard/EventCard";
+import Pagination from "@/components/events/Pagination/Pagination";
 
 const locations = ["İzmir, TR", "İzmir, TRT"];
 
@@ -112,6 +113,53 @@ function Events() {
             {/* PAGE EVENTS LIST SECTION */}
             <div className='col-span-8'>
                 <EventCard />
+            </div>
+
+            <div className='col-span-12'>
+                <Pagination />
+                {/* <nav aria-label="Page navigation example">
+                    <ul class="list-style-none mb-6 flex justify-center">
+                        
+                        <li>
+                            <a
+                                class="pointer-events-none relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-500 transition-all duration-300 dark:text-neutral-400"
+                            >Previous</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100  dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+                                href="#!"
+                            >1</a
+                            >
+                        </li>
+                        <li aria-current="page">
+                            <a
+                                class="relative block rounded bg-primary-100 px-3 py-1.5 text-sm font-medium text-primary-700 transition-all duration-300"
+                                href="#!"
+                            >2
+                                <span
+                                    class="absolute -m-px h-px w-px overflow-hidden whitespace-nowrap border-0 p-0 [clip:rect(0,0,0,0)]"
+                                >(current)</span
+                                >
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+                                href="#!"
+                            >3</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+                                href="#!"
+                            >Next</a
+                            >
+                        </li>
+                    </ul>
+                </nav> */}
             </div>
         </div>
     );
