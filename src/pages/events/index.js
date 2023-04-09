@@ -55,7 +55,7 @@ function Events() {
     };
 
     return (
-        <div className='container mx-auto grid grid-cols-12 gap-x-16'>
+        <div className='container mx-auto md:grid grid-cols-12 sm:gap-x-8 lg:gap-x-16'>
             {/* PAGE TITLE HEADER */}
             <div className='col-span-12  mx-auto mt-5 mb-12'>
                 <div className='flex items-start flex-col gap-3'>
@@ -68,8 +68,69 @@ function Events() {
                 </div>
             </div>
 
-            {/* PAGE FILTER SECTION */}
-            <div className='col-span-4 flex flex-col gap-6 items-center'>
+            {/* PAGE FILTER SECTION AT MOBILE */}
+            <div className='mobile'>
+                <Divider />
+                <div className='flex justify-between'>
+                    <Button
+                        classes='arrow-button arrow-down'
+                        ariaLabel='Arrow button'
+                    >
+                        Change Interest
+                    </Button>
+
+                    <Button
+                        classes='arrow-button arrow-down'
+                        ariaLabel='Arrow button'
+                    >
+                        Change Location
+                    </Button>
+
+                    <Button
+                        dropDownButton={{
+                            controls: "offcanvasBottom",
+                            target: "#offcanvasBottom",
+                        }}
+                        ariaLabel='Arrow button'
+                        classes='arrow-button arrow-down'
+                    >
+                        Change Date
+                    </Button>
+                    <div
+                        class='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
+                        tabindex='-1'
+                        style={{
+                            borderRadius: "20px 20px 0px 0px",
+                            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                            borderTop: "2px solid rgba(0, 0, 0, 0.1)",
+                        }}
+                        id='offcanvasBottom'
+                        aria-labelledby='offcanvasBottomLabel'
+                        data-te-offcanvas-init
+                    >
+                        <div class='flex items-center justify-between p-4'>
+                            <h3
+                                class='mb-0 font-semibold leading-normal text-center w-full text-3xl'
+                                id='offcanvasBottomLabel'
+                            >
+                                Change Date
+                            </h3>
+                        </div>
+                        <div class='small flex-grow overflow-y-auto px-12'>
+                            <DateRangePicker />
+                        </div>
+                    </div>
+                </div>
+                <Divider />
+            </div>
+
+            {/* PAGINATION SECTION AT MOBILE */}
+            <div className='col-span-12 mobile'>
+                <Pagination />
+            </div>
+
+            {/* PAGE FILTER SECTION AT TABLET AND DESKTOP */}
+            <div className='col-span-4 flex flex-col gap-6 items-center desktop'>
                 <DateRangePicker />
 
                 <Divider />
@@ -118,7 +179,8 @@ function Events() {
                 <EventCard />
             </div>
 
-            <div className='col-span-12'>
+            {/* PAGINATION SECTION AT TABLET AND DESKTOP */}
+            <div className='col-span-12 desktop'>
                 <Pagination />
             </div>
         </div>

@@ -5,8 +5,15 @@ import "@/styles/globals.css";
 import "@/styles/events.css";
 
 import Layout from "@/layout/Layout";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
+    useEffect(() => {
+        const importTE = async () => {
+            await import("tw-elements");
+        };
+        importTE();
+    }, []);
     return (
         <Layout>
             <Component {...pageProps} />

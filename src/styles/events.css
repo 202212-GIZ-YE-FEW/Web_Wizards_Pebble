@@ -67,3 +67,21 @@
     box-shadow: 2px 2px 0 black;
     color: black;
 }
+
+/* RESPONSIVE */
+@media (min-width: 640px) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: initial;
+    }
+}
+@media (max-width: 641px) {
+    .mobile {
+        display: initial;
+    }
+    .desktop {
+        display: none;
+    }
+}
