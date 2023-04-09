@@ -55,7 +55,7 @@ function Events() {
     };
 
     return (
-        <div className='container mx-auto grid grid-cols-12 gap-4'>
+        <div className='container mx-auto grid grid-cols-12 gap-x-16'>
             {/* PAGE TITLE HEADER */}
             <div className='col-span-12  mx-auto mt-5 mb-12'>
                 <div className='flex items-start flex-col gap-3'>
@@ -69,7 +69,7 @@ function Events() {
             </div>
 
             {/* PAGE FILTER SECTION */}
-            <div className='col-span-3 flex flex-col gap-6 items-center'>
+            <div className='col-span-4 flex flex-col gap-6 items-center'>
                 <DateRangePicker />
 
                 <Divider />
@@ -114,7 +114,7 @@ function Events() {
             </div>
 
             {/* PAGE EVENTS LIST SECTION */}
-            <div className='col-span-9'>
+            <div className='col-span-8'>
                 <EventCard />
             </div>
 
