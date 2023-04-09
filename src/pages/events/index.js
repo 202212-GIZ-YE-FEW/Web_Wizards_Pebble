@@ -183,10 +183,10 @@ function Events() {
                                         value={interest}
                                         name={interest}
                                         type='checkbox'
-                                        checked={selectedInterests.includes(
+                                        checked={selectedLocations.includes(
                                             interest
                                         )}
-                                        onChange={handleInterestsFilterUpdate}
+                                        onChange={handleLocationsFilterUpdate}
                                     />
                                     <span className='check'></span>
                                     {interest}
