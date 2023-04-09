@@ -16,12 +16,13 @@ function DateRangePicker() {
     ]);
 
     return (
-        <div>
+        <div style={{ maxWidth: "100%" }}>
             <DateRange
                 editableDateInputs={true}
                 onChange={(item) => setState([item.selection])}
                 moveRangeOnFirstSelection={false}
                 ranges={state}
+                className='w-full'
             />
         </div>
     );

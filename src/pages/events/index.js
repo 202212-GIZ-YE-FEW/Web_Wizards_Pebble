@@ -57,21 +57,24 @@ function Events() {
     return (
         <div className='container mx-auto grid grid-cols-12 gap-4'>
             {/* PAGE TITLE HEADER */}
-            <div className='col-span-12  mx-auto my-5'>
+            <div className='col-span-12  mx-auto mt-5 mb-12'>
                 <div className='flex items-start flex-col gap-3'>
-                    <h1 className='text-6xl font-extrabold '>Welcome, John!</h1>
-                    <p className='text-sm text-start'>
+                    <h1 className='text-6xl font-extrabold text-black-100'>
+                        Welcome, John!
+                    </h1>
+                    <p className='text-md text-start'>
                         Explore and Join Events
                     </p>
                 </div>
             </div>
 
             {/* PAGE FILTER SECTION */}
-            <div className='col-span-4 flex flex-col gap-6 items-center'>
+            <div className='col-span-3 flex flex-col gap-6 items-center'>
                 <DateRangePicker />
 
                 <Divider />
-                <div className=''>
+
+                <div className='w-full'>
                     <h4 className='text-center font-bold underline mb-3'>
                         Change Location
                     </h4>
@@ -111,55 +114,12 @@ function Events() {
             </div>
 
             {/* PAGE EVENTS LIST SECTION */}
-            <div className='col-span-8'>
+            <div className='col-span-9'>
                 <EventCard />
             </div>
 
             <div className='col-span-12'>
                 <Pagination />
-                {/* <nav aria-label="Page navigation example">
-                    <ul class="list-style-none mb-6 flex justify-center">
-                        
-                        <li>
-                            <a
-                                class="pointer-events-none relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-500 transition-all duration-300 dark:text-neutral-400"
-                            >Previous</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100  dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
-                                href="#!"
-                            >1</a
-                            >
-                        </li>
-                        <li aria-current="page">
-                            <a
-                                class="relative block rounded bg-primary-100 px-3 py-1.5 text-sm font-medium text-primary-700 transition-all duration-300"
-                                href="#!"
-                            >2
-                                <span
-                                    class="absolute -m-px h-px w-px overflow-hidden whitespace-nowrap border-0 p-0 [clip:rect(0,0,0,0)]"
-                                >(current)</span
-                                >
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
-                                href="#!"
-                            >3</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
-                                href="#!"
-                            >Next</a
-                            >
-                        </li>
-                    </ul>
-                </nav> */}
             </div>
         </div>
     );

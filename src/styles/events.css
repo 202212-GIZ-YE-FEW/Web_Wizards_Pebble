@@ -45,6 +45,20 @@
     color: black !important;
 }
 
+.rdrMonth {
+    max-width: 100% !important;
+}
+
+.rdrDayToday .rdrDayNumber span:after {
+    background: #fbc495 !important;
+}
+.rdrDayPassive .rdrDayNumber span {
+    /* display: none; */
+    color: #ccc !important;
+}
+.rdrMonth {
+    padding: 1em 0.833em !important;
+}
 /* BUTTON STYLES */
 .button {
     border-radius: 8px;
