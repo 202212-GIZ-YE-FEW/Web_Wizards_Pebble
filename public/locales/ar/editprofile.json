@@ -21,5 +21,10 @@
     "responsibleConsumption": "الاستهلاك والإنتاج المسؤولين",
     "lifeBelowWater": "الحياة تحت الماء",
     "lifeOnLand": "الحياة على اليابسة",
-    "peaceJustice": "السلام والعدالة والمؤسسات القوية"
+    "peaceJustice": "السلام والعدالة والمؤسسات القوية",
+    "changePassword": "تغيير كلمة المرور",
+    "newPassword": "كلمة مرور جديدة",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "cancel": "إلغاء",
+    "submit": "إرسال"
 }

@@ -1,6 +1,7 @@
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import ChangePasswordForm from "@/components/ChangePasswordForm";
 import CircleImg from "@/components/CircleImg";
 import EditprofileButton from "@/components/EditProfileButton";
 import EditProfileForm from "@/components/EditProfileForm";
@@ -32,6 +33,7 @@ const EditProfile = () => {
             <div className='flex flex-row justify-start py-8'>
                 <SaveButton text={t("saveChanges")} />
             </div>
+            <ChangePasswordForm t={t} />
         </div>
     );
 };
