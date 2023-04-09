@@ -35,25 +35,26 @@ function Events() {
     const [selectedLocations, setSelectedLocations] = useState([]);
     const [selectedInterests, setSelectedInterests] = useState([]);
 
-    const handleLocationsFilterUpdate = (location) => {
-        if (selectedLocations.includes(location)) {
+    const handleLocationsFilterUpdate = (eventOrLocation) => {
+        let interest;
+
+        if (typeof eventOrLocation === "string") {
+            // This is the first case, where interest is passed directly as a string parameter
+            interest = eventOrLocation;
+        } else {
+            // This is the second case, where the function is called with an event object
+            interest = eventOrLocation.target.value;
+        }
+
+        if (selectedLocations.includes(interest)) {
             setSelectedLocations(
-                selectedLocations.filter((l) => l !== location)
+                selectedLocations.filter((l) => l !== interest)
             );
         } else {
-            setSelectedLocations([...selectedLocations, location]);
+            setSelectedLocations([...selectedLocations, interest]);
         }
+        console.log(selectedLocations);
     };
-
-    // const handleInterestsFilterUpdate = (interest) => {
-    //     if (selectedInterests.includes(interest)) {
-    //         setSelectedInterests(
-    //             selectedInterests.filter((l) => l !== interest)
-    //         );
-    //     } else {
-    //         setSelectedInterests([...selectedInterests, interest]);
-    //     }
-    // };
 
     const handleInterestsFilterUpdate = (eventOrInterest) => {
         let interest;
@@ -102,7 +103,7 @@ function Events() {
                         ariaLabel='Arrow button'
                         classes='arrow-button arrow-down'
                     >
-                        Change Interest
+                        Change Interests
                     </Button>
                     <div
                         className='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
@@ -126,6 +127,56 @@ function Events() {
                         </div>
                         <div className='small flex-grow overflow-y-auto px-12'>
                             {interests.map((interest, index) => (
+                                <label className='checkbox-wrapper' key={index}>
+                                    <input
+                                        id={interest}
+                                        value={interest}
+                                        name={interest}
+                                        type='checkbox'
+                                        checked={selectedInterests.includes(
+                                            interest
+                                        )}
+                                        onChange={handleInterestsFilterUpdate}
+                                    />
+                                    <span className='check'></span>
+                                    {interest}
+                                </label>
+                            ))}
+                        </div>
+                    </div>
+
+                    <Button
+                        dropDownButton={{
+                            controls: "offcanvasLocation",
+                            target: "#offcanvasLocation",
+                        }}
+                        ariaLabel='Arrow button'
+                        classes='arrow-button arrow-down'
+                    >
+                        Change Location
+                    </Button>
+                    <div
+                        className='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
+                        tabIndex='-1'
+                        style={{
+                            borderRadius: "20px 20px 0px 0px",
+                            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                            borderTop: "2px solid rgba(0, 0, 0, 0.1)",
+                        }}
+                        id='offcanvasLocation'
+                        aria-labelledby='offcanvasLocationLabel'
+                        data-te-offcanvas-init
+                    >
+                        <div className='flex items-center justify-between p-4'>
+                            <h3
+                                className='mb-0 font-semibold leading-normal text-center w-full text-3xl'
+                                id='offcanvasLocationLabel'
+                            >
+                                Change Location
+                            </h3>
+                        </div>
+                        <div className='small flex-grow overflow-y-auto px-12'>
+                            {locations.map((interest, index) => (
                                 <label className='checkbox-wrapper' key={index}>
                                     <input
                                         id={interest}
@@ -179,6 +230,7 @@ function Events() {
                         </div>
                     </div>
                 </div>
+
                 <Divider />
             </div>
 
@@ -238,7 +290,7 @@ function Events() {
             </div>
 
             {/* PAGINATION SECTION AT TABLET AND DESKTOP */}
-            <div className='col-span-12 desktop'>
+            <div className='col-span-12 pagination desktop'>
                 <Pagination />
             </div>
         </div>

@@ -76,6 +76,9 @@
     .desktop {
         display: flex;
     }
+    .pagination.desktop {
+        display: initial;
+    }
 }
 @media (max-width: 641px) {
     .mobile {
