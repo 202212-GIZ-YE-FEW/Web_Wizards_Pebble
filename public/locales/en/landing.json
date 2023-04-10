@@ -17,5 +17,9 @@
     "volunteersTitle": "Hear it from volunteers",
     "volunteerName": "Name",
     "volunteerOccupation": "occupation",
-    "volunteerDescription": "This is some testimonial.This is some testimonial.This is some testimonial.This is some testimonial."
+    "volunteerDescription": "This is some testimonial.This is some testimonial.This is some testimonial.This is some testimonial.",
+    "endingTitle": "Become the change you wish to see in the world.",
+    "endingDescription": "Body placeholder for text paragraph. A paragraph is a self-contained unit of text dealing with a particular point or idea.",
+    "endingButton": "Get started",
+    "endingAboutButton": "Who are we?"
 }
