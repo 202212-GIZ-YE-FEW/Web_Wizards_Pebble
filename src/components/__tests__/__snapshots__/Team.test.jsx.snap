@@ -20,7 +20,7 @@ exports[`renders correctly 1`] = `
         className="m-8 py-6 rounded-3xl bg-[#29C5E6] lg:bg-[#bdd6d0]"
       >
         <div
-          className="   relative w-20 h-20 rounded-full z-10 mx-auto"
+          className=" relative w-20 h-20 rounded-full z-10 mx-auto"
         >
           <img
             alt="Abdullah Binsaed"
@@ -90,7 +90,7 @@ exports[`renders correctly 1`] = `
         className="m-8 py-6 rounded-3xl bg-[#29C5E6] lg:bg-[#bdd6d0]"
       >
         <div
-          className="   relative w-20 h-20 rounded-full z-10 mx-auto"
+          className=" relative w-20 h-20 rounded-full z-10 mx-auto"
         >
           <img
             alt="Hamad Bakeel"
@@ -160,7 +160,7 @@ exports[`renders correctly 1`] = `
         className="m-8 py-6 rounded-3xl bg-[#29C5E6] lg:bg-[#bdd6d0]"
       >
         <div
-          className="   relative w-20 h-20 rounded-full z-10 mx-auto"
+          className=" relative w-20 h-20 rounded-full z-10 mx-auto"
         >
           <img
             alt="Adeeb Abdulsamad"
@@ -230,7 +230,7 @@ exports[`renders correctly 1`] = `
         className="m-8 py-6 rounded-3xl bg-[#29C5E6] lg:bg-[#bdd6d0]"
       >
         <div
-          className="   relative w-20 h-20 rounded-full z-10 mx-auto"
+          className=" relative w-20 h-20 rounded-full z-10 mx-auto"
         >
           <img
             alt="Adeeb Abdulsamad"
@@ -300,7 +300,7 @@ exports[`renders correctly 1`] = `
         className="m-8 py-6 rounded-3xl bg-[#29C5E6] lg:bg-[#bdd6d0]"
       >
         <div
-          className="   relative w-20 h-20 rounded-full z-10 mx-auto"
+          className=" relative w-20 h-20 rounded-full z-10 mx-auto"
         >
           <img
             alt="Adeeb Abdulsamad"

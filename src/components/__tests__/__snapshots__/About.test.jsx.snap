@@ -17,12 +17,12 @@ exports[`renders correctly 1`] = `
     className="absolute inset-0 mx-auto translate-y-1/4 h-full w-full flex-col items-center justify-center lg:relative"
   >
     <h2
-      className="   m-1 text-center text-xl mdP:text-3xl font-bold md:m-4 md:text-5xl md:font-bold lg:text-5xl lg:font-bold"
+      className=" m-1 text-center text-xl mdP:text-3xl font-bold md:m-4 md:text-5xl md:font-bold lg:text-5xl lg:font-bold"
     >
       about
     </h2>
     <p
-      className="   text-sm mr-12 ml-12 text-center md:ml-24 md:mr-24 md:text-2xl lg:ml-32 lg:mr-32 lg:text-2xl"
+      className=" text-sm mr-12 ml-12 text-center md:ml-24 md:mr-24 md:text-2xl lg:ml-32 lg:mr-32 lg:text-2xl"
     >
       brief
     </p>
