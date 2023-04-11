@@ -10,7 +10,7 @@ exports[`renders correctly 1`] = `
     volunteersTitle
   </h2>
   <div
-    className="flex justify-center my-32 gap-x-5"
+    className="flex flex-col gap-y-10 md:flex-row md:gap-y-0 justify-center my-32 gap-x-5"
   >
     <div
       className="flex flex-col items-center gap-y-10"

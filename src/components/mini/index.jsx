@@ -43,3 +43,12 @@ export function RoundedImage(props) {
         />
     );
 }
+
+export function GetStartedButton(props) {
+    const { children } = props;
+    return (
+        <Button className='text-white font-medium bg-[#2F7DA9] shadow-none h-[52px] w-[166px] rounded-lg'>
+            {children}
+        </Button>
+    );
+}

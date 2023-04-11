@@ -20,6 +20,7 @@ function Brief(props) {
 
 const About = (props) => {
     const { t } = props;
+
     return (
         <section id='about'>
             <div
