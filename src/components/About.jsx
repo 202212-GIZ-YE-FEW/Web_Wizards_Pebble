@@ -45,6 +45,7 @@ function Brief(props) {
 
 const About = (props) => {
     const { t } = props;
+    
     return (
         <section id='about'>
             <div
@@ -71,6 +72,7 @@ const About = (props) => {
                     backgroundImage: "url(/images/about.png)",
                 }}
             ></div>
+
             <Brief
                 head={`${t("about")}`}
                 lineOne={`${t("briefLineOne")}`}

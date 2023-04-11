@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import About from "@/components/About";
 
 export default function AboutPage() {
+
     const { t } = useTranslation("about");
 
     return (

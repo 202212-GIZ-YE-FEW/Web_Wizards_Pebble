@@ -13,6 +13,7 @@ exports[`renders correctly 1`] = `
       }
     }
   />
+
   <div
     className="absolute inset-0 w-[250px] mx-auto my-[40px] translate-y-1/2 text-center sm:w-[450px] lg:relative lg:w-[650px] "
   >
@@ -30,6 +31,6 @@ exports[`renders correctly 1`] = `
        
       briefLineTwo
     </p>
-  </div>
+  </div
 </section>
 `;
