@@ -1,6 +1,11 @@
 {
-    "Explore and Join Events": "Explore and Join Events",
-    "Welcome, John!": "Welcome, John!",
+    "exploreAndJoinEvents": "Explore and Join Events",
+    "welcome": "Welcome",
     "filter": "FILTER",
-    "EVENTS LIST": "EVENTS LIST"
+    "eventsList": "EVENTS LIST",
+    "changeLocation": "Change Location",
+    "changeInterest": "Change Interest",
+    "changeDate": "Change Date",
+    "attendees": "Attendees",
+    "join": "Join"
 }

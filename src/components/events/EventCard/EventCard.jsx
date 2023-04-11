@@ -15,7 +15,7 @@ const eventsList = [
     },
 ];
 
-function EventCard() {
+function EventCard({ t }) {
     return (
         <>
             {eventsList.map((event, index) => (
@@ -41,7 +41,7 @@ function EventCard() {
                                 ))}
                             </div>
                             <span>{event.attendeesNumber}</span>
-                            <span>Attendees</span>
+                            <span>{t("attendees")}</span>
                         </div>
                     </div>
                     <header className='card-header'>
@@ -64,7 +64,7 @@ function EventCard() {
                                 href={`/events/${event.id}`}
                                 className='bg-[#FDA855] hover:bg-[#e38b33] !text-white font-bold py-2 px-8 rounded-lg push-right'
                             >
-                                join
+                                {t("join")}
                             </a>
                         </footer>
                     </div>

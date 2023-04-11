@@ -1,11 +1,12 @@
 // Translations import
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import React, { useState } from "react";
 
+import Button from "@/components/Button";
+import Divider from "@/components/Divider";
 // Component imports
 import DateRangePicker from "@/components/events/DatePicker/DateRangePicker";
-import Divider from "@/components/Divider";
-import Button from "@/components/Button";
 import EventCard from "@/components/events/EventCard/EventCard";
 import Pagination from "@/components/events/Pagination/Pagination";
 
@@ -35,6 +36,8 @@ function Events() {
     const [selectedLocations, setSelectedLocations] = useState([]);
     const [selectedInterests, setSelectedInterests] = useState([]);
 
+    const { t } = useTranslation("events");
+
     const handleLocationsFilterUpdate = (eventOrLocation) => {
         let interest;
 
@@ -53,7 +56,6 @@ function Events() {
         } else {
             setSelectedLocations([...selectedLocations, interest]);
         }
-        console.log(selectedLocations);
     };
 
     const handleInterestsFilterUpdate = (eventOrInterest) => {
@@ -74,7 +76,6 @@ function Events() {
         } else {
             setSelectedInterests([...selectedInterests, interest]);
         }
-        console.log(selectedInterests);
     };
 
     return (
@@ -83,10 +84,10 @@ function Events() {
             <div className='col-span-12  mx-auto mt-5 mb-12'>
                 <div className='flex items-start flex-col gap-3'>
                     <h1 className='text-6xl font-extrabold text-black-100'>
-                        Welcome, John!
+                        {t("welcome")}, John!
                     </h1>
                     <p className='text-md text-start'>
-                        Explore and Join Events
+                        {t("exploreAndJoinEvents")}
                     </p>
                 </div>
             </div>
@@ -103,7 +104,7 @@ function Events() {
                         ariaLabel='Arrow button'
                         classes='arrow-button arrow-down'
                     >
-                        Change Interests
+                        {t("changeInterests")}
                     </Button>
                     <div
                         className='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
@@ -122,7 +123,7 @@ function Events() {
                                 className='mb-0 font-semibold leading-normal text-center w-full text-3xl'
                                 id='offcanvasInterestLabel'
                             >
-                                Change Interest
+                                {t("changeInterest")}
                             </h3>
                         </div>
                         <div className='small flex-grow overflow-y-auto px-12'>
@@ -153,7 +154,7 @@ function Events() {
                         ariaLabel='Arrow button'
                         classes='arrow-button arrow-down'
                     >
-                        Change Location
+                        {t("changeLocation")}
                     </Button>
                     <div
                         className='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
@@ -172,7 +173,7 @@ function Events() {
                                 className='mb-0 font-semibold leading-normal text-center w-full text-3xl'
                                 id='offcanvasLocationLabel'
                             >
-                                Change Location
+                                {t("changeLocation")}
                             </h3>
                         </div>
                         <div className='small flex-grow overflow-y-auto px-12'>
@@ -203,7 +204,7 @@ function Events() {
                         ariaLabel='Arrow button'
                         classes='arrow-button arrow-down'
                     >
-                        Change Date
+                        {t("changeDate")}
                     </Button>
                     <div
                         className='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
@@ -222,7 +223,7 @@ function Events() {
                                 className='mb-0 font-semibold leading-normal text-center w-full text-3xl'
                                 id='offcanvasDateLabel'
                             >
-                                Change Date
+                                {t("changeDate")}
                             </h3>
                         </div>
                         <div className='small flex-grow overflow-y-auto px-12'>
@@ -247,7 +248,7 @@ function Events() {
 
                 <div className='w-full'>
                     <h4 className='text-center font-bold underline mb-3'>
-                        Change Location
+                        {t("changeLocation")}
                     </h4>
                     {locations.map((location, index) => (
                         <Button
@@ -266,7 +267,7 @@ function Events() {
                 <Divider />
                 <div className=''>
                     <h4 className='text-center font-bold underline mb-3'>
-                        Change Interest
+                        {t("changeInterest")}
                     </h4>
                     {interests.map((interest, index) => (
                         <Button
@@ -286,7 +287,7 @@ function Events() {
 
             {/* PAGE EVENTS LIST SECTION */}
             <div className='col-span-8'>
-                <EventCard />
+                <EventCard t={t} />
             </div>
 
             {/* PAGINATION SECTION AT TABLET AND DESKTOP */}

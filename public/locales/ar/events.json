@@ -1,6 +1,11 @@
 {
-    "Explore and Join Events": "Explore and Join Events",
-    "Welcome, John!": "Welcome, John!",
+    "exploreAndJoinEvents": "اكتشف وانظم للاحداث ",
+    "welcome": "مرحبا",
     "filter": "FILTER",
-    "EVENTS LIST": "EVENTS LIST"
+    "eventsList": "قائمة الأحداث",
+    "changeLocation": "تغيير الموقع",
+    "changeInterest": "تغيير الإهتمام",
+    "changeDate": "تغيير التاريخ",
+    "attendees": "حاضرين",
+    "join": "أنضمام"
 }
