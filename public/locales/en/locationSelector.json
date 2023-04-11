@@ -1,0 +1,9 @@
+{
+    "chooseLocation": "Choose Location",
+    "locationPlaceholder": "Enter location name",
+    "changeLocation": "Change Location",
+    "createEvent": {
+        "title": "Create Event",
+        "description": "Pubble events can be both local or online. Choose <br>where you want to host your event."
+    }
+}

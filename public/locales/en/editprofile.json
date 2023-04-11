@@ -20,5 +20,10 @@
     "responsibleConsumption": "Responsible Consumption and Production",
     "lifeBelowWater": "Life Below Water",
     "lifeOnLand": "Life on Land",
-    "peaceJustice": "Peace, Justice and Strong Institutions"
+    "peaceJustice": "Peace, Justice and Strong Institutions",
+    "changePassword": "Change Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "cancel": "Cancel",
+    "submit": "Submit"
 }

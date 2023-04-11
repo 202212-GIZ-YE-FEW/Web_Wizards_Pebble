@@ -1,0 +1,9 @@
+{
+    "chooseLocation": "اختر الموقع",
+    "locationPlaceholder": "أدخل اسم الموقع",
+    "changeLocation": "تغيير الموقع",
+    "createEvent": {
+        "title": "إنشاء حدث",
+        "description": "يمكن أن تكون فعاليات Pubble محلية أو عبر الإنترنت. اختر<br> المكان الذي تريد استضافة حدثك فيه."
+    }
+}
