@@ -13,7 +13,6 @@ exports[`renders correctly 1`] = `
       }
     }
   />
-
   <div
     className="absolute inset-0 mx-auto translate-y-1/4 h-full w-full flex-col items-center justify-center lg:relative"
   >
@@ -27,6 +26,6 @@ exports[`renders correctly 1`] = `
     >
       brief
     </p>
-  </div
+  </div>
 </section>
 `;
