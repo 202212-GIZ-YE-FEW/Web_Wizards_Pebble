@@ -4,6 +4,6 @@
     border-radius: 8px !important;
     box-shadow: none !important;
 }
-.InputForm:focus:not(.default) {
+.InputForm:focus:not(#password) {
     border: black 3px solid !important;
 }
