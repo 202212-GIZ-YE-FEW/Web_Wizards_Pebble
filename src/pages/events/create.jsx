@@ -8,7 +8,7 @@ const LocationSelectorPage = () => {
     return (
         <div>
             <LocationSelectors t={t} />
-            <EventCreation t={t} />
+            <EventCreation />
         </div>
     );
 };
