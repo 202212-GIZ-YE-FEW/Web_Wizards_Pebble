@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="bg-white p-4"
+>
+  <div
+    className="w-full md:w-2/3 mx-auto bg-white rounded-lg p-4 md:p-8 flex flex-col md:flex-row"
+  >
+    <div
+      className="w-full md:w-1/2 flex flex-col justify-between flex-grow"
+    >
+      <div
+        className="mb-3 flex flex-col gap-5 md:flex-row md:justify-between flex-grow"
+      >
+        <div>
+          <h2
+            className="py-1 text-2xl font-medium font-rubik text-black"
+            style={
+              Object {
+                "color": "#1A1A1A",
+                "fontWeight": 600,
+              }
+            }
+          >
+            Almost Done! Just take a minute to review our guidlines.
+          </h2>
+          <p
+            className="my-2  w-full text-gray-500"
+          >
+            Pebble is all about helping people with the help of volunteers like you. This means that all events should:
+          </p>
+          <ul
+            className="my-1  w-full list-disc pl-5 text-black"
+            style={
+              Object {
+                "color": "#1A1A1A",
+              }
+            }
+          >
+            <li>
+              Be transparent about the event’s intentions
+            </li>
+            <li>
+              Encourage real human interactions in person or online
+            </li>
+            <li>
+              Have the host present in all events
+            </li>
+          </ul>
+          <p
+            className="my-1 text-gray-400"
+          >
+            You can read more about all of this in our
+            <a
+              className="p-1 text-blue-600 hover:text-primary-200"
+              href="#"
+            >
+              community guidelines.
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
