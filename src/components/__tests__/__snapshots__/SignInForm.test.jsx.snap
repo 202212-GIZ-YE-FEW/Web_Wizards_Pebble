@@ -124,12 +124,12 @@ exports[`renders correctly 1`] = `
           className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper floating-label"
         >
           <input
-            autoFocus={true}
-            className="text-input InputForm"
+            className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
             id="8ec3013a-05cd-50"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
+            pattern={null}
             placeholder="email"
             type="Email"
             value=""
@@ -149,19 +149,19 @@ exports[`renders correctly 1`] = `
           className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper floating-label toggle-password"
         >
           <input
-            autoFocus={true}
-            className="text-input InputForm"
-            id="1a46755d-afd1-58"
+            className="text-input default !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
+            id="password"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
+            pattern="/(?=.*[A-Z])(?!.*[^a-zA-Z0-9@#$^+=])(.{8,15})$/"
             placeholder="password"
             type="password"
             value=""
           />
           <label
             className="form-label"
-            htmlFor="1a46755d-afd1-58"
+            htmlFor="password"
           >
             password
           </label>
@@ -171,6 +171,9 @@ exports[`renders correctly 1`] = `
             onClick={[Function]}
           />
         </div>
+        <p>
+          Must include one captial letter, one digit, and one special character.
+        </p>
       </div>
       <div
         className="pb-3 px-3"
