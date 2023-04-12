@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
     techTitle
   </h2>
   <p
-    className="https://us05web.zoom.us/j/83164148611?pwd=M3c2M1V0U1U5aVFabTVjTzh1b3pidz09"
+    className="text-center"
   >
     techBrief
   </p>

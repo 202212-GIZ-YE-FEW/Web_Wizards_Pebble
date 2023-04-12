@@ -1,16 +1,16 @@
 function Brief(props) {
     const { head, brief } = props;
     return (
-        <div className='absolute inset-0 mx-auto translate-y-1/4 h-full w-full flex-col items-center justify-center lg:relative'>
+        <div className='absolute inset-0 mx-auto translate-y-1/2 w-11/12 md:w-2/3 lg:w-full lg:mb-40 flex-col items-center justify-center lg:relative'>
             <h2
                 className='
-                m-1 text-center text-xl mdP:text-3xl font-bold md:m-4 md:text-5xl md:font-bold lg:text-5xl lg:font-bold'
+                m-1 text-center text-xl md:text-3xl font-bold md:m-4  md:font-bold lg:text-5xl lg:font-bold'
             >
                 {head}
             </h2>
             <p
                 className='
-                text-sm mr-12 ml-12 text-center md:ml-24 md:mr-24 md:text-2xl lg:ml-32 lg:mr-32 lg:text-2xl'
+                text-sm md:text-2xl mr-12 ml-12 text-center md:ml-24 md:mr-24  lg:ml-32 lg:mr-32 lg:text-4xl'
             >
                 {brief}
             </p>
