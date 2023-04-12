@@ -5,5 +5,9 @@
     "createEvent": {
         "title": "Create Event",
         "description": "Pubble events can be both local or online. Choose <br>where you want to host your event."
+    },
+    "CreateEventInfo": {
+        "EventTitle": "Event Title:",
+        "EventDescription": "Choose a title that will give people a clear idea of what the event is about. Feel free to be creative! You canedit this later if you change your mind."
     }
 }
