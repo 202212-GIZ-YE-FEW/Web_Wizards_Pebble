@@ -1,5 +1,7 @@
 {
-    "about": "About",
-    "briefLineOne": "Body placeholder for text paragraph.",
-    "briefLineTwo": "A paragraph is a self-contained unit of text dealing with a particular point or idea."
+    "about": "About Pebble Work",
+    "brief": "Body placeholder for text paragraph. A paragraph is a self-contained unit of text dealing with a particular point or idea.",
+    "ourTeam": "Our Team",
+    "techTitle": "Technologies Used and Project Structure",
+    "techBrief": "Body placeholder for text paragraph. A paragraph is a self-contained unit of text dealing with a particular point or idea."
 }

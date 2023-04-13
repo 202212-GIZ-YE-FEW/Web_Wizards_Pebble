@@ -17,6 +17,10 @@ class MyDocument extends Document {
                         type='font/woff2'
                         crossOrigin='anonymous'
                     /> */}
+                    <link
+                        rel='stylesheet'
+                        href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
+                    />
                 </Head>
                 <body>
                     <Main />

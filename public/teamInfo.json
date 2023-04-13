@@ -1,0 +1,97 @@
+[
+    {
+        "id": "1",
+        "name": "Abdullah Binsaed",
+        "image": "adeeb.png",
+        "links": [
+            {
+                "name": "github",
+                "link": "http//:"
+            },
+            {
+                "name": "discord",
+                "link": "http//:"
+            },
+            {
+                "name": "linkedin",
+                "link": "http//:"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Hamad Bakeel",
+        "image": "adeeb.png",
+        "links": [
+            {
+                "name": "github",
+                "link": "http//:"
+            },
+            {
+                "name": "facebook",
+                "link": "http//:"
+            },
+            {
+                "name": "linkedin",
+                "link": "http//:"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Adeeb Abdulsamad",
+        "image": "adeeb.png",
+        "links": [
+            {
+                "name": "github",
+                "link": "http//:"
+            },
+            {
+                "name": "instagram",
+                "link": "http//:"
+            },
+            {
+                "name": "linkedin",
+                "link": "http//:"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Adeeb Abdulsamad",
+        "image": "adeeb.png",
+        "links": [
+            {
+                "name": "github",
+                "link": "http//:"
+            },
+            {
+                "name": "twitter",
+                "link": "http//:"
+            },
+            {
+                "name": "linkedin",
+                "link": "http//:"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Adeeb Abdulsamad",
+        "image": "adeeb.png",
+        "links": [
+            {
+                "name": "github",
+                "link": "http//:"
+            },
+            {
+                "name": "discord",
+                "link": "http//:"
+            },
+            {
+                "name": "linkedin",
+                "link": "http//:"
+            }
+        ]
+    }
+]
