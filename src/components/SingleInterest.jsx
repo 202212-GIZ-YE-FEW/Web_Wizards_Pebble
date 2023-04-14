@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Button } from "react-flatifycss";
-const SingleInterest = ({ text }) => {
+const SingleInterest = ({ text, onInterestClick }) => {
     const [isClicked, setIsClicked] = useState(false);
 
     const handleClick = () => {
         setIsClicked(!isClicked);
+        onInterestClick(text);
     };
 
     const styles = {
