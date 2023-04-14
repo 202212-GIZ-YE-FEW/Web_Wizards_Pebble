@@ -11,6 +11,46 @@ exports[`renders correctly 1`] = `
       className="w-full md:w-1/2 flex flex-col justify-between flex-grow"
     >
       <div
+        className="py-3 mb-4 flex flex-col md:flex-row md:justify-between gap-10"
+      >
+        <div
+          className="w-full pr-20"
+        >
+          <h2
+            className="text-xl font-medium py-1 text-black"
+            style={
+              Object {
+                "color": "#1A1A1A",
+                "fontWeight": 600,
+              }
+            }
+          >
+            Event Description:
+          </h2>
+          <p
+            className="my-1 text-gray-500"
+          >
+            Describe the purpose of your event. Who should join and what will you do at the event?
+          </p>
+          <textarea
+            className="w-full h-40 px-3 py-2 rounded border-black shadow focus:border-black focus:outline-none focus:ring-0 focus:ring-black"
+            onChange={[Function]}
+            placeholder="Please write at least 50 characters"
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderColor": "#1A1A1A",
+                "borderRadius": "8px",
+                "borderWidth": "2px",
+                "color": "#1A1A1A",
+                "resize": "none",
+              }
+            }
+            value=""
+          />
+        </div>
+      </div>
+      <div
         className="mb-3 flex flex-col gap-5 md:flex-row md:justify-between flex-grow"
       >
         <div>
