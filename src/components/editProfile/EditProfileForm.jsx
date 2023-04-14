@@ -1,5 +1,5 @@
-import InputForm from "./InputForm";
 import SecondaryTitle from "./SecondaryTitle";
+import InputForm from "../InputForm";
 const EditProfileForm = ({ t }) => {
     return (
         <div className='mt-24 w-3/4'>

@@ -1,12 +1,12 @@
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import ChangePasswordForm from "@/components/ChangePasswordForm";
-import CircleImg from "@/components/CircleImg";
-import EditprofileButton from "@/components/EditProfileButton";
-import EditProfileForm from "@/components/EditProfileForm";
-import Interests from "@/components/Interests";
-import SaveButton from "@/components/SaveButton";
+import ChangePasswordForm from "@/components/editProfile/ChangePasswordForm";
+import CircleImg from "@/components/editProfile/CircleImg";
+import EditprofileButton from "@/components/editProfile/EditProfileButton";
+import EditProfileForm from "@/components/editProfile/EditProfileForm";
+import Interests from "@/components/editProfile/Interests";
+import SaveButton from "@/components/editProfile/SaveButton";
 
 const EditProfile = () => {
     const { t } = useTranslation("editprofile");
