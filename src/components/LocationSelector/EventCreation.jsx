@@ -1,12 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const EventCreation = () => {
-    const [content, setContent] = useState("");
-
-    function handleContent(e) {
-        setContent(e.target.value);
-    }
-
     return (
         <div className='bg-white p-4'>
             <div className='w-full md:w-2/3 mx-auto bg-white rounded-lg p-4 md:p-8 flex flex-col md:flex-row'>
@@ -24,8 +18,6 @@ const EventCreation = () => {
                                 join and what will you do at the event?
                             </p>
                             <textarea
-                                value={content}
-                                onChange={handleContent}
                                 style={{
                                     resize: "none",
                                     color: "#1A1A1A",
