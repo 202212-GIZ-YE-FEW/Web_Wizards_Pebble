@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "react-flatifycss";
 
-const ButtonAuth = ({ icon, alt, width, height, text }) => {
+const ButtonAuth = ({ icon, alt, width, height, text, onClick }) => {
     const styles = {
         backgroundColor: "white",
         border: "2px solid black",
@@ -10,7 +10,11 @@ const ButtonAuth = ({ icon, alt, width, height, text }) => {
     };
     return (
         <>
-            <Button style={styles} className='w-full h-14 px-6 transition'>
+            <Button
+                onClick={onClick}
+                style={styles}
+                className='w-full h-14 px-6 transition'
+            >
                 <div className='relative flex items-center space-x-4 justify-center'>
                     <Image src={icon} alt={alt} width={width} height={height} />
                     <span className='block w-max font-medium tracking-wide text-gray-900 sm:text-base'>

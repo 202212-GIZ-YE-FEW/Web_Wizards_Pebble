@@ -2,11 +2,12 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className=" w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+  className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
 >
   <button
-    className="button__ButtonWrapper-sc-1aw98b4-0 button bg-white w-full lg:h-18 h-16 px-1 transition focus:bg-primary-100"
+    className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
     disabled={false}
+    onClick={[Function]}
     style={
       Object {
         "border": "2px solid black",
