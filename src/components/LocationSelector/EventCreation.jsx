@@ -11,7 +11,7 @@ const EventCreation = () => {
                                 className='text-xl font-medium py-1 text-black'
                                 style={{ color: "#1A1A1A", fontWeight: 600 }}
                             >
-                                Event Description:
+                                Event Description :
                             </h2>
                             <p className='my-1 text-gray-500'>
                                 Describe the purpose of your event. Who should
