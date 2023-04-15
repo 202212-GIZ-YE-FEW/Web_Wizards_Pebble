@@ -1,7 +1,7 @@
 import { I18nContext } from "next-i18next";
 import renderer from "react-test-renderer";
 
-import SignUpForm from "../SignUpForm";
+import SignUpForm from "@/components/signUp/SignUpForm";
 
 it("renders correctly", () => {
     const i18n = {
