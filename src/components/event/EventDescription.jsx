@@ -5,7 +5,7 @@ const EventDescription = (props) => {
 
     return (
         <div className='order-1 lg:w-7/12 w-full px-2'>
-            <Title text='Eevent Description:' />
+            <Title text='Event Description:' />
             <p className='  lg:text-lg  md:text-md'>{eventData.description}</p>
         </div>
     );
