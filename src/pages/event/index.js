@@ -1,5 +1,6 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import Attendees from "@/components/event/Attendees";
 import EventDescription from "@/components/event/EventDescription";
 import EventDetails from "@/components/event/EventDetails";
 import EventImage from "@/components/event/EventImage";
@@ -30,6 +31,7 @@ const Event = () => {
             </div>
             <div className='flex lg:flex-row flex-col lg:py-16'>
                 <EventDescription eventData={eventData} />
+                <Attendees eventData={eventData} />
             </div>
         </div>
     );
