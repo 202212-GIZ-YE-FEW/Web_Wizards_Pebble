@@ -1,7 +1,7 @@
 import { I18nContext } from "next-i18next";
 import renderer from "react-test-renderer";
 
-import Interests from "../Interests";
+import Interests from "../editProfile/Interests";
 
 it("renders correctly", () => {
     const i18n = {
