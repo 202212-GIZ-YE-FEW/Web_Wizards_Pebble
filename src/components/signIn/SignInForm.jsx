@@ -1,8 +1,8 @@
-import FormFooter from "../FormFooter";
-import InputForm from "../InputForm";
-import SignButton from "../SignButton";
-import SignOptions from "../SignOptions";
-import SignTitle from "../SignTitle";
+import FormFooter from "@/components/shared/FormFooter";
+import InputForm from "@/components/shared/InputForm";
+import SignButton from "@/components/shared/SignButton";
+import SignOptions from "@/components/shared/SignOptions";
+import SignTitle from "@/components/shared/SignTitle";
 
 const SignInForm = ({ t }) => {
     const handleSubmit = (event) => {

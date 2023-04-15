@@ -1,8 +1,8 @@
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import SittingImg from "@/components/shared/SittingImg";
 import SignInForm from "@/components/signIn/SignInForm";
-import SittingImg from "@/components/SittingImg";
 
 const SignIn = () => {
     const { t } = useTranslation("signin");

@@ -1,7 +1,7 @@
 import EditprofileButton from "./EditProfileButton";
 import SaveButton from "./SaveButton";
 import SecondaryTitle from "./SecondaryTitle";
-import InputForm from "../InputForm";
+import InputForm from "../shared/InputForm";
 const ChangePasswordForm = ({ t }) => {
     return (
         <div className='w-11/12 mx-auto rounded-3xl flex flex-col justify-center bg-[#d4f3fa] md:px-10 px-2 py-10'>

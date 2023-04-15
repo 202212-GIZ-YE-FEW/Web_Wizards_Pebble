@@ -1,7 +1,8 @@
 import ButtonAuth from "./ButtonAuth";
 import OrDivider from "./OrDivider";
-import GoogleIcon from "../../public/GoogleIcon.png";
-import TwitterIcon from "../../public/twitter.svg";
+
+import GoogleIcon from "~/GoogleIcon.png";
+import TwitterIcon from "~/twitter.svg";
 
 const SignOptions = ({ t }) => {
     return (

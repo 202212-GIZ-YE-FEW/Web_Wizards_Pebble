@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer";
 
-import SignButton from "../SignButton";
+import SignButton from "../shared/SignButton";
 
 it("renders correctly", () => {
     const tree = renderer.create(<SignButton />).toJSON();
