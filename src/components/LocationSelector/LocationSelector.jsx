@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useRef, useState } from "react";
+
 import Input from "./LocationInput";
 
 const LocationSelectors = ({ label, t }) => {

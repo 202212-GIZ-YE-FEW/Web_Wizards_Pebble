@@ -1,5 +1,6 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import EventDescription from "@/components/event/EventDescription";
 import EventDetails from "@/components/event/EventDetails";
 import EventImage from "@/components/event/EventImage";
 import JoinButton from "@/components/event/JoinButton";
@@ -11,6 +12,8 @@ const Event = () => {
         date: "ahhallsei 26 Augest Kapisi",
         organizer: "Sufyan",
         attendees: ["Sufyan", "Adeeb", "Abdullah", "Azzam", "Hamad"],
+        description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,",
     };
     return (
         <div className='lg:px-28 px-12'>
@@ -24,6 +27,9 @@ const Event = () => {
                     <EventDetails eventData={eventData} />
                     <JoinButton />
                 </div>
+            </div>
+            <div className='flex lg:flex-row flex-col lg:py-16'>
+                <EventDescription eventData={eventData} />
             </div>
         </div>
     );
