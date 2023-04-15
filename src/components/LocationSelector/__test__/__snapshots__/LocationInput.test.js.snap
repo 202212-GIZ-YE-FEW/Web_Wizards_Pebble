@@ -16,10 +16,8 @@ exports[`renders correctly 1`] = `
       "fontFamily": "Rubik",
       "fontSize": "14px",
       "height": "48px",
-      "maxWidth": "370px",
       "outline": "none",
       "padding": "10px",
-      "width": "100%",
     }
   }
   type="text"
