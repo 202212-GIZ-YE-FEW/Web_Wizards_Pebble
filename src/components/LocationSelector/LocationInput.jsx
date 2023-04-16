@@ -7,8 +7,7 @@ const Input = ({ placeholder, value, onChange, inputRef }) => {
         boxSizing: "border-box",
         backgroundColor: "#FFFFFF",
         borderRadius: "8px",
-        width: "100%",
-        maxWidth: "370px",
+
         height: "48px",
         borderColor: "#000000",
         borderWidth: "2px",
