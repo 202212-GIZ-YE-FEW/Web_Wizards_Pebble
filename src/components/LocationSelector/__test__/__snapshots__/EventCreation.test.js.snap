@@ -11,6 +11,97 @@ exports[`renders correctly 1`] = `
       className="w-full md:w-1/2 flex flex-col justify-between flex-grow"
     >
       <div
+        className="mb-4 flex   flex-col gap-10 py-3 md:flex-row md:justify-between"
+      >
+        <div>
+          <h2
+            className="py-1 text-xl font-medium  font-rubik text-black"
+            style={
+              Object {
+                "color": "#1A1A1A",
+                "fontSize": 25,
+                "fontWeight": 600,
+              }
+            }
+          >
+            Event Title:
+          </h2>
+          <p
+            className="my-1 pr-20 text-gray-500 md:w-full"
+          >
+            Choose a title that will give people a clear idea of what the event is about. Feel free to be creative! You canedit this later if you change your mind.
+          </p>
+          <div
+            className="max-w-screen-xl mx-auto"
+          >
+            <div
+              className="py-5 md:max-w-96 lg:max-w-128"
+            >
+              <input
+                className="w-full border border-gray-400 rounded-lg py-2 px-4 text-sm font-rubik"
+                id="location"
+                placeholder="Enter your event title here"
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                    "borderColor": "#000000",
+                    "borderRadius": "8px",
+                    "borderWidth": "2px",
+                    "boxShadow": "none",
+                    "boxSizing": "border-box",
+                    "fontFamily": "Rubik",
+                    "fontSize": "14px",
+                    "height": "48px",
+                    "outline": "none",
+                    "padding": "10px",
+                  }
+                }
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="py-3 mb-4 flex flex-col md:flex-row md:justify-between gap-10"
+      >
+        <div
+          className="w-full pr-20"
+        >
+          <h2
+            className="text-xl font-medium py-1 text-black"
+            style={
+              Object {
+                "color": "#1A1A1A",
+                "fontWeight": 600,
+              }
+            }
+          >
+            Event Description:
+          </h2>
+          <p
+            className="my-1 text-gray-500"
+          >
+            Describe the purpose of your event. Who should join and what will you do at the event?
+          </p>
+          <textarea
+            className="w-full h-40 px-3 py-2 rounded border-black shadow focus:border-black focus:outline-none focus:ring-0 focus:ring-black"
+            placeholder="Please write at least 50 characters"
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderColor": "#1A1A1A",
+                "borderRadius": "8px",
+                "borderWidth": "2px",
+                "color": "#1A1A1A",
+                "resize": "none",
+                "width": "920px",
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
         className="mb-3 flex flex-col gap-5 md:flex-row md:justify-between flex-grow"
       >
         <div>
