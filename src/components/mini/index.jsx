@@ -4,7 +4,7 @@ import { Button } from "react-flatifycss";
 export function BorderlessButton(props) {
     const { children } = props;
     return (
-        <Button className='!rounded-none !text-black-100 !bg-transparent !shadow-none after:content-[url("/arrow.svg")] after:mt-[1px] ltr:after:ml-4 after:absolute rtl:after:rotate-180 rtl:after:mr-4'>
+        <Button className='!rounded-none !text-black-100 !bg-transparent !shadow-none !border-none after:content-[url("/arrow.svg")] after:mt-[1px] ltr:after:ml-4 after:absolute rtl:after:rotate-180 rtl:after:mr-4'>
             {children}
         </Button>
     );
@@ -47,7 +47,7 @@ export function RoundedImage(props) {
 export function GetStartedButton(props) {
     const { children } = props;
     return (
-        <Button className='text-white font-medium bg-[#2F7DA9] shadow-none h-[52px] w-[166px] rounded-lg'>
+        <Button className='!text-white !font-medium !bg-[#2F7DA9] !shadow-none h-[52px] w-[166px] !rounded-lg !border-none'>
             {children}
         </Button>
     );

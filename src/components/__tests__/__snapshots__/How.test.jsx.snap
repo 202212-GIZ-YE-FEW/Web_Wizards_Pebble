@@ -50,7 +50,7 @@ exports[`renders correctly 1`] = `
         onTouchStart={[Function]}
       >
         <button
-          className="button__ButtonWrapper-sc-1aw98b4-0 button !rounded-none !text-black-100 !bg-transparent !shadow-none after:content-[url(\\"/arrow.svg\\")] after:mt-[1px] ltr:after:ml-4 after:absolute rtl:after:rotate-180 rtl:after:mr-4"
+          className="button__ButtonWrapper-sc-1aw98b4-0 button !rounded-none !text-black-100 !bg-transparent !shadow-none !border-none after:content-[url(\\"/arrow.svg\\")] after:mt-[1px] ltr:after:ml-4 after:absolute rtl:after:rotate-180 rtl:after:mr-4"
           disabled={false}
         >
           registerButton
@@ -95,7 +95,7 @@ exports[`renders correctly 1`] = `
         onTouchStart={[Function]}
       >
         <button
-          className="button__ButtonWrapper-sc-1aw98b4-0 button !rounded-none !text-black-100 !bg-transparent !shadow-none after:content-[url(\\"/arrow.svg\\")] after:mt-[1px] ltr:after:ml-4 after:absolute rtl:after:rotate-180 rtl:after:mr-4"
+          className="button__ButtonWrapper-sc-1aw98b4-0 button !rounded-none !text-black-100 !bg-transparent !shadow-none !border-none after:content-[url(\\"/arrow.svg\\")] after:mt-[1px] ltr:after:ml-4 after:absolute rtl:after:rotate-180 rtl:after:mr-4"
           disabled={false}
         >
           attendButton
@@ -140,7 +140,7 @@ exports[`renders correctly 1`] = `
         onTouchStart={[Function]}
       >
         <button
-          className="button__ButtonWrapper-sc-1aw98b4-0 button !rounded-none !text-black-100 !bg-transparent !shadow-none after:content-[url(\\"/arrow.svg\\")] after:mt-[1px] ltr:after:ml-4 after:absolute rtl:after:rotate-180 rtl:after:mr-4"
+          className="button__ButtonWrapper-sc-1aw98b4-0 button !rounded-none !text-black-100 !bg-transparent !shadow-none !border-none after:content-[url(\\"/arrow.svg\\")] after:mt-[1px] ltr:after:ml-4 after:absolute rtl:after:rotate-180 rtl:after:mr-4"
           disabled={false}
         >
           organizeButton

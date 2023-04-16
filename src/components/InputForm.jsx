@@ -21,29 +21,33 @@ const InputForm = (props) => {
         type,
         placeholder,
         label,
-        name,
         hasFloatingLabel,
         togglePasswordLabel,
         togglePassword,
         width,
+        id,
+        isRequired = false,
     } = props;
     const InputWidth = width ? `w-${width}` : "w-full";
     const [state, setState] = useState("default");
     return (
         <div className={`px-3 mb-3 ${InputWidth} `}>
             <Input
-                // autoFocus
+                autoFocus
                 hasFloatingLabel={hasFloatingLabel}
                 label={label}
-                name={name}
-                id={togglePassword && "password"}
+                id={id}
                 placeholder={placeholder}
                 type={type}
+                required={isRequired}
                 className='!bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0'
                 togglePassword={togglePassword}
                 togglePasswordLabel={togglePasswordLabel}
                 state={togglePassword ? state : null}
-                pattern={togglePassword ? `${PASSWORD_REGEXP}` : null}
+                // Using slice to remove the first "\" and last "\".
+                pattern={
+                    togglePassword ? `${PASSWORD_REGEXP}`.slice(1, -1) : null
+                }
                 onChange={(password) => {
                     handlePasswordChange(password, setState);
                 }}
