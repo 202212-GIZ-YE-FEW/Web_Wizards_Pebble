@@ -85,7 +85,7 @@ function MobileDropDown(props) {
             </DropdownButton>
             <DropdownBody
                 isMenu
-                className='shadow-[2px_2px_0px_#1A1A1A;] border-2 border-[#1A1A1A] rounded-none'
+                className='shadow-[2px_2px_0px_#1A1A1A] border-2 border-[#1A1A1A] rounded-none'
             >
                 {
                     //TODO: do dynamic languages
@@ -121,7 +121,7 @@ export function Navbar(props) {
                 <div className='hidden md:flex gap-[10px]'>
                     <Link href='/signin'>
                         {" "}
-                        <Button className='w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-white !shadow-[2px_2px_0px_#1A1A1A;] !border-2 !border-[#1A1A1A] !border-solid !text-black-100'>
+                        <Button className='w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-white !shadow-[2px_2px_0px_#1A1A1A] !border-2 !border-[#1A1A1A] !border-solid !text-black-100'>
                             {t("signIn")}
                         </Button>
                     </Link>

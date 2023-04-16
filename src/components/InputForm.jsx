@@ -7,11 +7,10 @@ import { PASSWORD_REGEXP } from "@/util";
  * @param {string} password
  */
 function handlePasswordChange(password, setState) {
-    setState("invalid");
-    // if (!password) {
-    //     setState("default");
-    //     return;
-    // }
+    if (!password) {
+        setState("default");
+        return;
+    }
     const testPassword = PASSWORD_REGEXP.test(password);
     setState(testPassword ? "valid" : "invalid");
 }
@@ -26,6 +25,7 @@ const InputForm = (props) => {
         togglePassword,
         width,
         id,
+        name,
         isRequired = false,
     } = props;
     const InputWidth = width ? `w-${width}` : "w-full";
@@ -37,6 +37,7 @@ const InputForm = (props) => {
                 hasFloatingLabel={hasFloatingLabel}
                 label={label}
                 id={id}
+                name={name}
                 placeholder={placeholder}
                 type={type}
                 required={isRequired}

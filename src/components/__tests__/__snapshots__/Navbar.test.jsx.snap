@@ -35,7 +35,7 @@ exports[`renders correctly 1`] = `
       </button>
       <ul
         aria-labelledby="47b38185-4a78-57"
-        className="dropdown-body__DropdownBodyWrapper-sc-xo3k2p-0 dropdown menu-items-wrapper shadow-[2px_2px_0px_#1A1A1A;] border-2 border-[#1A1A1A] rounded-none"
+        className="dropdown-body__DropdownBodyWrapper-sc-xo3k2p-0 dropdown menu-items-wrapper shadow-[2px_2px_0px_#1A1A1A] border-2 border-[#1A1A1A] rounded-none"
         onClick={[Function]}
         style={
           Object {
@@ -119,7 +119,7 @@ exports[`renders correctly 1`] = `
       >
          
         <button
-          className="button__ButtonWrapper-sc-1aw98b4-0 button w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-white !shadow-[2px_2px_0px_#1A1A1A;] !border-2 !border-[#1A1A1A] !border-solid !text-black-100"
+          className="button__ButtonWrapper-sc-1aw98b4-0 button w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-white !shadow-[2px_2px_0px_#1A1A1A] !border-2 !border-[#1A1A1A] !border-solid !text-black-100"
           disabled={false}
         >
           signIn

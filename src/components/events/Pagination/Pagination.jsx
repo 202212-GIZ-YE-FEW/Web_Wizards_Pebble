@@ -8,7 +8,7 @@ function Button2({ content, onClick, active, disabled, classes }) {
       ${
           active
               ? "bg-[#FDA855] text-white"
-              : "text-black-100 border border-black-100 border-2"
+              : "text-black-100 border-black-100 border-2"
       }
       ${
           !disabled

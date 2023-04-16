@@ -18,10 +18,11 @@ const SignUpForm = ({ t }) => {
 				 * const formData = new FormData(e.target);
         console.log(formData.get("password0"));
 				*/
-        const { value: firstName } = e.target[0];
-        const { value: lastName } = e.target[1];
-        const { value: email } = e.target[2];
-        const { value: password } = e.target[3];
+        const formData = new FormData(e.target);
+        const firstName = formData.get("name");
+        const lastName = formData.get("surname");
+        const email = formData.get("name");
+        const password = formData.get("name");
         try {
             const { user } = await signUp(email, password);
             user.displayName = `${firstName} ${lastName}`;
@@ -41,7 +42,7 @@ const SignUpForm = ({ t }) => {
                             <InputForm
                                 placeholder={t("name")}
                                 label={t("name")}
-                                name='Name'
+                                name='name'
                                 type='text'
                                 hasFloatingLabel
                                 isRequired
@@ -50,7 +51,7 @@ const SignUpForm = ({ t }) => {
                             <InputForm
                                 placeholder={t("surname")}
                                 label={t("surname")}
-                                name='Surname'
+                                name='surname'
                                 type='text'
                                 hasFloatingLabel
                                 isRequired
@@ -69,7 +70,7 @@ const SignUpForm = ({ t }) => {
                         <InputForm
                             placeholder={t("password")}
                             label={t("password")}
-                            name='Password'
+                            name='password'
                             type='password'
                             hasFloatingLabel
                             togglePasswordLabel='Show/Hide password'
