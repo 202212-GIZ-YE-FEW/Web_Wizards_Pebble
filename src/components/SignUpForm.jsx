@@ -21,8 +21,8 @@ const SignUpForm = ({ t }) => {
         const formData = new FormData(e.target);
         const firstName = formData.get("name");
         const lastName = formData.get("surname");
-        const email = formData.get("name");
-        const password = formData.get("name");
+        const email = formData.get("email");
+        const password = formData.get("password");
         try {
             const { user } = await signUp(email, password);
             user.displayName = `${firstName} ${lastName}`;
