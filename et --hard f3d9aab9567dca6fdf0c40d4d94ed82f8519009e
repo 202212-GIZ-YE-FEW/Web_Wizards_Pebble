@@ -1,0 +1,1295 @@
+[33mcommit f3d9aab9567dca6fdf0c40d4d94ed82f8519009e[m[33m ([m[1;36mHEAD -> [m[1;32m22-event-page-add-attendees-component[m[33m)[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Sat Apr 15 06:26:06 2023 +0300
+
+    feat(event view page (single attendees component)): created basecode for Single Attendees
+    
+    Created Single Attendees component that shows the Attendees in the event which is going to be used
+    with other componetns later
+
+[33mcommit e0fd5007613a4ff322f1609ba83d8b523253927a[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/22-event-page-add-attendees-component[m[33m, [m[1;32mdevelop[m[33m)[m
+Merge: a5f4c4e ff159f0
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sat Apr 15 05:41:41 2023 +0300
+
+    Merge pull request #98 from 202212-GIZ-YE-FEW/30-edit-profile-page-add-interests-component
+    
+    30 edit profile page add interests component
+
+[33mcommit ff159f0dda9c74269cd6706333dd01e7d067a33c[m
+Merge: 06bc43d a5f4c4e
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sat Apr 15 05:39:22 2023 +0300
+
+    Merge branch 'develop' into 30-edit-profile-page-add-interests-component
+
+[33mcommit a5f4c4ee3bbfbfe4783e1421e9f59dccb99593de[m
+Merge: a51a765 f784042
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sat Apr 15 04:03:44 2023 +0300
+
+    Merge pull request #97 from 202212-GIZ-YE-FEW/20-event-page-add-event-description-component
+    
+    feat(event view page): created component for event description
+
+[33mcommit f7840421f1d1b179adbf72233dd7f7af502b5b16[m[33m ([m[1;31morigin/20-event-page-add-event-description-component[m[33m)[m
+Merge: 5bdc041 a51a765
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sat Apr 15 04:02:19 2023 +0300
+
+    Merge branch 'develop' into 20-event-page-add-event-description-component
+
+[33mcommit 06bc43d28c8f687c556bcfeddd2e36c2ad1a0f1a[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Fri Apr 14 05:28:43 2023 +0300
+
+    refactor(edit profile page): organize and refactor components on Edit Profile Page
+    
+    organized and refactored the components on Edit Profile Page to improve the overall structure and
+    readability of the code. I have grouped the components of the page together to improv readability of
+    the components structure
+
+[33mcommit b7938292b09d25a7e10bf2d8f380952e9d5bf03d[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Fri Apr 14 05:13:17 2023 +0300
+
+    docs(edit profile page): updated and corrected translation in Edit Profile Page
+    
+    Updated and corrected translation in Edit Profile Page in the Upload image buttons and add new
+    translation for (Your Interests)
+
+[33mcommit 6c2464cba79eb5819a871dd676776a56db1c01bf[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Fri Apr 14 04:59:35 2023 +0300
+
+    feat(edit profile page (interests buttons)): add function to collect clicked interest data
+    
+    Create a function that collects the data of the clicked interests buttons when they are pressed,
+    allowing for the data to be stored and used later in the Firebase
+
+[33mcommit bf83b6ca91b027ad41aba38171f9a5a4ee98f42e[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Fri Apr 14 04:30:33 2023 +0300
+
+    fix(edit profile page (interests buttons)): improve interest button for multiple clicks
+    
+    Improve interest button and add a function to make the effect work when clicking on more than one
+    button
+
+[33mcommit a51a7651df6c71efc572f96b0fb1a4cc008cb6af[m[33m ([m[1;31morigin/100-event-title-component[m[33m)[m
+Merge: 39cda31 34a29f9
+Author: Adeeb Abdulsamad <102668476+Adeeb2022@users.noreply.github.com>
+Date:   Thu Apr 13 15:27:55 2023 +0300
+
+    Merge pull request #87 from 202212-GIZ-YE-FEW/4-about-page-add-about-pebble-section
+    
+    4 about page add about pebble section
+
+[33mcommit 5bdc04130ccb03599784dd064466019cd24f1ccb[m[33m ([m[1;32m20-event-page-add-event-description-component[m[33m)[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Thu Apr 13 02:33:11 2023 +0300
+
+    feat(event view page): created component for event description
+    
+    Created component for Event Description and make it responsive for all devices
+
+[33mcommit 39cda313ab49a0319e88c4f5c7197da6c40d816c[m
+Merge: 1b93b51 c50f002
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Wed Apr 12 23:50:02 2023 +0300
+
+    Merge pull request #90 from 202212-GIZ-YE-FEW/21-event-page-add-header-1
+    
+    feat(event view page): created the components needed to view details of event
+
+[33mcommit c50f0024564c3075a41ee961e0eb656b6fd804de[m[33m ([m[1;31morigin/21-event-page-add-header-1[m[33m)[m
+Merge: 61236e6 1b93b51
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Wed Apr 12 23:47:47 2023 +0300
+
+    Merge branch 'develop' into 21-event-page-add-header-1
+
+[33mcommit 1b93b510348cd2dcac604443136a61f68603503e[m
+Merge: 44f7568 29f4cae
+Author: Azzam Fahd <a.sulmi24@gmail.com>
+Date:   Wed Apr 12 21:55:21 2023 +0200
+
+    Merge pull request #89 from 202212-GIZ-YE-FEW/38-event-creation-add-event-title-component
+    
+    38 event creation add event title component
+
+[33mcommit 34a29f91b824d19aba7703d21d36595683c6fb0d[m[33m ([m[1;31morigin/4-about-page-add-about-pebble-section[m[33m)[m
+Author: Adeeb2022 <adeebsamad01@gmail.com>
+Date:   Wed Apr 12 20:21:06 2023 +0300
+
+    fix(about page): fixes some bugs
+
+[33mcommit 61236e61bab1ab234e1f0dd0e6d1253e01072561[m[33m ([m[1;32m21-event-page-add-header-1[m[33m)[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Wed Apr 12 17:30:25 2023 +0300
+
+    feat(event view page): created the components needed to view the Image and details of the event
+    
+    The components will display the details of the event, such as the image, title, location, date,
+    organizer, and attendees and  the join b buttonn
+
+[33mcommit 29f4caef867c43448b7a2e9e36d791e78511ddb6[m[33m ([m[1;31morigin/38-event-creation-add-event-title-component[m[33m)[m
+Author: a.sulmi24 <a.sulmi24@gmail.com>
+Date:   Wed Apr 12 14:35:56 2023 +0200
+
+    fix(fix test files): fix the location test
+
+[33mcommit edc5729af062f81057aa47c5413eaf6459f65e98[m
+Author: a.sulmi24 <a.sulmi24@gmail.com>
+Date:   Wed Apr 12 14:26:13 2023 +0200
+
+    fix(about prettier): fix the format and prettier issue test
+
+[33mcommit 52868261712b56d45d265825d821792dca8b484c[m
+Author: a.sulmi24 <a.sulmi24@gmail.com>
+Date:   Wed Apr 12 14:14:44 2023 +0200
+
+    fix(create page): remove the t prop
+    
+    #36
+
+[33mcommit bfc8ef213efbb2be755efcf1f04105e425c2c8b8[m
+Author: a.sulmi24 <a.sulmi24@gmail.com>
+Date:   Wed Apr 12 13:50:17 2023 +0200
+
+    feat(agree terms button): add styling to "Agree with terms and Create Event" button
+    
+    Add styling to "Agree with terms and Create Event" button in EventCreation component.
+    
+    #36
+
+[33mcommit 133c388b4174f8724e35634d30c6301294073480[m
+Author: a.sulmi24 <a.sulmi24@gmail.com>
+Date:   Wed Apr 12 13:33:37 2023 +0200
+
+    test(eventcreation test): add EventCreation component test cases
+    
+    #38
+
+[33mcommit b94558f457028a6dcee047341b71fa5c5c349fb9[m
+Author: a.sulmi24 <a.sulmi24@gmail.com>
+Date:   Wed Apr 12 13:28:51 2023 +0200
+
+    feat(guidelines in event creation): add guidelines title and description to EventCreation component
+    
+    #36
+
+[33mcommit 1859b6e5435a963291bcc376e6ded9d3d57c4486[m
+Author: Adeeb2022 <adeebsamad01@gmail.com>
+Date:   Wed Apr 12 02:31:05 2023 +0300
+
+    fix(about page): add team & teh  sections
+
+[33mcommit cc17e899998a54ab41c337be26e9853e13b2f492[m
+Author: a.sulmi24 <a.sulmi24@gmail.com>
+Date:   Wed Apr 12 00:41:20 2023 +0200
+
+    chore(location selector json file): add Arabic and English translation for "CreateEventInfo" in JSON
+    
+    The translation includes the "EventTitle" and "EventDescription" properties. This addition will
+    help support Arabic-speaking users by providing them with a localized version of the
+    "CreateEventInfo" section.
+    
+    #38
+
+[33mcommit 2a5b62cfe327769b0148c95e21ddc7db96f15ea2[m
+Merge: a252f42 57316fb
+Author: Adeeb2022 <adeebsamad01@gmail.com>
+Date:   Tue Apr 11 23:52:50 2023 +0300
+
+    Merge branch '4-about-page-add-about-pebble-section' of github.com:202212-GIZ-YE-FEW/team-5 into 4-about-page-add-about-pebble-section
+
+[33mcommit a252f42e4616aa71d3dbef71568f5ee2540688ef[m
+Author: Adeeb2022 <adeebsamad01@gmail.com>
+Date:   Tue Apr 11 21:43:25 2023 +0300
+
+    feat(about page): add team & tech sections
+
+[33mcommit 39b92ae97bc24e6be6be4f7d5c1b900522271c2e[m
+Author: Adeeb2022 <adeebsamad01@gmail.com>
+Date:   Tue Apr 11 20:11:06 2023 +0300
+
+    feat(apout page): add team & tech sections
+
+[33mcommit 44f75681d1e6af6eae3bf5344b40aab963b0a65a[m[33m ([m[1;31morigin/36-event-creation-add-event-creation-guidelines[m[33m, [m[1;31morigin/21-event-page-add-header[m[33m)[m
+Merge: f0bd493 57316fb
+Author: Adeeb Abdulsamad <102668476+Adeeb2022@users.noreply.github.com>
+Date:   Tue Apr 11 16:23:49 2023 +0300
+
+    Merge pull request #63 from 202212-GIZ-YE-FEW/4-about-page-add-about-pebble-section
+    
+    feat: add about pebble section
+
+[33mcommit 57316fb4f209364d0b42a09d4f1accaec8bc6555[m
+Merge: 166517c f0bd493
+Author: Adeeb Abdulsamad <102668476+Adeeb2022@users.noreply.github.com>
+Date:   Tue Apr 11 16:23:07 2023 +0300
+
+    Merge branch 'develop' into 4-about-page-add-about-pebble-section
+
+[33mcommit f0bd4932eb33c4c6d839ab4511a2ae935d501deb[m
+Merge: 93894d3 d6126fb
+Author: Adeeb Abdulsamad <102668476+Adeeb2022@users.noreply.github.com>
+Date:   Tue Apr 11 16:11:33 2023 +0300
+
+    Merge pull request #62 from 202212-GIZ-YE-FEW/2-about-page-add-header-image
+    
+    feat(about-page): add header image
+
+[33mcommit 93894d3ebee7c04b8b4ab6379fbbf7a3c6900e08[m
+Merge: 52f4e39 381cf72
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Tue Apr 11 04:29:37 2023 +0300
+
+    Merge pull request #61 from 202212-GIZ-YE-FEW/events-page
+    
+    Events page
+
+[33mcommit 381cf72fd6eae8857e143cfed85f7ab0741351bb[m[33m ([m[1;31morigin/events-page[m[33m)[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Tue Apr 11 04:26:29 2023 +0300
+
+    feat: events page translation
+
+[33mcommit 9af15e81a44a4d3006388466d1eebbb8d41e7c34[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Tue Apr 11 03:15:58 2023 +0300
+
+    fix: format json files with prettier
+
+[33mcommit 97795df0246600d9ea670220a02f6419976c2486[m
+Merge: 2454d97 52f4e39
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Tue Apr 11 03:11:47 2023 +0300
+
+    Merge branch 'develop' of https://github.com/202212-GIZ-YE-FEW/team-5 into events-page
+
+[33mcommit 2454d97ea737f43d97ccae22d7d2dbecb64529f8[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Tue Apr 11 03:06:30 2023 +0300
+
+    fix: format css/scss/js/jsx files with prettier
+
+[33mcommit 52f4e39301527956ff345e8fcae3fa9719abfed5[m
+Merge: 9085647 3666948
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Tue Apr 11 01:13:12 2023 +0300
+
+    Merge pull request #66 from 202212-GIZ-YE-FEW/feature/firebase-configuration
+    
+    Feature/firebase configuration
+
+[33mcommit d6126fbab291e0d803d2d353ef0a8509f92cdb6e[m[33m ([m[1;31morigin/2-about-page-add-header-image[m[33m)[m
+Merge: 0d3c8d1 9085647
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Mon Apr 10 19:39:35 2023 +0300
+
+    Merge branch 'develop' into 2-about-page-add-header-image
+
+[33mcommit 166517c55ec9618ee8a40bb85290444d0891715e[m
+Merge: 73b00ef 9085647
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Mon Apr 10 19:39:12 2023 +0300
+
+    Merge branch 'develop' into 4-about-page-add-about-pebble-section
+
+[33mcommit 3666948d69ce09e78ee97c5fa5412a8425b9c456[m[33m ([m[1;31morigin/feature/firebase-configuration[m[33m)[m
+Author: a.sulmi24 <a.sulmi24@gmail.com>
+Date:   Mon Apr 10 04:03:17 2023 +0200
+
+    feat(set up firestore and rules): added Firebase and set up Firestore for the app
+    
+    implementation of a custom hook for using Firestore in a React application. It includes functions
+    for adding, updating, and deleting documents, as well as fetching a document by its ID.
+    
+    #65
+
+[33mcommit b85487160db71c8312b065424142c519aa674df6[m
+Author: a.sulmi24 <a.sulmi24@gmail.com>
+Date:   Mon Apr 10 03:56:49 2023 +0200
+
+    feat(firebase configaration): feat: Update Firebase configuration for project web-wizards-pebble
+    
+    #65
+
+[33mcommit 9085647095963280ca312f328158525c29aa1436[m
+Merge: f1d48ee 277c396
+Author: Azzam Fahd <a.sulmi24@gmail.com>
+Date:   Mon Apr 10 01:57:23 2023 +0200
+
+    Merge pull request #64 from 202212-GIZ-YE-FEW/33-event-creation-add-header-component
+    
+    33 event creation add header component
+
+[33mcommit 277c3961310ffc7561d4ddf482238c0436f5ae73[m[33m ([m[1;31morigin/33-event-creation-add-header-component[m[33m)[m
+Author: a.sulmi24 <a.sulmi24@gmail.com>
+Date:   Sun Apr 9 23:27:53 2023 +0200
+
+    feat(event create): create event page to call the event page creation function to Event Location
+    
+    #33
+
+[33mcommit 86c22b66b96cddd247ac92e31f4f1774e1caf0c9[m
+Author: a.sulmi24 <a.sulmi24@gmail.com>
+Date:   Sun Apr 9 23:23:08 2023 +0200
+
+    feat(locationselector): add locationSelector component for creating event location
+    
+    #33
+
+[33mcommit 086d8ef074db71c10db2f872ef1de48e13af652b[m
+Author: a.sulmi24 <a.sulmi24@gmail.com>
+Date:   Sun Apr 9 23:04:26 2023 +0200
+
+    test(locationinput): add test for location input Location
+    
+    #33
+
+[33mcommit 957a898748f6a6e0f764df7694967d8781df8433[m
+Author: a.sulmi24 <a.sulmi24@gmail.com>
+Date:   Sun Apr 9 22:55:41 2023 +0200
+
+    feat(locationinput): building a new feat for location input
+    
+    #33
+
+[33mcommit 73b00efcd6da3f22157d5ae422a6808ceeaaf4d6[m
+Author: Adeeb2022 <adeebsamad01@gmail.com>
+Date:   Sun Apr 9 21:17:29 2023 +0300
+
+    feat: add about pebble section
+    
+    Add the about pebble work section with its description
+
+[33mcommit f1d48ee3791c885a28b8184a95d0a50bcb280df8[m
+Merge: 40717e8 77ba9ad
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 19:56:05 2023 +0300
+
+    Merge pull request #58 from 202212-GIZ-YE-FEW/5-landing-page-add-ending-get-started-section
+    
+    feat(landing): add `ending` section
+
+[33mcommit 77ba9ad4444e536ee91d5d9015015595673fe5c7[m[33m ([m[1;31morigin/5-landing-page-add-ending-get-started-section[m[33m)[m
+Merge: bcc0a90 40717e8
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 19:54:10 2023 +0300
+
+    Merge branch 'develop' into 5-landing-page-add-ending-get-started-section
+
+[33mcommit 40717e858fa2710acfd1734b9f021c7f17cb467b[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 19:30:42 2023 +0300
+
+    test(prettier): pass test
+
+[33mcommit 6f12a64dcdc5723e0db967218590f22a4685c2c0[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 06:35:05 2023 +0300
+
+    feat(landing): add `ending` section
+
+[33mcommit c4238e2f2f74a58dcf88c41dd1380e89b9e86acc[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 06:31:22 2023 +0300
+
+    fix(test): move `SingleInterest` to correct path
+
+[33mcommit 572fd6176d1c476415a7792eb6dcac106d068890[m
+Merge: d4eb974 d353dbc
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 19:20:40 2023 +0300
+
+    Merge pull request #56 from 202212-GIZ-YE-FEW/7-landing-page-add-image-grid-section
+    
+    feat(landing): add `gallery` section
+
+[33mcommit d353dbcf4958c6b04368560bcd4754b57d2145a7[m
+Merge: 1692bf6 739c0b4
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 19:18:29 2023 +0300
+
+    Merge branch '7-landing-page-add-image-grid-section' of https://github.com/202212-GIZ-YE-FEW/team-5 into 7-landing-page-add-image-grid-section
+
+[33mcommit 1692bf660cc245c4a90e3913adac4eaed8f0be67[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 04:44:48 2023 +0300
+
+    feat(landing): add `gallery` section
+
+[33mcommit 0d3c8d1c16e9fa5849e1e548b5b4a71b821ee1a8[m
+Author: Adeeb2022 <adeebsamad01@gmail.com>
+Date:   Sun Apr 9 18:45:46 2023 +0300
+
+    feat(about-page): add header image
+    
+    Add the header image for the about us page.
+
+[33mcommit d4eb974e35cf0ed40e5e049083d204047d311af7[m
+Merge: 1aaa74b 0a34323
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sun Apr 9 16:16:59 2023 +0300
+
+    Merge pull request #57 from 202212-GIZ-YE-FEW/28-edit-profile-page-add-change-password-component
+    
+    feat(edit profile page): created component for designing the change password
+
+[33mcommit c7010702f8536eab5d29cc0214e95dce6ff4fb40[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sun Apr 9 08:13:30 2023 +0300
+
+    fix: assign locations filter to change interests data on mobile screen
+
+[33mcommit 35729029ef30f6f818e36cc94d8f3a618c2924c0[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sun Apr 9 08:04:30 2023 +0300
+
+    fix: reformatted tailwind.config.js to check prettier in pull request approval
+
+[33mcommit 3fba51d00587d58f247fef30a0c77f77e20a25c9[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sun Apr 9 08:02:06 2023 +0300
+
+    fix: events.json en to check prettier in pull request approval
+
+[33mcommit 30e00200a0c8a98d50e98a76a271deb15d9d1a5c[m
+Merge: b929ab0 1aaa74b
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sun Apr 9 07:53:16 2023 +0300
+
+    Merge branch 'develop' of https://github.com/202212-GIZ-YE-FEW/team-5 into events-page
+
+[33mcommit b929ab02e2ff0020118ffc314fa02486323c499d[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sun Apr 9 07:51:12 2023 +0300
+
+    feat: locations filter on mobile screen
+
+[33mcommit 834a509f92334cdd8a9abe28e1ba5e45a7a3c0f4[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sun Apr 9 07:40:15 2023 +0300
+
+    feat: interests filter on mobile screen
+
+[33mcommit bcc0a906e31575b8f62846cecf759e83d6185f8f[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 06:41:42 2023 +0300
+
+    test(prettier): pass test
+
+[33mcommit 6dd8300b9811df4e4892b80e3ee96a24c57f72bc[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 06:35:05 2023 +0300
+
+    feat(landing): add `ending` section
+
+[33mcommit d65837e3fcf580504c762d58660a2981eac6924f[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 06:31:22 2023 +0300
+
+    fix(test): move `SingleInterest` to correct path
+
+[33mcommit 5181483a697cdbc54475c5f2a2ac8c7dc5b99895[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sun Apr 9 06:25:02 2023 +0300
+
+    feat: date filter on mobile screen
+
+[33mcommit 739c0b468f2baa0fa7f361b79760ca65b4ccd5f7[m
+Merge: 1aaa74b 6a1005f
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 05:19:17 2023 +0300
+
+    feat(landing): add `gallery` section
+
+[33mcommit 0a343234cca3028933c6bd6614ad3237ab2a82e1[m[33m ([m[1;31morigin/28-edit-profile-page-add-change-password-component[m[33m, [m[1;32m28-edit-profile-page-add-change-password-component[m[33m)[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Sun Apr 9 04:59:29 2023 +0300
+
+    feat(edit profile page): created component for designing the change password form
+    
+    I've created component for designing the change password form with buttons and make it responsive
+    and easy to use on different screen sizes. and supports both Arabic and English languages.
+
+[33mcommit 6a1005f9575741d7be902e7ee1b9d278e0363d27[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 04:44:48 2023 +0300
+
+    feat(landing): add `gallery` section
+
+[33mcommit 3f7d6115679659a61f1119720d1121b9a33a4a87[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sun Apr 9 03:51:12 2023 +0300
+
+    fix: some of events list page styles
+
+[33mcommit 6b0c1d84b10e18818e8dbfb4110cc9a22f20b634[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sun Apr 9 03:48:24 2023 +0300
+
+    fix: some of events list page styles
+
+[33mcommit e9c8eff8df6225c0deb3410e8019cbc4d8b64a80[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sun Apr 9 03:17:09 2023 +0300
+
+    feat: pagination
+
+[33mcommit 40570788337306a9b1b0162c428a19f4277b60b1[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sun Apr 9 00:53:44 2023 +0300
+
+    feat: event card, events list
+
+[33mcommit 1aaa74bebd4bd88bd3e6edeeb49ed21e37032144[m
+Merge: 0ca4e37 7112210
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 9 00:23:36 2023 +0300
+
+    feat(landing): add `volunteers` section (#55)
+    
+    feat(landing): add `volunteers` section
+
+[33mcommit 71122101f8be9fabd297bd42199023dd4dd12a13[m[33m ([m[1;31morigin/6-landing-page-add-volunteers-section[m[33m)[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 8 20:06:53 2023 +0300
+
+    feat(landing): add `volunteers` section
+
+[33mcommit 0ca4e37b4ce0dd0d1002d91882ab3ef461c13d76[m[33m ([m[1;31morigin/34-feat/event-choose-type-component[m[33m)[m
+Merge: f17bf19 362d708
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sat Apr 8 22:01:54 2023 +0300
+
+    Merge pull request #54 from 202212-GIZ-YE-FEW/27-edit-profile-page-add-save-button
+    
+    feat(edit profile page): added Save button component
+
+[33mcommit 362d708ed7890b969b97468ee016f37bde454194[m[33m ([m[1;31morigin/27-edit-profile-page-add-save-button[m[33m)[m
+Merge: 1e62ef6 f17bf19
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sat Apr 8 21:57:40 2023 +0300
+
+    Merge branch 'develop' into 27-edit-profile-page-add-save-button
+
+[33mcommit f17bf192271231b73772e17db95c9c13b40c7784[m[33m ([m[1;31morigin/7-landing-page-add-image-grid-section[m[33m, [m[1;32m7-landing-page-add-image-grid-section[m[33m)[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 8 20:19:08 2023 +0300
+
+    ci(assigner): add missing reviewer
+
+[33mcommit 1e62ef66e0ec2fb0ae6ff9ca5c7e73eb70d0a1a1[m[33m ([m[1;32m27-edit-profile-page-add-save-button[m[33m)[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Sat Apr 8 18:59:17 2023 +0300
+
+    feat(edit profile page): added Save button component
+    
+    Reused Save button designed component to the interests of editprofile page
+
+[33mcommit 81f4b853eaf308e7b6dc560ea4f14a0486411f1d[m
+Merge: d4b8366 afea68b
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sat Apr 8 18:35:16 2023 +0300
+
+    Merge pull request #53 from 202212-GIZ-YE-FEW/30-edit-profile-page-add-interests-component
+    
+    feat(edit profile page): created Interests components
+
+[33mcommit afea68bf227ddc8db1a34a034234b222dfdf0d91[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Sat Apr 8 06:20:36 2023 +0300
+
+    revert(edit profile page): created Interests components
+    
+    Create Interests buttons designed component and make it responsive and easy to use on different
+    screen sizes. and supports both Arabic and English languages.
+
+[33mcommit d4b83663be4d1de71e4922c44a23aea6fc5145cb[m
+Merge: e0cb98f d6831d6
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sat Apr 8 04:29:25 2023 +0300
+
+    Merge pull request #52 from 202212-GIZ-YE-FEW/29-edit-profile-page-add-user-fields-components
+    
+    feat(edit profile page): created Edit profile user fileds (Name, Location)
+
+[33mcommit 8ee93f839be6606f7228ab62982e3ee125851e46[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sat Apr 8 04:27:45 2023 +0300
+
+    feat: static side filter section
+
+[33mcommit d6831d6cf76cb82314842284c1a6dc359467ac30[m[33m ([m[1;31morigin/29-edit-profile-page-add-user-fields-components[m[33m)[m
+Merge: db6a233 e0cb98f
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sat Apr 8 04:27:27 2023 +0300
+
+    Merge branch 'develop' into 29-edit-profile-page-add-user-fields-components
+
+[33mcommit e0cb98fc59de703307cd8adf48d43ad3b8aed8f9[m
+Merge: 44bdae1 bbe0af3
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sat Apr 8 04:26:34 2023 +0300
+
+    Merge pull request #51 from 202212-GIZ-YE-FEW/8-landing-page-add-sustainable-development-goals-section
+    
+    feat(landing): add `sustainable development goals` section
+
+[33mcommit bbe0af334a92d7495383722305307ef17f83b03b[m[33m ([m[1;31morigin/8-landing-page-add-sustainable-development-goals-section[m[33m)[m
+Merge: 9a59617 44bdae1
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sat Apr 8 04:22:50 2023 +0300
+
+    Merge branch 'develop' into 8-landing-page-add-sustainable-development-goals-section
+
+[33mcommit 290e06e2477ebfd4e0b6c85da10e8da9cbc6b813[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sat Apr 8 01:51:40 2023 +0300
+
+    feat: static calendar filter
+
+[33mcommit 9a596172e64fece4f690b78cb402656f7cb53258[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 8 01:26:39 2023 +0300
+
+    refactor(landing): get images from `getImages()`
+
+[33mcommit e91110f641e660799ee137a03a7024b36b4f5774[m
+Merge: eb4c559 44bdae1
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Fri Apr 7 22:33:23 2023 +0300
+
+    Merge branch 'develop' into events-page
+
+[33mcommit db6a23382b9effd84884c045848334dfe949a613[m[33m ([m[1;32m29-edit-profile-page-add-user-fields-components[m[33m)[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Fri Apr 7 22:31:36 2023 +0300
+
+    feat(edit profile page): created Edit profile user fileds (Name, Location)
+    
+    Create Edit profile user data ( Name, Location ) fileds component and make it responsive and easy to
+    use on different screen sizes. and supports both Arabic and English languages.
+
+[33mcommit 44bdae1e2fa8cd694e7524060ee7644a71bc7b6d[m
+Merge: 2304a95 fabce0c
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Fri Apr 7 21:27:01 2023 +0300
+
+    Merge pull request #50 from 202212-GIZ-YE-FEW/25-edit-profile-page-add-image-and-change-image-component
+    
+    feat(created edit profile page components): designed profile image with buttons
+
+[33mcommit d0107dd33811fdc9cd9c942c7206cb4ce99dd14b[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Fri Apr 7 18:28:03 2023 +0300
+
+    feat(landing): add `goals` section
+
+[33mcommit 8eb647d1779a38e04314fbf13a4ee3255a23c1bd[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Fri Apr 7 18:23:24 2023 +0300
+
+    style(layout): overwrite with tailwind utilities
+
+[33mcommit 6b48a10889dfef1dbaff75e9e3bf1b2a910ffcd9[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Fri Apr 7 18:09:02 2023 +0300
+
+    refactor: move description to a mini component
+
+[33mcommit f11a8e5fd168496c5b18b1ed637864ab6678c1de[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Fri Apr 7 18:00:11 2023 +0300
+
+    style(tailwind): more padding to container
+
+[33mcommit fabce0c63426d4a58a583bf539d3d01f54ba1e91[m[33m ([m[1;31morigin/25-edit-profile-page-add-image-and-change-image-component[m[33m, [m[1;32m25-edit-profile-page-add-image-and-change-image-component[m[33m)[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Fri Apr 7 15:48:08 2023 +0300
+
+    feat(created edit profile page components): designed components for users profile image with buttons
+    
+    I created designed components for the Edit Profile page that allow users to change their profile
+    image using buttons.
+
+[33mcommit 2304a95e24dffbc14ed7099039db243189c8d7f3[m
+Merge: 95cbbbe edbf940
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Fri Apr 7 14:17:56 2023 +0300
+
+    Merge pull request #49 from 202212-GIZ-YE-FEW/17-sign-in-add-sign-in-fields-component
+    
+    feat(created sign in page): Create sign in filed component and gathers all the necessary components for sign-in page
+
+[33mcommit edbf9406ce8336b3058f2c86a0c20fd90c0090e0[m[33m ([m[1;31morigin/17-sign-in-add-sign-in-fields-component[m[33m)[m
+Merge: 7d30d99 95cbbbe
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Fri Apr 7 13:45:00 2023 +0300
+
+    Merge branch 'develop' into 17-sign-in-add-sign-in-fields-component
+
+[33mcommit 95cbbbe0068d7fab6047ab7b83c292478a44b582[m
+Merge: cd982ec 2155675
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Thu Apr 6 16:58:19 2023 +0300
+
+    chore: better setup (#47)
+
+[33mcommit 2155675c2bd9aeba5548c13bf58ef3edbedff552[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Thu Apr 6 16:55:33 2023 +0300
+
+    vercel: remove `important` in tailwind config
+
+[33mcommit eec3cc4a7115f27dbf91b8138ab081538a77c8f8[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Thu Apr 6 16:42:32 2023 +0300
+
+    style(tailwind): add `important` overriding config
+
+[33mcommit a6d88dee0db6e2ca9c4b2a3ad765b22900398fb5[m
+Merge: 7e8bf10 343ae47
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Thu Apr 6 16:30:12 2023 +0300
+
+    Merge branch 'chore/better-setup' of https://github.com/202212-GIZ-YE-FEW/team-5 into chore/better-setup
+
+[33mcommit 343ae47fd69335fdeeea57ef3bf3f3f6bc3b518a[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 05:07:28 2023 +0300
+
+    test(prettier): pass tests
+
+[33mcommit 856b9fd09afcc1adfe43a37ab8bdd469cf401cb6[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 05:03:45 2023 +0300
+
+    chore(github): modifiy pull request template
+
+[33mcommit 691d8ea7789bc5cd5be8a905971afc718e75ca5a[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 04:49:28 2023 +0300
+
+    perf: delete unneeded images
+
+[33mcommit f82ab48b796917493424fee3e048b9340c16d6b5[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 04:40:39 2023 +0300
+
+    chore: add favicon
+
+[33mcommit 43f46add8cbc8c74cb4ea86aa4ecde5da76660d4[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 04:21:59 2023 +0300
+
+    chore: setup next-sitemap config
+
+[33mcommit 675e4dc236123b04b8361dd0262511d0caaff165[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 04:10:14 2023 +0300
+
+    chore: add pull request template
+
+[33mcommit 9e44de56c9772c18f4cc355689c603c763ed3ce1[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 03:45:03 2023 +0300
+
+    ci: automate pull requests assigning
+
+[33mcommit 7d30d996f02e2ade0615317fc02fa021eb26d3b2[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Thu Apr 6 07:29:39 2023 +0300
+
+    feat(created sign in page): dsf
+
+[33mcommit cd982ec2fe5e8d2857e98e24ffe4cdfeb0776320[m
+Merge: f99e690 3154957
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Thu Apr 6 01:40:29 2023 +0300
+
+    Merge pull request #48 from 202212-GIZ-YE-FEW/16-sign-up-add-sign-up-fields-components
+    
+    feat(sign up page): created all components for sign up page
+
+[33mcommit 3154957e412ca5d2791431a2e2fca1e41cf605da[m[33m ([m[1;31morigin/16-sign-up-add-sign-up-fields-components[m[33m)[m
+Merge: 1d803db f99e690
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Thu Apr 6 00:57:35 2023 +0300
+
+    Merge branch 'develop' into 16-sign-up-add-sign-up-fields-components
+
+[33mcommit 1d803dbad7c544eb4949e2a83c711f063073658e[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Wed Apr 5 19:13:00 2023 +0300
+
+    feat(sign up page): created all components for sign up page
+
+[33mcommit 0258f34f5f28c81ca79420073992aeba729ea7cc[m
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Wed Apr 5 18:43:27 2023 +0300
+
+    Update ButtonAuth.jsx
+
+[33mcommit 4eab3f63bec249f7faca0e178edd48ef2cf80243[m
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Wed Apr 5 18:24:50 2023 +0300
+
+    Update package.json
+
+[33mcommit f99e690e9362d8769b36e29cc3d0c1d281151b81[m
+Merge: 097e750 29a1a1b
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 17:08:37 2023 +0300
+
+    feat(landing): add how it works section (#46)
+
+[33mcommit 1d186d51cdf27d51edb3ab9bcb3cbca1fe97704b[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Wed Apr 5 16:25:17 2023 +0300
+
+    feat(sign up page): created all components for sign up page
+    
+    Created all components for sign up page and make it responsive for all devices and adding
+    translation for 2 languages (AR, EN)
+
+[33mcommit 7e8bf102814921275adea019fcf1e900a4454ba9[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 05:07:28 2023 +0300
+
+    test(prettier): pass tests
+
+[33mcommit 2a5bf997d2bf9cc43365bf234058b1cb9fbf92f0[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 05:03:45 2023 +0300
+
+    chore(github): modifiy pull request template
+
+[33mcommit f36bafc48184221adfaa50c8f04d418ca67db7ef[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 04:49:28 2023 +0300
+
+    perf: delete unneeded images
+
+[33mcommit 5e9e8e9d58ca832ad4241397b969707a5f19d644[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 04:40:39 2023 +0300
+
+    chore: add favicon
+
+[33mcommit 92e9071f329e08866c7799d95dc38fd7cee8bfc7[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 04:21:59 2023 +0300
+
+    chore: setup next-sitemap config
+
+[33mcommit 74b2df5139a472b2906ec3be833bf5e693ee09ea[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 04:10:14 2023 +0300
+
+    chore: add pull request template
+
+[33mcommit 6e58fa3f70270d8a9c3a56051553783d93393336[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 03:45:03 2023 +0300
+
+    ci: automate pull requests assigning
+
+[33mcommit 29a1a1b6dae59a4bf58a7fc2408b054fb56139b2[m[33m ([m[1;31morigin/9-landing-page-add-how-it-works-section[m[33m)[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 03:16:24 2023 +0300
+
+    style: override 'pointer-arrow' with important
+
+[33mcommit 08dfc761d7ea663053b25d6d641150d54f79a8cf[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 03:08:03 2023 +0300
+
+    style: use important in utlity classes
+
+[33mcommit 69b04f1efa490b4404a87034daa81cad88cd13a1[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 03:06:48 2023 +0300
+
+    test(landing): add 'how it works' section test
+
+[33mcommit 594e858a8a98c14cca2c832cc0138cd22649ffe7[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 03:04:42 2023 +0300
+
+    refactor(i18n): use translation in missed places
+
+[33mcommit 344c56861d617313696d83ae753ff991df432d45[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 02:59:01 2023 +0300
+
+    feat(landing): add 'how it works' section
+
+[33mcommit 546ce9aa88058680c82ffc5e88a366431ce778ec[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Apr 5 02:54:05 2023 +0300
+
+    refactor(styles): reconfigure utilites classes
+
+[33mcommit d49d23c90d14b8e87042972ede1fef53f7f97474[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Tue Apr 4 18:12:27 2023 +0300
+
+    refactor(styles): reconfigure tailwind container
+
+[33mcommit 097e750efe1cb4b69f48d123764430ffdc8fe733[m
+Merge: 5852b4e fce7272
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Tue Apr 4 15:54:03 2023 +0300
+
+    feat(landing): add hero section (#45)
+    
+    feat(landing): add hero section
+
+[33mcommit fce7272cfe6275022867be8c5d6d9f65f5bcb503[m
+Merge: 9e2ec8b 5852b4e
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Tue Apr 4 15:52:24 2023 +0300
+
+    Merge branch 'develop' into 10-landing-page-add-landing-hero-section
+
+[33mcommit 9e2ec8b17af5d554236ef49a39363b2edbdf4559[m
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Mon Apr 3 05:46:38 2023 +0300
+
+    style(tailwind): remove important
+
+[33mcommit 434c5b28ad06d07f778f82565d70a754af4964b7[m
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Mon Apr 3 05:39:39 2023 +0300
+
+    style(global): use default method to override flatify
+
+[33mcommit 1cac1c3e29af52497d9bf08118f9cb96c955235f[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Apr 3 05:17:30 2023 +0300
+
+    style(tailwind): override flatify with important
+
+[33mcommit b56d7944c0ef1135a842d3f3390f4ae0c34a745f[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Apr 3 04:47:35 2023 +0300
+
+    feat(505): add page to avoid vercel error
+
+[33mcommit 6ba6802e62bceab798cacb7ace5c7c477f1399a2[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Apr 3 04:32:50 2023 +0300
+
+    fix(i18n): correct 'localePath' config scope
+
+[33mcommit e4b0e0b72ed519aa18efe03cc6e7d0933c7f4240[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Apr 3 04:23:35 2023 +0300
+
+    fix(formatting): pretify tailwind config
+
+[33mcommit 5852b4e4dfa1a7c9cdbc962ce64eb277d2ef3dd2[m
+Merge: 6c2f4c1 e24324a
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Mon Apr 3 04:07:40 2023 +0300
+
+    Merge pull request #44 from 202212-GIZ-YE-FEW/origin/18-sign-inup-page-support-twitter-and-google-auth
+    
+    Feature: created buttons component and OR divider
+
+[33mcommit e24324ad8b78b28892483bcb8fc1d89adfe8a181[m[33m ([m[1;31morigin/origin/18-sign-inup-page-support-twitter-and-google-auth[m[33m)[m
+Merge: a1e8e0e 6c2f4c1
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Mon Apr 3 04:06:00 2023 +0300
+
+    Merge branch 'develop' into origin/18-sign-inup-page-support-twitter-and-google-auth
+
+[33mcommit c5e20b94ab8b3953484d6c843084ec30bf3e6890[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Apr 3 04:03:09 2023 +0300
+
+    fix(404): remove uneeded t function
+
+[33mcommit 41840572d17b1d98da037d6509acf0aab3ed5d4c[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Apr 3 03:54:38 2023 +0300
+
+    vercel(i18n): add locales path
+
+[33mcommit cfdf684ad45f4524fe6bd8b1300c1bebb77803e5[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Apr 3 03:41:02 2023 +0300
+
+    feat(landing): add 'hero' section
+
+[33mcommit 1dbb34bf8e0dc0a96a8e68ce20ed4af13e40c5cb[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Apr 3 03:38:49 2023 +0300
+
+    fix(layout): adjust text color in footer
+
+[33mcommit ca35f483bbe7659c3c4a1c12984782b3bdf0e9a4[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Apr 3 03:34:53 2023 +0300
+
+    refactor(layout): use withTranslation avoids props
+
+[33mcommit 6c6fda9b54f77a7a22f4dccafab6fe1c2be5fe29[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Apr 3 02:36:41 2023 +0300
+
+    chore(layout): tailwind font reconfiguration
+
+[33mcommit 50d5b8f4d8631b108fbeb77bc392c377543dc7bf[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Apr 3 02:04:21 2023 +0300
+
+    fix(layout): change font family to rubik
+
+[33mcommit a1e8e0e326867ec7d1dac261a67b69c71430b4d5[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Sun Apr 2 19:56:11 2023 +0300
+
+    feat: the props object is being destructured into separate variables to access them easily
+    
+    the props object is being destructured into separate variables icon, alt, width, and height to
+    access them easily.
+
+[33mcommit 6c2f4c1088f89a194dce2870c7aa44cdbd42c4bb[m
+Merge: 9b548a4 553ab05
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sun Apr 2 19:39:50 2023 +0300
+
+    Merge pull request #40 from 202212-GIZ-YE-FEW/19-sign-inup-page-add-header
+    
+    Future created Sign up-in title component
+
+[33mcommit 553ab05f68cf7541646bdd5963c23140211ab792[m[33m ([m[1;31morigin/19-sign-inup-page-add-header[m[33m)[m
+Merge: 98575f4 9b548a4
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sun Apr 2 19:38:22 2023 +0300
+
+    Merge branch 'develop' into 19-sign-inup-page-add-header
+
+[33mcommit 0a5f9fca3ccdb7d0e858c98bb6a5758b3f1beab0[m
+Author: Sufyan Basurra <sufianb.contact@gmail.com>
+Date:   Sun Apr 2 18:34:03 2023 +0300
+
+    Update ButtonAuth.jsx component
+    
+    the props object is being destructured into separate variables icon, alt, width, and height to access them easily.
+
+[33mcommit 9b548a40dd48dfacb89ad82c6501f115cae1f690[m
+Merge: af2c888 2c97d30
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 2 15:59:03 2023 +0300
+
+    feat(layout): setup of navbar and footer (#35)
+
+[33mcommit eb4c5595aef26363b9775634ec1a82b6fc68d281[m[33m ([m[1;32mevents-page[m[33m)[m
+Author: Hamad Bakeel <90466313+HamadBakeel@users.noreply.github.com>
+Date:   Sun Apr 2 15:11:22 2023 +0300
+
+    feat(events): page initial layout sturcture
+
+[33mcommit cc808dbe96e717f848de19602c54e6a8bca027c8[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Sun Apr 2 08:14:07 2023 +0300
+
+    feat(created authentication accounts buttons component): create buttons and OR divider
+    
+    Created authentication Buttons with OR Divider component and make it responsive for Desktop, Tablet
+    and Mobile.
+
+[33mcommit 98575f494ec9bca3f0ad89c5de7d2a4161ea48f4[m
+Author: Sufyan <sufianb.contact@gmail.com>
+Date:   Sun Apr 2 07:34:08 2023 +0300
+
+    feat(sign up-in title): created Sign up-in title component with it's test file
+    
+    Created Sign in-up title component and make it responsive for Desktop, Tablet and Mobile.
+
+[33mcommit 2c97d301590d123cc7d149d6a147df9dd3471f0f[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 2 05:43:56 2023 +0300
+
+    fix(layout): add 'links' to sign in/up buttons
+
+[33mcommit 32142ca1c0810bf5a6864d73c9dc1182bde844a2[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sun Apr 2 03:50:44 2023 +0300
+
+    style(layout): better reponsiveness for navbar and footer
+
+[33mcommit edd7db0d422743771e009b6f2c1bce00f61ca2e4[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 1 21:29:28 2023 +0300
+
+    feat(layout): add mobile navbar hamburger menu
+
+[33mcommit 4575800cc4510f7d68b00b67c361a5454c6b34bc[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 1 21:28:20 2023 +0300
+
+    fix(layout): use of logo component in footer
+
+[33mcommit 41675b3ae109f2bc07dca05b78fe8d2a67273398[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 1 21:23:41 2023 +0300
+
+    refactor(layout): use next/navigation in navbar
+
+[33mcommit fb3618adfe7fe0b32bac728f6f44d66ec953780c[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 1 19:20:10 2023 +0300
+
+    fix(layout): pass i18n in error page
+
+[33mcommit 97bba834672184ddd4813d6a46f3925191e804bb[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 1 17:52:33 2023 +0300
+
+    refactor(layout): dyanmic language changing
+
+[33mcommit 91c603cae27ec26f0fd0dcbe4f39204ec5050736[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 1 17:27:41 2023 +0300
+
+    fix: remove unneeded state
+
+[33mcommit 273700b935d2f77133f7d0647f18daba02cb1835[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 1 17:23:01 2023 +0300
+
+    fix(layout): add static language to navbar
+
+[33mcommit 43208e2f100d6082e63acac8642c731844909626[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 1 16:57:56 2023 +0300
+
+    fix(404): add needed serverSideTranslations
+
+[33mcommit bde3c61b6aeb75df4d562c0ccf032b5d581dac5f[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 1 16:50:50 2023 +0300
+
+    refactor(layout): dyanmic layout for pages
+
+[33mcommit b11f15d3ce1351b0a59474e5a5ca99622c9d1b80[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 1 16:49:13 2023 +0300
+
+    fix(layout): add correct icons to footer
+
+[33mcommit c0acea1055c6564904da90b95725b6273f2d3e87[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 1 16:46:36 2023 +0300
+
+    refactor(layout): more decomposing of navbar
+
+[33mcommit 15b297e8aef7a302248792c4d9cf6428797246b6[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 1 16:42:37 2023 +0300
+
+    feat(layout): add logo component
+
+[33mcommit 166517d778e28b5b1c0763829b1aa2c10a30540b[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Sat Apr 1 16:29:16 2023 +0300
+
+    feat(layout): add footer supporting responsiveness
+
+[33mcommit fb265b068ac7adac26d97271e7d5b9b487fe4e9c[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Thu Mar 30 15:44:13 2023 +0300
+
+    fix(navbar): responsive to mobile and tablet
+
+[33mcommit 028e1cfc576f4cded44d7e0c1437f5c5624c9897[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Wed Mar 29 20:56:38 2023 +0300
+
+    feat(layout): add navbar with links
+
+[33mcommit af2c888419e336fd9e91029756c7e04b5b07499e[m
+Merge: bc3fa15 85c135d
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Wed Mar 29 16:54:54 2023 +0300
+
+    chore(setup): general design system (#31)
+    
+    chore(setup): general design system
+
+[33mcommit 85c135d2f7be3e47c824d4752b71844c670265db[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Tue Mar 28 05:07:14 2023 +0300
+
+    chore(icons): setup heroicons
+
+[33mcommit 891e441566a3680db7de51e1563067502375dd08[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Tue Mar 28 04:57:17 2023 +0300
+
+    chore(flatify): setup faltify settings
+
+[33mcommit bc3fa156e8a37fa360d76692a80e8854aab1023d[m
+Merge: d32f757 e514332
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Tue Mar 28 03:30:49 2023 +0300
+
+    Merge pull request #26 from 202212-GIZ-YE-FEW/23-general-setup-tailwindcss-configruation
+    
+    chore: setup tailwindcss
+
+[33mcommit e514332184ea05064f9726be470d1b21a6cc6081[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Mar 27 16:50:18 2023 +0300
+
+    chore(tailwind): setup the default font
+
+[33mcommit aa45a4cd5b52e2b3368bf43ac7fbed0994212247[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Mar 27 03:02:09 2023 +0300
+
+    chore: setup needed tailwind plugins
+
+[33mcommit 13083c46b15f22ccbc313e717016892a05fb099b[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Mar 27 02:44:01 2023 +0300
+
+    chore: setup tailwindcss main components
+
+[33mcommit aee68f2f0802ae2d018240817386a21ca1af2cc3[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Mar 27 02:42:04 2023 +0300
+
+    chore: setup customized colors
+
+[33mcommit e0946d7ae20e0ff74157d7109d8183619547b466[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Mar 27 02:26:38 2023 +0300
+
+    fix(prettier): code style errors
+
+[33mcommit 5b982663ac215a9ef4e25239cd3774b4db4797b0[m
+Author: Abdullah Binsaad <abdullah.binsaadd@gmail.com>
+Date:   Mon Mar 27 02:14:17 2023 +0300
+
+    chore: setup tailwindcss
+
+[33mcommit d32f757186dd5940ee6317c4461ba76c6b30a708[m
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Sat Mar 25 21:09:07 2023 +0300
+
+    docs: update project readme with description and names
+
+[33mcommit 0a463529723b4e5901015390463839a0c2000338[m
+Author: Abdullah <abdullah.binsaadd@gmail.com>
+Date:   Sat Mar 25 20:03:09 2023 +0300
+
+    Initial commit
