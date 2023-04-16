@@ -1,5 +1,6 @@
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
 import LocationSelectors from "../../components/LocationSelector/LocationSelector";
 const LocationSelectorPage = () => {
     const { t } = useTranslation("locationSelector");
