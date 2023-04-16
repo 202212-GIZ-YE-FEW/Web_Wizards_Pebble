@@ -4,7 +4,7 @@ import { DateRange } from "react-date-range";
 // Styles
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
-import css from "./DateRangePicker.module.scss";
+// import css from "./DateRangePicker.module.scss";
 
 function DateRangePicker() {
     const [state, setState] = useState([

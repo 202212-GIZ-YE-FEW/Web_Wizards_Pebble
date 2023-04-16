@@ -1,10 +1,5 @@
 import { useCallback, useState } from "react";
-import {
-    FaChevronLeft,
-    FaChevronRight,
-    FaRegArrowAltCircleLeft,
-} from "react-icons/fa";
-import { MdArrowLeft } from "react-icons/md";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 function Button2({ content, onClick, active, disabled, classes }) {
     return (
