@@ -1,0 +1,31 @@
+.card {
+    background: var(--flatify__local-bg-color);
+    border: 2px solid black !important;
+    border-radius: 8px;
+    padding-top: 2.5rem;
+}
+.cardBadges {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-inline-end: 26px;
+
+    .badge {
+        margin-inline-end: -12px;
+
+        &:not(:last-of-type) {
+            &:hover {
+                margin-inline-end: 2px;
+                margin-inline-start: 14px;
+            }
+        }
+        &:last-of-type {
+            &:hover {
+                // margin-inline-end: 2px;
+                margin-inline-start: 14px;
+            }
+        }
+    }
+}
