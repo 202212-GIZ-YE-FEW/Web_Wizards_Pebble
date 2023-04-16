@@ -2,7 +2,7 @@ import { Rubik } from "next/font/google";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import NotVerfied from "@/components/NotVerfied";
+import NotVerified from "@/components/NotVerified";
 
 import { useAuthContext } from "@/context/AuthContext";
 
@@ -21,7 +21,7 @@ export default function Layout({ children }) {
     const { user } = useAuthContext();
     return (
         <div className={`${rubik.variable} font-sans`}>
-            {user && !user.isVerified && <NotVerfied />}
+            {user && !user.isVerified && <NotVerified />}
             <Navbar />
             {children}
             <Footer />
