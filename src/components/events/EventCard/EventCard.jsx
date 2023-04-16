@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-// import styles from "./EventCard.module.scss";
+import styles from "./EventCard.module.scss";
 
 const eventsList = [
     {
@@ -21,13 +21,10 @@ function EventCard({ t }) {
         <>
             {eventsList.map((event, index) => (
                 <article
-                    className='horizontal card ' //+ styles.card
+                    className={"horizontal card " + styles.card}
                     key={index}
                 >
-                    <div>
-                        {
-                            //className={styles.cardBadges}
-                        }
+                    <div className={styles.cardBadges}>
                         <span>{event.date}</span>
                         <div style={{ display: "flex", gap: "6px" }}>
                             <div style={{ marginInlineEnd: "10px" }}>
@@ -36,8 +33,8 @@ function EventCard({ t }) {
                                         href='#'
                                         key={index}
                                         className={
-                                            "!bg-black-100 !text-white rounded-full px-2 py-1 !transition-all "
-                                            // + styles.badge
+                                            "!bg-black-100 !text-white rounded-full px-2 py-1 !transition-all " +
+                                            styles.badge
                                         }
                                     >
                                         {item}
