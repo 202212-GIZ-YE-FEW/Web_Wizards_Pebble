@@ -63,7 +63,7 @@ function PaginationNav1({
                 />
             </li>
         ));
-    }, [pageCount, pageIndex]);
+    }, [pageCount, pageIndex, gotoPage]);
     return (
         <ul className='flex gap-2'>
             <li>
