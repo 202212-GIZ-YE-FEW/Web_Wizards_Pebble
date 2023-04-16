@@ -127,19 +127,21 @@ exports[`renders correctly 1`] = `
             className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper floating-label"
           >
             <input
+              autoFocus={true}
               className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
-              id="d0736587-17a2-5b"
+              id="name"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
               pattern={null}
               placeholder="name"
+              required={true}
               type="text"
               value=""
             />
             <label
               className="form-label"
-              htmlFor="d0736587-17a2-5b"
+              htmlFor="name"
             >
               name
             </label>
@@ -152,19 +154,21 @@ exports[`renders correctly 1`] = `
             className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper floating-label"
           >
             <input
+              autoFocus={true}
               className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
-              id="28a6ffa1-da6d-5e"
+              id="surname"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
               pattern={null}
               placeholder="surname"
+              required={true}
               type="text"
               value=""
             />
             <label
               className="form-label"
-              htmlFor="28a6ffa1-da6d-5e"
+              htmlFor="surname"
             >
               surname
             </label>
@@ -178,19 +182,21 @@ exports[`renders correctly 1`] = `
           className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper floating-label"
         >
           <input
+            autoFocus={true}
             className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
-            id="8c09c45d-4134-5d"
+            id="email"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
             pattern={null}
             placeholder="email"
+            required={true}
             type="email"
             value=""
           />
           <label
             className="form-label"
-            htmlFor="8c09c45d-4134-5d"
+            htmlFor="email"
           >
             email
           </label>
@@ -203,13 +209,15 @@ exports[`renders correctly 1`] = `
           className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper floating-label toggle-password"
         >
           <input
+            autoFocus={true}
             className="text-input default !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
             id="password"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
-            pattern="/(?=.*[A-Z])(?!.*[^a-zA-Z0-9@#$^+=])(.{8,15})$/"
+            pattern="(?=.*[A-Z])(?!.*[^a-zA-Z0-9@#$^+=])(.{8,15})$"
             placeholder="password"
+            required={true}
             type="password"
             value=""
           />

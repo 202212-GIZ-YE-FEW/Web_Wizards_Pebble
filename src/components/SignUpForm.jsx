@@ -3,10 +3,32 @@ import InputForm from "./InputForm";
 import SignButton from "./SignButton";
 import SignOptions from "./SignOptions";
 import SignTitle from "./SignTitle";
+// TODO: use dynamic path once testing doesnt conflicts paths.
+import { sendEmailConfirmation, signUp } from "../../lib/useAuth";
 
 const SignUpForm = ({ t }) => {
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    /**
+     *
+     * @param {import('react').SyntheticEvent} e
+     */
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        /**
+				 TODO: make it like this once react-flatifycss releases a new version.
+				 * const formData = new FormData(e.target);
+        console.log(formData.get("password0"));
+				*/
+        const { value: firstName } = e.target[0];
+        const { value: lastName } = e.target[1];
+        const { value: email } = e.target[2];
+        const { value: password } = e.target[3];
+        try {
+            const { user } = await signUp(email, password);
+            user.displayName = `${firstName} ${lastName}`;
+            sendEmailConfirmation(user);
+        } catch (error) {
+            window.alert(error.code);
+        }
     };
     return (
         <>
@@ -22,6 +44,8 @@ const SignUpForm = ({ t }) => {
                                 name='Name'
                                 type='text'
                                 hasFloatingLabel
+                                isRequired
+                                id='name'
                             />
                             <InputForm
                                 placeholder={t("surname")}
@@ -29,6 +53,8 @@ const SignUpForm = ({ t }) => {
                                 name='Surname'
                                 type='text'
                                 hasFloatingLabel
+                                isRequired
+                                id='surname'
                             />
                         </div>
                         <InputForm
@@ -37,6 +63,8 @@ const SignUpForm = ({ t }) => {
                             name='email'
                             type='email'
                             hasFloatingLabel
+                            isRequired
+                            id='email'
                         />
                         <InputForm
                             placeholder={t("password")}
@@ -46,6 +74,8 @@ const SignUpForm = ({ t }) => {
                             hasFloatingLabel
                             togglePasswordLabel='Show/Hide password'
                             togglePassword='true'
+                            isRequired
+                            id='password'
                         />
                         <FormFooter
                             message={t("haveAccount")}
