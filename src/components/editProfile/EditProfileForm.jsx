@@ -1,5 +1,5 @@
 import SecondaryTitle from "./SecondaryTitle";
-import InputForm from "../shared/InputForm";
+import InputForm from "@/components/shared/InputForm";
 const EditProfileForm = ({ t }) => {
     return (
         <div className='mt-24 w-3/4'>
