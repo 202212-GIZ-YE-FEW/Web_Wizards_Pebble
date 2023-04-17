@@ -1,4 +1,5 @@
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 import { useAuthContext } from "@/context/AuthContext";
 
@@ -13,6 +14,7 @@ import { signUp } from "../../lib/useAuth";
 const SignUpForm = ({ t }) => {
     const router = useRouter();
     const { user } = useAuthContext();
+    const [loading, setLoading] = useState(false);
     /**
      *
      * @param {import('react').SyntheticEvent} e
@@ -26,7 +28,9 @@ const SignUpForm = ({ t }) => {
         const email = formData.get("email");
         const password = formData.get("password");
         try {
+            setLoading(true);
             await signUp(email, password, { firstName, lastName });
+            setLoading(false);
             router.push("/");
         } catch (error) {
             alert(error);
@@ -85,7 +89,7 @@ const SignUpForm = ({ t }) => {
                             linkHref='/signin'
                             linkText={t("signIn")}
                         />
-                        <SignButton text={t("signUp")} />
+                        <SignButton text={t("signUp")} loading={loading} />
                     </form>
                 </div>
             </div>
