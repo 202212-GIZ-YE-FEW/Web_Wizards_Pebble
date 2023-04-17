@@ -32,7 +32,7 @@ const LocationSelectors = ({ label, t }) => {
                             className='text-gray-700'
                             style={{ color: "#878787" }}
                             dangerouslySetInnerHTML={{
-                                __html: t("createEvent.description"),
+                                __html: t("locationDescription"),
                             }}
                         ></p>
                     </div>
