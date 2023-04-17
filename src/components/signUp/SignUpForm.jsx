@@ -1,11 +1,11 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import FormFooter from "@/components/FormFooter";
-import InputForm from "@/components/InputForm";
-import SignButton from "@/components/SignButton";
-import SignOptions from "@/components/SignOptions";
-import SignTitle from "@/components/SignTitle";
+import FormFooter from "@/components/shared/FormFooter";
+import InputForm from "@/components/shared/InputForm";
+import SignButton from "@/components/shared/SignButton";
+import SignOptions from "@/components/shared/SignOptions";
+import SignTitle from "@/components/shared/SignTitle";
 
 import { useAuthContext } from "@/context/AuthContext";
 

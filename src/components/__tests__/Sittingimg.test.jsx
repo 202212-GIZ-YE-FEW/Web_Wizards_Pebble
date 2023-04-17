@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { I18nContext } from "next-i18next";
 import renderer from "react-test-renderer";
 
-import SittingImg from "../SittingImg";
+import SittingImg from "@/components/shared/SittingImg";
 
 // Mock the useRouter hook
 jest.mock("next/router", () => ({

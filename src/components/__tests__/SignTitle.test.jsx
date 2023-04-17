@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer";
 
-import SignTitle from "../SignTitle";
+import SignTitle from "@/components/shared/SignTitle";
 
 it("renders correctly", () => {
     const tree = renderer.create(<SignTitle />).toJSON();
