@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "./LocationInput";
-import Interests from "../editProfile/Interests";
+//import Interests from "../editProfile/Interests";
 const EventCreation = ({ t }) => {
     return (
         <div className='bg-white p-4'>
