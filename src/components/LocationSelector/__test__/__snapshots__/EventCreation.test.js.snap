@@ -23,14 +23,10 @@ exports[`renders correctly 1`] = `
                 "fontWeight": 600,
               }
             }
-          >
-            Event Title:
-          </h2>
+          />
           <p
             className="my-1 pr-20 text-gray-500 md:w-full"
-          >
-            Choose a title that will give people a clear idea of what the event is about. Feel free to be creative! You canedit this later if you change your mind.
-          </p>
+          />
           <div
             className="max-w-screen-xl mx-auto"
           >
@@ -40,7 +36,7 @@ exports[`renders correctly 1`] = `
               <input
                 className="w-full border border-gray-400 rounded-lg py-2 px-4 text-sm font-rubik"
                 id="location"
-                placeholder="Enter your event title here"
+                placeholder="locationPlaceholder"
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -63,10 +59,10 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="py-3 mb-4 flex flex-col md:flex-row md:justify-between gap-10"
+        className="py-2 mb-4 flex flex-col md:flex-row md:justify-between gap-10"
       >
         <div
-          className="w-full pr-20"
+          className="w-full"
         >
           <h2
             className="text-xl font-medium py-1 text-black"
@@ -76,17 +72,12 @@ exports[`renders correctly 1`] = `
                 "fontWeight": 600,
               }
             }
-          >
-            Event Description:
-          </h2>
+          />
           <p
             className="my-1 text-gray-500"
-          >
-            Describe the purpose of your event. Who should join and what will you do at the event?
-          </p>
+          />
           <textarea
             className="w-full h-40 px-3 py-2 rounded border-black shadow focus:border-black focus:outline-none focus:ring-0 focus:ring-black"
-            placeholder="Please write at least 50 characters"
             style={
               Object {
                 "backgroundColor": "white",
@@ -95,10 +86,52 @@ exports[`renders correctly 1`] = `
                 "borderWidth": "2px",
                 "color": "#1A1A1A",
                 "resize": "none",
-                "width": "920px",
               }
             }
           />
+        </div>
+      </div>
+      <div
+        className="py-3 pr-4 md:pr-20 mb-4 md:flex md:flex-row md:justify-between md:flex-wrap "
+      >
+        <div
+          className="w-full md:w-2/2"
+        >
+          <h2
+            className="text-xl md:text-2xl font-medium text-black py-1"
+            style={
+              Object {
+                "color": "#1A1A1A",
+                "fontWeight": 600,
+              }
+            }
+          />
+          <p
+            className="text-gray-500 my-1"
+          />
+        </div>
+        <div
+          className="w-full md:w-1/2"
+        >
+          <div
+            className="relative py-2"
+          >
+            <input
+              accept="image/x-png,image/gif,image/jpeg"
+              style={
+                Object {
+                  "backgroundColor": "white",
+                  "borderColor": "#1A1A1A",
+                  "borderRadius": "8px",
+                  "borderWidth": "2px",
+                  "color": "#1A1A1A",
+                  "resize": "none",
+                  "width": "570px",
+                }
+              }
+              type="file"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -113,14 +146,10 @@ exports[`renders correctly 1`] = `
                 "fontWeight": 600,
               }
             }
-          >
-            Almost Done! Just take a minute to review our guidlines.
-          </h2>
+          />
           <p
             className="my-2  w-full text-gray-500"
-          >
-            Pebble is all about helping people with the help of volunteers like you. This means that all events should:
-          </p>
+          />
           <ul
             className="my-1  w-full list-disc pl-5 text-black"
             style={
@@ -129,26 +158,17 @@ exports[`renders correctly 1`] = `
               }
             }
           >
-            <li>
-              Be transparent about the event’s intentions
-            </li>
-            <li>
-              Encourage real human interactions in person or online
-            </li>
-            <li>
-              Have the host present in all events
-            </li>
+            <li />
+            <li />
+            <li />
           </ul>
           <p
             className="my-1 text-gray-400"
           >
-            You can read more about all of this in our
             <a
               className="p-1 text-blue-600 hover:text-primary-200"
               href="#"
-            >
-              community guidelines.
-            </a>
+            />
           </p>
         </div>
       </div>
@@ -163,9 +183,7 @@ exports[`renders correctly 1`] = `
               "fontWeight": 500,
             }
           }
-        >
-          Agree with terms and Create Event!
-        </button>
+        />
       </div>
     </div>
   </div>

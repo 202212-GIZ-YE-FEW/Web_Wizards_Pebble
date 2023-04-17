@@ -3,13 +3,14 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import LocationSelectors from "../../components/LocationSelector/LocationSelector";
 import EventCreation from "../../components/LocationSelector/EventCreation";
+
 const LocationSelectorPage = () => {
-    const { t } = useTranslation("locationSelector");
+    const locationT = useTranslation("locationSelector").t;
 
     return (
         <div>
-            <LocationSelectors t={t} />
-            <EventCreation />
+            <LocationSelectors t={locationT} />
+            <EventCreation t={locationT} />
         </div>
     );
 };
@@ -23,6 +24,7 @@ export async function getStaticProps({ locale }) {
                 "common",
                 "landing",
                 "locationSelector",
+                "EventCreation",
             ])),
             // Will be passed to the page component as props
         },
