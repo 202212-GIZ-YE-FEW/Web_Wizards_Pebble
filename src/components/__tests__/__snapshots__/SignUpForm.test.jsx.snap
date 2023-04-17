@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
       className="flex justify-center lg:justify-start"
     >
       <h3
-        className="font-semibold mb-8 tracking-tight text-custom-blue lg:text-gray-800 text-3xl order-first"
+        className="font-semibold !font-sans mb-8 tracking-tight text-custom-blue lg:text-gray-800 text-3xl order-first"
       >
         signUp
       </h3>
@@ -128,18 +128,21 @@ exports[`renders correctly 1`] = `
           >
             <input
               autoFocus={true}
-              className="text-input InputForm"
-              id="d0736587-17a2-5b"
+              className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
+              id="name"
+              name="name"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
+              pattern={null}
               placeholder="name"
+              required={true}
               type="text"
               value=""
             />
             <label
               className="form-label"
-              htmlFor="d0736587-17a2-5b"
+              htmlFor="name"
             >
               name
             </label>
@@ -153,18 +156,21 @@ exports[`renders correctly 1`] = `
           >
             <input
               autoFocus={true}
-              className="text-input InputForm"
-              id="28a6ffa1-da6d-5e"
+              className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
+              id="surname"
+              name="surname"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
+              pattern={null}
               placeholder="surname"
+              required={true}
               type="text"
               value=""
             />
             <label
               className="form-label"
-              htmlFor="28a6ffa1-da6d-5e"
+              htmlFor="surname"
             >
               surname
             </label>
@@ -179,18 +185,21 @@ exports[`renders correctly 1`] = `
         >
           <input
             autoFocus={true}
-            className="text-input InputForm"
-            id="8c09c45d-4134-5d"
+            className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
+            id="email"
+            name="email"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
+            pattern={null}
             placeholder="email"
+            required={true}
             type="email"
             value=""
           />
           <label
             className="form-label"
-            htmlFor="8c09c45d-4134-5d"
+            htmlFor="email"
           >
             email
           </label>
@@ -204,18 +213,21 @@ exports[`renders correctly 1`] = `
         >
           <input
             autoFocus={true}
-            className="text-input InputForm"
-            id="1a46755d-afd1-58"
+            className="text-input default !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
+            id="password"
+            name="password"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
+            pattern="(?=.*[A-Z])(?!.*[^a-zA-Z0-9@#$^+=])(.{8,15})$"
             placeholder="password"
+            required={true}
             type="password"
             value=""
           />
           <label
             className="form-label"
-            htmlFor="1a46755d-afd1-58"
+            htmlFor="password"
           >
             password
           </label>
@@ -225,6 +237,9 @@ exports[`renders correctly 1`] = `
             onClick={[Function]}
           />
         </div>
+        <p>
+          passwordCriteria
+        </p>
       </div>
       <div
         className="pb-3 px-3"

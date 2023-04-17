@@ -1,10 +1,5 @@
 import { useCallback, useState } from "react";
-import {
-    FaChevronLeft,
-    FaChevronRight,
-    FaRegArrowAltCircleLeft,
-} from "react-icons/fa";
-import { MdArrowLeft } from "react-icons/md";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 function Button2({ content, onClick, active, disabled, classes }) {
     return (
@@ -13,7 +8,7 @@ function Button2({ content, onClick, active, disabled, classes }) {
       ${
           active
               ? "bg-[#FDA855] text-white"
-              : "text-black-100 border border-black-100 border-2"
+              : "text-black-100 border-black-100 border-2"
       }
       ${
           !disabled
@@ -68,7 +63,7 @@ function PaginationNav1({
                 />
             </li>
         ));
-    }, [pageCount, pageIndex]);
+    }, [pageCount, pageIndex, gotoPage]);
     return (
         <ul className='flex gap-2'>
             <li>

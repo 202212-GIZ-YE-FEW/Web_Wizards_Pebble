@@ -18,7 +18,7 @@ exports[`renders correctly 1`] = `
       landingDescription
     </p>
     <button
-      className="button__ButtonWrapper-sc-1aw98b4-0 button text-white font-medium bg-[#2F7DA9] shadow-none h-[52px] w-[166px] rounded-lg"
+      className="button__ButtonWrapper-sc-1aw98b4-0 button !text-white !font-medium !bg-[#2F7DA9] !shadow-none h-[52px] w-[166px] !rounded-lg !border-none"
       disabled={false}
     >
       landingStart

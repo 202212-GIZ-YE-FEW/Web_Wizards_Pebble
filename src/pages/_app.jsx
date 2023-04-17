@@ -5,6 +5,7 @@ import "flatifycss/dist/css/flatify-min.css";
 import "@/styles/globals.css";
 import "@/styles/events.css";
 
+import { AuthContextProvider } from "@/context/AuthContext";
 import Layout from "@/layout/Layout";
 
 function MyApp({ Component, pageProps }) {
@@ -15,9 +16,11 @@ function MyApp({ Component, pageProps }) {
         importTE();
     }, []);
     return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
+        <AuthContextProvider>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </AuthContextProvider>
     );
 }
 

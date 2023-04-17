@@ -1,9 +1,0 @@
-.InputForm {
-    background-color: #ffffff !important;
-    border: 2px solid black !important;
-    border-radius: 8px !important;
-    box-shadow: none !important;
-}
-.InputForm:focus:not(.default) {
-    border: black 3px solid !important;
-}

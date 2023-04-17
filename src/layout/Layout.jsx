@@ -2,6 +2,9 @@ import { Rubik } from "next/font/google";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import NotVerified from "@/components/NotVerified";
+
+import { useAuthContext } from "@/context/AuthContext";
 
 // TODO: figure out why fallback doesn't work with rubik and noto.
 // const notoSansArabic = Noto_Sans_Arabic({
@@ -15,8 +18,10 @@ const rubik = Rubik({
 });
 
 export default function Layout({ children }) {
+    const { user } = useAuthContext();
     return (
         <div className={`${rubik.variable} font-sans`}>
+            {user && !user.isVerified && <NotVerified />}
             <Navbar />
             {children}
             <Footer />

@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
       className="flex justify-center lg:justify-start"
     >
       <h3
-        className="font-semibold mb-8 tracking-tight text-custom-blue lg:text-gray-800 text-3xl order-first"
+        className="font-semibold !font-sans mb-8 tracking-tight text-custom-blue lg:text-gray-800 text-3xl order-first"
       >
         signIn
       </h3>
@@ -125,12 +125,15 @@ exports[`renders correctly 1`] = `
         >
           <input
             autoFocus={true}
-            className="text-input InputForm"
+            className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
             id="8ec3013a-05cd-50"
+            name="Email"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
+            pattern={null}
             placeholder="email"
+            required={false}
             type="Email"
             value=""
           />
@@ -150,12 +153,15 @@ exports[`renders correctly 1`] = `
         >
           <input
             autoFocus={true}
-            className="text-input InputForm"
+            className="text-input default !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
             id="1a46755d-afd1-58"
+            name="Password"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
+            pattern="(?=.*[A-Z])(?!.*[^a-zA-Z0-9@#$^+=])(.{8,15})$"
             placeholder="password"
+            required={false}
             type="password"
             value=""
           />
@@ -171,6 +177,7 @@ exports[`renders correctly 1`] = `
             onClick={[Function]}
           />
         </div>
+        <p />
       </div>
       <div
         className="pb-3 px-3"

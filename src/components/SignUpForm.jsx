@@ -1,12 +1,36 @@
+import { useRouter } from "next/navigation";
+
+import { useAuthContext } from "@/context/AuthContext";
+
 import FormFooter from "./FormFooter";
 import InputForm from "./InputForm";
 import SignButton from "./SignButton";
 import SignOptions from "./SignOptions";
 import SignTitle from "./SignTitle";
+// TODO: use dynamic path once testing doesnt conflicts paths.
+import { signUp } from "../../lib/useAuth";
 
 const SignUpForm = ({ t }) => {
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const router = useRouter();
+    const { user } = useAuthContext();
+    /**
+     *
+     * @param {import('react').SyntheticEvent} e
+     */
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (user) return;
+        const formData = new FormData(e.target);
+        const firstName = formData.get("name");
+        const lastName = formData.get("surname");
+        const email = formData.get("email");
+        const password = formData.get("password");
+        try {
+            await signUp(email, password, { firstName, lastName });
+            router.push("/");
+        } catch (error) {
+            alert(error);
+        }
     };
     return (
         <>
@@ -19,16 +43,20 @@ const SignUpForm = ({ t }) => {
                             <InputForm
                                 placeholder={t("name")}
                                 label={t("name")}
-                                name='Name'
+                                name='name'
                                 type='text'
                                 hasFloatingLabel
+                                isRequired
+                                id='name'
                             />
                             <InputForm
                                 placeholder={t("surname")}
                                 label={t("surname")}
-                                name='Surname'
+                                name='surname'
                                 type='text'
                                 hasFloatingLabel
+                                isRequired
+                                id='surname'
                             />
                         </div>
                         <InputForm
@@ -37,15 +65,20 @@ const SignUpForm = ({ t }) => {
                             name='email'
                             type='email'
                             hasFloatingLabel
+                            isRequired
+                            id='email'
                         />
                         <InputForm
                             placeholder={t("password")}
                             label={t("password")}
-                            name='Password'
+                            name='password'
                             type='password'
                             hasFloatingLabel
                             togglePasswordLabel='Show/Hide password'
                             togglePassword='true'
+                            isRequired
+                            id='password'
+                            passwordCriteria={t("passwordCriteria")}
                         />
                         <FormFooter
                             message={t("haveAccount")}
