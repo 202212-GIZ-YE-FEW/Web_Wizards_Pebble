@@ -38,11 +38,6 @@ const SignUpForm = ({ t }) => {
         <>
             <div className='w-full lg:w-3/5 flex-grow-1 relative px-4 lg:px-8 order-1'>
                 <div className='mx-auto lg:max-w-lg md:max-w-3xl py-4 lg:py-8 flex flex-col'>
-                    {currentUser && (
-                        <div className='font-bold mb-2 bg-warning-200 p-2 rounded-lg'>
-                            {t("verifyEmail")}
-                        </div>
-                    )}
                     <SignTitle text={t("signUp")} />
                     <SignOptions t={t} />
                     <form className='-mx-3 order-3' onSubmit={handleSubmit}>

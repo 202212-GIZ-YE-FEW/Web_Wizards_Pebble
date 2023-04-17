@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
       className="flex justify-center lg:justify-start"
     >
       <h3
-        className="font-semibold mb-8 tracking-tight text-custom-blue lg:text-gray-800 text-3xl order-first"
+        className="font-semibold !font-sans mb-8 tracking-tight text-custom-blue lg:text-gray-800 text-3xl order-first"
       >
         signIn
       </h3>
