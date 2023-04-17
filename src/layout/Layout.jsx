@@ -21,7 +21,7 @@ export default function Layout({ children }) {
     const { user } = useAuthContext();
     return (
         <div className={`${rubik.variable} font-sans`}>
-            {user && !user.isVerified && <NotVerified />}
+            {user && !user.emailVerified && <NotVerified />}
             <Navbar />
             {children}
             <Footer />
