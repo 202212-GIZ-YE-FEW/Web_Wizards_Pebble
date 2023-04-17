@@ -1,15 +1,16 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+import FormFooter from "@/components/FormFooter";
+import InputForm from "@/components/InputForm";
+import SignButton from "@/components/SignButton";
+import SignOptions from "@/components/SignOptions";
+import SignTitle from "@/components/SignTitle";
+
 import { useAuthContext } from "@/context/AuthContext";
 
-import FormFooter from "./FormFooter";
-import InputForm from "./InputForm";
-import SignButton from "./SignButton";
-import SignOptions from "./SignOptions";
-import SignTitle from "./SignTitle";
 // TODO: use dynamic path once testing doesnt conflicts paths.
-import { signUp } from "../../lib/useAuth";
+import { signUp } from "../../../lib/useAuth";
 
 const SignUpForm = ({ t }) => {
     const router = useRouter();
