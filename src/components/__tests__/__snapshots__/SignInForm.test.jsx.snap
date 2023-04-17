@@ -177,9 +177,7 @@ exports[`renders correctly 1`] = `
             onClick={[Function]}
           />
         </div>
-        <p>
-          Must include one captial letter, one digit, and one special character.
-        </p>
+        <p />
       </div>
       <div
         className="pb-3 px-3"

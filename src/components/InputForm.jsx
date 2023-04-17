@@ -27,6 +27,7 @@ const InputForm = (props) => {
         id,
         name,
         isRequired = false,
+        passwordCriteria,
     } = props;
     const InputWidth = width ? `w-${width}` : "w-full";
     const [state, setState] = useState("default");
@@ -53,12 +54,7 @@ const InputForm = (props) => {
                     handlePasswordChange(password, setState);
                 }}
             />
-            {togglePassword && (
-                <p>
-                    Must include one captial letter, one digit, and one special
-                    character.
-                </p>
-            )}
+            {togglePassword && <p>{passwordCriteria}</p>}
         </div>
     );
 };

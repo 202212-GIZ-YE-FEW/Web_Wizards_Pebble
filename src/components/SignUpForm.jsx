@@ -8,30 +8,28 @@ import SignButton from "./SignButton";
 import SignOptions from "./SignOptions";
 import SignTitle from "./SignTitle";
 // TODO: use dynamic path once testing doesnt conflicts paths.
-import { sendEmailConfirmation, signUp } from "../../lib/useAuth";
+import { signUp } from "../../lib/useAuth";
 
 const SignUpForm = ({ t }) => {
     const router = useRouter();
-    const { user: currentUser } = useAuthContext();
+    const { user } = useAuthContext();
     /**
      *
      * @param {import('react').SyntheticEvent} e
      */
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (currentUser) return;
+        if (user) return;
         const formData = new FormData(e.target);
         const firstName = formData.get("name");
         const lastName = formData.get("surname");
         const email = formData.get("email");
         const password = formData.get("password");
         try {
-            const { user } = await signUp(email, password);
-            user.displayName = `${firstName} ${lastName}`;
-            sendEmailConfirmation(user);
+            await signUp(email, password, { firstName, lastName });
             router.push("/");
         } catch (error) {
-            window.alert(error.code);
+            alert(error);
         }
     };
     return (
@@ -80,6 +78,7 @@ const SignUpForm = ({ t }) => {
                             togglePassword='true'
                             isRequired
                             id='password'
+                            passwordCriteria={t("passwordCriteria")}
                         />
                         <FormFooter
                             message={t("haveAccount")}

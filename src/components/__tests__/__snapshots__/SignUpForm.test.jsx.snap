@@ -238,7 +238,7 @@ exports[`renders correctly 1`] = `
           />
         </div>
         <p>
-          Must include one captial letter, one digit, and one special character.
+          passwordCriteria
         </p>
       </div>
       <div
