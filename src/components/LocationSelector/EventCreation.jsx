@@ -1,22 +1,28 @@
 import React from "react";
 import Input from "./LocationInput";
-//import Interests from "../editProfile/Interests";
+import Interests from "../editProfile/Interests";
 const EventCreation = ({ t }) => {
     return (
         <div className='bg-white p-4'>
             <div className='w-full md:w-2/3 mx-auto bg-white rounded-lg p-4 md:p-8 flex flex-col md:flex-row'>
                 <div className='w-full md:w-1/2 flex flex-col justify-between flex-grow'>
-                    {/* <div className='pt-3 flex flex-col'>
-                        <div>
+                    <div className='pt-3 flex flex-col'>
+                        {/* <div>
                             <h2 className='text-black font-medium text-xl py-1'>
                                 {t("EventType.eventTypeTitle")}
                             </h2>
                             <p className='text-gray-500 pr-20 mt-1'>
                                 {t("EventType.EventTypeDescription")}
                             </p>
-                        </div>
+                            <div className='md:flex md:justify-between'>
+                                <Interests
+                                    beforeClick='text-primary-200  border-primary-200'
+                                    button='hidden'
+                                />
+                            </div>
+                        </div> */}
                         <div className='flex justify-between md:flex md:justify-between'></div>
-                    </div> */}
+                    </div>
 
                     <div className='mb-4 flex   flex-col gap-10 py-3 md:flex-row md:justify-between'>
                         <div>
@@ -102,7 +108,6 @@ const EventCreation = ({ t }) => {
                             </div>
                         </div>
                     </div>
-
                     <div className='mb-3 flex flex-col gap-5 md:flex-row md:justify-between flex-grow'>
                         <div>
                             <h2
