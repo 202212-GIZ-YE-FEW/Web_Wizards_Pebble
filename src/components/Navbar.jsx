@@ -8,13 +8,12 @@ import {
     DropdownButton,
 } from "react-flatifycss";
 
-import { signOut } from "../../lib/useAuth";
-
 import Logo from "@/components/Logo";
 
 import { useAuthContext } from "@/context/AuthContext";
 
 import { RoundedImage } from "./mini";
+import { signOut } from "../../lib/useAuth";
 
 import person from "~/person.svg";
 
