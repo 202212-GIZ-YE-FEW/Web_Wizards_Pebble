@@ -199,13 +199,18 @@ exports[`renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="px-3"
+        className="px-3 flex gap-x-4"
       >
         <button
           className="w-full lg:w-auto bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-5 py-3 "
         >
           signIn
         </button>
+        <span
+          aria-hidden={true}
+          className="loading__LoadingWrapper-sc-43dx6p-0 hEsmJL hidden size-lg style-orange spinner"
+          size="lg"
+        />
       </div>
     </form>
   </div>
