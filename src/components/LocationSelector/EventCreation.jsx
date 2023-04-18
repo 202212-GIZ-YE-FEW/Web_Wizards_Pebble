@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "./LocationInput";
-import Interests from "../editProfile/Interests";
+//import Interests from "../editProfile/Interests";
 const EventCreation = ({ t }) => {
     return (
         <div className='bg-white p-4'>
@@ -14,12 +14,6 @@ const EventCreation = ({ t }) => {
                             <p className='text-gray-500 pr-20 mt-1'>
                                 {t("EventType.EventTypeDescription")}
                             </p>
-                            <div className='md:flex md:justify-between'>
-                                <Interests
-                                    beforeClick='text-primary-200  border-primary-200'
-                                    button='hidden'
-                                />
-                            </div>
                         </div>
                         <div className='flex justify-between md:flex md:justify-between'></div>
                     </div> */}
@@ -108,6 +102,7 @@ const EventCreation = ({ t }) => {
                             </div>
                         </div>
                     </div>
+
                     <div className='mb-3 flex flex-col gap-5 md:flex-row md:justify-between flex-grow'>
                         <div>
                             <h2
