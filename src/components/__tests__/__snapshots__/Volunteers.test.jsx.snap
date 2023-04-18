@@ -17,7 +17,7 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt="Person with hand on face"
-        className="rounded-full"
+        className="rounded-full "
         data-nimg="1"
         decoding="async"
         height={72}
@@ -51,7 +51,7 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt="Person with hand on face"
-        className="rounded-full"
+        className="rounded-full "
         data-nimg="1"
         decoding="async"
         height={72}
@@ -85,7 +85,7 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt="Person with hand on face"
-        className="rounded-full"
+        className="rounded-full "
         data-nimg="1"
         decoding="async"
         height={72}
