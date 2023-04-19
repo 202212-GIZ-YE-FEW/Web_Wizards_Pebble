@@ -101,10 +101,17 @@ function MobileDropDown(props) {
                     //TODO: do dynamic languages
                 }
                 {routes.map((route, index) => {
-                    if (route.name === "Events") route.name = "All Events";
                     return (
                         <li className='menu-item' key={index}>
-                            <Nav t={t} name={route.name} href={route.href} />
+                            <Nav
+                                t={t}
+                                name={
+                                    route.name === "Events"
+                                        ? "All Events"
+                                        : route.name
+                                }
+                                href={route.href}
+                            />
                         </li>
                     );
                 })}
