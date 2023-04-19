@@ -5,5 +5,9 @@
     "events": "Events",
     "about": "About",
     "howItWorks": "How it works",
-    "verifyEmail": "You have signed up successfully! Please check your email to verify your accout."
+    "verifyEmail": "You have signed up successfully! Please check your email to verify your accout.",
+    "viewEvents": "Your Events",
+    "viewProfile": "View Profile",
+    "viewSettings": "Settings",
+    "logOut": "Log Out"
 }
