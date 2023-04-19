@@ -1,7 +1,7 @@
 import { I18nContext } from "next-i18next";
 import renderer from "react-test-renderer";
 
-import SignOptions from "../SignOptions";
+import SignOptions from "@/components/shared/SignOptions";
 
 it("renders correctly", () => {
     const i18n = {

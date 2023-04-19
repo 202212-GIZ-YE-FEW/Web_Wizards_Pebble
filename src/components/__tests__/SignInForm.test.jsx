@@ -1,7 +1,7 @@
 import { I18nContext } from "next-i18next";
 import renderer from "react-test-renderer";
 
-import SignInForm from "@/components/SignInForm";
+import SignInForm from "@/components/signIn/SignInForm";
 
 it("renders correctly", () => {
     const i18n = {
