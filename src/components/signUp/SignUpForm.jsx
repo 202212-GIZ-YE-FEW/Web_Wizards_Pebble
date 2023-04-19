@@ -38,8 +38,7 @@ const SignUpForm = ({ t }) => {
             await signUp(email, password, { firstName, lastName });
         } catch (error) {
             setLoading(false);
-            const isDuplicate = errors.includes(error.code || "auth/unknown");
-            if (!isDuplicate) setErrors([...errors, error.code]);
+            setErrors(error.code || "auth/unknown");
             return;
         }
         setLoading(false);

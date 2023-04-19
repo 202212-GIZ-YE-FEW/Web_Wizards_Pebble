@@ -31,8 +31,7 @@ const SignInForm = ({ t }) => {
             await signIn(email, password);
         } catch (error) {
             setLoading(false);
-            const isDuplicate = errors.includes(error.code || "auth/unknown");
-            if (!isDuplicate) setErrors([...errors, error.code]);
+            setErrors(error.code || "auth/unknown");
             return;
         }
         setLoading(false);
