@@ -10,7 +10,7 @@ import SignTitle from "@/components/shared/SignTitle";
 import { useAuthContext } from "@/context/AuthContext";
 
 import AuthErrorBox from "../shared/AuthErrorBox";
-import { signInWithEmailAndPass } from "../../../lib/useAuth";
+import { signIn } from "../../../lib/useAuth";
 
 const SignInForm = ({ t }) => {
     const router = useRouter();
@@ -28,7 +28,7 @@ const SignInForm = ({ t }) => {
         const password = formData.get("password");
         setLoading(true);
         try {
-            await signInWithEmailAndPass(email, password);
+            await signIn(email, password);
         } catch (error) {
             setLoading(false);
             const isDuplicate = errors.includes(error.code || "auth/unknown");
