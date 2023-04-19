@@ -10,7 +10,7 @@
     "signIn": "Sign in",
     "or": "OR",
     "passwordCriteria": "Must include one captial letter and one digit.",
-    "auth/email-already-exists": "This email already exists.",
+    "auth/email-already-in-use": "This email already exists.",
     "auth/internal-error": "Internal error",
     "auth/unknown": "Unknown error occured while signing up, please contact support."
 }

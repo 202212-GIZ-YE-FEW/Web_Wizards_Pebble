@@ -10,7 +10,7 @@
     "signIn": " تسجيل الدخول ",
     "or": "أو",
     "passwordCriteria": "يجب أن تحتوي على حرف كبير ورقم.",
-    "auth/email-already-exists": "هذاالبريد الإلكتروني موجود بالفعل.",
+    "auth/email-already-in-use": "هذاالبريد الإلكتروني موجود بالفعل.",
     "auth/internal-error": "خطأ داخلي.",
     "auth/unknown": "خطأ غير معروف حدث خلال التسجيل، يرجى مراجعة الدعم."
 }

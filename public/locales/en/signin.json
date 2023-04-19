@@ -7,7 +7,7 @@
     "haveAccount": "Don't Have an account? ",
     "signUp": "Sign up",
     "or": "OR",
-    "auth/invalid-password": "Invalid password.",
+    "auth/wrong-password": "Invalid password.",
     "auth/user-not-found": "User is not found.",
     "auth/unknown": "Unknown occured error while singing in, please contact support."
 }
