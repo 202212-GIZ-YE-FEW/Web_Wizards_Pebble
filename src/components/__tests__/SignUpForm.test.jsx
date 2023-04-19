@@ -2,7 +2,7 @@ import { useRouter } from "next/navigation";
 import { I18nContext } from "next-i18next";
 import renderer from "react-test-renderer";
 
-import SignUpForm from "../SignUpForm";
+import SignUpForm from "@/components/signUp/SignUpForm";
 
 // Mock the useRouter hook
 jest.mock("next/navigation", () => ({

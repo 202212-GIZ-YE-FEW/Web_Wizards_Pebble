@@ -1,7 +1,7 @@
 import { I18nContext } from "next-i18next";
 import renderer from "react-test-renderer";
 
-import EditProfileForm from "../editProfile/EditProfileForm";
+import EditProfileForm from "@/components/editProfile/EditProfileForm";
 
 it("renders correctly", () => {
     const i18n = {

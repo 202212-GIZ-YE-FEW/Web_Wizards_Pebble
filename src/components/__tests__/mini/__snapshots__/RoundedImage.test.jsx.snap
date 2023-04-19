@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <img
-  className="rounded-full"
+  className="rounded-full "
   data-nimg="1"
   decoding="async"
   loading="lazy"

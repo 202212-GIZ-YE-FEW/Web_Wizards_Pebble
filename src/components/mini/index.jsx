@@ -31,7 +31,7 @@ export function Description(props) {
 }
 
 export function RoundedImage(props) {
-    const { src, alt, height, width } = props;
+    const { src, alt, height, width, className = "" } = props;
 
     return (
         <Image
@@ -39,7 +39,7 @@ export function RoundedImage(props) {
             alt={alt}
             height={height}
             width={width}
-            className='rounded-full'
+            className={`rounded-full ${className}`}
         />
     );
 }

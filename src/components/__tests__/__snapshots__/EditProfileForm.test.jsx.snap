@@ -19,8 +19,7 @@ exports[`renders correctly 1`] = `
         className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper"
       >
         <input
-          autoFocus={true}
-          className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
+          className="text-input !bg-white !border-2 !border-[black] !rounded-lg !shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
           id="23cac36d-9b93-55"
           name="Name"
           onBlur={[Function]}
@@ -52,8 +51,7 @@ exports[`renders correctly 1`] = `
         className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper"
       >
         <input
-          autoFocus={true}
-          className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
+          className="text-input !bg-white !border-2 !border-[black] !rounded-lg !shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
           id="060f87ae-bff9-5e"
           name="Location"
           onBlur={[Function]}

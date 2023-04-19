@@ -1,8 +1,8 @@
-import ButtonAuth from "./ButtonAuth";
-import OrDivider from "./OrDivider";
-import GoogleIcon from "../../public/GoogleIcon.png";
-import TwitterIcon from "../../public/twitter.svg";
+import ButtonAuth from "@/components/shared/ButtonAuth";
+import OrDivider from "@/components/shared/OrDivider";
 
+import GoogleIcon from "~/GoogleIcon.png";
+import TwitterIcon from "~/twitter.svg";
 const SignOptions = ({ t }) => {
     return (
         <div className='flex flex-col-reverse order-last lg:flex-col lg:order-2'>
