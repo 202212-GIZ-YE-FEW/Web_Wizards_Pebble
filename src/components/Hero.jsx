@@ -7,7 +7,7 @@ import heroImage from "~/landing/hero.svg";
 function LandingTitle(props) {
     const { children } = props;
     return (
-        <h1 className='text-black-100 tracking-wide leading-[50px] text-5xl font-medium font-sans'>
+        <h1 className='text-black-100 md:tracking-wide leading-[50px] text-5xl font-medium font-sans'>
             {children}
         </h1>
     );
@@ -16,7 +16,7 @@ function LandingTitle(props) {
 function LandingDescription(props) {
     const { children } = props;
     return (
-        <p className='text-2xl text-black-50 leading-7 tracking-[0.1px]'>
+        <p className='text-2xl text-black-50 leading-7 md:tracking-[0.1px]'>
             {children}
         </p>
     );

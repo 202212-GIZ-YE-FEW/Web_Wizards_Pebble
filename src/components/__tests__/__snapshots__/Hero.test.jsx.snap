@@ -8,12 +8,12 @@ exports[`renders correctly 1`] = `
     className="flex flex-col items-center text-center lg:items-start rtl:lg:text-right ltr:lg:text-left gap-y-5"
   >
     <h1
-      className="text-black-100 tracking-wide leading-[50px] text-5xl font-medium font-sans"
+      className="text-black-100 md:tracking-wide leading-[50px] text-5xl font-medium font-sans"
     >
       landingTitle
     </h1>
     <p
-      className="text-2xl text-black-50 leading-7 tracking-[0.1px]"
+      className="text-2xl text-black-50 leading-7 md:tracking-[0.1px]"
     >
       landingDescription
     </p>
