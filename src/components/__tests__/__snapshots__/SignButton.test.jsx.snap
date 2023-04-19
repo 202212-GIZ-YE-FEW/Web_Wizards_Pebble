@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="px-3 flex gap-x-4"
 >
   <button
-    className="w-full lg:w-auto bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-5 py-3 "
+    className="w-full lg:w-auto bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-5 py-3 disabled:opacity-40"
   />
   <span
     aria-hidden={true}
