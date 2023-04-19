@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<ul
+  className="bg-warning-600 p-7 mb-4 rounded-lg text-white font-medium"
+>
+  <li>
+    auth/unknown
+  </li>
+</ul>
+`;
