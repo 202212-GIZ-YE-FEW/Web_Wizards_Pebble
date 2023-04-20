@@ -1,11 +1,15 @@
-// Translations import
+// Firebase imports
+import { collection, getDocs } from "@firebase/firestore";
+import { db } from "firebase.config";
+// Translations imports
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import React, { useState } from "react";
+// React imports
+import React, { useEffect, useState } from "react";
 
+// Component imports
 import Button from "@/components/Button";
 import Divider from "@/components/Divider";
-// Component imports
 import DateRangePicker from "@/components/events/DatePicker/DateRangePicker";
 import EventCard from "@/components/events/EventCard/EventCard";
 import Pagination from "@/components/events/Pagination/Pagination";
@@ -33,8 +37,47 @@ const interests = [
 ];
 
 function Events() {
+    const [eventsList, setEventsList] = useState([]);
     const [selectedLocations, setSelectedLocations] = useState([]);
     const [selectedInterests, setSelectedInterests] = useState([]);
+
+    const eventsCollectionRef = collection(db, "events");
+    function formatDate(dateObj) {
+        const date = new Date(
+            dateObj.seconds * 1000 + dateObj.nanoseconds / 1000000
+        );
+        const options = {
+            weekday: "short",
+            month: "short",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            timeZoneName: "short",
+        };
+        return date.toLocaleString("en-US", options);
+    }
+
+    useEffect(() => {
+        const getEvents = async () => {
+            try {
+                const data = await getDocs(eventsCollectionRef);
+                const formattedData = data.docs.map((doc) => ({
+                    ...doc.data(),
+                    id: doc.id,
+                    date: formatDate(doc.data().date),
+                    attendees: doc
+                        .data()
+                        .attendees.map((attendee) => attendee.charAt(0)),
+                    attendeesNumber: doc.data().attendees.length,
+                }));
+                setEventsList(formattedData);
+            } catch (e) {
+                console.error("error while fetching events data ", e);
+            }
+        };
+
+        getEvents();
+    }, []);
 
     const { t } = useTranslation("events");
 
@@ -287,7 +330,14 @@ function Events() {
 
             {/* PAGE EVENTS LIST SECTION */}
             <div className='col-span-8'>
-                <EventCard t={t} />
+                {eventsList.map((event) => (
+                    <EventCard
+                        t={t}
+                        event={event}
+                        keyValue={event.id}
+                        key={event.id}
+                    />
+                ))}
             </div>
 
             {/* PAGINATION SECTION AT TABLET AND DESKTOP */}

@@ -1,19 +1,25 @@
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+import FormFooter from "@/components/shared/FormFooter";
+import InputForm from "@/components/shared/InputForm";
+import SignButton from "@/components/shared/SignButton";
+import SignOptions from "@/components/shared/SignOptions";
+import SignTitle from "@/components/shared/SignTitle";
 
 import { useAuthContext } from "@/context/AuthContext";
 
-import FormFooter from "./FormFooter";
-import InputForm from "./InputForm";
-import SignButton from "./SignButton";
-import SignOptions from "./SignOptions";
-import SignTitle from "./SignTitle";
+import AuthErrorBox from "../shared/AuthErrorBox";
 // TODO: use dynamic path once testing doesnt conflicts paths.
-import { signUp } from "../../lib/useAuth";
+import { signUp } from "../../../lib/useAuth";
 
 const SignUpForm = ({ t }) => {
     const router = useRouter();
     const { user } = useAuthContext();
+    const [errors, setErrors] = useState([]);
+    useEffect(() => {
+        if (user && user.emailVerified) router.push("/");
+    }, [user, router]);
     const [loading, setLoading] = useState(false);
     /**
      *
@@ -30,11 +36,13 @@ const SignUpForm = ({ t }) => {
         try {
             setLoading(true);
             await signUp(email, password, { firstName, lastName });
-            setLoading(false);
-            router.push("/");
         } catch (error) {
-            alert(error);
+            setLoading(false);
+            setErrors(error.code || "auth/unknown");
+            return;
         }
+        setLoading(false);
+        router.push("/");
     };
     return (
         <>
@@ -42,9 +50,13 @@ const SignUpForm = ({ t }) => {
                 <div className='mx-auto lg:max-w-lg md:max-w-3xl py-4 lg:py-8 flex flex-col'>
                     <SignTitle text={t("signUp")} />
                     <SignOptions t={t} />
+                    {errors.length > 0 && (
+                        <AuthErrorBox t={t} errors={errors} />
+                    )}
                     <form className='-mx-3 order-3' onSubmit={handleSubmit}>
                         <div className='sm:flex flex-row hidden'>
                             <InputForm
+                                autoFocus
                                 placeholder={t("name")}
                                 label={t("name")}
                                 name='name'
@@ -89,7 +101,11 @@ const SignUpForm = ({ t }) => {
                             linkHref='/signin'
                             linkText={t("signIn")}
                         />
-                        <SignButton text={t("signUp")} loading={loading} />
+                        <SignButton
+                            text={t("signUp")}
+                            loading={loading}
+                            disabled={user && !user.emailVerified}
+                        />
                     </form>
                 </div>
             </div>

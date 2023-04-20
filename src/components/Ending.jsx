@@ -18,7 +18,7 @@ export default function Ending(props) {
                 <Description className='lg:h-[33px] lg:w-[792px] !mb-20'>
                     {t("endingDescription")}
                 </Description>
-                <div className='flex flex-row gap-x-10'>
+                <div className='flex flex-col md:flex-row md:gap-x-10'>
                     <Link href='/events'>
                         <GetStartedButton>{t("endingButton")}</GetStartedButton>
                     </Link>

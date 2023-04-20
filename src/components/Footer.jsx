@@ -6,7 +6,7 @@ import Logo from "@/components/Logo";
 function Footer(props) {
     const { t } = props;
     return (
-        <footer className='sm:h-[180px] h-[449px] bg-primary-200 min-w-full absolute mt-10'>
+        <footer className='sm:h-[180px] h-[449px] bg-primary-200 mt-10'>
             <div className='container flex flex-col lg:flex-row items-center min-h-full justify-evenly sm:justify-between'>
                 <Link href='/'>
                     <Logo />

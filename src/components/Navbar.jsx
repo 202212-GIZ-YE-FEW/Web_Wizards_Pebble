@@ -10,6 +10,13 @@ import {
 
 import Logo from "@/components/Logo";
 
+import { useAuthContext } from "@/context/AuthContext";
+
+import { RoundedImage } from "./mini";
+import { signOut } from "../../lib/useAuth";
+
+import person from "~/person.svg";
+
 //TODO:  do dyanmic routers
 //
 // read paths of pages dir and extract their respective name and href
@@ -28,10 +35,13 @@ function SwitchLangDropDown(props) {
     const { to, lang } = props;
     return (
         <Dropdown autoClose offsetX={-40} id='lang-dropdown'>
-            <DropdownButton buttonStyle={false} style={{ color: "white" }}>
+            <DropdownButton buttonStyle={false} className='!text-white'>
                 {lang.toUpperCase()}
             </DropdownButton>
-            <DropdownBody isMenu className='rounded-none'>
+            <DropdownBody
+                isMenu
+                className='shadow-[2px_2px_0px_#1A1A1A] border-2 border-[#1A1A1A] rounded-none'
+            >
                 {
                     //TODO: do dynamic languages
                 }
@@ -63,7 +73,7 @@ function MobileDropDown(props) {
     return (
         <Dropdown
             autoClose
-            id='lang-dropdown'
+            id='mobile-dropdown'
             className='md:hidden place-self-center'
             offsetX={65}
         >
@@ -93,10 +103,62 @@ function MobileDropDown(props) {
                 {routes.map((route, index) => {
                     return (
                         <li className='menu-item' key={index}>
-                            <Nav t={t} name={route.name} href={route.href} />
+                            <Nav
+                                t={t}
+                                name={
+                                    route.name === "Events"
+                                        ? "All Events"
+                                        : route.name
+                                }
+                                href={route.href}
+                            />
                         </li>
                     );
                 })}
+                <li className='menu-item'>
+                    <Nav t={t} name='How It Works' href='#howitworks' />
+                </li>
+            </DropdownBody>
+        </Dropdown>
+    );
+}
+
+function UserDropDown(props) {
+    const { t, user } = props;
+    return (
+        <Dropdown
+            autoClose
+            id='user-dropdown'
+            offsetX={-60}
+            className='place-self-center'
+        >
+            <DropdownButton buttonStyle={false} hasArrow={false}>
+                <RoundedImage
+                    src={user.photoURL ? user.photoURL : person}
+                    alt='User Profile Picture'
+                    height={68}
+                    width={68}
+                    className='ml-4 max-w-[1.8rem] max-h-[1.8rem] lg:max-h-full lg:max-w-full'
+                />
+            </DropdownButton>
+            <DropdownBody
+                isMenu
+                className='shadow-[2px_2px_0px_#1A1A1A] border-2 border-[#1A1A1A] rounded-none'
+            >
+                <li className='menu-item'>
+                    <Link href='/events'>{t("viewEvents")}</Link>
+                </li>
+                <li className='menu-item'>
+                    <Link href='/editprofile'>{t("viewProfile")}</Link>
+                </li>
+                <li className='menu-item'>
+                    <Link href='/editprofile'>{t("viewSettings")}</Link>
+                </li>
+                <li className='menu-item'>
+                    <Link onClick={() => signOut()} href='/'>
+                        {t("logOut")}
+                    </Link>
+                </li>
             </DropdownBody>
         </Dropdown>
     );
@@ -104,13 +166,14 @@ function MobileDropDown(props) {
 
 export function Navbar(props) {
     const path = usePathname() || "/";
+    const { user } = useAuthContext();
     // const query = useSearchParams();
     const { t, i18n } = props;
     const lang = i18n.language.toUpperCase();
 
     return (
-        <nav className='bg-primary-200 h-[120px] max-w-full flex items-center mb-10'>
-            <div className='container flex md:justify-between'>
+        <nav className='bg-primary-200 h-[120px] mb-10'>
+            <div className='container flex h-full md:justify-between items-center'>
                 <MobileDropDown t={t} />
                 <Link
                     href='/'
@@ -118,19 +181,35 @@ export function Navbar(props) {
                 >
                     <Logo />
                 </Link>
-                <div className='hidden md:flex gap-[10px]'>
-                    <Link href='/signin'>
-                        {" "}
-                        <Button className='w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-white !shadow-[2px_2px_0px_#1A1A1A] !border-2 !border-[#1A1A1A] !border-solid !text-black-100'>
-                            {t("signIn")}
-                        </Button>
-                    </Link>
-                    <Link href='/signup'>
-                        <Button className='w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-[#2F7DA9] !text-white !shadow-none !border-none'>
-                            {t("signUp")}
-                        </Button>
-                    </Link>
-                    <div className='flex items-center gap-1'>
+                <div className='flex gap-[10px] !items-center'>
+                    {user &&
+                        user.emailVerified &&
+                        routes.map((route, index) => {
+                            return (
+                                <Link
+                                    href={route.href}
+                                    className='hidden md:inline !text-white !text-[22px] !font-medium !px-2 !leading-[30px]'
+                                    key={index}
+                                >
+                                    {route.name}
+                                </Link>
+                            );
+                        })}
+                    {(!user || !user.emailVerified) && (
+                        <>
+                            <Link href='/signin'>
+                                <Button className='hidden md:block w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-white !shadow-[2px_2px_0px_#1A1A1A] !border-2 !border-[#1A1A1A] !border-solid !text-black-100'>
+                                    {t("signIn")}
+                                </Button>
+                            </Link>
+                            <Link href='/signup'>
+                                <Button className='hidden md:block w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-[#2F7DA9] !text-white !shadow-none !border-none'>
+                                    {t("signUp")}
+                                </Button>
+                            </Link>
+                        </>
+                    )}
+                    <div className='hidden md:flex items-center gap-1'>
                         <svg
                             width='28'
                             height='28'
@@ -147,6 +226,9 @@ export function Navbar(props) {
                         </svg>
                         <SwitchLangDropDown to={path} lang={lang} />
                     </div>
+                    {user && user.emailVerified && (
+                        <UserDropDown user={user} t={t} />
+                    )}
                 </div>
             </div>
         </nav>

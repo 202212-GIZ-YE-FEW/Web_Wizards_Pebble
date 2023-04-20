@@ -125,9 +125,9 @@ exports[`renders correctly 1`] = `
         >
           <input
             autoFocus={true}
-            className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
-            id="8ec3013a-05cd-50"
-            name="Email"
+            className="text-input !bg-white !border-2 !border-[black] !rounded-lg !shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
+            id="8c09c45d-4134-5d"
+            name="email"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -139,7 +139,7 @@ exports[`renders correctly 1`] = `
           />
           <label
             className="form-label"
-            htmlFor="8ec3013a-05cd-50"
+            htmlFor="8c09c45d-4134-5d"
           >
             email
           </label>
@@ -152,10 +152,9 @@ exports[`renders correctly 1`] = `
           className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper floating-label toggle-password"
         >
           <input
-            autoFocus={true}
-            className="text-input default !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
-            id="1a46755d-afd1-58"
-            name="Password"
+            className="text-input default !bg-white !border-2 !border-[black] !rounded-lg !shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
+            id="password"
+            name="password"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -167,7 +166,7 @@ exports[`renders correctly 1`] = `
           />
           <label
             className="form-label"
-            htmlFor="1a46755d-afd1-58"
+            htmlFor="password"
           >
             password
           </label>
@@ -177,7 +176,9 @@ exports[`renders correctly 1`] = `
             onClick={[Function]}
           />
         </div>
-        <p />
+        <p
+          className="italic"
+        />
       </div>
       <div
         className="pb-3 px-3"
@@ -202,7 +203,7 @@ exports[`renders correctly 1`] = `
         className="px-3 flex gap-x-4"
       >
         <button
-          className="w-full lg:w-auto bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-5 py-3 "
+          className="w-full lg:w-auto bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-5 py-3 disabled:opacity-40"
         >
           signIn
         </button>

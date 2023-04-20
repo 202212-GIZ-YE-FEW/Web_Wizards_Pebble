@@ -2,20 +2,20 @@
 
 exports[`renders correctly 1`] = `
 <nav
-  className="bg-primary-200 h-[120px] max-w-full flex items-center mb-10"
+  className="bg-primary-200 h-[120px] mb-10"
 >
   <div
-    className="container flex md:justify-between"
+    className="container flex h-full md:justify-between items-center"
   >
     <div
       className="dropdown__DropdownWrapper-sc-clud83-0 cXRnlz dropdown-wrapper md:hidden place-self-center md:hidden place-self-center"
-      id="wrapper-lang-dropdown"
+      id="wrapper-mobile-dropdown"
     >
       <button
         aria-expanded={false}
         className="button__ButtonWrapper-sc-1aw98b4-0 button dropdown-button__DropdownButtonWrapper-sc-188aygt-0 dropdown-toggle arrow-bottom no-style"
         disabled={false}
-        id="47b38185-4a78-57"
+        id="e088a42c-ef7a-5d"
         onClick={[Function]}
       >
         <svg
@@ -34,7 +34,7 @@ exports[`renders correctly 1`] = `
         </svg>
       </button>
       <ul
-        aria-labelledby="47b38185-4a78-57"
+        aria-labelledby="e088a42c-ef7a-5d"
         className="dropdown-body__DropdownBodyWrapper-sc-xo3k2p-0 dropdown menu-items-wrapper shadow-[2px_2px_0px_#1A1A1A] border-2 border-[#1A1A1A] rounded-none"
         onClick={[Function]}
         style={
@@ -54,7 +54,7 @@ exports[`renders correctly 1`] = `
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
-            Events
+            All Events
           </a>
         </li>
         <li
@@ -67,6 +67,18 @@ exports[`renders correctly 1`] = `
             onTouchStart={[Function]}
           >
             About
+          </a>
+        </li>
+        <li
+          className="menu-item"
+        >
+          <a
+            href="#howitworks"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            How It Works
           </a>
         </li>
         <li
@@ -109,7 +121,7 @@ exports[`renders correctly 1`] = `
       />
     </a>
     <div
-      className="hidden md:flex gap-[10px]"
+      className="flex gap-[10px] !items-center"
     >
       <a
         href="/signin"
@@ -117,9 +129,8 @@ exports[`renders correctly 1`] = `
         onMouseEnter={[Function]}
         onTouchStart={[Function]}
       >
-         
         <button
-          className="button__ButtonWrapper-sc-1aw98b4-0 button w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-white !shadow-[2px_2px_0px_#1A1A1A] !border-2 !border-[#1A1A1A] !border-solid !text-black-100"
+          className="button__ButtonWrapper-sc-1aw98b4-0 button hidden md:block w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-white !shadow-[2px_2px_0px_#1A1A1A] !border-2 !border-[#1A1A1A] !border-solid !text-black-100"
           disabled={false}
         >
           signIn
@@ -132,14 +143,14 @@ exports[`renders correctly 1`] = `
         onTouchStart={[Function]}
       >
         <button
-          className="button__ButtonWrapper-sc-1aw98b4-0 button w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-[#2F7DA9] !text-white !shadow-none !border-none"
+          className="button__ButtonWrapper-sc-1aw98b4-0 button hidden md:block w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-[#2F7DA9] !text-white !shadow-none !border-none"
           disabled={false}
         >
           signUp
         </button>
       </a>
       <div
-        className="flex items-center gap-1"
+        className="hidden md:flex items-center gap-1"
       >
         <svg
           fill="none"
@@ -161,21 +172,16 @@ exports[`renders correctly 1`] = `
         >
           <button
             aria-expanded={false}
-            className="button__ButtonWrapper-sc-1aw98b4-0 button dropdown-button__DropdownButtonWrapper-sc-188aygt-0 dropdown-toggle arrow-bottom no-style"
+            className="button__ButtonWrapper-sc-1aw98b4-0 button dropdown-button__DropdownButtonWrapper-sc-188aygt-0 dropdown-toggle !text-white arrow-bottom no-style"
             disabled={false}
             id="47b38185-4a78-57"
             onClick={[Function]}
-            style={
-              Object {
-                "color": "white",
-              }
-            }
           >
             EN
           </button>
           <ul
             aria-labelledby="47b38185-4a78-57"
-            className="dropdown-body__DropdownBodyWrapper-sc-xo3k2p-0 dropdown menu-items-wrapper rounded-none"
+            className="dropdown-body__DropdownBodyWrapper-sc-xo3k2p-0 dropdown menu-items-wrapper shadow-[2px_2px_0px_#1A1A1A] border-2 border-[#1A1A1A] rounded-none"
             onClick={[Function]}
             style={
               Object {
