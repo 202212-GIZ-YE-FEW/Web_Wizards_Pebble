@@ -1,7 +1,7 @@
 import ButtonAuth from "@/components/shared/ButtonAuth";
 import OrDivider from "@/components/shared/OrDivider";
 
-import { signUpwithGoogle, singInWithTwitter } from "../../../lib/useAuth";
+import { signUpwithGoogle, singUpWithTwitter } from "../../../lib/useAuth";
 
 import GoogleIcon from "~/GoogleIcon.png";
 import TwitterIcon from "~/twitter.svg";
@@ -9,7 +9,7 @@ const SignOptions = ({ t }) => {
     return (
         <div className='flex flex-col-reverse order-last lg:flex-col lg:order-2'>
             <ButtonAuth
-                onClick={singInWithTwitter}
+                onClick={singUpWithTwitter}
                 text={t("signWithTwitter")}
                 icon={TwitterIcon}
                 alt='TwitterIcon'
