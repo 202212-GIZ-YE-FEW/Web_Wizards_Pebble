@@ -1,6 +1,8 @@
 import ButtonAuth from "@/components/shared/ButtonAuth";
 import OrDivider from "@/components/shared/OrDivider";
 
+import { signUpwithGoogle } from "../../../lib/useAuth";
+
 import GoogleIcon from "~/GoogleIcon.png";
 import TwitterIcon from "~/twitter.svg";
 const SignOptions = ({ t }) => {
@@ -14,6 +16,7 @@ const SignOptions = ({ t }) => {
                 height='16.5'
             />
             <ButtonAuth
+                onClick={signUpwithGoogle}
                 text={t("signWithGoogle")}
                 icon={GoogleIcon}
                 alt='Google Icon'

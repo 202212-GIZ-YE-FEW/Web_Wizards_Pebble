@@ -61,6 +61,7 @@ exports[`renders correctly 1`] = `
       <button
         className="button__ButtonWrapper-sc-1aw98b4-0 button w-full h-14 px-6 transition"
         disabled={false}
+        onClick={[Function]}
         style={
           Object {
             "backgroundColor": "white",
