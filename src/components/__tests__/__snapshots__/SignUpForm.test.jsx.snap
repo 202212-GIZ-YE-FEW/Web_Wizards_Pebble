@@ -129,7 +129,7 @@ exports[`renders correctly 1`] = `
           >
             <input
               autoFocus={true}
-              className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
+              className="text-input !bg-white !border-2 !border-[black] !rounded-lg !shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
               id="name"
               name="name"
               onBlur={[Function]}
@@ -156,8 +156,7 @@ exports[`renders correctly 1`] = `
             className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper floating-label"
           >
             <input
-              autoFocus={true}
-              className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
+              className="text-input !bg-white !border-2 !border-[black] !rounded-lg !shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
               id="surname"
               name="surname"
               onBlur={[Function]}
@@ -185,8 +184,7 @@ exports[`renders correctly 1`] = `
           className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper floating-label"
         >
           <input
-            autoFocus={true}
-            className="text-input !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
+            className="text-input !bg-white !border-2 !border-[black] !rounded-lg !shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
             id="email"
             name="email"
             onBlur={[Function]}
@@ -213,8 +211,7 @@ exports[`renders correctly 1`] = `
           className="input__InputWrapper-sc-1hj52gj-0 hyTiyQ input-wrapper floating-label toggle-password"
         >
           <input
-            autoFocus={true}
-            className="text-input default !bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
+            className="text-input default !bg-white !border-2 !border-[black] !rounded-lg !shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
             id="password"
             name="password"
             onBlur={[Function]}
@@ -238,7 +235,9 @@ exports[`renders correctly 1`] = `
             onClick={[Function]}
           />
         </div>
-        <p>
+        <p
+          className="italic"
+        >
           passwordCriteria
         </p>
       </div>
@@ -265,7 +264,7 @@ exports[`renders correctly 1`] = `
         className="px-3 flex gap-x-4"
       >
         <button
-          className="w-full lg:w-auto bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-5 py-3 "
+          className="w-full lg:w-auto bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-5 py-3 disabled:opacity-40"
         >
           signUp
         </button>

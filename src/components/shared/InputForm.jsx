@@ -26,6 +26,7 @@ const InputForm = (props) => {
         width,
         id,
         name,
+        autoFocus,
         isRequired = false,
         passwordCriteria,
     } = props;
@@ -34,7 +35,7 @@ const InputForm = (props) => {
     return (
         <div className={`px-3 mb-3 ${InputWidth} `}>
             <Input
-                autoFocus
+                autoFocus={autoFocus}
                 hasFloatingLabel={hasFloatingLabel}
                 label={label}
                 id={id}
@@ -42,7 +43,7 @@ const InputForm = (props) => {
                 placeholder={placeholder}
                 type={type}
                 required={isRequired}
-                className='!bg-white !border-2 !border-[black] rounded-lg shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0'
+                className='!bg-white !border-2 !border-[black] !rounded-lg !shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0'
                 togglePassword={togglePassword}
                 togglePasswordLabel={togglePasswordLabel}
                 state={togglePassword ? state : null}
@@ -54,7 +55,7 @@ const InputForm = (props) => {
                     handlePasswordChange(password, setState);
                 }}
             />
-            {togglePassword && <p>{passwordCriteria}</p>}
+            {togglePassword && <p className='italic'>{passwordCriteria}</p>}
         </div>
     );
 };
