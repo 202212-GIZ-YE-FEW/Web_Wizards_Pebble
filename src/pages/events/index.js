@@ -121,15 +121,22 @@ function Events() {
             setSelectedInterests([...selectedInterests, interest]);
         }
     };
-
+    const [currentUser, setCurrentUser] = useState(
+        auth?.currentUser?.displayName
+    );
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+            setCurrentUser(user?.displayName.split(" ")[0]);
+        });
+        return unsubscribe;
+    }, []);
     return (
         <div className='container mx-auto md:grid grid-cols-12 sm:gap-x-8 lg:gap-x-16'>
             {/* PAGE TITLE HEADER */}
             <div className='col-span-12  mx-auto mt-5 mb-12'>
                 <div className='flex items-start flex-col gap-3'>
                     <h1 className='text-6xl font-extrabold text-black-100'>
-                        {t("welcome")},{" "}
-                        {auth?.currentUser?.displayName.split(" ")[0]}
+                        {t("welcome")}, {currentUser}
                     </h1>
                     <p className='text-md text-start'>
                         {t("exploreAndJoinEvents")}
