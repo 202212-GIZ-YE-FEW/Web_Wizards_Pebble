@@ -16,11 +16,12 @@ export const AuthContextProvider = (props) => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
+                setLoading(false);
             } else {
                 setUser(null);
+                setLoading(false);
             }
         });
-        setLoading(false);
         return () => unsubscribe();
     }, []);
     return (
