@@ -35,6 +35,7 @@ const SignInForm = ({ t }) => {
             return;
         }
         setLoading(false);
+        router.push("/");
     };
 
     return (
