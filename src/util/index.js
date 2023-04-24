@@ -1,1 +1,1 @@
-export const PASSWORD_REGEXP = /(?=.*[A-Z])(?!.*[^a-zA-Z0-9@#$^+=])(.{8,15})$/;
+export const PASSWORD_REGEXP = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,32}$/;

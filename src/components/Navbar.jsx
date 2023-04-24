@@ -73,7 +73,7 @@ function SwitchLangDropDown(props) {
 }
 
 function MobileDropDown(props) {
-    const { t } = props;
+    const { t, isVerified } = props;
     return (
         <Dropdown
             autoClose
@@ -122,12 +122,16 @@ function MobileDropDown(props) {
                 <li className='menu-item'>
                     <Nav t={t} name='howItWorks' href='#howitworks' />
                 </li>
-                <li className='menu-item'>
-                    <Nav t={t} name='signIn' href='/signin' />
-                </li>
-                <li className='menu-item'>
-                    <Nav t={t} name='signUp' href='/signup' />
-                </li>
+                {isVerified && (
+                    <li className='menu-item'>
+                        <Nav t={t} name='signIn' href='/signin' />
+                    </li>
+                )}
+                {isVerified && (
+                    <li className='menu-item'>
+                        <Nav t={t} name='signUp' href='/signup' />
+                    </li>
+                )}
             </DropdownBody>
         </Dropdown>
     );
@@ -184,7 +188,10 @@ export function Navbar(props) {
     return (
         <nav className='bg-primary-200 h-[120px] mb-10'>
             <div className='container flex h-full md:justify-between items-center'>
-                <MobileDropDown t={t} />
+                <MobileDropDown
+                    isVerified={!(user && user.emailVerified)}
+                    t={t}
+                />
                 <Link
                     href='/'
                     className='mr-1 justify-center flex flex-1 md:flex-none'
