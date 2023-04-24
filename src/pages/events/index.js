@@ -7,13 +7,14 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 // React imports
 import React, { useEffect, useState } from "react";
 
+import { auth } from "@/lib/useAuth";
+
 // Component imports
 import Button from "@/components/Button";
 import Divider from "@/components/Divider";
 import DateRangePicker from "@/components/events/DatePicker/DateRangePicker";
 import EventCard from "@/components/events/EventCard/EventCard";
 import Pagination from "@/components/events/Pagination/Pagination";
-
 const locations = ["İzmir, TR", "İzmir, TRT"];
 
 const interests = [
@@ -127,7 +128,8 @@ function Events() {
             <div className='col-span-12  mx-auto mt-5 mb-12'>
                 <div className='flex items-start flex-col gap-3'>
                     <h1 className='text-6xl font-extrabold text-black-100'>
-                        {t("welcome")}, John!
+                        {t("welcome")},{" "}
+                        {auth?.currentUser?.displayName.split(" ")[0]}
                     </h1>
                     <p className='text-md text-start'>
                         {t("exploreAndJoinEvents")}
