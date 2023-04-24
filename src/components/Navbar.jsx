@@ -27,8 +27,12 @@ const routes = [
 ];
 
 function Nav(props) {
-    const { name, t, href } = props;
-    return <Link href={href}>{t(name)}</Link>;
+    const { name, t, href, className = "" } = props;
+    return (
+        <Link className={className} href={href}>
+            {t(name)}
+        </Link>
+    );
 }
 
 function SwitchLangDropDown(props) {
@@ -116,7 +120,13 @@ function MobileDropDown(props) {
                     );
                 })}
                 <li className='menu-item'>
-                    <Nav t={t} name='How It Works' href='#howitworks' />
+                    <Nav t={t} name='howItWorks' href='#howitworks' />
+                </li>
+                <li className='menu-item'>
+                    <Nav t={t} name='signIn' href='/signin' />
+                </li>
+                <li className='menu-item'>
+                    <Nav t={t} name='signUp' href='/signup' />
                 </li>
             </DropdownBody>
         </Dropdown>
@@ -197,12 +207,20 @@ export function Navbar(props) {
                         })}
                     {(!user || !user.emailVerified) && (
                         <>
-                            <Link href='/signin'>
+                            <Link
+                                href='/signin'
+                                role='button'
+                                className='hover:!no-underline'
+                            >
                                 <Button className='hidden md:block w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-white !shadow-[2px_2px_0px_#1A1A1A] !border-2 !border-[#1A1A1A] !border-solid !text-black-100'>
                                     {t("signIn")}
                                 </Button>
                             </Link>
-                            <Link href='/signup'>
+                            <Link
+                                href='/signup'
+                                role='button'
+                                className='hover:!no-underline'
+                            >
                                 <Button className='hidden md:block w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-[#2F7DA9] !text-white !shadow-none !border-none'>
                                     {t("signUp")}
                                 </Button>
