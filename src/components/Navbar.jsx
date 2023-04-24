@@ -22,8 +22,8 @@ import person from "~/person.svg";
 // read paths of pages dir and extract their respective name and href
 
 const routes = [
-    { name: "Events", href: "/events" },
-    { name: "About", href: "/about" },
+    { name: "events", href: "/events" },
+    { name: "about", href: "/about" },
 ];
 
 function Nav(props) {
@@ -106,8 +106,8 @@ function MobileDropDown(props) {
                             <Nav
                                 t={t}
                                 name={
-                                    route.name === "Events"
-                                        ? "All Events"
+                                    route.name === "events"
+                                        ? "allEvents"
                                         : route.name
                                 }
                                 href={route.href}
@@ -186,13 +186,13 @@ export function Navbar(props) {
                         user.emailVerified &&
                         routes.map((route, index) => {
                             return (
-                                <Link
-                                    href={route.href}
-                                    className='hidden md:inline !text-white !text-[22px] !font-medium !px-2 !leading-[30px]'
+                                <Nav
+                                    name={route.name}
                                     key={index}
-                                >
-                                    {route.name}
-                                </Link>
+                                    className='hidden md:inline !text-white !text-[22px] !font-medium !px-2 !leading-[30px]'
+                                    t={t}
+                                    href={route.href}
+                                />
                             );
                         })}
                     {(!user || !user.emailVerified) && (
