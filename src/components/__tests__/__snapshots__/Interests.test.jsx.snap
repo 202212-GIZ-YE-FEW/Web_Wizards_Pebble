@@ -18,16 +18,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
@@ -44,16 +37,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
@@ -70,16 +56,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
@@ -96,16 +75,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
@@ -122,16 +94,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
@@ -148,16 +113,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
@@ -174,16 +132,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
@@ -200,16 +151,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
@@ -226,16 +170,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
@@ -252,16 +189,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
@@ -278,16 +208,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
@@ -304,16 +227,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
@@ -330,16 +246,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
@@ -356,16 +265,9 @@ exports[`renders correctly 1`] = `
       className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
     >
       <button
-        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white "
+        className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "border": "2px solid black",
-            "borderRadius": "0.5rem",
-            "boxShadow": "2px 2px #1a1a1a",
-          }
-        }
       >
         <div
           className="relative flex items-center justify-center "
