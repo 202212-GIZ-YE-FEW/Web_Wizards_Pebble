@@ -1,11 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="px-3 py-2 lg:py-4 "
->
-  <button
-    className="w-36 h-16 lg:w-56 bg-primary-200  text-white font-semibold rounded-lg text-sm lg:text-md px-3 sm:px-5 py-3  undefined"
-  />
-</div>
+<button
+  className="button__ButtonWrapper-sc-1aw98b4-0 button !w-36 !h-16 lg:!w-56 !bg-primary-200  !text-white !font-semibold !rounded-lg !text-sm lg:!text-md !px-3 sm:!px-5 !py-3 !shadow-none !border-none undefined"
+  disabled={false}
+/>
 `;

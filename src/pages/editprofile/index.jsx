@@ -12,25 +12,28 @@ const EditProfile = () => {
     const { t } = useTranslation("editprofile");
 
     return (
-        <div className='flex flex-col md:px-14 px-4 lg:px-48  flex-wrap nowrap mt-8'>
-            <div className='flex justify-start py-3'>
+        <div className='flex flex-col md:px-14 px-4 lg:px-48  flex-wrap mt-8'>
+            <div className='flex justify-start lg:py-3'>
                 <h3 className='font-semibold mb-8 tracking-tight text-gray-800 text-4xl order-first'>
                     {t("editProfile")}
                 </h3>
             </div>
-            <div className='flex flex-row items-center justify-between flex-wrap nowrap'>
+            <div className='flex flex-col gap-y-5 lg:flex-row items-center justify-between flex-wrap'>
                 <CircleImg />
-                <div className='w-1/4'>
-                    <SaveButton
-                        text={t("uploadNew")}
-                        className='lg:ml-16 tracking-widest'
-                    />
-                </div>
-                <EditprofileButton text={t("chooseFromLibrary")} />
+
+                <SaveButton
+                    text={t("uploadNew")}
+                    className='lg:!ml-16 !tracking-widest'
+                />
+
+                <EditprofileButton
+                    text={t("chooseFromLibrary")}
+                    className='lg:!w-96'
+                />
             </div>
             <EditProfileForm t={t} />
             <Interests t={t} />
-            <div className='flex flex-row justify-start py-8'>
+            <div className='flex flex-row justify-end py-8'>
                 <SaveButton text={t("saveChanges")} />
             </div>
             <ChangePasswordForm t={t} />
