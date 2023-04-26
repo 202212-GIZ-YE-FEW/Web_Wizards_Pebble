@@ -8,6 +8,7 @@ exports[`renders correctly 1`] = `
   <button
     aria-label="Close the error alert."
     className="alert-close-button__AlertCloseButtonWrapper-sc-unvdea-0 close-button style-orange-light"
+    onClick={[Function]}
   />
   auth/unknown
 </div>
