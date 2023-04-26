@@ -29,7 +29,10 @@ const ChangePasswordForm = ({ t }) => {
 
             <div className='flex flex-row justify-end'>
                 <SaveButton text={t("submit")} />
-                <EditprofileButton text={t("cancel")} className='!w-36' />
+                <EditprofileButton
+                    text={t("cancel")}
+                    className='!w-36 !m-0 !ml-2'
+                />
             </div>
         </div>
     );
