@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import SecondaryTitle from "./SecondaryTitle";
-import SingleInterest from "./SingleInterest";
+import SecondaryTitle from "@/components/editProfile/SecondaryTitle";
+import SingleInterest from "@/components/editProfile/SingleInterest";
 const Interests = ({ t }) => {
     const interests = [
         "noPoverty",
@@ -28,8 +28,6 @@ const Interests = ({ t }) => {
             setClickedInterests([...clickedInterests, interest]);
         }
     };
-    // Here is the clolected data from the intersts button @Addeb you can use it later
-    console.log(clickedInterests);
 
     return (
         <div className='mt-10 '>
