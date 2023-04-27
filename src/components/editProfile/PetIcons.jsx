@@ -6,7 +6,7 @@ import { updateProfile } from "../../../lib/useAuth";
 import { cat, checkMark, dog, rabbit } from "~/library/svgs";
 
 export default function PetIcons(props) {
-    const { hidden, user } = props;
+    const { hidden, user, t } = props;
     const [pet, setPet] = useState("cat");
     const [loading, setLoading] = useState(false);
     return (
@@ -15,21 +15,21 @@ export default function PetIcons(props) {
                 hidden={hidden}
                 items={[
                     {
-                        subtitle: "Super duper Pebble Cat!",
+                        subtitle: t("catSubtitle"),
                         svg: cat,
-                        title: "Pebble's Cat",
+                        title: t("catTitle"),
                         value: "cat",
                     },
                     {
-                        subtitle: "Amazing R-r-r-rabit!",
+                        subtitle: t("rabbitSubtitle"),
                         svg: rabbit,
-                        title: "Pebble's Rabbit",
+                        title: t("rabbitTitle"),
                         value: "rabbit",
                     },
                     {
-                        subtitle: "Woofy Dog!",
+                        subtitle: t("dogSubtitle"),
                         svg: dog,
-                        title: "Pebble's Dog",
+                        title: t("dogTitle"),
                         value: "dog",
                     },
                     {
@@ -46,7 +46,7 @@ export default function PetIcons(props) {
                         ),
                     },
                     {
-                        subtitle: "Pets made by Rachmat Budiaji",
+                        subtitle: t("petsCredit"),
                     },
                 ]}
                 onChange={async (_pet) => {

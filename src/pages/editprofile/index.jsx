@@ -83,7 +83,7 @@ const EditProfile = () => {
                     className='lg:!w-96'
                     onClick={() => setModalOpen(!modalOpen)}
                 />
-                <PetIcons hidden={!modalOpen} user={user} />
+                <PetIcons hidden={!modalOpen} user={user} t={t} />
             </div>
             <EditProfileForm t={t} />
             <Interests t={t} />
