@@ -8,18 +8,6 @@ import EventAttendees from "./EventAttendees";
 import EventDate from "./EventDate";
 import EventsImage from "./EventsImage";
 import EventsTitle from "./EventsTitle";
-const eventsList = [
-    {
-        id: 1,
-        date: "FRI, JUL -7:00 PM GMT+3",
-        attendees: ["A", "B", "C", "D", "E"],
-        attendeesNumber: "+12",
-        title: "Title of the Event",
-        description:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.",
-        image: "event1.png",
-    },
-];
 
 function EventCard({ event, t, keyValue }) {
     return (
