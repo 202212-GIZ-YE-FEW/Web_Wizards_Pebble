@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="flex flex-col-reverse order-last lg:flex-col lg:order-2"
+>
+  <button
+    className="button__ButtonWrapper-sc-1aw98b4-0 button w-full h-14 px-6 transition"
+    disabled={false}
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "white",
+        "border": "2px solid black",
+        "borderRadius": "0.5rem",
+        "boxShadow": "2px 2px #1a1a1a",
+      }
+    }
+  >
+    <div
+      className="relative flex h-full items-center space-x-4 justify-center"
+    >
+      <img
+        alt="TwitterIcon"
+        data-nimg="1"
+        decoding="async"
+        height={35}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={35}
+      />
+      <span
+        className="block w-max font-medium tracking-wide text-gray-900 sm:text-base"
+      >
+        signWithTwitter
+      </span>
+    </div>
+  </button>
+  <button
+    className="button__ButtonWrapper-sc-1aw98b4-0 button w-full h-14 px-6 transition"
+    disabled={false}
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "white",
+        "border": "2px solid black",
+        "borderRadius": "0.5rem",
+        "boxShadow": "2px 2px #1a1a1a",
+      }
+    }
+  >
+    <div
+      className="relative flex h-full items-center space-x-4 justify-center"
+    >
+      <img
+        alt="Google Icon"
+        data-nimg="1"
+        decoding="async"
+        height={45}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={45}
+      />
+      <span
+        className="block w-max font-medium tracking-wide text-gray-900 sm:text-base"
+      >
+        signWithGoogle
+      </span>
+    </div>
+  </button>
+  <div
+    className="flex mt-7 order-3 items-center text-center mb-4"
+  >
+    <hr
+      className=" text-gray-400  w-full "
+    />
+    <label
+      className="block font-medium text-sm text-gray-700 ml-6 mr-6"
+    >
+      or
+    </label>
+    <hr
+      className=" text-gray-400 w-full"
+    />
+  </div>
+</div>
+`;

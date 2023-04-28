@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<h2
+  className="card-title font-bold"
+>
+  <span
+    className="hidden sm:inline"
+  >
+    undefined...
+  </span>
+  <span
+    className="inline sm:hidden"
+  >
+    undefined...
+  </span>
+</h2>
+`;

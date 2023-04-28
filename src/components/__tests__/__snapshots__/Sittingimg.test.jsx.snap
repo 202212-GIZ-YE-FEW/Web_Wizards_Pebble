@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="  mx-auto w-1/2 max-w-xl pl-16 py-2 lg:py-14 order-1 lg:order-2"
+>
+  <img
+    alt="Sitting or a rock"
+    className=" mx-auto  mt-16"
+    data-nimg="1"
+    decoding="async"
+    height={40}
+    id="sitting-img"
+    loading="lazy"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+    srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+    style={
+      Object {
+        "color": "transparent",
+      }
+    }
+    width={40}
+  />
+</div>
+`;

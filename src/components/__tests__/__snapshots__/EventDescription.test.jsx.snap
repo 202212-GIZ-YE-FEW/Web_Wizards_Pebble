@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="order-1 lg:w-7/12 w-full px-2"
+>
+  <h2
+    className="text-2xl font-semibold mb-2 "
+  >
+    Event Description:
+  </h2>
+  <p
+    className="  lg:text-lg  md:text-md"
+  />
+</div>
+`;

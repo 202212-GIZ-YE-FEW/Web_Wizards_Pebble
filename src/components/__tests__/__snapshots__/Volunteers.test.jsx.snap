@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section
+  className="container text-center mt-40"
+>
+  <h2
+    className="text-center text-black-100 text-4xl font-sans "
+  >
+    volunteersTitle
+  </h2>
+  <div
+    className="flex flex-col gap-y-10 md:flex-row md:gap-y-0 justify-center my-32 gap-x-5"
+  >
+    <div
+      className="flex flex-col items-center gap-y-10"
+    >
+      <img
+        alt="Person with hand on face"
+        className="rounded-full "
+        data-nimg="1"
+        decoding="async"
+        height={72}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=256&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=96&q=75 1x, /_next/image?url=%2Fimg.jpg&w=256&q=75 2x"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={72}
+      />
+      <h3
+        className="text-2xl font-sans"
+      >
+        volunteerName
+        , 
+        volunteerOccupation
+      </h3>
+      <p
+        className="text-black-50 text-xl leading-8 "
+      >
+        volunteerDescription
+      </p>
+    </div>
+    <div
+      className="flex flex-col items-center gap-y-10"
+    >
+      <img
+        alt="Person with hand on face"
+        className="rounded-full "
+        data-nimg="1"
+        decoding="async"
+        height={72}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=256&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=96&q=75 1x, /_next/image?url=%2Fimg.jpg&w=256&q=75 2x"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={72}
+      />
+      <h3
+        className="text-2xl font-sans"
+      >
+        volunteerName
+        , 
+        volunteerOccupation
+      </h3>
+      <p
+        className="text-black-50 text-xl leading-8 "
+      >
+        volunteerDescription
+      </p>
+    </div>
+    <div
+      className="flex flex-col items-center gap-y-10"
+    >
+      <img
+        alt="Person with hand on face"
+        className="rounded-full "
+        data-nimg="1"
+        decoding="async"
+        height={72}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=256&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=96&q=75 1x, /_next/image?url=%2Fimg.jpg&w=256&q=75 2x"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={72}
+      />
+      <h3
+        className="text-2xl font-sans"
+      >
+        volunteerName
+        , 
+        volunteerOccupation
+      </h3>
+      <p
+        className="text-black-50 text-xl leading-8 "
+      >
+        volunteerDescription
+      </p>
+    </div>
+  </div>
+</section>
+`;

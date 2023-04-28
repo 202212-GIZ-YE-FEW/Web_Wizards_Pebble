@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import Input from "./LocationInput";
 import Interests from "../editProfile/Interests";
 import YemenCities from "./YemenCities";
+import useFirestore from "../../../lib/useFirestore";
 
 const EventCreation = ({ label, t }) => {
     const [{ searchLocation, locationName }, setState] = useState({
@@ -34,7 +35,32 @@ const EventCreation = ({ label, t }) => {
             searchCity !== cityData
         );
     });
+    const createEventDataWithLocation = () => {
+        return {
+            ...eventData,
+            location: locationName ? locationName : searchLocation,
+        };
+    };
 
+    const [eventData, setEventData] = useState({
+        location: searchLocation,
+    });
+
+    const { addDocument } = useFirestore("events");
+
+    const handleSubmit = async (e) => {
+        const eventDataWithLocation = createEventDataWithLocation();
+        const result = await addDocument(eventDataWithLocation, eventData);
+        if (result.success) {
+            console.log("Event added successfully with ID:", result.id);
+            window.alert("Event added successfully with ID:", result?.title);
+            setEventData({
+                location: "",
+            });
+        } else {
+            console.error("Error adding event:", result.error);
+        }
+    };
     return (
         <div className=' w-full md:w-2/3 mx-auto rounded-lg p-2 flex flex-col md:flex-row'>
             <div>
@@ -219,6 +245,7 @@ const EventCreation = ({ label, t }) => {
                         <button
                             className='rounded border border-b-4 border-r-4 border-opacity-100 border-gray-700 shadow-black py-4 px-4 md:w-96 p-4 '
                             style={{ color: "#1A1A1A", fontWeight: 500 }}
+                            onClick={handleSubmit}
                         >
                             {t("Guidelines.submitButton")}
                         </button>
