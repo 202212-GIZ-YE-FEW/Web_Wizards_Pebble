@@ -103,6 +103,7 @@ export async function getStaticProps({ locale }) {
             ...(await serverSideTranslations(locale, [
                 "common",
                 "editprofile",
+                "interests",
             ])),
             // Will be passed to the page component as props
         },
