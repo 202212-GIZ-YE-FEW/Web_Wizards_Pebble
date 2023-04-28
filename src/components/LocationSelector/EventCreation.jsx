@@ -1,11 +1,96 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Input from "./LocationInput";
 import Interests from "../editProfile/Interests";
-const EventCreation = ({ t }) => {
+import YemenCities from "./YemenCities";
+
+const EventCreation = ({ label, t }) => {
+    const [{ searchLocation, locationName }, setState] = useState({
+        searchLocation: "",
+        locationName: "",
+    });
+
+    const inputElementRef = useRef(null);
+
+    const handleLocationNameChange = (event) => {
+        const selectedCity = event.target.innerText;
+        setState({ searchLocation: "", locationName: selectedCity });
+        inputElementRef.current.value = "";
+    };
+
+    const handleSearch = (e) => {
+        const enteredSearchLocation = e.target;
+        setState({
+            searchLocation: enteredSearchLocation.value,
+            locationName: "",
+        });
+    };
+
+    const filteredCities = YemenCities.filter((city) => {
+        const searchCity = searchLocation.toLowerCase();
+        const cityData = city.toLowerCase();
+        return (
+            searchCity &&
+            cityData.includes(searchCity) &&
+            searchCity !== cityData
+        );
+    });
+
     return (
-        <div className='bg-white p-4'>
-            <div className='w-full md:w-2/3 mx-auto bg-white rounded-lg p-4 md:p-8 flex flex-col md:flex-row'>
-                <div className='w-full md:w-1/2 flex flex-col justify-between flex-grow'>
+        <div className=' w-full md:w-2/3 mx-auto rounded-lg p-2 flex flex-col md:flex-row'>
+            <div>
+                <div className='flex flex-wrap justify-between '>
+                    <div className='flex flex-col mr-10'>
+                        <div className='mb-4'>
+                            <h4 className='font-sans font-semibold text-black-100 mb-2'>
+                                {t("chooseLocation")}
+                            </h4>
+                            <p
+                                className='text-black-50'
+                                dangerouslySetInnerHTML={{
+                                    __html: t("locationDescription"),
+                                }}
+                            ></p>
+                        </div>
+                        <Input
+                            id='location'
+                            name='Location name'
+                            value={searchLocation}
+                            onChange={handleSearch}
+                            placeholder={t("locationPlaceholder")}
+                            inputRef={inputElementRef}
+                            className='!rounded-md !border-2 !border-black-100 !bg-white w-80 '
+                        />
+
+                        <div>
+                            {filteredCities.slice(0, 5).map((city, index) => (
+                                <div
+                                    key={index}
+                                    onClick={handleLocationNameChange}
+                                    className='cursor-pointer p-2 px-4 hover:bg-primary-200'
+                                >
+                                    {city}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className='w-full md:w-1/2 flex flex-col justify-between'>
+                        <div className='flex flex-col mb-4'>
+                            <label
+                                htmlFor='location'
+                                className='text-6xl md:text-6xl font-semibold mb-2 text-black-100'
+                            >
+                                {locationName ? locationName : label || "izmir"}
+                            </label>
+                            <a
+                                href='#'
+                                onClick={handleLocationNameChange}
+                                className='!text-secondary-400'
+                            >
+                                {t("changeLocation")}
+                            </a>
+                        </div>
+                    </div>
+
                     <div className='md:flex md:justify-between'>
                         <Interests
                             t={t}
