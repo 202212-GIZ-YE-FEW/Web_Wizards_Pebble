@@ -2,14 +2,59 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="bg-white p-4"
+  className=" w-full md:w-2/3 mx-auto rounded-lg p-2 flex flex-col md:flex-row"
 >
-  <div
-    className="w-full md:w-2/3 mx-auto bg-white rounded-lg p-4 md:p-8 flex flex-col md:flex-row"
-  >
+  <div>
     <div
-      className="w-full md:w-1/2 flex flex-col justify-between flex-grow"
+      className="flex flex-wrap justify-between "
     >
+      <div
+        className="flex flex-col mr-10"
+      >
+        <div
+          className="mb-4"
+        >
+          <h4
+            className="font-sans font-semibold text-black-100 mb-2"
+          />
+          <p
+            className="text-black-50"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+          />
+        </div>
+        <input
+          className="!rounded-md !border-2 !border-black-100 !bg-white w-80 "
+          id="location"
+          name="Location name"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+        <div />
+      </div>
+      <div
+        className="w-full md:w-1/2 flex flex-col justify-between"
+      >
+        <div
+          className="flex flex-col mb-4"
+        >
+          <label
+            className="text-6xl md:text-6xl font-semibold mb-2 text-black-100"
+            htmlFor="location"
+          >
+            Some label
+          </label>
+          <a
+            className="!text-secondary-400"
+            href="#"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
       <div
         className="md:flex md:justify-between"
       >
@@ -350,24 +395,7 @@ exports[`renders correctly 1`] = `
               className="py-5 md:max-w-96 lg:max-w-128"
             >
               <input
-                className="w-full border border-gray-400 rounded-lg py-2 px-4 text-sm font-rubik"
-                id="location"
-                placeholder="locationPlaceholder"
-                style={
-                  Object {
-                    "backgroundColor": "#FFFFFF",
-                    "borderColor": "#000000",
-                    "borderRadius": "8px",
-                    "borderWidth": "2px",
-                    "boxShadow": "none",
-                    "boxSizing": "border-box",
-                    "fontFamily": "Rubik",
-                    "fontSize": "14px",
-                    "height": "48px",
-                    "outline": "none",
-                    "padding": "10px",
-                  }
-                }
+                className="w-full md:w-96 rounded border border-black px-3 py-2 shadow focus:border-black focus:outline-none focus:ring-0 focus:ring-black"
                 type="text"
               />
             </div>
