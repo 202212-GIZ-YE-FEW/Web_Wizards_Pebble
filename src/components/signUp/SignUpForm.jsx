@@ -35,7 +35,9 @@ const SignUpForm = ({ t }) => {
         const password = formData.get("password");
         try {
             setLoading(true);
-            await signUp(email, password, { firstName, lastName });
+            await signUp(email, password, {
+                displayName: `${firstName} ${lastName}`,
+            });
         } catch (error) {
             setLoading(false);
             setErrors(error.code || "auth/unknown");

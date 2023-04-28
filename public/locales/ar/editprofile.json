@@ -26,5 +26,12 @@
     "newPassword": "كلمة مرور جديدة",
     "confirmPassword": "تأكيد كلمة المرور",
     "cancel": "إلغاء",
-    "submit": "إرسال"
+    "submit": "إرسال",
+    "catTitle": "قطة بيبل",
+    "catSubTitle": "قطة رهيبة سريعة!",
+    "rabbitTitle": "أرنب بيبل",
+    "rabbitSubTitle": "أرنب رائع!",
+    "dogTitle": "كلب بيبل",
+    "dogSubTitle": "كلب وفي!",
+    "petsCredit": "تم صنع الحيوانات الإلفية بواسطة رشامت بوداجي."
 }
