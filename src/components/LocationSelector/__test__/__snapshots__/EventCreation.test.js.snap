@@ -350,24 +350,7 @@ exports[`renders correctly 1`] = `
               className="py-5 md:max-w-96 lg:max-w-128"
             >
               <input
-                className="w-full border border-gray-400 rounded-lg py-2 px-4 text-sm font-rubik"
-                id="location"
-                placeholder="locationPlaceholder"
-                style={
-                  Object {
-                    "backgroundColor": "#FFFFFF",
-                    "borderColor": "#000000",
-                    "borderRadius": "8px",
-                    "borderWidth": "2px",
-                    "boxShadow": "none",
-                    "boxSizing": "border-box",
-                    "fontFamily": "Rubik",
-                    "fontSize": "14px",
-                    "height": "48px",
-                    "outline": "none",
-                    "padding": "10px",
-                  }
-                }
+                className="w-full md:w-96 rounded border border-black px-3 py-2 shadow focus:border-black focus:outline-none focus:ring-0 focus:ring-black"
                 type="text"
               />
             </div>
