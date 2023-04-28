@@ -228,39 +228,29 @@ const EventCreation = ({ label, t }) => {
 
                     <div className='mb-3 flex flex-col gap-5 md:flex-row md:justify-between flex-grow'>
                         <div>
-                            <h2
-                                className='py-1 text-2xl font-medium font-rubik text-black'
-                                style={{ color: "#1A1A1A", fontWeight: 600 }}
-                            >
+                            <h2 className='py-2 text-2xl font-semibold text-black-100 font-sans'>
                                 {t("Guidelines.guidelinesHeading")}
                             </h2>
 
-                            <p className='my-2  w-full text-gray-500'>
+                            <p className='my-2 w-full text-black-50'>
                                 {t("Guidelines.guidelinesText")}
                             </p>
-                            <ul
-                                className='my-1  w-full list-disc pl-5 text-black'
-                                style={{ color: "#1A1A1A" }}
-                            >
+                            <ul className='my-1 w-full list-disc pl-5 !text-black-100'>
                                 <li>{t("Guidelines.list1")}</li>
                                 <li>{t("Guidelines.list2")}</li>
                                 <li>{t("Guidelines.list3")}</li>
                             </ul>
-                            <p className='my-1 text-gray-400'>
+                            <p className='my-1 text-black-50'>
                                 {t("Guidelines.guidelinesCommunity")}
-                                <a
-                                    href='#'
-                                    className='p-1 text-blue-600 hover:text-primary-200'
-                                >
+                                <a href='#' className='p-1 !text-secondary-400'>
                                     {t("Guidelines.guidelinesLink")}
                                 </a>
                             </p>
                         </div>
                     </div>
-                    <div className='mb-4 flex w-full flex-col items-center justify-center gap-10 py-3 '>
+                    <div className='mb-4 flex w-full flex-col items-center justify-center gap-10 py-3'>
                         <button
-                            className='rounded border border-b-4 border-r-4 border-opacity-100 border-gray-700 shadow-black py-4 px-4 md:w-96 p-4 '
-                            style={{ color: "#1A1A1A", fontWeight: 500 }}
+                            className='rounded border border-b-4 border-r-4 border-opacity-100 border-gray-700 shadow-black py-4 px-4 md:w-96 p-4 text-black-100 font-sans font-semibold hover:bg-primary-200'
                             onClick={handleSubmit}
                         >
                             {t("Guidelines.submitButton")}
