@@ -7,6 +7,7 @@ import EventsDescription from "@/components/events/EventCard/EventsDescription";
 import EventAttendees from "./EventAttendees";
 import EventDate from "./EventDate";
 import EventsImage from "./EventsImage";
+import EventsTitle from "./EventsTitle";
 const eventsList = [
     {
         id: 1,
@@ -38,7 +39,7 @@ function EventCard({ event, t, keyValue }) {
                 <EventsImage eventImg={event.image} />
                 <div className='card-right'>
                     <div className='card-body'>
-                        <h2 className='card-title font-bold'>{event.title}</h2>
+                        <EventsTitle title={event.title} />
                         <EventsDescription description={event.description} />
                     </div>
 
