@@ -422,22 +422,16 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="py-3 pr-4 md:pr-20 mb-4 md:flex md:flex-row md:justify-between md:flex-wrap "
+        className="py-2 pr-4 md:pr-1 mb-4 md:flex md:flex-row md:justify-between md:flex-wrap"
       >
         <div
           className="w-full md:w-2/2"
         >
           <h2
-            className="text-xl md:text-2xl font-medium text-black py-1"
-            style={
-              Object {
-                "color": "#1A1A1A",
-                "fontWeight": 600,
-              }
-            }
+            className="text-xl text-black-100 font-sans font-semibold py-1"
           />
           <p
-            className="text-gray-500 my-1"
+            className="text-black-50 my-1"
           />
         </div>
         <div
@@ -448,17 +442,9 @@ exports[`renders correctly 1`] = `
           >
             <input
               accept="image/x-png,image/gif,image/jpeg"
-              style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderColor": "#1A1A1A",
-                  "borderRadius": "8px",
-                  "borderWidth": "2px",
-                  "color": "#1A1A1A",
-                  "resize": "none",
-                  "width": "570px",
-                }
-              }
+              className="!w-full !h-12  !rounded  !border-2 !border-black-100  !bg-white"
+              name="image"
+              onChange={[Function]}
               type="file"
             />
           </div>

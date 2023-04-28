@@ -1,10 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Input from "./LocationInput";
 import Interests from "../editProfile/Interests";
 import YemenCities from "./YemenCities";
 import useFirestore from "../../../lib/useFirestore";
+import useFirebaseStorage from "../../../lib/useFirebaseStorage";
 
 const EventCreation = ({ label, t }) => {
+    const [selectedFile, setSelectedFile] = useState(null);
+    const [isUploading, setIsUploading] = useState(false);
     const [{ searchLocation, locationName }, setState] = useState({
         searchLocation: "",
         locationName: "",
@@ -31,6 +34,7 @@ const EventCreation = ({ label, t }) => {
 
         setEventData({ ...eventData, [name]: value });
     };
+
     const filteredCities = YemenCities.filter((city) => {
         const searchCity = searchLocation.toLowerCase();
         const cityData = city.toLowerCase();
@@ -56,6 +60,28 @@ const EventCreation = ({ label, t }) => {
     });
 
     const { addDocument } = useFirestore("events");
+
+    const { uploadFile, downloadUrl, error } =
+        useFirebaseStorage("eventsPictures");
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        console.log("file", file);
+        setSelectedFile(file);
+        if (file) {
+            setIsUploading(true);
+            uploadFile(file);
+        }
+    };
+
+    useEffect(() => {
+        if (downloadUrl) {
+            // Retrieve download URL from useFirebaseStorage hook
+            setEventData({ ...eventData, image: downloadUrl });
+            setIsUploading(false);
+        }
+        setIsUploading(false);
+    }, [downloadUrl]);
 
     const handleSubmit = async (e) => {
         const eventDataWithLocation = createEventDataWithLocation();
@@ -178,32 +204,23 @@ const EventCreation = ({ label, t }) => {
                             />
                         </div>
                     </div>
-                    <div className='py-3 pr-4 md:pr-20 mb-4 md:flex md:flex-row md:justify-between md:flex-wrap '>
+                    <div className='py-2 pr-4 md:pr-1 mb-4 md:flex md:flex-row md:justify-between md:flex-wrap'>
                         <div className='w-full md:w-2/2'>
-                            <h2
-                                className='text-xl md:text-2xl font-medium text-black py-1'
-                                style={{ color: "#1A1A1A", fontWeight: 600 }}
-                            >
+                            <h2 className='text-xl text-black-100 font-sans font-semibold py-1'>
                                 {t("CreateEventInfo.eventImageHeading")}
                             </h2>
-                            <p className='text-gray-500 my-1'>
+                            <p className='text-black-50 my-1'>
                                 {t("CreateEventInfo.eventImageText")}
                             </p>
                         </div>
                         <div className='w-full md:w-1/2'>
                             <div className='relative py-2'>
                                 <input
+                                    name='image'
+                                    onChange={handleFileChange}
                                     type='file'
                                     accept='image/x-png,image/gif,image/jpeg'
-                                    style={{
-                                        resize: "none",
-                                        color: "#1A1A1A",
-                                        backgroundColor: "white",
-                                        borderColor: "#1A1A1A",
-                                        borderRadius: "8px",
-                                        borderWidth: "2px",
-                                        width: "570px",
-                                    }}
+                                    className='!w-full !h-12  !rounded  !border-2 !border-black-100  !bg-white'
                                 />
                             </div>
                         </div>
