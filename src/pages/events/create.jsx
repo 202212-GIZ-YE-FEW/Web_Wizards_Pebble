@@ -1,14 +1,15 @@
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import LocationSelectors from "../../components/LocationSelector/LocationSelector";
+// import LocationSelectors from "../../components/LocationSelector/LocationSelector";
 import EventCreation from "../../components/LocationSelector/EventCreation";
+import Interests from "../../components/editProfile/Interests";
 
 const LocationSelectorPage = () => {
     const locationT = useTranslation("locationSelector").t;
 
     return (
         <div>
-            <LocationSelectors t={locationT} />
+            {/* <LocationSelectors t={locationT} /> */}
             <EventCreation t={locationT} />
         </div>
     );
@@ -24,6 +25,7 @@ export async function getStaticProps({ locale }) {
                 "landing",
                 "locationSelector",
                 "EventCreation",
+                "interests",
             ])),
             // Will be passed to the page component as props
         },

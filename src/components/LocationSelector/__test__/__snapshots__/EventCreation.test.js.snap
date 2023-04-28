@@ -16,13 +16,8 @@ exports[`renders correctly 1`] = `
         <div
           className="mt-10 "
         >
-          <div>
-            <label
-              className="font-extrabold text-2xl py-2 ml-3 text-gray-800"
-            />
-          </div>
           <div
-            className="flex flex-wrap justify-evenly"
+            className="flex flex-wrap items-center justify-center overflow-hidden lg:ml-8 lg:mr-8 lg:flex-row lg:flex-wrap lg:items-center lg:justify-center"
           >
             <div
               className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
@@ -37,7 +32,9 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    no_poverty
+                  </p>
                 </div>
               </button>
             </div>
@@ -54,7 +51,9 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    zero_hunger
+                  </p>
                 </div>
               </button>
             </div>
@@ -71,7 +70,9 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    good_health
+                  </p>
                 </div>
               </button>
             </div>
@@ -88,7 +89,9 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    quality_education
+                  </p>
                 </div>
               </button>
             </div>
@@ -105,7 +108,9 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    gender_equality
+                  </p>
                 </div>
               </button>
             </div>
@@ -122,7 +127,9 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    clean_water
+                  </p>
                 </div>
               </button>
             </div>
@@ -139,7 +146,9 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    affordable_energy
+                  </p>
                 </div>
               </button>
             </div>
@@ -156,7 +165,9 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    decent_work
+                  </p>
                 </div>
               </button>
             </div>
@@ -173,7 +184,9 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    innovation
+                  </p>
                 </div>
               </button>
             </div>
@@ -190,7 +203,9 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    reduced_inequalities
+                  </p>
                 </div>
               </button>
             </div>
@@ -207,7 +222,9 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    sustainable_cities
+                  </p>
                 </div>
               </button>
             </div>
@@ -224,7 +241,9 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    responsible_consumption
+                  </p>
                 </div>
               </button>
             </div>
@@ -241,7 +260,9 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    climate_action
+                  </p>
                 </div>
               </button>
             </div>
@@ -258,7 +279,47 @@ exports[`renders correctly 1`] = `
                 >
                   <p
                     className="block w-max font-semibold text-gray-900 text-xs py-1 "
-                  />
+                  >
+                    life_below_water
+                  </p>
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  >
+                    life_on_land
+                  </p>
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  >
+                    peace_justice
+                  </p>
                 </div>
               </button>
             </div>
