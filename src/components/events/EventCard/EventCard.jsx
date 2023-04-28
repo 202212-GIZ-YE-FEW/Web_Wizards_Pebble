@@ -3,6 +3,8 @@ import React from "react";
 
 import styles from "./EventCard.module.scss";
 
+import EventDate from "./EventDate";
+
 const eventsList = [
     {
         id: 1,
@@ -17,22 +19,6 @@ const eventsList = [
 ];
 
 function EventCard({ event, t, keyValue }) {
-    function formatDate(dateObj) {
-        const date = new Date(
-            dateObj?.seconds * 1000 + dateObj?.nanoseconds / 1000000
-        );
-        const options = {
-            weekday: "short",
-            month: "short",
-            day: "numeric",
-            hour: "numeric",
-            minute: "numeric",
-            timeZoneName: "short",
-        };
-        return date.toLocaleString("en-US", options);
-    }
-
-    const formattedDate = formatDate(event.date);
     return (
         <>
             <article
@@ -40,7 +26,7 @@ function EventCard({ event, t, keyValue }) {
                 key={keyValue}
             >
                 <div className={styles.cardBadges}>
-                    <span>{formattedDate}</span>
+                    <EventDate EventDate={event.date} />
                     <div style={{ display: "flex", gap: "6px" }}>
                         <div style={{ marginInlineEnd: "10px" }}>
                             {event?.attendees
