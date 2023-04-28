@@ -14,7 +14,10 @@ import DateRangePicker from "@/components/events/DatePicker/DateRangePicker";
 import EventCard from "@/components/events/EventCard/EventCard";
 import Pagination from "@/components/events/Pagination/Pagination";
 
+import { useAuthContext } from "@/context/AuthContext";
+
 import useFirestore from "../../../lib/useFirestore";
+
 const locations = ["İzmir, TR", "İzmir, TRT"];
 
 const interests = [
@@ -124,13 +127,16 @@ function Events() {
         }
     };
 
+    const { user } = useAuthContext();
+    const firstName = user?.displayName.split(" ")[0];
+
     return (
         <div className='container mx-auto md:grid grid-cols-12 sm:gap-x-8 lg:gap-x-16'>
             {/* PAGE TITLE HEADER */}
             <div className='col-span-12  mx-auto mt-5 mb-12'>
                 <div className='flex items-start flex-col gap-3'>
                     <h1 className='text-6xl font-extrabold text-black-100'>
-                        {t("welcome")}, John!
+                        {t("welcome")}, {firstName}
                     </h1>
                     <p className='text-md text-start'>
                         {t("exploreAndJoinEvents")}
