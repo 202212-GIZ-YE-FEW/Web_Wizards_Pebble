@@ -1,11 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<ul
-  className="bg-warning-600 p-7 mb-4 rounded-lg text-white font-medium"
+<div
+  className="alert__AlertWrapper-sc-4qwf0l-0 iGVtYN alert style-orange-light"
+  role="alert"
 >
-  <li>
-    auth/unknown
-  </li>
-</ul>
+  <button
+    aria-label="Close the error alert."
+    className="alert-close-button__AlertCloseButtonWrapper-sc-unvdea-0 close-button style-orange-light"
+    onClick={[Function]}
+  />
+  auth/unknown
+</div>
 `;

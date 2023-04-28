@@ -4,7 +4,7 @@
     "signWithGoogle": "Continue with Google",
     "email": "Email",
     "password": "Password",
-    "haveAccount": "Don't Have an account? ",
+    "haveAccount": "Don't have an account? ",
     "signUp": "Sign up",
     "or": "OR",
     "auth/wrong-password": "Invalid password.",

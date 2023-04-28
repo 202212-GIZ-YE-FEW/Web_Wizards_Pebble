@@ -1,10 +1,19 @@
+import { useState } from "react";
+import { Alert, AlertCloseButton } from "react-flatifycss";
+
 export default function AuthErrorBox(props) {
     const { errors, t } = props;
+    const theme = "orange-light";
+    const [close, setClosed] = useState(true);
+
     return (
-        <ul className='bg-warning-600 p-7 mb-4 rounded-lg text-white font-medium'>
-            {errors.map((error, index) => {
-                return <li key={index}>{t(error)}</li>;
-            })}
-        </ul>
+        <Alert show={close} theme={theme}>
+            <AlertCloseButton
+                theme={theme}
+                label='Close the error alert.'
+                onClick={() => setClosed(true)}
+            />
+            {t(errors)}
+        </Alert>
     );
 }
