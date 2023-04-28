@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 import styles from "./EventCard.module.scss";
@@ -7,6 +6,7 @@ import EventsDescription from "@/components/events/EventCard/EventsDescription";
 
 import EventAttendees from "./EventAttendees";
 import EventDate from "./EventDate";
+import EventsImage from "./EventsImage";
 const eventsList = [
     {
         id: 1,
@@ -22,7 +22,7 @@ const eventsList = [
 
 function EventCard({ event, t, keyValue }) {
     return (
-        <>
+        <div className='py-4'>
             <article
                 className={"horizontal card " + styles.card}
                 key={keyValue}
@@ -35,15 +35,7 @@ function EventCard({ event, t, keyValue }) {
                         style={styles.badge}
                     />
                 </div>
-                <header className='card-header'>
-                    <Image
-                        className='card-image'
-                        src={`/Images/events/${event.image}`}
-                        alt='Card image'
-                        width='200'
-                        height='200'
-                    />
-                </header>
+                <EventsImage eventImg={event.image} />
                 <div className='card-right'>
                     <div className='card-body'>
                         <h2 className='card-title font-bold'>{event.title}</h2>
@@ -60,7 +52,7 @@ function EventCard({ event, t, keyValue }) {
                     </footer>
                 </div>
             </article>
-        </>
+        </div>
     );
 }
 

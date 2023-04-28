@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="border-2 rounded-4 overflow-hidden  h-28 w-48 sm:h-40 sm:w-64"
+>
+  <img
+    alt="Card image"
+    className="object-fill rounded-8 h-28 w-48 sm:h-40 sm:w-64"
+  />
+</div>
+`;
