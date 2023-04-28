@@ -1,6 +1,6 @@
-import EditprofileButton from "./EditProfileButton";
-import SaveButton from "./SaveButton";
-import SecondaryTitle from "./SecondaryTitle";
+import EditprofileButton from "@/components/editProfile/EditProfileButton";
+import SaveButton from "@/components/editProfile/SaveButton";
+import SecondaryTitle from "@/components/editProfile/SecondaryTitle";
 import InputForm from "@/components/shared/InputForm";
 const ChangePasswordForm = ({ t }) => {
     return (
@@ -27,9 +27,12 @@ const ChangePasswordForm = ({ t }) => {
                 />
             </div>
 
-            <div className='flex flex-row '>
-                <EditprofileButton text={t("cancel")} />
+            <div className='flex flex-row justify-end'>
                 <SaveButton text={t("submit")} />
+                <EditprofileButton
+                    text={t("cancel")}
+                    className='!w-36 !m-0 !ml-2'
+                />
             </div>
         </div>
     );

@@ -49,36 +49,65 @@ exports[`renders correctly 1`] = `
           className="menu-item"
         >
           <a
+            className=""
             href="/events"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
-            All Events
+            allEvents
           </a>
         </li>
         <li
           className="menu-item"
         >
           <a
+            className=""
             href="/about"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
-            About
+            about
           </a>
         </li>
         <li
           className="menu-item"
         >
           <a
+            className=""
             href="#howitworks"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
-            How It Works
+            howItWorks
+          </a>
+        </li>
+        <li
+          className="menu-item"
+        >
+          <a
+            className=""
+            href="/signin"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            signIn
+          </a>
+        </li>
+        <li
+          className="menu-item"
+        >
+          <a
+            className=""
+            href="/signup"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            signUp
           </a>
         </li>
         <li
@@ -124,10 +153,12 @@ exports[`renders correctly 1`] = `
       className="flex gap-[10px] !items-center"
     >
       <a
+        className="hover:!no-underline"
         href="/signin"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onTouchStart={[Function]}
+        role="button"
       >
         <button
           className="button__ButtonWrapper-sc-1aw98b4-0 button hidden md:block w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-white !shadow-[2px_2px_0px_#1A1A1A] !border-2 !border-[#1A1A1A] !border-solid !text-black-100"
@@ -137,10 +168,12 @@ exports[`renders correctly 1`] = `
         </button>
       </a>
       <a
+        className="hover:!no-underline"
         href="/signup"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onTouchStart={[Function]}
+        role="button"
       >
         <button
           className="button__ButtonWrapper-sc-1aw98b4-0 button hidden md:block w-[113px] h-[52px] !rounded-[8px] !py-[11px] !px-[16px] !bg-[#2F7DA9] !text-white !shadow-none !border-none"

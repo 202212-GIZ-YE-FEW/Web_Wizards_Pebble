@@ -1,11 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="px-3 py-2 lg:py-4 "
+<label
+  className="!w-36 !h-16 lg:!w-56 !bg-primary-200  !text-white !font-semibold !rounded-lg !text-sm lg:!text-md lg:!p-5 !p-2 !shadow-none !border-none !cursor-pointer !text-center !flex !items-center !justify-center !gap-x-1 undefined"
 >
-  <button
-    className="w-36 h-16 lg:w-56 bg-primary-200  text-white font-semibold rounded-lg text-sm lg:text-md px-3 sm:px-5 py-3  undefined"
+  <span
+    aria-hidden={true}
+    className="loading__LoadingWrapper-sc-43dx6p-0 hEsmJL size-sm style-orange spinner"
+    hidden={true}
+    size="sm"
   />
-</div>
+</label>
 `;
