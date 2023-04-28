@@ -103,7 +103,7 @@ function Events() {
                 </div>
             </div>
 
-            {/* PAGE FILTER SECTION AT MOBILE */}
+            {/* PAGE FILTER SECTION AT MOBILE ..*/}
             <div className='mobile'>
                 <Divider />
                 <div className='flex justify-between'>
