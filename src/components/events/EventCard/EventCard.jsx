@@ -1,62 +1,34 @@
-import Image from "next/image";
 import React from "react";
 
 import styles from "./EventCard.module.scss";
 
-const eventsList = [
-    {
-        id: 1,
-        date: "FRI, JUL -7:00 PM GMT+3",
-        attendees: ["A", "B", "C", "D", "E"],
-        attendeesNumber: "+12",
-        title: "Title of the Event",
-        description:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.",
-        image: "event1.png",
-    },
-];
+import EventsDescription from "@/components/events/EventCard/EventsDescription";
+
+import EventAttendees from "./EventAttendees";
+import EventDate from "./EventDate";
+import EventsImage from "./EventsImage";
+import EventsTitle from "./EventsTitle";
 
 function EventCard({ event, t, keyValue }) {
     return (
-        <>
+        <div className='py-4'>
             <article
                 className={"horizontal card " + styles.card}
                 key={keyValue}
             >
                 <div className={styles.cardBadges}>
-                    <span>{event.date}</span>
-                    <div style={{ display: "flex", gap: "6px" }}>
-                        <div style={{ marginInlineEnd: "10px" }}>
-                            {event.attendees.map((item, index) => (
-                                <a
-                                    href='#'
-                                    key={index}
-                                    className={
-                                        "!bg-black-100 !text-white rounded-full px-2 py-1 !transition-all " +
-                                        styles.badge
-                                    }
-                                >
-                                    {item}
-                                </a>
-                            ))}
-                        </div>
-                        <span>{event.attendeesNumber}</span>
-                        <span>{t("attendees")}</span>
-                    </div>
-                </div>
-                <header className='card-header'>
-                    <Image
-                        className='card-image'
-                        src={`/Images/events/${event.image}`}
-                        alt='Card image'
-                        width='200'
-                        height='200'
+                    <EventDate EventDate={event.date} />
+                    <EventAttendees
+                        attendees={event.attendees}
+                        t={t}
+                        style={styles.badge}
                     />
-                </header>
+                </div>
+                <EventsImage eventImg={event.image} />
                 <div className='card-right'>
                     <div className='card-body'>
-                        <h2 className='card-title font-bold'></h2>
-                        {event.description}
+                        <EventsTitle title={event.title} />
+                        <EventsDescription description={event.description} />
                     </div>
 
                     <footer className='card-footer'>
@@ -69,7 +41,7 @@ function EventCard({ event, t, keyValue }) {
                     </footer>
                 </div>
             </article>
-        </>
+        </div>
     );
 }
 
