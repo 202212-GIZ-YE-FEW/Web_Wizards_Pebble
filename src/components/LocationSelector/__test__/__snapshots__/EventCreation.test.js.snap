@@ -521,6 +521,7 @@ exports[`renders correctly 1`] = `
       >
         <button
           className="rounded border border-b-4 border-r-4 border-opacity-100 border-gray-700 shadow-black py-4 px-4 md:w-96 p-4 "
+          onClick={[Function]}
           style={
             Object {
               "color": "#1A1A1A",
