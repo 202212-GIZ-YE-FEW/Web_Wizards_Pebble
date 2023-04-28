@@ -6,6 +6,14 @@ import useFirestore from "../../../lib/useFirestore";
 import useFirebaseStorage from "../../../lib/useFirebaseStorage";
 
 const EventCreation = ({ label, t }) => {
+    const [dateInput, setDateInput] = useState();
+    const [timeInput, setTimeInput] = useState();
+    function handleDate(e) {
+        setDateInput(e.target.value);
+    }
+    function handleTime(e) {
+        setTimeInput(e.target.value);
+    }
     const [selectedFile, setSelectedFile] = useState(null);
     const [isUploading, setIsUploading] = useState(false);
     const [{ searchLocation, locationName }, setState] = useState({
@@ -51,6 +59,7 @@ const EventCreation = ({ label, t }) => {
             title: eventData.title,
             description: eventData.description,
             address: eventData.address,
+            date: `${dateInput}T${timeInput}`,
         };
     };
 
@@ -59,6 +68,7 @@ const EventCreation = ({ label, t }) => {
         title: "",
         description: "",
         address: "",
+        date: `${dateInput}T${timeInput}`,
     });
 
     const { addDocument } = useFirestore("events");
@@ -172,6 +182,45 @@ const EventCreation = ({ label, t }) => {
                             className='!rounded-md !border-2 !border-black-100 !bg-white w-full px-1'
                         />
                     </div>
+                    <div className='w-full md:w-auto md:mr-2'>
+                        <div className='relative'>
+                            <Input
+                                type='date'
+                                id='date'
+                                value={dateInput}
+                                onChange={handleDate}
+                                className='block w-full !rounded-md !border-black-100 !bg-white !border-2 pl-8'
+                            />
+                            <label
+                                htmlFor='date'
+                                className='absolute top-0 left-0 px-1 text-black-50'
+                            >
+                                {t("eventDate")}
+                            </label>
+                        </div>
+                    </div>
+                    <div className='w-full md:w-auto md:mr-1'>
+                        <div className='relative'>
+                            <Input
+                                type='time'
+                                value={timeInput}
+                                onChange={handleTime}
+                                required
+                                className='!w-full !rounded-md !border-black-100 !bg-white !border-2 pl-8'
+                            />
+                            <label
+                                htmlFor='time'
+                                className='absolute top-0 left-0 px-1 text-black-50'
+                                style={{
+                                    top: "30%",
+                                    transform: "translateY(-50%)",
+                                }}
+                            >
+                                {t("eventTime")}
+                            </label>
+                        </div>
+                    </div>
+
                     <div className='mb-2 flex flex-col gap-10 py-3 md:flex-row md:justify-between '>
                         <div className='w-full'>
                             <h2 className='py-1 text-xl text-black-100 font-sans font-semibold'>
