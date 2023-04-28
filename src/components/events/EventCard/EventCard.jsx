@@ -3,8 +3,8 @@ import React from "react";
 
 import styles from "./EventCard.module.scss";
 
+import EventAttendees from "./EventAttendees";
 import EventDate from "./EventDate";
-
 const eventsList = [
     {
         id: 1,
@@ -27,32 +27,11 @@ function EventCard({ event, t, keyValue }) {
             >
                 <div className={styles.cardBadges}>
                     <EventDate EventDate={event.date} />
-                    <div style={{ display: "flex", gap: "6px" }}>
-                        <div style={{ marginInlineEnd: "10px" }}>
-                            {event?.attendees
-                                ?.slice(0, 3)
-                                .map((item, index) => (
-                                    <a
-                                        href='#'
-                                        key={index}
-                                        className={
-                                            "!bg-black-100 !text-white rounded-full px-2 py-1 !transition-all " +
-                                            styles.badge
-                                        }
-                                    >
-                                        {item.charAt(0)}
-                                    </a>
-                                ))}
-                        </div>
-                        {event?.attendees?.length > 0 ? (
-                            <span>
-                                {" "}
-                                + {event.attendees.length - 3} {t("attendees")}
-                            </span>
-                        ) : (
-                            <span>0 {t("attendees")}</span>
-                        )}
-                    </div>
+                    <EventAttendees
+                        attendees={event.attendees}
+                        t={t}
+                        style={styles.badge}
+                    />
                 </div>
                 <header className='card-header'>
                     <Image
