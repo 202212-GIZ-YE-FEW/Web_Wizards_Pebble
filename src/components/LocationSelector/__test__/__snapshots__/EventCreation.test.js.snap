@@ -11,6 +11,261 @@ exports[`renders correctly 1`] = `
       className="w-full md:w-1/2 flex flex-col justify-between flex-grow"
     >
       <div
+        className="md:flex md:justify-between"
+      >
+        <div
+          className="mt-10 "
+        >
+          <div>
+            <label
+              className="font-extrabold text-2xl py-2 ml-3 text-gray-800"
+            />
+          </div>
+          <div
+            className="flex flex-wrap justify-evenly"
+          >
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+            <div
+              className="w-[33%] flex justify-center lg:py-3 lg:px-3 md:py-2 md:px-2 py-1 px-1 "
+            >
+              <button
+                className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="relative flex items-center justify-center "
+                >
+                  <p
+                    className="block w-max font-semibold text-gray-900 text-xs py-1 "
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
         className="mb-4 flex   flex-col gap-10 py-3 md:flex-row md:justify-between"
       >
         <div>
