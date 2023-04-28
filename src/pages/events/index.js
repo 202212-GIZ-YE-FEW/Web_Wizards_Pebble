@@ -11,9 +11,9 @@ import React, { useEffect, useState } from "react";
 import Button from "@/components/Button";
 import Divider from "@/components/Divider";
 import DateRangePicker from "@/components/events/DatePicker/DateRangePicker";
-import EventCard from "@/components/events/EventCard/EventCard";
 import Pagination from "@/components/events/Pagination/Pagination";
 
+import useFirestore from "../../../lib/useFirestore";
 const locations = ["İzmir, TR", "İzmir, TRT"];
 
 const interests = [
@@ -37,6 +37,8 @@ const interests = [
 ];
 
 function Events() {
+    const { documents } = useFirestore("events");
+    const events = documents;
     const [eventsList, setEventsList] = useState([]);
     const [selectedLocations, setSelectedLocations] = useState([]);
     const [selectedInterests, setSelectedInterests] = useState([]);
@@ -330,14 +332,7 @@ function Events() {
 
             {/* PAGE EVENTS LIST SECTION */}
             <div className='col-span-8'>
-                {eventsList.map((event) => (
-                    <EventCard
-                        t={t}
-                        event={event}
-                        keyValue={event.id}
-                        key={event.id}
-                    />
-                ))}
+                {events.map((event) => console.log(event))}
             </div>
 
             {/* PAGINATION SECTION AT TABLET AND DESKTOP */}
