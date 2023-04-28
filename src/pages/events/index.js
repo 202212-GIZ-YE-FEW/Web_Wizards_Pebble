@@ -11,6 +11,7 @@ import React, { useEffect, useState } from "react";
 import Button from "@/components/Button";
 import Divider from "@/components/Divider";
 import DateRangePicker from "@/components/events/DatePicker/DateRangePicker";
+import EventCard from "@/components/events/EventCard/EventCard";
 import Pagination from "@/components/events/Pagination/Pagination";
 
 import useFirestore from "../../../lib/useFirestore";
@@ -332,7 +333,14 @@ function Events() {
 
             {/* PAGE EVENTS LIST SECTION */}
             <div className='col-span-8'>
-                {events.map((event) => console.log(event))}
+                {events.map((event) => (
+                    <EventCard
+                        t={t}
+                        event={event}
+                        keyValue={event.id}
+                        key={event.id}
+                    />
+                ))}
             </div>
 
             {/* PAGINATION SECTION AT TABLET AND DESKTOP */}
