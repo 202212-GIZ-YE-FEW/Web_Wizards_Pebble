@@ -50,6 +50,7 @@ const EventCreation = ({ label, t }) => {
             location: locationName ? locationName : searchLocation,
             title: eventData.title,
             description: eventData.description,
+            address: eventData.address,
         };
     };
 
@@ -57,6 +58,7 @@ const EventCreation = ({ label, t }) => {
         location: searchLocation,
         title: "",
         description: "",
+        address: "",
     });
 
     const { addDocument } = useFirestore("events");
@@ -160,7 +162,16 @@ const EventCreation = ({ label, t }) => {
                             button='hidden'
                         />
                     </div>
-
+                    <div className='w-full md:w-auto md:mr-2 mb-2 md:mb-0 md:flex-1 md:mr-0'>
+                        <Input
+                            id='address'
+                            name='address'
+                            value={eventData.address}
+                            onChange={handleChange}
+                            placeholder={t("locationAddress")}
+                            className='!rounded-md !border-2 !border-black-100 !bg-white w-full px-1'
+                        />
+                    </div>
                     <div className='mb-2 flex flex-col gap-10 py-3 md:flex-row md:justify-between '>
                         <div className='w-full'>
                             <h2 className='py-1 text-xl text-black-100 font-sans font-semibold'>
