@@ -22,7 +22,7 @@ const SignInForm = ({ t }) => {
     const [errors, setErrors] = useState([]);
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (user) return;
+        if (user && user.emailVerified) return;
         const formData = new FormData(e.target);
         const email = formData.get("email");
         const password = formData.get("password");
@@ -35,6 +35,7 @@ const SignInForm = ({ t }) => {
             return;
         }
         setLoading(false);
+        router.push("/");
     };
 
     return (
@@ -52,7 +53,8 @@ const SignInForm = ({ t }) => {
                             placeholder={t("email")}
                             label={t("email")}
                             name='email'
-                            type='Email'
+                            type='email'
+                            isRequired
                             hasFloatingLabel
                         />
                         <InputForm
@@ -62,6 +64,7 @@ const SignInForm = ({ t }) => {
                             id='password'
                             type='password'
                             hasFloatingLabel
+                            isRequired
                             togglePasswordLabel='Show/Hide password'
                             togglePassword='true'
                         />
@@ -70,11 +73,7 @@ const SignInForm = ({ t }) => {
                             linkHref='/signup'
                             linkText={t("signUp")}
                         />
-                        <SignButton
-                            text={t("signIn")}
-                            loading={loading}
-                            disabled={user && !user.emailVerified}
-                        />
+                        <SignButton text={t("signIn")} loading={loading} />
                     </form>
                 </div>
             </div>

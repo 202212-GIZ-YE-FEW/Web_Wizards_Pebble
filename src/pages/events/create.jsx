@@ -24,6 +24,7 @@ export async function getStaticProps({ locale }) {
                 "landing",
                 "locationSelector",
                 "EventCreation",
+                "interests",
             ])),
             // Will be passed to the page component as props
         },

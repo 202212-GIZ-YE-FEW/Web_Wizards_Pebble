@@ -27,7 +27,7 @@ const SignUpForm = ({ t }) => {
      */
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (user) return;
+        if (user && user.emailVerified) return;
         const formData = new FormData(e.target);
         const firstName = formData.get("name");
         const lastName = formData.get("surname");
@@ -35,7 +35,9 @@ const SignUpForm = ({ t }) => {
         const password = formData.get("password");
         try {
             setLoading(true);
-            await signUp(email, password, { firstName, lastName });
+            await signUp(email, password, {
+                displayName: `${firstName} ${lastName}`,
+            });
         } catch (error) {
             setLoading(false);
             setErrors(error.code || "auth/unknown");
@@ -101,11 +103,7 @@ const SignUpForm = ({ t }) => {
                             linkHref='/signin'
                             linkText={t("signIn")}
                         />
-                        <SignButton
-                            text={t("signUp")}
-                            loading={loading}
-                            disabled={user && !user.emailVerified}
-                        />
+                        <SignButton text={t("signUp")} loading={loading} />
                     </form>
                 </div>
             </div>

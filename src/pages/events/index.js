@@ -1,11 +1,9 @@
 // Firebase imports
-import { collection, getDocs } from "@firebase/firestore";
-import { db } from "firebase.config";
 // Translations imports
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 // React imports
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 // Component imports
 import Button from "@/components/Button";
@@ -43,47 +41,8 @@ const interests = [
 function Events() {
     const { documents } = useFirestore("events");
     const events = documents;
-    const [eventsList, setEventsList] = useState([]);
     const [selectedLocations, setSelectedLocations] = useState([]);
     const [selectedInterests, setSelectedInterests] = useState([]);
-
-    const eventsCollectionRef = collection(db, "events");
-    function formatDate(dateObj) {
-        const date = new Date(
-            dateObj.seconds * 1000 + dateObj.nanoseconds / 1000000
-        );
-        const options = {
-            weekday: "short",
-            month: "short",
-            day: "numeric",
-            hour: "numeric",
-            minute: "numeric",
-            timeZoneName: "short",
-        };
-        return date.toLocaleString("en-US", options);
-    }
-
-    useEffect(() => {
-        const getEvents = async () => {
-            try {
-                const data = await getDocs(eventsCollectionRef);
-                const formattedData = data.docs.map((doc) => ({
-                    ...doc.data(),
-                    id: doc.id,
-                    date: formatDate(doc.data().date),
-                    attendees: doc
-                        .data()
-                        .attendees.map((attendee) => attendee.charAt(0)),
-                    attendeesNumber: doc.data().attendees.length,
-                }));
-                setEventsList(formattedData);
-            } catch (e) {
-                console.error("error while fetching events data ", e);
-            }
-        };
-
-        getEvents();
-    }, []);
 
     const { t } = useTranslation("events");
 

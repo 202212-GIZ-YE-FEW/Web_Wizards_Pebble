@@ -26,5 +26,12 @@
     "confirmPassword": "Confirm Password",
     "cancel": "Cancel",
     "submit": "Submit",
-    "yourInterests": "your interests"
+    "yourInterests": "Your Interests",
+    "catTitle": "Pebble\\'s Cat",
+    "catSubTitle": "Super duper Pebble Cat!",
+    "rabbitTitle": "Pebble\\'s Rabbit",
+    "rabbitSubTitle": "Amazing R-r-r-rabit!",
+    "dogTitle": "Pebble\\'s Dog",
+    "dogSubTitle": "Woofy Dog!",
+    "petsCredit": "Pets made by Rachmat Budiaji."
 }

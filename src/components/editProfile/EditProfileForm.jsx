@@ -1,5 +1,6 @@
-import SecondaryTitle from "./SecondaryTitle";
 import InputForm from "@/components/shared/InputForm";
+
+import SecondaryTitle from "./SecondaryTitle";
 const EditProfileForm = ({ t }) => {
     return (
         <div className='mt-24 w-3/4'>
@@ -26,17 +27,3 @@ const EditProfileForm = ({ t }) => {
 };
 
 export default EditProfileForm;
-// import InputForm from "../../components/InputForm";
-
-// const EditProfileForm = (props) => {
-//   return (
-//     <div className='mt-24'>
-//     <div>
-//       <label>{props.label}</label>
-//       <InputForm name={name} placeholder={props.placeholder} type={props.type} width="4/5"/>
-//     </div>
-//   </div>
-//   );
-// }
-
-// export default EditProfileForm;
