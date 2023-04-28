@@ -372,31 +372,30 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="mb-4 flex   flex-col gap-10 py-3 md:flex-row md:justify-between"
+        className="mb-2 flex flex-col gap-10 py-3 md:flex-row md:justify-between "
       >
-        <div>
+        <div
+          className="w-full"
+        >
           <h2
-            className="py-1 text-xl font-medium  font-rubik text-black"
-            style={
-              Object {
-                "color": "#1A1A1A",
-                "fontSize": 25,
-                "fontWeight": 600,
-              }
-            }
+            className="py-1 text-xl text-black-100 font-sans font-semibold"
           />
           <p
-            className="my-1 pr-20 text-gray-500 md:w-full"
+            className="my-1 text-black-50 md:w-full"
           />
           <div
             className="max-w-screen-xl mx-auto"
           >
             <div
-              className="py-5 md:max-w-96 lg:max-w-128"
+              className="py-5 md:max-w-96 lg:max-w-128 "
             >
               <input
-                className="w-full md:w-96 rounded border border-black px-3 py-2 shadow focus:border-black focus:outline-none focus:ring-0 focus:ring-black"
+                className="!w-full md:w-96 !rounded !border-2 !border-black-100  !bg-white"
+                id="title"
+                name="title"
+                onChange={[Function]}
                 type="text"
+                value=""
               />
             </div>
           </div>

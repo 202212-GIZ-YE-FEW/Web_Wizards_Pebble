@@ -8,6 +8,7 @@ const EventCreation = ({ label, t }) => {
     const [{ searchLocation, locationName }, setState] = useState({
         searchLocation: "",
         locationName: "",
+        title: "",
     });
 
     const inputElementRef = useRef(null);
@@ -25,7 +26,11 @@ const EventCreation = ({ label, t }) => {
             locationName: "",
         });
     };
+    const handleChange = (e) => {
+        const { name, value } = e.target;
 
+        setEventData({ ...eventData, [name]: value });
+    };
     const filteredCities = YemenCities.filter((city) => {
         const searchCity = searchLocation.toLowerCase();
         const cityData = city.toLowerCase();
@@ -39,11 +44,13 @@ const EventCreation = ({ label, t }) => {
         return {
             ...eventData,
             location: locationName ? locationName : searchLocation,
+            title: eventData.title,
         };
     };
 
     const [eventData, setEventData] = useState({
         location: searchLocation,
+        title: "",
     });
 
     const { addDocument } = useFirestore("events");
@@ -61,6 +68,7 @@ const EventCreation = ({ label, t }) => {
             console.error("Error adding event:", result.error);
         }
     };
+
     return (
         <div className=' w-full md:w-2/3 mx-auto rounded-lg p-2 flex flex-col md:flex-row'>
             <div>
@@ -125,28 +133,25 @@ const EventCreation = ({ label, t }) => {
                         />
                     </div>
 
-                    <div className='mb-4 flex   flex-col gap-10 py-3 md:flex-row md:justify-between'>
-                        <div>
-                            <h2
-                                className='py-1 text-xl font-medium  font-rubik text-black'
-                                style={{
-                                    color: "#1A1A1A",
-                                    fontWeight: 600,
-                                    fontSize: 25,
-                                }}
-                            >
+                    <div className='mb-2 flex flex-col gap-10 py-3 md:flex-row md:justify-between '>
+                        <div className='w-full'>
+                            <h2 className='py-1 text-xl text-black-100 font-sans font-semibold'>
                                 {t("CreateEventInfo.eventTitle")}
                             </h2>
-                            <p className='my-1 pr-20 text-gray-500 md:w-full'>
+                            <p className='my-1 text-black-50 md:w-full'>
                                 {t("CreateEventInfo.eventTitleDescription")}
                             </p>
                             <div className='max-w-screen-xl mx-auto'>
-                                <div className='py-5 md:max-w-96 lg:max-w-128'>
+                                <div className='py-5 md:max-w-96 lg:max-w-128 '>
                                     <Input
+                                        id='title'
+                                        name='title'
+                                        value={eventData.title}
+                                        onChange={handleChange}
                                         placeholder={t(
                                             "CreateEventInfo.eventTitlePlaceholder"
                                         )}
-                                        className='w-full md:w-96 rounded border border-black px-3 py-2 shadow focus:border-black focus:outline-none focus:ring-0 focus:ring-black'
+                                        className='!w-full md:w-96 !rounded !border-2 !border-black-100  !bg-white'
                                     />
                                 </div>
                             </div>
