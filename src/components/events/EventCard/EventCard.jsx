@@ -3,6 +3,8 @@ import React from "react";
 
 import styles from "./EventCard.module.scss";
 
+import EventsDescription from "@/components/events/EventCard/EventsDescription";
+
 import EventAttendees from "./EventAttendees";
 import EventDate from "./EventDate";
 const eventsList = [
@@ -44,8 +46,8 @@ function EventCard({ event, t, keyValue }) {
                 </header>
                 <div className='card-right'>
                     <div className='card-body'>
-                        <h2 className='card-title font-bold'></h2>
-                        {event.description}
+                        <h2 className='card-title font-bold'>{event.title}</h2>
+                        <EventsDescription description={event.description} />
                     </div>
 
                     <footer className='card-footer'>
