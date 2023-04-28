@@ -45,12 +45,14 @@ const EventCreation = ({ label, t }) => {
             ...eventData,
             location: locationName ? locationName : searchLocation,
             title: eventData.title,
+            description: eventData.description,
         };
     };
 
     const [eventData, setEventData] = useState({
         location: searchLocation,
         title: "",
+        description: "",
     });
 
     const { addDocument } = useFirestore("events");
@@ -159,28 +161,20 @@ const EventCreation = ({ label, t }) => {
                     </div>
                     <div className='py-2 mb-4 flex flex-col md:flex-row md:justify-between gap-10'>
                         <div className='w-full'>
-                            <h2
-                                className='text-xl font-medium py-1 text-black'
-                                style={{ color: "#1A1A1A", fontWeight: 600 }}
-                            >
+                            <h2 className='text-xl py-1 text-black-100 font-sans font-semibold'>
                                 {t("CreateEventInfo.eventDescriptionHeading")}
                             </h2>
-                            <p className='my-1 text-gray-500'>
+                            <p className='my-1 text-black-50'>
                                 {t("CreateEventInfo.eventDescriptionText")}
                             </p>
                             <textarea
-                                style={{
-                                    resize: "none",
-                                    color: "#1A1A1A",
-                                    backgroundColor: "white",
-                                    borderColor: "#1A1A1A",
-                                    borderRadius: "8px",
-                                    borderWidth: "2px",
-                                }}
+                                value={eventData.description}
+                                name='description'
+                                onChange={handleChange}
                                 placeholder={t(
                                     "CreateEventInfo.eventDescriptionPlaceholder"
                                 )}
-                                className='w-full h-40 px-3 py-2 rounded border-black shadow focus:border-black focus:outline-none focus:ring-0 focus:ring-black'
+                                className='!w-full !h-40  !rounded  !border-2 !border-black-100  !bg-white'
                             />
                         </div>
                     </div>

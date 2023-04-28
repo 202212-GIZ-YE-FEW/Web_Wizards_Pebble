@@ -408,29 +408,16 @@ exports[`renders correctly 1`] = `
           className="w-full"
         >
           <h2
-            className="text-xl font-medium py-1 text-black"
-            style={
-              Object {
-                "color": "#1A1A1A",
-                "fontWeight": 600,
-              }
-            }
+            className="text-xl py-1 text-black-100 font-sans font-semibold"
           />
           <p
-            className="my-1 text-gray-500"
+            className="my-1 text-black-50"
           />
           <textarea
-            className="w-full h-40 px-3 py-2 rounded border-black shadow focus:border-black focus:outline-none focus:ring-0 focus:ring-black"
-            style={
-              Object {
-                "backgroundColor": "white",
-                "borderColor": "#1A1A1A",
-                "borderRadius": "8px",
-                "borderWidth": "2px",
-                "color": "#1A1A1A",
-                "resize": "none",
-              }
-            }
+            className="!w-full !h-40  !rounded  !border-2 !border-black-100  !bg-white"
+            name="description"
+            onChange={[Function]}
+            value=""
           />
         </div>
       </div>
