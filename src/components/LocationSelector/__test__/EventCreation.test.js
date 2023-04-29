@@ -1,6 +1,11 @@
 import renderer from "react-test-renderer";
+import { useRouter } from "next/router";
 
 import EventCreation from "../EventCreation";
+
+jest.mock("next/router", () => ({
+    useRouter: jest.fn().mockReturnValue({}),
+}));
 
 it("renders correctly", () => {
     const tree = renderer
