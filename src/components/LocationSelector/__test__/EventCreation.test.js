@@ -1,5 +1,4 @@
 import renderer from "react-test-renderer";
-import { useRouter } from "next/router";
 
 import EventCreation from "../EventCreation";
 

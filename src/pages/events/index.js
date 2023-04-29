@@ -87,7 +87,17 @@ function Events() {
 
     const { user } = useAuthContext();
     const firstName = user?.displayName.split(" ")[0];
-
+    const filteredEvents = events.filter((event) => {
+        if (selectedInterests.includes("All")) {
+            // If no interests are selected or "All" is selected, show all events
+            return true;
+        } else {
+            // Otherwise, check if event interests match selected interests
+            return event?.interests?.some((interest) =>
+                selectedInterests?.includes(interest)
+            );
+        }
+    });
     return (
         <div className='container mx-auto md:grid grid-cols-12 sm:gap-x-8 lg:gap-x-16'>
             {/* PAGE TITLE HEADER */}
@@ -297,7 +307,7 @@ function Events() {
 
             {/* PAGE EVENTS LIST SECTION */}
             <div className='col-span-8'>
-                {events.map((event) => (
+                {filteredEvents.map((event) => (
                     <EventCard
                         t={t}
                         event={event}
