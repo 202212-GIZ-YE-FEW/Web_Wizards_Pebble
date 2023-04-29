@@ -41,7 +41,7 @@ function Events() {
     const { documents } = useFirestore("events");
     const events = documents;
     const [selectedLocations, setSelectedLocations] = useState([]);
-    const [selectedInterests, setSelectedInterests] = useState([]);
+    const [selectedInterests, setSelectedInterests] = useState(["All"]);
 
     const { t } = useTranslation("events");
 
@@ -76,12 +76,24 @@ function Events() {
             interest = eventOrInterest.target.value;
         }
 
-        if (selectedInterests.includes(interest)) {
-            setSelectedInterests(
-                selectedInterests.filter((l) => l !== interest)
-            );
+        if (interest === "All") {
+            setSelectedInterests([interest]);
         } else {
-            setSelectedInterests([...selectedInterests, interest]);
+            setSelectedInterests((prevSelectedInterests) => {
+                // Remove "All" from the selected interests if it is included
+                const newSelectedInterests = prevSelectedInterests.includes(
+                    "All"
+                )
+                    ? prevSelectedInterests.filter((i) => i !== "All")
+                    : prevSelectedInterests;
+
+                // Add or remove the selected interest as necessary
+                if (newSelectedInterests.includes(interest)) {
+                    return newSelectedInterests.filter((i) => i !== interest);
+                } else {
+                    return [...newSelectedInterests, interest];
+                }
+            });
         }
     };
 
