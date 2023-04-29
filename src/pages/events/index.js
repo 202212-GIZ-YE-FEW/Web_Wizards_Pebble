@@ -13,8 +13,7 @@ import EventCard from "@/components/events/EventCard/EventCard";
 import Pagination from "@/components/events/Pagination/Pagination";
 
 import { useAuthContext } from "@/context/AuthContext";
-
-import useFirestore from "../../../lib/useFirestore";
+import useFirestore from "@/firebase/firestore";
 
 const locations = ["İzmir, TR", "İzmir, TRT"];
 

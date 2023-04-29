@@ -1,7 +1,7 @@
 import ButtonAuth from "@/components/shared/ButtonAuth";
 import OrDivider from "@/components/shared/OrDivider";
 
-import { signUpwithGoogle, singUpWithTwitter } from "../../../lib/useAuth";
+import { signUpwithGoogle, singUpWithTwitter } from "@/firebase/auth";
 
 import GoogleIcon from "~/GoogleIcon.png";
 import TwitterIcon from "~/twitter.svg";

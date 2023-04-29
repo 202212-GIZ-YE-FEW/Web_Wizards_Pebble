@@ -11,7 +11,7 @@ import { useAuthContext } from "@/context/AuthContext";
 
 import AuthErrorBox from "../shared/AuthErrorBox";
 // TODO: use dynamic path once testing doesnt conflicts paths.
-import { signUp } from "../../../lib/useAuth";
+import { signUp } from "@/firebase/auth";
 
 const SignUpForm = ({ t }) => {
     const router = useRouter();

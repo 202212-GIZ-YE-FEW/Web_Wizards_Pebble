@@ -8,9 +8,9 @@ import SignOptions from "@/components/shared/SignOptions";
 import SignTitle from "@/components/shared/SignTitle";
 
 import { useAuthContext } from "@/context/AuthContext";
+import { signIn } from "@/firebase/auth";
 
 import AuthErrorBox from "../shared/AuthErrorBox";
-import { signIn } from "../../../lib/useAuth";
 
 const SignInForm = ({ t }) => {
     const router = useRouter();

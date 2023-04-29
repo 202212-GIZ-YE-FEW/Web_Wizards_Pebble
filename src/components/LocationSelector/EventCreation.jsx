@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import Input from "./LocationInput";
 import Interests from "../editProfile/Interests";
 import YemenCities from "./YemenCities";
-import useFirestore from "../../../lib/useFirestore";
+import useFirestore from "@/firebase/firestore";
 
 const EventCreation = ({ label, t }) => {
     const [{ searchLocation, locationName }, setState] = useState({

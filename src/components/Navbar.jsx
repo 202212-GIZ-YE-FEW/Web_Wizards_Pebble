@@ -11,9 +11,9 @@ import {
 import Logo from "@/components/Logo";
 
 import { useAuthContext } from "@/context/AuthContext";
+import { signOut } from "@/firebase/auth";
 
 import { RoundedImage } from "./mini";
-import { signOut } from "../../lib/useAuth";
 
 import person from "~/person.svg";
 

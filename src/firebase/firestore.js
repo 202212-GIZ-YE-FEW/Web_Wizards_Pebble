@@ -10,7 +10,7 @@ import {
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
-import app from "../firebase.config";
+import app from "@/firebase/firebase.config";
 
 // when calling the useFirestore hook, we pass in the collection path as a parameter
 // this can be imported in other files liek this: import useFirestore from import useFirestore from "@/lib/useFirestore";

@@ -10,7 +10,7 @@ import {
     updateProfile as _updateProfile,
 } from "firebase/auth";
 
-import app from "../firebase.config";
+import app from "@/firebase/firebase.config";
 const googleProvider = new GoogleAuthProvider();
 const twitterProvider = new TwitterAuthProvider();
 
@@ -66,10 +66,12 @@ export async function signIn(email, password) {
     return _signInWithEmailAndPassword(auth, email, password);
 }
 
-export async function updateProfile(user, data) {
-    await _updateProfile(user, {
+export async function updateProfile(data) {
+    const fireBaseUser = auth.currentUser;
+    await _updateProfile(fireBaseUser, {
         ...data,
     });
+    return fireBaseUser;
 }
 
 export async function sendEmailVerification(user) {

@@ -13,31 +13,45 @@ import SaveButton from "@/components/editProfile/SaveButton";
 import { RoundedImage } from "@/components/mini";
 
 import { useAuthContext } from "@/context/AuthContext";
+import app from "@/firebase/firebase.config";
 
-import app from "../../../firebase.config";
-import { updateProfile } from "../../../lib/useAuth";
-
-async function handleUploadImage({ target: { files } }, user) {
+async function handleUploadImage({ target: { files } }, { uid, updateUser }) {
     const image = files[0];
     const storage = getStorage(app);
     const extension = image.name.split(".")[1];
 
     const userProfilePictureRef = ref(
         storage,
-        `users/profiles_pictures/${user.uid}.${extension}`
+        `users/profiles_pictures/${uid}.${extension}`
     );
 
     const uploadedImage = await uploadBytes(userProfilePictureRef, image);
     const imageURL = await getDownloadURL(uploadedImage.ref);
 
-    updateProfile(user, {
+    updateUser({
         photoURL: imageURL,
     });
 }
 
+function UserImage() {
+    const { user } = useAuthContext();
+    return !user?.photoURL ? (
+        <CircleImg letter={user?.displayName[0]} />
+    ) : (
+        <RoundedImage
+            src={user.photoURL}
+            alt='User Profile Picture'
+            height={256}
+            width={256}
+            className='max-w-[8rem] max-h-32 lg:max-w-none lg:max-h-none'
+        />
+    );
+}
+
 const EditProfile = () => {
     const { t } = useTranslation("editprofile");
-    const { user } = useAuthContext();
+    const { user, updateUser } = useAuthContext();
+
     const [imgLoading, setimgLoading] = useState(false);
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -49,17 +63,7 @@ const EditProfile = () => {
                 </h3>
             </div>
             <div className='flex flex-col gap-y-5 lg:flex-row items-center justify-between flex-wrap'>
-                {user?.photoURL ? (
-                    <RoundedImage
-                        src={user.photoURL}
-                        alt='User Profile Picture'
-                        height={256}
-                        width={256}
-                        className='max-w-[8rem] max-h-32 lg:max-w-none lg:max-h-none'
-                    />
-                ) : (
-                    <CircleImg letter={user?.displayName[0]} />
-                )}
+                <UserImage />
                 <input
                     hidden
                     type='file'
@@ -68,7 +72,10 @@ const EditProfile = () => {
                     accept='image/*'
                     onChange={async (e) => {
                         setimgLoading(true);
-                        await handleUploadImage(e, user);
+                        await handleUploadImage(e, {
+                            uid: user.uid,
+                            updateUser,
+                        });
                         setimgLoading(false);
                     }}
                 />
@@ -83,7 +90,7 @@ const EditProfile = () => {
                     className='lg:!w-96'
                     onClick={() => setModalOpen(!modalOpen)}
                 />
-                <PetIcons hidden={!modalOpen} user={user} t={t} />
+                <PetIcons hidden={!modalOpen} t={t} />
             </div>
             <EditProfileForm t={t} />
             <Interests t={t} />
