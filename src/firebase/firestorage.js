@@ -6,7 +6,7 @@ import {
     getDownloadURL,
     deleteObject,
 } from "firebase/storage";
-import app from "../firebase.config";
+import app from "@/firebase/firebase.config";
 
 const useFirebaseStorage = (path) => {
     const [uploadProgress, setUploadProgress] = useState(0);

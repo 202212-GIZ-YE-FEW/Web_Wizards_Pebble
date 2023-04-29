@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 import Input from "./LocationInput";
 import Interests from "../editProfile/Interests";
 import YemenCities from "./YemenCities";
-import useFirestore from "../../../lib/useFirestore";
-import useFirebaseStorage from "../../../lib/useFirebaseStorage";
+import useFirestore from "@/firebase/firestore";
+import useFirebaseStorage from "@/firebase/firestorage";
 
 const EventCreation = ({ label, t }) => {
     const router = useRouter();

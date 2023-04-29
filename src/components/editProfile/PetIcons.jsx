@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { ItemsGroup, Loading } from "react-flatifycss";
 
-import { updateProfile } from "../../../lib/useAuth";
+import { useAuthContext } from "@/context/AuthContext";
 
 import { cat, checkMark, dog, rabbit } from "~/library/svgs";
 
 export default function PetIcons(props) {
-    const { hidden, user, t } = props;
+    const { hidden, t } = props;
+    const { updateUser } = useAuthContext();
     const [pet, setPet] = useState("cat");
     const [loading, setLoading] = useState(false);
     return (
@@ -53,7 +54,7 @@ export default function PetIcons(props) {
                     if (!_pet) return;
                     if (_pet === "confirm") {
                         setLoading(true);
-                        await updateProfile(user, {
+                        await updateUser({
                             photoURL: `/library/${pet}.jpg`,
                         });
                         setLoading(false);
