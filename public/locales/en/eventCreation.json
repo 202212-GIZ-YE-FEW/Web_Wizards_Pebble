@@ -3,6 +3,9 @@
     "locationPlaceholder": "Enter location name",
     "changeLocation": "Change Location",
     "locationDescription": "Pubble events can be both local or online. Choose <br>where you want to host your event.",
+    "locationAddress": "Enter your Event's Address that you will host",
+    "eventDate": "Date:",
+    "eventTime": "Time",
 
     "EventType": {
         "eventTypeTitle": "Choose Event Type",

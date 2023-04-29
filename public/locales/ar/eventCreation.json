@@ -3,6 +3,9 @@
     "locationPlaceholder": "أدخل اسم الموقع",
     "changeLocation": "تغيير الموقع",
     "locationDescription": "يمكن أن تكون فعاليات Pubble محلية أو عبر الإنترنت. اختر<br> المكان الذي تريد استضافة حدثك فيه.",
+    "locationAddress": "قم بإدخال عوان الحدث الذي ستقوم به",
+    "eventDate": "التاريخ:",
+    "eventTime": "الوقت:",
 
     "EventType": {
         "eventTypeTitle": "اختر نوع الحدث",
