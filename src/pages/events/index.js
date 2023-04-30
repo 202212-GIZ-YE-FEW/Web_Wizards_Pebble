@@ -100,14 +100,20 @@ function Events() {
     const { user } = useAuthContext();
     const firstName = user?.displayName.split(" ")[0];
     const filteredEvents = events.filter((event) => {
-        if (selectedInterests.includes("All")) {
-            // If no interests are selected or "All" is selected, show all events
+        if (
+            selectedLocations.length === 0 &&
+            selectedInterests.includes("All")
+        ) {
+            // If no filters are selected, show all events
             return true;
         } else {
-            // Otherwise, check if event interests match selected interests
-            return event?.interests?.some((interest) =>
-                selectedInterests?.includes(interest)
-            );
+            // Otherwise, check if event matches selected locations and interests
+            const locationMatch =
+                event?.location && selectedLocations.includes(event.location);
+            const interestMatch =
+                selectedInterests.includes("All") ||
+                event?.interests?.some((i) => selectedInterests.includes(i));
+            return locationMatch && interestMatch;
         }
     });
     return (
