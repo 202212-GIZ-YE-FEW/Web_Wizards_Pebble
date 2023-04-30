@@ -109,7 +109,8 @@ function Events() {
         } else {
             // Otherwise, check if event matches selected locations and interests
             const locationMatch =
-                event?.location && selectedLocations.includes(event.location);
+                selectedLocations.length === 0 ||
+                (event?.location && selectedLocations.includes(event.location));
             const interestMatch =
                 selectedInterests.includes("All") ||
                 event?.interests?.some((i) => selectedInterests.includes(i));
