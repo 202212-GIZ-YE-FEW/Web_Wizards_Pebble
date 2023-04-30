@@ -14,6 +14,28 @@ import { RoundedImage } from "@/components/mini";
 
 import { useAuthContext } from "@/context/AuthContext";
 import app from "@/firebase/firebase.config";
+import useFirestore from "@/firebase/firestore";
+
+/**
+ * @param {import('react').SyntheticEvent} e
+ */
+async function handleEditProfileSubmit(data, user, firebase) {
+    const { e, clickedInterests: selectedInterests } = data;
+    const { locations, interests } = firebase;
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const location = formData.get("location");
+    if (name) {
+        await user.updateUser({
+            displayName: name,
+        });
+    }
+    if (location) {
+        locations.setLocation(user.uid, { location });
+    }
+    interests.setInterests(user.uid, { selectedInterests });
+}
 
 async function handleUploadImage({ target: { files } }, { uid, updateUser }) {
     const image = files[0];
@@ -52,8 +74,12 @@ const EditProfile = () => {
     const { t } = useTranslation("editprofile");
     const { user, updateUser } = useAuthContext();
 
+    const [clickedInterests, setClickedInterests] = useState([]);
     const [imgLoading, setimgLoading] = useState(false);
+    const [formLoading, setformLoading] = useState(false);
     const [modalOpen, setModalOpen] = useState(false);
+    const { setDocument: setLocation } = useFirestore("locations");
+    const { setDocument: setInterests } = useFirestore("interests");
 
     return (
         <div className='flex flex-col md:px-14 px-4 lg:px-48  flex-wrap mt-8'>
@@ -92,11 +118,47 @@ const EditProfile = () => {
                 />
                 <PetIcons hidden={!modalOpen} t={t} />
             </div>
-            <EditProfileForm t={t} />
-            <Interests t={t} />
-            <div className='flex flex-row justify-end py-8'>
-                <SaveButton text={t("saveChanges")} />
-            </div>
+            <form
+                id='editProfileForm'
+                onSubmit={(e) => {
+                    setformLoading(true);
+                    handleEditProfileSubmit(
+                        { e, clickedInterests },
+                        {
+                            updateUser,
+                            uid: user.uid,
+                        },
+                        {
+                            locations: {
+                                setLocation,
+                            },
+                            interests: {
+                                setInterests,
+                            },
+                        }
+                    );
+                    setformLoading(false);
+                }}
+            >
+                <EditProfileForm t={t} />
+                <Interests
+                    clickedInterests={clickedInterests}
+                    setClickedInterests={setClickedInterests}
+                />
+                <div className='flex flex-row justify-end py-8'>
+                    <input
+                        id='submitFormData'
+                        type='submit'
+                        name='submit'
+                        hidden
+                    />
+                    <SaveButton
+                        text={t("saveChanges")}
+                        htmlFor='submitFormData'
+                        loading={formLoading}
+                    />
+                </div>
+            </form>
             <ChangePasswordForm t={t} />
         </div>
     );

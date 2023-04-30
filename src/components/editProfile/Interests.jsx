@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import SecondaryTitle from "./SecondaryTitle";
 import SingleInterest from "./SingleInterest";
-const Interests = () => {
+const Interests = (props) => {
+    const { clickedInterests, setClickedInterests } = props;
     const { t } = useTranslation("interests");
 
     const interests = [
@@ -25,8 +24,6 @@ const Interests = () => {
         "peace_justice",
     ];
 
-    const [clickedInterests, setClickedInterests] = useState([]);
-
     const handleInterestClick = (interest) => {
         if (clickedInterests.includes(interest)) {
             setClickedInterests(clickedInterests.filter((i) => i !== interest));
@@ -39,7 +36,6 @@ const Interests = () => {
 
     return (
         <div className='mt-10 '>
-            {/* <SecondaryTitle text={t("yourInterests")} /> */}
             <div className='flex flex-wrap items-center justify-center overflow-hidden lg:ml-8 lg:mr-8 lg:flex-row lg:flex-wrap lg:items-center lg:justify-center'>
                 {interests.map((interest) => (
                     <SingleInterest
