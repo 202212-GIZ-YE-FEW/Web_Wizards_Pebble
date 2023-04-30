@@ -137,6 +137,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -156,6 +157,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -175,6 +177,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -194,6 +197,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -213,6 +217,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -232,6 +237,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -251,6 +257,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -270,6 +277,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -289,6 +297,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -308,6 +317,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -327,6 +337,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -346,6 +357,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -365,6 +377,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -384,6 +397,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -403,6 +417,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "
@@ -422,6 +437,7 @@ exports[`renders correctly 1`] = `
               className="button__ButtonWrapper-sc-1aw98b4-0 button  w-full lg:h-18 h-16 px-1 transition bg-white !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <div
                 className="relative flex items-center justify-center "

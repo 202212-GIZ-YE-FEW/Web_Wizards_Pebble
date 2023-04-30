@@ -7,7 +7,7 @@ const EditProfileForm = ({ t }) => {
             <div>
                 <SecondaryTitle text={t("nameRequired")} />
                 <InputForm
-                    name='Name'
+                    name='name'
                     placeholder={t("placeholderName")}
                     type='text'
                     width='4/5'
@@ -16,7 +16,7 @@ const EditProfileForm = ({ t }) => {
             <div className='mt-2 lg:mt-8'>
                 <SecondaryTitle text={t("yourLocation")} />
                 <InputForm
-                    name='Location'
+                    name='location'
                     placeholder={t("placeholderLocation")}
                     type='text'
                     width='4/5'
