@@ -15,6 +15,7 @@ const SingleInterest = ({ text, onInterestClick }) => {
                     isClicked ? "!bg-primary-100" : "bg-white"
                 } !border-2 !rounded-lg !shadow-[2px_2px_#1A1A1A]`}
                 onClick={handleClick}
+                type='button'
             >
                 <div className='relative flex items-center justify-center '>
                     <p className='block w-max font-semibold text-gray-900 text-xs py-1 '>
