@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { Button } from "react-flatifycss";
-
 import Input from "./LocationInput";
 import Interests from "../editProfile/Interests";
 import YemenCities from "./YemenCities";
@@ -107,7 +106,7 @@ const EventCreation = ({ label, t }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!eventData.address || !eventData.title) {
-            alert("Please fill out all the required fields.");
+            console.error("Please fill out all the required fields.");
             return;
         }
 
@@ -115,8 +114,6 @@ const EventCreation = ({ label, t }) => {
         const result = await addDocument(eventDataWithLocation, eventData);
 
         if (result.success) {
-            console.log("Event added successfully with ID:", result.id);
-            window.alert(`Event added successfully with ID: ${result.id}`);
             router.push(`/events/${result.id}`);
         } else {
             console.error("Error adding event:", result.error);
