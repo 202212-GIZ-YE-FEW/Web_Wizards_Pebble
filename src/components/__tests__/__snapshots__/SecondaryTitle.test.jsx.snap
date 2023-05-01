@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`renders correctly 1`] = `
-<div>
-  <label
-    className="font-extrabold text-2xl py-2 ml-3 text-gray-800"
-  />
-</div>
-`;
