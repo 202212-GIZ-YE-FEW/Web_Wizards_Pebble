@@ -20,8 +20,8 @@ exports[`renders correctly 1`] = `
       >
         <input
           className="text-input !bg-white !border-2 !border-[black] !rounded-lg !shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
-          id="23cac36d-9b93-55"
-          name="Name"
+          id="0a98b7ab-c40c-59"
+          name="name"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -52,8 +52,8 @@ exports[`renders correctly 1`] = `
       >
         <input
           className="text-input !bg-white !border-2 !border-[black] !rounded-lg !shadow-none focus:[&:not(#password)]:!border-[3px] focus:[&:not(#password)]:!border-[black] focus:ring-0"
-          id="060f87ae-bff9-5e"
-          name="Location"
+          id="2423c66d-5198-5e"
+          name="location"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}

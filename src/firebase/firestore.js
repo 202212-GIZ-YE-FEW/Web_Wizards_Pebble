@@ -6,6 +6,7 @@ import {
     getFirestore,
     onSnapshot,
     query,
+    setDoc,
     updateDoc,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
@@ -76,6 +77,11 @@ const useFirestore = (collectionPath) => {
         }
     };
 
+    // set document
+    const setDocument = async (id, data) => {
+        await setDoc(doc(firestore, collectionPath, id), data);
+    };
+
     // get document by id
     const getDocumentById = (id) => {
         return documents.find((doc) => doc.id === id);
@@ -87,6 +93,7 @@ const useFirestore = (collectionPath) => {
         updateDocumentById,
         deleteDocument,
         getDocumentById,
+        setDocument,
     };
 };
 
