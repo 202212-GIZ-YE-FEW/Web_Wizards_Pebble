@@ -6,8 +6,9 @@ import EventDescription from "@/components/event/EventDescription";
 import EventDetails from "@/components/event/EventDetails";
 import EventImage from "@/components/event/EventImage";
 import JoinButton from "@/components/event/JoinButton";
-import useFirestore from "@/firebase/firestore";
+
 import { useAuthContext } from "@/context/AuthContext";
+import useFirestore from "@/firebase/firestore";
 
 const Event = () => {
     const router = useRouter();
