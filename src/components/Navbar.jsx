@@ -40,7 +40,7 @@ function SwitchLangDropDown(props) {
     return (
         <Dropdown autoClose offsetX={-40} id='lang-dropdown'>
             <DropdownButton buttonStyle={false} className='!text-white'>
-                {lang.toUpperCase()}
+                {lang?.toUpperCase()}
             </DropdownButton>
             <DropdownBody
                 isMenu
@@ -183,7 +183,7 @@ export function Navbar(props) {
     const { user } = useAuthContext();
     // const query = useSearchParams();
     const { t, i18n } = props;
-    const lang = i18n.language.toUpperCase();
+    const lang = i18n?.language?.toUpperCase();
 
     return (
         <nav className='bg-primary-200 h-[120px] mb-10'>

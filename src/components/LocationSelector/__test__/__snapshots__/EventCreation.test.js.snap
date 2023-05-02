@@ -524,7 +524,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             accept="image/x-png,image/gif,image/jpeg"
-            className="!w-full !h-12  !rounded  !border-2 !border-black-100  !bg-white"
+            className="!w-full  !rounded  !border-2 !border-black-100  !bg-white top-0 left-0  px-1"
             name="image"
             onChange={[Function]}
             type="file"
