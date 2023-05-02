@@ -41,7 +41,7 @@ function Events() {
     const { documents } = useFirestore("events");
     const events = documents;
     const [selectedLocations, setSelectedLocations] = useState([]);
-    const [selectedInterests, setSelectedInterests] = useState([]);
+    const [selectedInterests, setSelectedInterests] = useState(["All"]);
 
     const { t } = useTranslation("events");
 
@@ -76,18 +76,47 @@ function Events() {
             interest = eventOrInterest.target.value;
         }
 
-        if (selectedInterests.includes(interest)) {
-            setSelectedInterests(
-                selectedInterests.filter((l) => l !== interest)
-            );
+        if (interest === "All") {
+            setSelectedInterests([interest]);
         } else {
-            setSelectedInterests([...selectedInterests, interest]);
+            setSelectedInterests((prevSelectedInterests) => {
+                // Remove "All" from the selected interests if it is included
+                const newSelectedInterests = prevSelectedInterests.includes(
+                    "All"
+                )
+                    ? prevSelectedInterests.filter((i) => i !== "All")
+                    : prevSelectedInterests;
+
+                // Add or remove the selected interest as necessary
+                if (newSelectedInterests.includes(interest)) {
+                    return newSelectedInterests.filter((i) => i !== interest);
+                } else {
+                    return [...newSelectedInterests, interest];
+                }
+            });
         }
     };
 
     const { user } = useAuthContext();
     const firstName = user?.displayName.split(" ")[0];
-
+    const filteredEvents = events.filter((event) => {
+        if (
+            selectedLocations.length === 0 &&
+            selectedInterests.includes("All")
+        ) {
+            // If no filters are selected, show all events
+            return true;
+        } else {
+            // Otherwise, check if event matches selected locations and interests
+            const locationMatch =
+                selectedLocations.length === 0 ||
+                (event?.location && selectedLocations.includes(event.location));
+            const interestMatch =
+                selectedInterests.includes("All") ||
+                event?.interests?.some((i) => selectedInterests.includes(i));
+            return locationMatch && interestMatch;
+        }
+    });
     return (
         <div className='container mx-auto md:grid grid-cols-12 sm:gap-x-8 lg:gap-x-16'>
             {/* PAGE TITLE HEADER */}
@@ -297,7 +326,7 @@ function Events() {
 
             {/* PAGE EVENTS LIST SECTION */}
             <div className='col-span-8'>
-                {events.map((event) => (
+                {filteredEvents.map((event) => (
                     <EventCard
                         t={t}
                         event={event}

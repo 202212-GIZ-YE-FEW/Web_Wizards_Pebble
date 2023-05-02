@@ -1,11 +1,12 @@
-import { useState } from "react";
 import {
+    deleteObject,
+    getDownloadURL,
     getStorage,
     ref,
     uploadBytesResumable,
-    getDownloadURL,
-    deleteObject,
 } from "firebase/storage";
+import { useState } from "react";
+
 import app from "@/firebase/firebase.config";
 
 const useFirebaseStorage = (path) => {
