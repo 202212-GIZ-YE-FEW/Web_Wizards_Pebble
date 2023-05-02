@@ -1,7 +1,5 @@
 import React from "react";
 
-import styles from "./EventCard.module.scss";
-
 import EventsDescription from "@/components/events/EventCard/EventsDescription";
 
 import EventAttendees from "./EventAttendees";
@@ -9,36 +7,30 @@ import EventDate from "./EventDate";
 import EventsImage from "./EventsImage";
 import EventsTitle from "./EventsTitle";
 
-function EventCard({ event, t, keyValue }) {
+function EventCard({ event, t }) {
     return (
         <div className='py-4'>
-            <article
-                className={"horizontal card " + styles.card}
-                key={keyValue}
-            >
-                <div className={styles.cardBadges}>
+            <article className='border-2 border-gray-900 rounded-lg py-2 px-3'>
+                <div className='flex flex-row justify-between py-1'>
                     <EventDate EventDate={event.date} />
-                    <EventAttendees
-                        attendees={event.attendees}
-                        t={t}
-                        style={styles.badge}
-                    />
+                    <EventAttendees attendees={event.attendees} t={t} />
                 </div>
-                <EventsImage eventImg={event.image} />
-                <div className='card-right'>
-                    <div className='card-body'>
+                <div className='flex flex-row'>
+                    <div>
+                        <EventsImage eventImg={event.image} />
+                    </div>
+                    <div className='px-2'>
                         <EventsTitle title={event.title} />
                         <EventsDescription description={event.description} />
                     </div>
-
-                    <footer className='card-footer'>
+                    <div className='flex justify-end ml-auto mt-auto '>
                         <a
                             href={`/events/${event.id}`}
-                            className='bg-[#FDA855] hover:bg-[#e38b33] !text-white font-bold py-2 px-8 rounded-lg push-right'
+                            className='bg-primary-200 hover:bg-[#fe9437] !text-white font-bold py-2 px-8 rounded-lg'
                         >
                             {t("join")}
                         </a>
-                    </footer>
+                    </div>
                 </div>
             </article>
         </div>
