@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
-
+import { Button } from "react-flatifycss";
 import Input from "./LocationInput";
 import Interests from "../editProfile/Interests";
 import YemenCities from "./YemenCities";
@@ -9,6 +9,9 @@ import useFirebaseStorage from "@/firebase/firestorage";
 
 const EventCreation = ({ label, t }) => {
     const router = useRouter();
+
+    const uploadButtonRef = useRef();
+    const [selectedInterests, setSelectedInterests] = useState([]);
 
     const [dateInput, setDateInput] = useState();
     const [timeInput, setTimeInput] = useState();
@@ -64,6 +67,7 @@ const EventCreation = ({ label, t }) => {
             description: eventData.description,
             address: eventData.address,
             date: `${dateInput}T${timeInput}`,
+            category: selectedInterests,
         };
     };
 
@@ -100,17 +104,17 @@ const EventCreation = ({ label, t }) => {
     }, [downloadUrl]);
 
     const handleSubmit = async (e) => {
+        e.preventDefault();
         if (!eventData.address || !eventData.title) {
-            alert("Please fill out all the required fields.");
+            console.error("Please fill out all the required fields.");
             return;
         }
+
         const eventDataWithLocation = createEventDataWithLocation();
         const result = await addDocument(eventDataWithLocation, eventData);
-        if (result.success) {
-            console.log("Event added successfully with ID:", result.id);
-            window.alert("Event added successfully with ID:", result?.title);
 
-            router.push("/events");
+        if (result.success) {
+            router.push(`/events/${result.id}`);
         } else {
             console.error("Error adding event:", result.error);
         }
@@ -236,6 +240,8 @@ const EventCreation = ({ label, t }) => {
                         t={t}
                         className='!text-primary-200 !border-primary-200'
                         button='hidden'
+                        setSelectedInterests={setSelectedInterests}
+                        interestsButtonStyle='!text-primary-200 !border-primary-200'
                     />
                 </div>
 
@@ -298,7 +304,7 @@ const EventCreation = ({ label, t }) => {
                                 onChange={handleFileChange}
                                 type='file'
                                 accept='image/x-png,image/gif,image/jpeg'
-                                className='!w-full !h-12  !rounded  !border-2 !border-black-100  !bg-white'
+                                className='!w-full  !rounded  !border-2 !border-black-100  !bg-white top-0 left-0  px-1'
                             />
                         </div>
                     </div>
