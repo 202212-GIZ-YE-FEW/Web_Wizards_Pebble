@@ -1,27 +1,21 @@
 const EventAttendees = ({ attendees, t, style }) => {
     return (
-        <div style={{ display: "flex", gap: "6px" }}>
-            <div style={{ marginInlineEnd: "10px" }}>
-                {attendees?.slice(0, 3).map((item, index) => (
-                    <a
-                        href='#'
-                        key={index}
-                        className={
-                            "!bg-black-100 !text-white rounded-full px-2 py-1 !transition-all " +
-                            style
-                        }
-                    >
-                        {item.charAt(0)}
-                    </a>
-                ))}
-            </div>
+        <div className='flex -space-x-2 overflow-hidden'>
+            {attendees?.slice(0, 3).map((item, index) => (
+                <a
+                    href='#'
+                    key={index}
+                    className='inline-block w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900  '
+                >
+                    {item.charAt(0)}
+                </a>
+            ))}
             {attendees?.length > 0 ? (
-                <span>
-                    {" "}
+                <span className='pl-3'>
                     + {attendees.length - 3} {t("attendees")}
                 </span>
             ) : (
-                <span>0 {t("attendees")}</span>
+                <span className='ml-1'>0 {t("attendees")}</span>
             )}
         </div>
     );
