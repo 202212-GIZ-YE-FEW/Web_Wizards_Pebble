@@ -176,6 +176,7 @@ exports[`renders correctly 1`] = `
             aria-label="Show/Hide password"
             className="show-password-button"
             onClick={[Function]}
+            type="button"
           />
         </div>
         <p
