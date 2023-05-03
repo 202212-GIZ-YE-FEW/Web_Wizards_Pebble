@@ -53,7 +53,7 @@ function DateRangePicker({ onDateRangeUpdate }) {
     };
 
     return (
-        <div style={{ maxWidth: "100%" }}>
+        <div className='w-full'>
             <DateRange
                 editableDateInputs={true}
                 onChange={(item) => handleDateRangeUpdate(item.selection)}
