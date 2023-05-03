@@ -42,8 +42,10 @@ function Events() {
     const events = documents;
     const [selectedLocations, setSelectedLocations] = useState([]);
     const [selectedInterests, setSelectedInterests] = useState(["All"]);
-
+    const [selectedDateRange, setSelectedDateRange] = useState(null);
     const { t } = useTranslation("events");
+
+    //! Filter by location
 
     const handleLocationsFilterUpdate = (eventOrLocation) => {
         let interest;
@@ -64,6 +66,8 @@ function Events() {
             setSelectedLocations([...selectedLocations, interest]);
         }
     };
+
+    // ! Filter by Interests
 
     const handleInterestsFilterUpdate = (eventOrInterest) => {
         let interest;
@@ -97,24 +101,40 @@ function Events() {
         }
     };
 
+    //! Filter By Date
+
+    const handleDateRangeUpdate = (dateRange) => {
+        setSelectedDateRange(dateRange);
+    };
+
     const { user } = useAuthContext();
     const firstName = user?.displayName.split(" ")[0];
+
+    //!Filter Match Event
     const filteredEvents = events.filter((event) => {
         if (
             selectedLocations.length === 0 &&
-            selectedInterests.includes("All")
+            selectedInterests.includes("All") &&
+            !selectedDateRange
         ) {
             // If no filters are selected, show all events
             return true;
         } else {
-            // Otherwise, check if event matches selected locations and interests
+            // Otherwise, check if event matches selected locations and interests and Date
             const locationMatch =
                 selectedLocations.length === 0 ||
                 (event?.location && selectedLocations.includes(event.location));
             const interestMatch =
                 selectedInterests.includes("All") ||
                 event?.interests?.some((i) => selectedInterests.includes(i));
-            return locationMatch && interestMatch;
+            const dateMatch =
+                !selectedDateRange ||
+                (new Date(event?.date?.seconds * 1000) >=
+                    selectedDateRange.startDate &&
+                    new Date(event?.date?.seconds * 1000) <=
+                        selectedDateRange.endDate);
+
+            return locationMatch && interestMatch && dateMatch;
         }
     });
     return (
@@ -266,7 +286,9 @@ function Events() {
                             </h3>
                         </div>
                         <div className='small flex-grow overflow-y-auto px-12'>
-                            <DateRangePicker />
+                            <DateRangePicker
+                                onDateRangeUpdate={handleDateRangeUpdate}
+                            />
                         </div>
                     </div>
                 </div>
@@ -281,7 +303,7 @@ function Events() {
 
             {/* PAGE FILTER SECTION AT TABLET AND DESKTOP */}
             <div className='col-span-4 flex flex-col gap-6 items-center desktop'>
-                <DateRangePicker />
+                <DateRangePicker onDateRangeUpdate={handleDateRangeUpdate} />
 
                 <Divider />
 
