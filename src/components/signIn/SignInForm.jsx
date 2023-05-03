@@ -14,6 +14,7 @@ import AuthErrorBox from "../shared/AuthErrorBox";
 
 const SignInForm = ({ t }) => {
     const router = useRouter();
+
     const { user } = useAuthContext();
     useEffect(() => {
         if (user && user.emailVerified) router.push("/");
