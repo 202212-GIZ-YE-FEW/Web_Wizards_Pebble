@@ -2,21 +2,11 @@
 
 exports[`renders correctly 1`] = `
 <div
-  style={
-    Object {
-      "display": "flex",
-      "gap": "6px",
-    }
-  }
+  className="flex -space-x-2 overflow-hidden"
 >
-  <div
-    style={
-      Object {
-        "marginInlineEnd": "10px",
-      }
-    }
-  />
-  <span>
+  <span
+    className="ml-1"
+  >
     0 
     attendees
   </span>
