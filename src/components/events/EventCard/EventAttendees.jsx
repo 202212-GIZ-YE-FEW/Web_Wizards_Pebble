@@ -1,4 +1,4 @@
-const EventAttendees = ({ attendees, t, style }) => {
+const EventAttendees = ({ attendees, t }) => {
     return (
         <div className='flex -space-x-2 overflow-hidden'>
             {attendees?.slice(0, 3).map((item, index) => (
