@@ -4,7 +4,7 @@ import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 
-function DateRangePicker() {
+function DateRangePicker({ onDateRangeUpdate }) {
     const [state, setState] = useState([
         {
             startDate: new Date(),
@@ -12,12 +12,16 @@ function DateRangePicker() {
             key: "selection",
         },
     ]);
+    const handleDateRangeUpdate = (dateRange) => {
+        setState([dateRange]);
+        onDateRangeUpdate(dateRange);
+    };
 
     return (
         <div style={{ maxWidth: "100%" }}>
             <DateRange
                 editableDateInputs={true}
-                onChange={(item) => setState([item.selection])}
+                onChange={(item) => handleDateRangeUpdate(item.selection)}
                 moveRangeOnFirstSelection={false}
                 ranges={state}
                 className='w-full'
