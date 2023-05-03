@@ -1,5 +1,3 @@
-import React from "react";
-
 import EventsDescription from "@/components/events/EventCard/EventsDescription";
 
 import EventAttendees from "./EventAttendees";
