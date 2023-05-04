@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<span>
-  Invalid Date
-</span>
+<div
+  className="flex items-center"
+>
+  <span>
+    Invalid Date
+  </span>
+</div>
 `;
