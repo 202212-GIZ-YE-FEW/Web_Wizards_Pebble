@@ -2,11 +2,24 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="border-2 rounded-4 overflow-hidden  h-28 w-48 sm:h-40 sm:w-64"
+  className="border-2 rounded-lg overflow-hidden h-28 w-48 lg:h-40 lg:w-64 sm:h-36 sm:w-58"
 >
   <img
-    alt="Card image"
-    className="object-fill rounded-8 h-28 w-48 sm:h-40 sm:w-64"
+    className="object-fill h-28 w-48 lg:h-40 lg:w-64 sm:h-36 sm:w-58"
+    data-nimg="1"
+    decoding="async"
+    height={572}
+    loading="lazy"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="/_next/image?url=%2Fimg.jpg&w=1920&q=75"
+    srcSet="/_next/image?url=%2Fimg.jpg&w=750&q=75 1x, /_next/image?url=%2Fimg.jpg&w=1920&q=75 2x"
+    style={
+      Object {
+        "color": "transparent",
+      }
+    }
+    width={720}
   />
 </div>
 `;

@@ -8,14 +8,15 @@ import SignOptions from "@/components/shared/SignOptions";
 import SignTitle from "@/components/shared/SignTitle";
 
 import { useAuthContext } from "@/context/AuthContext";
-
-import AuthErrorBox from "../shared/AuthErrorBox";
 // TODO: use dynamic path once testing doesnt conflicts paths.
 import { signUp } from "@/firebase/auth";
+
+import AuthErrorBox from "../shared/AuthErrorBox";
 
 const SignUpForm = ({ t }) => {
     const router = useRouter();
     const { user } = useAuthContext();
+
     const [errors, setErrors] = useState([]);
     useEffect(() => {
         if (user && user.emailVerified) router.push("/");
