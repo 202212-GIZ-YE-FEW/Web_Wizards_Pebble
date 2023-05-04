@@ -2,6 +2,7 @@ import { AiFillClockCircle } from "react-icons/ai";
 import { MdLocationPin } from "react-icons/md";
 
 import SingleDetail from "./SingleDetail.jsx";
+import EventDate from "../events/EventCard/EventDate.jsx";
 
 const EventDetails = (props) => {
     const eventData = props?.eventData;
@@ -16,9 +17,11 @@ const EventDetails = (props) => {
                 icon={<MdLocationPin size={30} />}
             />
 
-            <SingleDetail
-                text={eventData?.date}
-                icon={<AiFillClockCircle size={30} />}
+            <EventDate
+                eventDate={eventData?.date}
+                icon={
+                    <AiFillClockCircle size={30} className='text-black-100' />
+                }
             />
             <div className='flex -space-x-3 overflow-hidden'>
                 {eventData?.attendees?.slice(0, 3).map((attende, index) => (
