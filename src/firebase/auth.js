@@ -7,6 +7,7 @@ import {
     signInWithPopup,
     signOut as _signOut,
     TwitterAuthProvider,
+    updatePassword,
     updateProfile as _updateProfile,
 } from "firebase/auth";
 
@@ -80,4 +81,12 @@ export async function sendEmailVerification(user) {
 
 export async function signOut() {
     _signOut(auth);
+}
+
+export async function changePassword(password) {
+    try {
+        await updatePassword(auth.currentUser, password);
+    } catch (error) {
+        console.log(error);
+    }
 }

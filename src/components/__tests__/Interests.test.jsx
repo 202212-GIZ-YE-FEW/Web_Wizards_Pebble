@@ -11,7 +11,7 @@ it("renders correctly", () => {
     const tree = renderer
         .create(
             <I18nContext.Provider value={i18n}>
-                <Interests t={i18n.t} />
+                <Interests t={i18n.t} clickedInterests={[]} />
             </I18nContext.Provider>
         )
         .toJSON();

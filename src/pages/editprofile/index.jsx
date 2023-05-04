@@ -1,7 +1,7 @@
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import ChangePasswordForm from "@/components/editProfile/ChangePasswordForm";
 import CircleImg from "@/components/editProfile/CircleImg";
@@ -75,11 +75,24 @@ const EditProfile = () => {
     const { user, updateUser } = useAuthContext();
 
     const [clickedInterests, setClickedInterests] = useState([]);
+
     const [imgLoading, setimgLoading] = useState(false);
     const [formLoading, setformLoading] = useState(false);
     const [modalOpen, setModalOpen] = useState(false);
     const { setDocument: setLocation } = useFirestore("locations");
-    const { setDocument: setInterests } = useFirestore("interests");
+    const { setDocument: setInterests, getDocumentByIdNoCache: getInterests } =
+        useFirestore("interests");
+
+    useEffect(() => {
+        if (user?.uid)
+            getInterests(user.uid).then((document) => {
+                if (document.exists()) {
+                    const { selectedInterests } = document.data();
+                    setClickedInterests(selectedInterests);
+                }
+            });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [user?.uid]);
 
     return (
         <div className='flex flex-col md:px-14 px-4 lg:px-48  flex-wrap mt-8'>
@@ -120,9 +133,9 @@ const EditProfile = () => {
             </div>
             <form
                 id='editProfileForm'
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                     setformLoading(true);
-                    handleEditProfileSubmit(
+                    await handleEditProfileSubmit(
                         { e, clickedInterests },
                         {
                             updateUser,
@@ -137,7 +150,9 @@ const EditProfile = () => {
                             },
                         }
                     );
-                    setformLoading(false);
+                    setTimeout(() => {
+                        setformLoading(false);
+                    }, 1000);
                 }}
             >
                 <EditProfileForm t={t} />

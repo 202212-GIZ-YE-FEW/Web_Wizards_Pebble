@@ -31,8 +31,6 @@ const Interests = (props) => {
             setClickedInterests([...clickedInterests, interest]);
         }
     };
-    // Here is the clolected data from the intersts button @Addeb you can use it later
-    console.log(clickedInterests);
 
     return (
         <div className='mt-10 '>
@@ -41,6 +39,8 @@ const Interests = (props) => {
                     <SingleInterest
                         key={interest}
                         text={t(interest)}
+                        id={interest}
+                        clicked={clickedInterests.includes(interest)}
                         onInterestClick={handleInterestClick}
                     />
                 ))}
