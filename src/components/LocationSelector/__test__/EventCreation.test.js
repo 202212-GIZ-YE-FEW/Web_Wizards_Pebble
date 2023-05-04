@@ -8,7 +8,13 @@ jest.mock("next/router", () => ({
 
 it("renders correctly", () => {
     const tree = renderer
-        .create(<EventCreation label='Some label' t={() => {}} />)
+        .create(
+            <EventCreation
+                label='Some label'
+                t={() => {}}
+                clickedInterests={[]}
+            />
+        )
         .toJSON();
     expect(tree).toMatchSnapshot();
 });

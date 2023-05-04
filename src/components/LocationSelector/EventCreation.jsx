@@ -15,6 +15,7 @@ const EventCreation = ({ label, t }) => {
 
     const [dateInput, setDateInput] = useState();
     const [timeInput, setTimeInput] = useState();
+    const [clickedInterests, setClickedInterests] = useState([]);
     function handleDate(e) {
         setDateInput(e.target.value);
     }
@@ -238,6 +239,8 @@ const EventCreation = ({ label, t }) => {
                 <div className='md:flex md:justify-between'>
                     <Interests
                         t={t}
+                        clickedInterests={clickedInterests}
+                        setClickedInterests={setClickedInterests}
                         className='!text-primary-200 !border-primary-200'
                         button='hidden'
                         setSelectedInterests={setSelectedInterests}
