@@ -37,7 +37,7 @@ const Event = () => {
                 <EventImage imageUrl={event?.image} />
                 <div className='order-2 flex flex-col justify-start lg:items-start lg:px-16 lg:py-16 py-8'>
                     <EventDetails eventData={event} />
-                    <JoinButton />
+                    <JoinButton eventId={event?.id} />
                 </div>
             </div>
             <div className='flex lg:flex-row flex-col lg:py-16 '>
