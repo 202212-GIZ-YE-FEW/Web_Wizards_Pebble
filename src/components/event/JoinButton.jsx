@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useAuthContext } from "@/context/AuthContext";
 import useFirestore from "@/firebase/firestore";
@@ -8,9 +8,16 @@ const JoinButton = ({ eventId }) => {
     const [isJoining, setIsJoining] = useState(false);
     const [isLeaving, setIsLeaving] = useState(false);
     const [isJoined, setIsJoined] = useState(false);
-
     const [error, setError] = useState();
     const eventsHook = useFirestore("events");
+    useEffect(() => {
+        const checkIfJoined = async () => {
+            const event = await eventsHook.getDocumentById(eventId);
+            const attendees = event?.attendees || [];
+            setIsJoined(attendees.includes(user?.displayName));
+        };
+        checkIfJoined();
+    }, [eventId, user?.displayName, eventsHook]);
 
     const handleJoinClick = async () => {
         try {
@@ -23,6 +30,7 @@ const JoinButton = ({ eventId }) => {
                 await eventsHook.updateDocumentById(eventId, {
                     attendees: updatedAttendees,
                 });
+                setIsJoined(true);
             }
 
             setIsJoining(false);
@@ -59,21 +67,17 @@ const JoinButton = ({ eventId }) => {
         <>
             <div className='py-12 order-3 lg:order-none px-4'>
                 <button
-                    onClick={handleJoinClick}
-                    disabled={isJoining}
-                    className='w-full bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-32 py-3 '
+                    onClick={isJoined ? handleLeaveClick : handleJoinClick}
+                    disabled={isJoining || isLeaving}
+                    className='w-full bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-32 py-3'
                 >
-                    Join
-                </button>
-            </div>
-
-            <div className='py-12 order-3 lg:order-none px-4'>
-                <button
-                    onClick={handleLeaveClick}
-                    disabled={isJoining}
-                    className='w-full bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-32 py-3 '
-                >
-                    Leave
+                    {isJoined
+                        ? isLeaving
+                            ? "Leaving..."
+                            : "Leave"
+                        : isJoining
+                        ? "Joining..."
+                        : "Join"}
                 </button>
             </div>
         </>
