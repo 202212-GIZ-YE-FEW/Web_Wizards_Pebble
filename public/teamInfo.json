@@ -2,38 +2,38 @@
     {
         "id": "1",
         "name": "Abdullah Binsaed",
-        "image": "adeeb.png",
+        "image": "abdullah.png",
         "links": [
             {
                 "name": "github",
-                "link": "http//:"
+                "link": "https://github.com/iiAbady"
             },
             {
                 "name": "discord",
-                "link": "http//:"
+                "link": "http://"
             },
             {
                 "name": "linkedin",
-                "link": "http//:"
+                "link": "http://"
             }
         ]
     },
     {
         "id": "2",
-        "name": "Hamad Bakeel",
-        "image": "adeeb.png",
+        "name": "Sufyan Basurra",
+        "image": "sufyan.png",
         "links": [
             {
                 "name": "github",
-                "link": "http//:"
+                "link": "https://github.com/SufyanCS"
             },
             {
                 "name": "facebook",
-                "link": "http//:"
+                "link": "http://"
             },
             {
                 "name": "linkedin",
-                "link": "http//:"
+                "link": "http://"
             }
         ]
     },
@@ -44,53 +44,53 @@
         "links": [
             {
                 "name": "github",
-                "link": "http//:"
+                "link": "https://github.com/adeeb-samad"
             },
             {
                 "name": "instagram",
-                "link": "http//:"
+                "link": "http://"
             },
             {
                 "name": "linkedin",
-                "link": "http//:"
+                "link": "https://www.linkedin.com/in/adeeb-samad/"
             }
         ]
     },
     {
         "id": "4",
-        "name": "Adeeb Abdulsamad",
-        "image": "adeeb.png",
+        "name": "Azzam Al-Sulmi",
+        "image": "azzam.png",
         "links": [
             {
                 "name": "github",
-                "link": "http//:"
+                "link": "http://github.com/sulmi24"
             },
             {
                 "name": "twitter",
-                "link": "http//:"
+                "link": "http://"
             },
             {
                 "name": "linkedin",
-                "link": "http//:"
+                "link": "http://linkedin.com/in/a-sulmi24"
             }
         ]
     },
     {
         "id": "5",
-        "name": "Adeeb Abdulsamad",
-        "image": "adeeb.png",
+        "name": "Bakeel Hamad",
+        "image": "bakeel.png",
         "links": [
             {
                 "name": "github",
-                "link": "http//:"
+                "link": "https://github.com/HamadBakeel/HamadBakeel"
             },
             {
                 "name": "discord",
-                "link": "http//:"
+                "link": "http://"
             },
             {
                 "name": "linkedin",
-                "link": "http//:"
+                "link": "http://"
             }
         ]
     }
