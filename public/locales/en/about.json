@@ -1,7 +1,7 @@
 {
     "about": "About Pebble Work",
-    "brief": "Body placeholder for text paragraph. A paragraph is a self-contained unit of text dealing with a particular point or idea.",
+    "brief": "On this website, organizations or individuals will post their initiatives. Ordinary users browse these initiatives and choose which one to donate to.",
     "ourTeam": "Our Team",
-    "techTitle": "Technologies Used and Project Structure",
-    "techBrief": "Body placeholder for text paragraph. A paragraph is a self-contained unit of text dealing with a particular point or idea."
+    "techStack": "Technologies",
+    "techTitle": "Technologies Used and Project Structure"
 }
