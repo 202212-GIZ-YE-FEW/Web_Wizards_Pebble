@@ -79,7 +79,7 @@ function Card(props) {
 export default function How(props) {
     const { t } = props;
     return (
-        <section className='container mt-40' id='howitworks'>
+        <section className='container mt-40' id='how_it_works'>
             <Title className='pb-32'>{t("howItWorks")}</Title>
             <Cards t={t} />
         </section>

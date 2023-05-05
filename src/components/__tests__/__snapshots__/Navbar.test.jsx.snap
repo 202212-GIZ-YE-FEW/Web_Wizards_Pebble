@@ -46,7 +46,7 @@ exports[`renders correctly 1`] = `
         }
       >
         <li
-          className="menu-item"
+          className="menu-item hover:!bg-primary-100 !rounded-none"
         >
           <a
             className=""
@@ -59,7 +59,7 @@ exports[`renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="menu-item"
+          className="menu-item hover:!bg-primary-100 !rounded-none"
         >
           <a
             className=""
@@ -72,11 +72,11 @@ exports[`renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="menu-item"
+          className="menu-item hover:!bg-primary-100 !rounded-none"
         >
           <a
             className=""
-            href="#howitworks"
+            href="/#how_it_works"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
@@ -85,7 +85,7 @@ exports[`renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="menu-item"
+          className="menu-item hover:!bg-primary-100 !rounded-none"
         >
           <a
             className=""
@@ -98,7 +98,7 @@ exports[`renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="menu-item"
+          className="menu-item hover:!bg-primary-100 !rounded-none"
         >
           <a
             className=""
@@ -110,6 +110,83 @@ exports[`renders correctly 1`] = `
             signUp
           </a>
         </li>
+        <div
+          className="dropdown__DropdownWrapper-sc-clud83-0 cXRnlz dropdown-wrapper"
+          id="wrapper-lang-dropdown"
+        >
+          <button
+            aria-expanded={false}
+            className="button__ButtonWrapper-sc-1aw98b4-0 button dropdown-button__DropdownButtonWrapper-sc-188aygt-0 dropdown-toggle items-center gap-1 menu-item hover:!bg-primary-100 !flex !px-4 !py-3 !rounded-none !w-full arrow-bottom no-style"
+            disabled={false}
+            id="47b38185-4a78-57"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height="28"
+              viewBox="0 0 28 28"
+              width="28"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z"
+                fill="#2e4051"
+                fillRule="evenodd"
+              />
+            </svg>
+            EN
+          </button>
+          <ul
+            aria-labelledby="47b38185-4a78-57"
+            className="dropdown-body__DropdownBodyWrapper-sc-xo3k2p-0 dropdown menu-items-wrapper shadow-[2px_2px_0px_#1A1A1A] border-2 border-[#1A1A1A] rounded-none"
+            onClick={[Function]}
+            style={
+              Object {
+                "left": "0",
+                "position": "absolute",
+                "top": "0",
+              }
+            }
+          >
+            <li
+              className="menu-item"
+            >
+              <a
+                href="/"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onTouchStart={[Function]}
+              >
+                English
+              </a>
+            </li>
+            <li
+              className="menu-item"
+            >
+              <a
+                href="/"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onTouchStart={[Function]}
+              >
+                العربية
+              </a>
+            </li>
+            <li
+              aria-hidden={false}
+            >
+              <span
+                className="pointer-arrow"
+                style={
+                  Object {
+                    "position": "absolute",
+                  }
+                }
+              />
+            </li>
+          </ul>
+        </div>
         <li
           aria-hidden={false}
         >
@@ -183,85 +260,81 @@ exports[`renders correctly 1`] = `
         </button>
       </a>
       <div
-        className="hidden md:flex items-center gap-1"
+        className="dropdown__DropdownWrapper-sc-clud83-0 cXRnlz dropdown-wrapper"
+        id="wrapper-lang-dropdown"
       >
-        <svg
-          fill="none"
-          height="28"
-          viewBox="0 0 28 28"
-          width="28"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-expanded={false}
+          className="button__ButtonWrapper-sc-1aw98b4-0 button dropdown-button__DropdownButtonWrapper-sc-188aygt-0 dropdown-toggle items-center gap-1 hidden md:flex !text-white arrow-bottom no-style"
+          disabled={false}
+          id="47b38185-4a78-57"
+          onClick={[Function]}
         >
-          <path
-            clipRule="evenodd"
-            d="M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z"
-            fill="white"
-            fillRule="evenodd"
-          />
-        </svg>
-        <div
-          className="dropdown__DropdownWrapper-sc-clud83-0 cXRnlz dropdown-wrapper"
-          id="wrapper-lang-dropdown"
-        >
-          <button
-            aria-expanded={false}
-            className="button__ButtonWrapper-sc-1aw98b4-0 button dropdown-button__DropdownButtonWrapper-sc-188aygt-0 dropdown-toggle !text-white arrow-bottom no-style"
-            disabled={false}
-            id="47b38185-4a78-57"
-            onClick={[Function]}
+          <svg
+            fill="none"
+            height="28"
+            viewBox="0 0 28 28"
+            width="28"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            EN
-          </button>
-          <ul
-            aria-labelledby="47b38185-4a78-57"
-            className="dropdown-body__DropdownBodyWrapper-sc-xo3k2p-0 dropdown menu-items-wrapper shadow-[2px_2px_0px_#1A1A1A] border-2 border-[#1A1A1A] rounded-none"
-            onClick={[Function]}
-            style={
-              Object {
-                "left": "0",
-                "position": "absolute",
-                "top": "0",
-              }
+            <path
+              clipRule="evenodd"
+              d="M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z"
+              fill="white"
+              fillRule="evenodd"
+            />
+          </svg>
+          EN
+        </button>
+        <ul
+          aria-labelledby="47b38185-4a78-57"
+          className="dropdown-body__DropdownBodyWrapper-sc-xo3k2p-0 dropdown menu-items-wrapper shadow-[2px_2px_0px_#1A1A1A] border-2 border-[#1A1A1A] rounded-none"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": "0",
+              "position": "absolute",
+              "top": "0",
             }
+          }
+        >
+          <li
+            className="menu-item"
           >
-            <li
-              className="menu-item"
+            <a
+              href="/"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
-              <a
-                href="/"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onTouchStart={[Function]}
-              >
-                English
-              </a>
-            </li>
-            <li
-              className="menu-item"
+              English
+            </a>
+          </li>
+          <li
+            className="menu-item"
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
-              <a
-                href="/"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onTouchStart={[Function]}
-              >
-                العربية
-              </a>
-            </li>
-            <li
-              aria-hidden={false}
-            >
-              <span
-                className="pointer-arrow"
-                style={
-                  Object {
-                    "position": "absolute",
-                  }
+              العربية
+            </a>
+          </li>
+          <li
+            aria-hidden={false}
+          >
+            <span
+              className="pointer-arrow"
+              style={
+                Object {
+                  "position": "absolute",
                 }
-              />
-            </li>
-          </ul>
-        </div>
+              }
+            />
+          </li>
+        </ul>
       </div>
     </div>
   </div>

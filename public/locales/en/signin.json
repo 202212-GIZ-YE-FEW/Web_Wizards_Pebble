@@ -9,5 +9,6 @@
     "or": "OR",
     "auth/wrong-password": "Invalid password.",
     "auth/user-not-found": "User is not found.",
-    "auth/unknown": "Unknown occured error while singing in, please contact support."
+    "auth/unknown": "Unknown occured error while singing in, please contact support.",
+    "forgetPassword": "Forget your password?"
 }

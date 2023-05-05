@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { BorderlessButton } from "@/components/mini";
 
-const FormFooter = ({ message, linkText, linkHref }) => {
+const FormFooter = ({ message, linkText, linkHref, t }) => {
     return (
         <div className='pb-3 px-3'>
             <p>
@@ -13,6 +14,7 @@ const FormFooter = ({ message, linkText, linkHref }) => {
                     </Link>
                 )}
             </p>
+            <BorderlessButton>{t("forgetPassword")}</BorderlessButton>
         </div>
     );
 };

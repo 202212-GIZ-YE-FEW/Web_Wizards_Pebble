@@ -10,5 +10,8 @@
     "viewEvents": "Your Events",
     "viewProfile": "View Profile",
     "viewSettings": "Settings",
-    "logOut": "Log Out"
+    "logOut": "Log Out",
+    "madeBy": "Made with ♥ by Web Wizards",
+    "successChanges": "Updated changes successfully!",
+		"incorrectPassword": "The password is incorrect!"
 }

@@ -57,7 +57,7 @@ exports[`renders correctly 1`] = `
         </a>
         <a
           className="font-extrabold !text-black-100"
-          href="#how_it_works"
+          href="/#how_it_works"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
@@ -69,7 +69,7 @@ exports[`renders correctly 1`] = `
         className="text-center"
       >
         <p>
-          Made with ♥ by Web Wizards
+          madeBy
         </p>
       </div>
     </div>
