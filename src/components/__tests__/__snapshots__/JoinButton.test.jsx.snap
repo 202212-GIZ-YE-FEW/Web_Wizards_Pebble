@@ -1,15 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="py-12 order-3 lg:order-none px-4"
->
-  <button
-    className="w-full bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-32 py-3 "
-    disabled={false}
-    onClick={[Function]}
+Array [
+  <div
+    className="py-12 order-3 lg:order-none px-4"
   >
-    Join
-  </button>
-</div>
+    <button
+      className="w-full bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-32 py-3 "
+      disabled={false}
+      onClick={[Function]}
+    >
+      Join
+    </button>
+  </div>,
+  <div
+    className="py-12 order-3 lg:order-none px-4"
+  >
+    <button
+      className="w-full bg-primary-200 focus:outline-none text-white font-semibold rounded-lg text-md px-32 py-3 "
+      disabled={false}
+      onClick={[Function]}
+    >
+      Leave
+    </button>
+  </div>,
+]
 `;
