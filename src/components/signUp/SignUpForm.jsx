@@ -103,6 +103,7 @@ const SignUpForm = ({ t }) => {
                             message={t("haveAccount")}
                             linkHref='/signin'
                             linkText={t("signIn")}
+                            t={t}
                         />
                         <SignButton text={t("signUp")} loading={loading} />
                     </form>

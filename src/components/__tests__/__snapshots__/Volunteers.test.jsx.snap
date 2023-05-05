@@ -36,14 +36,14 @@ exports[`renders correctly 1`] = `
       <h3
         className="text-2xl font-sans"
       >
-        volunteerName
+        volunteerName1
         , 
-        volunteerOccupation
+        volunteerOccupation1
       </h3>
       <p
         className="text-black-50 text-xl leading-8 "
       >
-        volunteerDescription
+        volunteerDescription1
       </p>
     </div>
     <div
@@ -70,14 +70,14 @@ exports[`renders correctly 1`] = `
       <h3
         className="text-2xl font-sans"
       >
-        volunteerName
+        volunteerName2
         , 
-        volunteerOccupation
+        volunteerOccupation2
       </h3>
       <p
         className="text-black-50 text-xl leading-8 "
       >
-        volunteerDescription
+        volunteerDescription2
       </p>
     </div>
     <div
@@ -104,14 +104,14 @@ exports[`renders correctly 1`] = `
       <h3
         className="text-2xl font-sans"
       >
-        volunteerName
+        volunteerName3
         , 
-        volunteerOccupation
+        volunteerOccupation3
       </h3>
       <p
         className="text-black-50 text-xl leading-8 "
       >
-        volunteerDescription
+        volunteerDescription3
       </p>
     </div>
   </div>

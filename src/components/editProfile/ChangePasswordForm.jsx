@@ -5,18 +5,35 @@ import SaveButton from "@/components/editProfile/SaveButton";
 import SecondaryTitle from "@/components/editProfile/SecondaryTitle";
 import InputForm from "@/components/shared/InputForm";
 
-import { changePassword } from "@/firebase/auth";
+import { useAlertContext } from "@/context/AlertContext";
+import { changePassword, confirmCurrentPassword } from "@/firebase/auth";
 
-async function handlePasswordChange(e) {
+async function handlePasswordChange(
+    e,
+    { setShow, setMessage, setTheme },
+    { success, fail }
+) {
     const form = e.target;
     const formData = new FormData(form);
-    const password = formData.get("password");
-    const confirmPassword = formData.get("passwordConfirm");
-    if (password != confirmPassword) return;
-    await changePassword(password);
+    const currentPassword = formData.get("currentPassword");
+    const newPassword = formData.get("newPassword");
+    const currentPasswordConfirmed = await confirmCurrentPassword(
+        currentPassword
+    );
+    setShow(true);
+
+    if (!currentPasswordConfirmed) {
+        setTheme("warning-light");
+        setMessage(fail);
+    } else {
+        setTheme("success-light");
+        setMessage(success);
+        changePassword(newPassword);
+    }
 }
 
 const ChangePasswordForm = ({ t }) => {
+    const { setShow, setMessage, setTheme } = useAlertContext();
     const [passwordLoading, setPasswordLoading] = useState(false);
     return (
         <div className='w-11/12 mx-auto rounded-3xl flex flex-col justify-center bg-[#d4f3fa] md:px-10 px-2 py-10'>
@@ -25,7 +42,18 @@ const ChangePasswordForm = ({ t }) => {
                 onSubmit={async (e) => {
                     e.preventDefault();
                     setPasswordLoading(true);
-                    await handlePasswordChange(e);
+                    await handlePasswordChange(
+                        e,
+                        {
+                            setShow,
+                            setTheme,
+                            setMessage,
+                        },
+                        {
+                            sucess: t("successChanges"),
+                            fail: t("incorrectPassword"),
+                        }
+                    );
                     setTimeout(() => {
                         setPasswordLoading(false);
                     }, 1000);
@@ -34,18 +62,18 @@ const ChangePasswordForm = ({ t }) => {
             >
                 <div className='flex flex-row py-6'>
                     <InputForm
-                        placeholder={t("newPassword")}
-                        label={t("newPassword")}
-                        name='password'
+                        placeholder={t("currentPassword")}
+                        label={t("currentPassword")}
+                        name='currentPassword'
                         type='password'
                         hasFloatingLabel
                         togglePasswordLabel='Show/Hide password'
                         togglePassword='true'
                     />
                     <InputForm
-                        placeholder={t("confirmPassword")}
-                        label={t("confirmPassword")}
-                        name='confirmPassword'
+                        placeholder={t("newPassword")}
+                        label={t("newPassword")}
+                        name='newPassword'
                         type='password'
                         hasFloatingLabel
                         togglePasswordLabel='Show/Hide password'
