@@ -28,7 +28,7 @@ function DateRangePicker({ onDateRangeUpdate }) {
             {
                 startDate,
                 endDate,
-                key: `selection-${new Date().getTime()}`,
+                key: "selection",
             },
         ]);
         onDateRangeUpdate({ startDate, endDate });
@@ -46,20 +46,19 @@ function DateRangePicker({ onDateRangeUpdate }) {
             {
                 startDate,
                 endDate,
-                key: `selection-${new Date().getTime()}`,
+                key: "selection",
             },
         ]);
         onDateRangeUpdate({ startDate, endDate });
     };
 
     return (
-        <div className='w-full'>
+        <div>
             <DateRange
                 editableDateInputs={true}
                 onChange={(item) => handleDateRangeUpdate(item.selection)}
                 moveRangeOnFirstSelection={false}
                 ranges={state}
-                className='w-full'
             />
             <div className='flex justify-between mt-3'>
                 <Button className='w-5/12' onClick={handleThisWeekClick}>
