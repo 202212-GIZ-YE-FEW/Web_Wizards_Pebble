@@ -1,19 +1,31 @@
-import React from "react";
+import Image from "next/image";
+
+import techs from "~/techs.json";
 
 const Tech = (props) => {
     const { t } = props;
 
     return (
-        <section id='tech' className='m-16 md:m-36'>
-            <h5 className='text-center mb-4'>{t("techStack")}</h5>
-            <h2 className='mb-2 text-center font-sans text-2xl font-bold md:mb-4 md:text-4xl lg:mb-4 lg:text-4xl'>
-                {t("techTitle")}
-            </h2>
-            <p className='text-center'>
-                React.js/Next.js for coding, TailwindCSS for styyling and Jest
-                for testing
-            </p>
-        </section>
+        <div className='h-screen flex flex-col justify-center'>
+            <div className='max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8'>
+                <h2 className='mb-4 text-center text-2xl md:text-4xl font-bold  lg:text-5xl lg:font-bold m-1 md:m-4 font-sans'>
+                    {t("techTitle")}
+                </h2>
+                <div className='flex flex-wrap justify-center'>
+                    {techs.map((tech) => (
+                        <div key={tech.tech} className='m-6'>
+                            <Image
+                                src={`/images/tech/${tech.logo}`}
+                                alt={tech.tech}
+                                width={100}
+                                height={100}
+                                className='max-h-12'
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
     );
 };
 

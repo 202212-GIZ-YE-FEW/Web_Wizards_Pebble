@@ -1,24 +1,373 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<section
-  className="m-16 md:m-36"
-  id="tech"
+<div
+  className="h-screen flex flex-col justify-center"
 >
-  <h5
-    className="text-center mb-4"
+  <div
+    className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8"
   >
-    techStack
-  </h5>
-  <h2
-    className="mb-2 text-center font-sans text-2xl font-bold md:mb-4 md:text-4xl lg:mb-4 lg:text-4xl"
-  >
-    techTitle
-  </h2>
-  <p
-    className="text-center"
-  >
-    React.js/Next.js for coding, TailwindCSS for styyling and Jest for testing
-  </p>
-</section>
+    <h2
+      className="mb-4 text-center text-2xl md:text-4xl font-bold  lg:text-5xl lg:font-bold m-1 md:m-4 font-sans"
+    >
+      techTitle
+    </h2>
+    <div
+      className="flex flex-wrap justify-center"
+    >
+      <div
+        className="m-6"
+      >
+        <img
+          alt="HTML"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Fhtml.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Fhtml.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Fhtml.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="JavaScript"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Fjs.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Fjs.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Fjs.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="React.js"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Freact.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Freact.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Freact.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="Next.js"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Fnext.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Fnext.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Fnext.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="CSS"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Fcss.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Fcss.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Fcss.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="TailwindCSS"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Ftailwind.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Ftailwind.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Ftailwind.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="FlatifyCSS"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Fflatify.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Fflatify.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Fflatify.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="Firebase"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Ffirebase.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Ffirebase.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Ffirebase.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="JSON"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Fjson.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Fjson.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Fjson.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="FontAwesome"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Ffa.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Ffa.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Ffa.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="Git"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Fgit.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Fgit.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Fgit.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="Github"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Fgithub.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Fgithub.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Fgithub.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="Jest"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Fjest.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Fjest.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Fjest.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="Node"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Fnode.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Fnode.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Fnode.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="npm"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Fnpm.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Fnpm.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Fnpm.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+      <div
+        className="m-6"
+      >
+        <img
+          alt="Figma"
+          className="max-h-12"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Ftech%2Ffigma.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Ftech%2Ffigma.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Ftech%2Ffigma.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+      </div>
+    </div>
+  </div>
+</div>
 `;

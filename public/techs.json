@@ -1,0 +1,82 @@
+[
+    {
+        "tech": "HTML",
+        "logo": "html.png",
+        "desc": ""
+    },
+    {
+        "tech": "JavaScript",
+        "logo": "js.png",
+        "desc": ""
+    },
+    {
+        "tech": "React.js",
+        "logo": "react.png",
+        "desc": ""
+    },
+    {
+        "tech": "Next.js",
+        "logo": "next.png",
+        "desc": ""
+    },
+    {
+        "tech": "CSS",
+        "logo": "css.png",
+        "desc": ""
+    },
+    {
+        "tech": "TailwindCSS",
+        "logo": "tailwind.png",
+        "desc": ""
+    },
+    {
+        "tech": "FlatifyCSS",
+        "logo": "flatify.png",
+        "desc": ""
+    },
+    {
+        "tech": "Firebase",
+        "logo": "firebase.png",
+        "desc": ""
+    },
+    {
+        "tech": "JSON",
+        "logo": "json.png",
+        "desc": ""
+    },
+    {
+        "tech": "FontAwesome",
+        "logo": "fa.png",
+        "desc": ""
+    },
+    {
+        "tech": "Git",
+        "logo": "git.png",
+        "desc": ""
+    },
+    {
+        "tech": "Github",
+        "logo": "github.png",
+        "desc": ""
+    },
+    {
+        "tech": "Jest",
+        "logo": "jest.png",
+        "desc": ""
+    },
+    {
+        "tech": "Node",
+        "logo": "node.png",
+        "desc": ""
+    },
+    {
+        "tech": "npm",
+        "logo": "npm.png",
+        "desc": ""
+    },
+    {
+        "tech": "Figma",
+        "logo": "figma.png",
+        "desc": ""
+    }
+]
