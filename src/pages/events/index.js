@@ -14,6 +14,7 @@ import Pagination from "@/components/events/Pagination/Pagination";
 
 import { useAuthContext } from "@/context/AuthContext";
 import useFirestore from "@/firebase/firestore";
+import { ArrowButton } from "react-flatifycss";
 
 const locations = ["İzmir, TR", "İzmir, TRT"];
 
@@ -38,12 +39,17 @@ const interests = [
 ];
 
 function Events() {
-    const { documents } = useFirestore("events");
+    const [limit, setLimit] = useState(10);
+    const [offset, setOffset] = useState(0);
+    const { documents, getNextPage, getPrevPage } = useFirestore("events");
     const events = documents;
     const [selectedLocations, setSelectedLocations] = useState([]);
     const [selectedInterests, setSelectedInterests] = useState(["All"]);
     const [selectedDateRange, setSelectedDateRange] = useState(null);
     const { t } = useTranslation("events");
+    const handlePageChange = (pageIndex) => {
+        setOffset(pageIndex * limit);
+    };
 
     //! Filter by location
 
@@ -360,7 +366,12 @@ function Events() {
 
             {/* PAGINATION SECTION AT TABLET AND DESKTOP */}
             <div className='col-span-12 pagination desktop'>
-                <Pagination />
+                <Button handleClick={getNextPage}></Button>
+                <Button handleClick={getPrevPage}></Button>
+                <Pagination
+                    handleNextPage={getNextPage}
+                    handlePrevPage={getPrevPage}
+                />
             </div>
         </div>
     );
