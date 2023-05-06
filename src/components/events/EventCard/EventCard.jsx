@@ -10,7 +10,7 @@ function EventCard({ event, t }) {
         <div className='py-4'>
             <article className='border-2 border-gray-900 rounded-lg py-2 px-3 relative'>
                 <div className='flex flex-row justify-between py-1'>
-                    <EventDate EventDate={event.date} />
+                    <EventDate eventDate={event.date} />
                     <EventAttendees attendees={event.attendees} t={t} />
                 </div>
                 <div className='flex flex-row py-1'>

@@ -3,6 +3,7 @@ import {
     collection,
     deleteDoc,
     doc,
+    getDoc,
     getFirestore,
     onSnapshot,
     query,
@@ -87,6 +88,11 @@ const useFirestore = (collectionPath) => {
         return documents.find((doc) => doc.id === id);
     };
 
+    const getDocumentByIdNoCache = async (id) => {
+        const docRef = doc(firestore, collectionPath, id);
+        return await getDoc(docRef);
+    };
+
     return {
         documents,
         addDocument,
@@ -94,6 +100,7 @@ const useFirestore = (collectionPath) => {
         deleteDocument,
         getDocumentById,
         setDocument,
+        getDocumentByIdNoCache,
     };
 };
 

@@ -26,14 +26,14 @@ function Footer(props) {
                             {t("about")}
                         </Link>
                         <Link
-                            href='#how_it_works'
+                            href='/#how_it_works'
                             className='font-extrabold !text-black-100'
                         >
                             {t("howItWorks")}
                         </Link>
                     </div>
                     <div className='text-center'>
-                        <p>Made with ♥ by Web Wizards</p>
+                        <p>{t("madeBy")}</p>
                     </div>
                 </div>
                 <div>

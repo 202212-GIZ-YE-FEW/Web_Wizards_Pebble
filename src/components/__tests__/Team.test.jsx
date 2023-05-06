@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer";
 
-import Team from "../Team";
+import Team from "../about/Team";
 
 it("renders correctly", () => {
     const tree = renderer.create(<Team t={(str) => str} />).toJSON();

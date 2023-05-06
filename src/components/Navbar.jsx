@@ -36,10 +36,27 @@ function Nav(props) {
 }
 
 function SwitchLangDropDown(props) {
-    const { to, lang } = props;
+    const { to, lang, className, iconColor = "white" } = props;
     return (
         <Dropdown autoClose offsetX={-40} id='lang-dropdown'>
-            <DropdownButton buttonStyle={false} className='!text-white'>
+            <DropdownButton
+                buttonStyle={false}
+                className={`items-center gap-1 ${className}`}
+            >
+                <svg
+                    width='28'
+                    height='28'
+                    viewBox='0 0 28 28'
+                    fill='none'
+                    xmlns='http://www.w3.org/2000/svg'
+                >
+                    <path
+                        fillRule='evenodd'
+                        clipRule='evenodd'
+                        d='M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z'
+                        fill={iconColor}
+                    />
+                </svg>
                 {lang?.toUpperCase()}
             </DropdownButton>
             <DropdownBody
@@ -73,7 +90,7 @@ function SwitchLangDropDown(props) {
 }
 
 function MobileDropDown(props) {
-    const { t, isVerified } = props;
+    const { t, isVerified, lang, path } = props;
     return (
         <Dropdown
             autoClose
@@ -106,7 +123,10 @@ function MobileDropDown(props) {
                 }
                 {routes.map((route, index) => {
                     return (
-                        <li className='menu-item' key={index}>
+                        <li
+                            className='menu-item hover:!bg-primary-100 !rounded-none'
+                            key={index}
+                        >
                             <Nav
                                 t={t}
                                 name={
@@ -119,19 +139,25 @@ function MobileDropDown(props) {
                         </li>
                     );
                 })}
-                <li className='menu-item'>
-                    <Nav t={t} name='howItWorks' href='#howitworks' />
+                <li className='menu-item hover:!bg-primary-100 !rounded-none'>
+                    <Nav t={t} name='howItWorks' href='/#how_it_works' />
                 </li>
                 {isVerified && (
-                    <li className='menu-item'>
+                    <li className='menu-item hover:!bg-primary-100 !rounded-none'>
                         <Nav t={t} name='signIn' href='/signin' />
                     </li>
                 )}
                 {isVerified && (
-                    <li className='menu-item'>
+                    <li className='menu-item hover:!bg-primary-100 !rounded-none'>
                         <Nav t={t} name='signUp' href='/signup' />
                     </li>
                 )}
+                <SwitchLangDropDown
+                    lang={lang}
+                    to={path}
+                    className='menu-item hover:!bg-primary-100 !flex !px-4 !py-3 !rounded-none !w-full'
+                    iconColor='#2e4051'
+                />
             </DropdownBody>
         </Dropdown>
     );
@@ -191,6 +217,8 @@ export function Navbar(props) {
                 <MobileDropDown
                     isVerified={!(user && user.emailVerified)}
                     t={t}
+                    lang={lang}
+                    path={path}
                 />
                 <Link
                     href='/'
@@ -234,23 +262,11 @@ export function Navbar(props) {
                             </Link>
                         </>
                     )}
-                    <div className='hidden md:flex items-center gap-1'>
-                        <svg
-                            width='28'
-                            height='28'
-                            viewBox='0 0 28 28'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'
-                        >
-                            <path
-                                fillRule='evenodd'
-                                clipRule='evenodd'
-                                d='M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z'
-                                fill='white'
-                            />
-                        </svg>
-                        <SwitchLangDropDown to={path} lang={lang} />
-                    </div>
+                    <SwitchLangDropDown
+                        to={path}
+                        lang={lang}
+                        className='hidden md:flex !text-white'
+                    />
                     {user && user.emailVerified && (
                         <UserDropDown user={user} t={t} />
                     )}
