@@ -1,7 +1,23 @@
+import Image from "next/image";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import { GetStartedButton } from "@/components/mini";
+
 export default function NotFoundPage() {
-    return <h1 className='text-center !my-80 text-6xl font-sans'>404</h1>;
+    const { t } = useTranslation("common");
+
+    return (
+        <div className='flex flex-col items-center h-screen'>
+            <Image
+                src='/images/404.png'
+                alt='About Page Image'
+                width={800}
+                height={800}
+            />
+            <GetStartedButton>{t("HomePage")}</GetStartedButton>
+        </div>
+    );
 }
 
 export async function getStaticProps({ locale }) {
