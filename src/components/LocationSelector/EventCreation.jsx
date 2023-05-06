@@ -61,6 +61,9 @@ const EventCreation = ({ label, t }) => {
             searchCity !== cityData
         );
     });
+
+    const date = new Date(`${dateInput}T${timeInput}`);
+    const timestamp = date.getTime() / 1000;
     const createEventDataWithLocation = () => {
         return {
             ...eventData,
@@ -68,7 +71,7 @@ const EventCreation = ({ label, t }) => {
             title: eventData.title,
             description: eventData.description,
             address: eventData.address,
-            date: `${dateInput}T${timeInput}`,
+            date: timestamp,
             category: selectedInterests,
         };
     };
@@ -78,7 +81,7 @@ const EventCreation = ({ label, t }) => {
         title: "",
         description: "",
         address: "",
-        date: `${dateInput}T${timeInput}`,
+        date: timestamp,
     });
 
     const { addDocument } = useFirestore("events");
