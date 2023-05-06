@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
-import { Button } from "react-flatifycss";
-import Input from "./LocationInput";
-import Interests from "../editProfile/Interests";
-import YemenCities from "./YemenCities";
-import useFirestore from "@/firebase/firestore";
+import React, { useEffect, useRef, useState } from "react";
+
 import useFirebaseStorage from "@/firebase/firestorage";
+import useFirestore from "@/firebase/firestore";
+
+import Input from "./LocationInput";
+import YemenCities from "./YemenCities";
+import Interests from "../editProfile/Interests";
 
 const EventCreation = ({ label, t }) => {
     const router = useRouter();
