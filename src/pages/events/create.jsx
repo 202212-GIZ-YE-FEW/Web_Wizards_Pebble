@@ -31,7 +31,7 @@ const EventCreationPage = () => {
 
     return (
         <div>
-            <EventCreation t={t} />
+            <EventCreation t={t} user={user} />
         </div>
     );
 };
