@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-import techs from "~/techs.json";
-
 const Tech = (props) => {
     const { t } = props;
 
