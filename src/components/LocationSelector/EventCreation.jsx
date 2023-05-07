@@ -72,7 +72,7 @@ const EventCreation = ({ label, t, user }) => {
             description: eventData.description,
             address: eventData.address,
             date: timestamp,
-            category: selectedInterests,
+            interests: clickedInterests,
         };
     };
 
