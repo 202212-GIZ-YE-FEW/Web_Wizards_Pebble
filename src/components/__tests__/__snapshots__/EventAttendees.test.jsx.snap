@@ -5,9 +5,10 @@ exports[`renders correctly 1`] = `
   className="flex -space-x-2 overflow-hidden"
 >
   <span
-    className="ml-1"
+    className="px-4"
   >
-    0 
+    0
+     
     attendees
   </span>
 </div>

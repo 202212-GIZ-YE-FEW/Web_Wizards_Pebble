@@ -1,4 +1,5 @@
 const EventAttendees = ({ attendees, t }) => {
+    const attendeeCount = attendees?.length || 0;
     return (
         <div className='flex -space-x-2 overflow-hidden'>
             {attendees?.slice(0, 3).map((item, index) => (
@@ -10,12 +11,14 @@ const EventAttendees = ({ attendees, t }) => {
                     {item.charAt(0)}
                 </a>
             ))}
-            {attendees?.length > 0 ? (
+            {attendeeCount > 3 ? (
                 <span className='pl-3'>
                     + {attendees.length - 3} {t("attendees")}
                 </span>
             ) : (
-                <span className='ml-1'>0 {t("attendees")}</span>
+                <span className='px-4'>
+                    {attendeeCount} {t("attendees")}
+                </span>
             )}
         </div>
     );
