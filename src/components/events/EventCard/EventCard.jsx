@@ -15,7 +15,10 @@ function EventCard({ event, t }) {
                 </div>
                 <div className='flex flex-row py-1'>
                     <div>
-                        <EventsImage eventImg={event.image} />
+                        <EventsImage
+                            eventImg={event.image}
+                            title={event.title}
+                        />
                     </div>
                     <div className='px-2 flex-grow'>
                         <div className='flex flex-col h-full'>

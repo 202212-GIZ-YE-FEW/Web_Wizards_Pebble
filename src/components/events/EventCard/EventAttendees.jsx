@@ -6,9 +6,9 @@ const EventAttendees = ({ attendees, t }) => {
                 <a
                     href='#'
                     key={index}
-                    className='inline-block flex justify-center !no-underline  w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900  '
+                    className='inline-block flex justify-center !no-underline !text-white w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900'
                 >
-                    {item.charAt(0)}
+                    {item.charAt(0).toUpperCase()}
                 </a>
             ))}
             {attendeeCount > 3 ? (
