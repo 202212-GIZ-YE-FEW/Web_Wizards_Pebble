@@ -6,22 +6,22 @@ const Interests = (props) => {
     const { t } = useTranslation("interests");
 
     const interests = [
-        "no_poverty",
-        "zero_hunger",
-        "good_health",
-        "quality_education",
-        "gender_equality",
-        "clean_water",
-        "affordable_energy",
-        "decent_work",
-        "innovation",
-        "reduced_inequalities",
-        "sustainable_cities",
-        "responsible_consumption",
-        "climate_action",
-        "life_below_water",
-        "life_on_land",
-        "peace_justice",
+        "Zero Hunger",
+        "No Poverty",
+        "Good Health and Well Being",
+        "Quality Education",
+        "Gender Equality",
+        "Clean Water and Sanitation",
+        "Affordable and Clean Energy",
+        "Decent Work and Economic Growth",
+        "Industry, Innovation, and Infrastructure",
+        "Reduced Inequalities",
+        "Sustainable Cities and Communities",
+        "Responsible Consumption/ Production",
+        "Life Below Water",
+        "Life on Land",
+        "Peace, Justice and Strong Institutions",
+        "Climate Action",
     ];
 
     const handleInterestClick = (interest) => {
