@@ -8,7 +8,7 @@ import Input from "./LocationInput";
 import YemenCities from "./YemenCities";
 import Interests from "../editProfile/Interests";
 
-const EventCreation = ({ label, t }) => {
+const EventCreation = ({ label, t, user }) => {
     const router = useRouter();
 
     const uploadButtonRef = useRef();
@@ -72,7 +72,7 @@ const EventCreation = ({ label, t }) => {
             description: eventData.description,
             address: eventData.address,
             date: timestamp,
-            category: selectedInterests,
+            interests: clickedInterests,
         };
     };
 
@@ -82,6 +82,7 @@ const EventCreation = ({ label, t }) => {
         description: "",
         address: "",
         date: timestamp,
+        organizer: user?.displayName,
     });
 
     const { addDocument } = useFirestore("events");
