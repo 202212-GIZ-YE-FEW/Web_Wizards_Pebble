@@ -22,7 +22,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            no_poverty
+            Zero Hunger
           </p>
         </div>
       </button>
@@ -42,7 +42,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            zero_hunger
+            No Poverty
           </p>
         </div>
       </button>
@@ -62,7 +62,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            good_health
+            Good Health and Well Being
           </p>
         </div>
       </button>
@@ -82,7 +82,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            quality_education
+            Quality Education
           </p>
         </div>
       </button>
@@ -102,7 +102,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            gender_equality
+            Gender Equality
           </p>
         </div>
       </button>
@@ -122,7 +122,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            clean_water
+            Clean Water and Sanitation
           </p>
         </div>
       </button>
@@ -142,7 +142,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            affordable_energy
+            Affordable and Clean Energy
           </p>
         </div>
       </button>
@@ -162,7 +162,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            decent_work
+            Decent Work and Economic Growth
           </p>
         </div>
       </button>
@@ -182,7 +182,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            innovation
+            Industry, Innovation, and Infrastructure
           </p>
         </div>
       </button>
@@ -202,7 +202,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            reduced_inequalities
+            Reduced Inequalities
           </p>
         </div>
       </button>
@@ -222,7 +222,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            sustainable_cities
+            Sustainable Cities and Communities
           </p>
         </div>
       </button>
@@ -242,7 +242,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            responsible_consumption
+            Responsible Consumption/ Production
           </p>
         </div>
       </button>
@@ -262,7 +262,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            climate_action
+            Life Below Water
           </p>
         </div>
       </button>
@@ -282,7 +282,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            life_below_water
+            Life on Land
           </p>
         </div>
       </button>
@@ -302,7 +302,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            life_on_land
+            Peace, Justice and Strong Institutions
           </p>
         </div>
       </button>
@@ -322,7 +322,7 @@ exports[`renders correctly 1`] = `
           <p
             className="block w-max font-semibold text-gray-900 text-xs py-1 "
           >
-            peace_justice
+            Climate Action
           </p>
         </div>
       </button>

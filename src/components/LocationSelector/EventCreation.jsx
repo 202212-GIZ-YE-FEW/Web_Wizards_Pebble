@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
-import { Button } from "react-flatifycss";
-import Input from "./LocationInput";
-import Interests from "../editProfile/Interests";
-import YemenCities from "./YemenCities";
-import useFirestore from "@/firebase/firestore";
-import useFirebaseStorage from "@/firebase/firestorage";
+import React, { useEffect, useRef, useState } from "react";
 
-const EventCreation = ({ label, t }) => {
+import useFirebaseStorage from "@/firebase/firestorage";
+import useFirestore from "@/firebase/firestore";
+
+import Input from "./LocationInput";
+import YemenCities from "./YemenCities";
+import Interests from "../editProfile/Interests";
+
+const EventCreation = ({ label, t, user }) => {
     const router = useRouter();
 
     const uploadButtonRef = useRef();
@@ -60,6 +61,9 @@ const EventCreation = ({ label, t }) => {
             searchCity !== cityData
         );
     });
+
+    const date = new Date(`${dateInput}T${timeInput}`);
+    const timestamp = date.getTime() / 1000;
     const createEventDataWithLocation = () => {
         return {
             ...eventData,
@@ -67,8 +71,8 @@ const EventCreation = ({ label, t }) => {
             title: eventData.title,
             description: eventData.description,
             address: eventData.address,
-            date: `${dateInput}T${timeInput}`,
-            category: selectedInterests,
+            date: timestamp,
+            interests: clickedInterests,
         };
     };
 
@@ -77,7 +81,8 @@ const EventCreation = ({ label, t }) => {
         title: "",
         description: "",
         address: "",
-        date: `${dateInput}T${timeInput}`,
+        date: timestamp,
+        organizer: user?.displayName,
     });
 
     const { addDocument } = useFirestore("events");

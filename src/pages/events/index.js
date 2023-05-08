@@ -11,12 +11,11 @@ import Divider from "@/components/Divider";
 import DateRangePicker from "@/components/events/DatePicker/DateRangePicker";
 import EventCard from "@/components/events/EventCard/EventCard";
 import Pagination from "@/components/events/Pagination/Pagination";
+import YemenCities from "@/components/LocationSelector/YemenCities";
 
 import { useAuthContext } from "@/context/AuthContext";
 import useFirestore from "@/firebase/firestore";
 import { ArrowButton } from "react-flatifycss";
-
-const locations = ["İzmir, TR", "İzmir, TRT"];
 
 const interests = [
     "All",
@@ -242,7 +241,7 @@ function Events() {
                             </h3>
                         </div>
                         <div className='small flex-grow overflow-y-auto px-12'>
-                            {locations.map((interest, index) => (
+                            {YemenCities.map((interest, index) => (
                                 <label className='checkbox-wrapper' key={index}>
                                     <input
                                         id={interest}
@@ -317,7 +316,7 @@ function Events() {
                     <h4 className='text-center font-bold underline mb-3'>
                         {t("changeLocation")}
                     </h4>
-                    {locations.map((location, index) => (
+                    {YemenCities.map((location, index) => (
                         <Button
                             handleClick={handleLocationsFilterUpdate}
                             classes={`w-full ${

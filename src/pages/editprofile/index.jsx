@@ -1,4 +1,5 @@
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
+import { useRouter } from "next/navigation";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";
@@ -12,6 +13,7 @@ import PetIcons from "@/components/editProfile/PetIcons";
 import SaveButton from "@/components/editProfile/SaveButton";
 import { RoundedImage } from "@/components/mini";
 
+import { useAlertContext } from "@/context/AlertContext";
 import { useAuthContext } from "@/context/AuthContext";
 import app from "@/firebase/firebase.config";
 import useFirestore from "@/firebase/firestore";
@@ -71,19 +73,14 @@ function UserImage() {
 }
 
 const EditProfile = () => {
-    const { t } = useTranslation("editprofile");
-    const { user, updateUser } = useAuthContext();
-
+    const router = useRouter();
+    const { user, loading, updateUser } = useAuthContext();
     const [clickedInterests, setClickedInterests] = useState([]);
 
-    const [imgLoading, setimgLoading] = useState(false);
-    const [formLoading, setformLoading] = useState(false);
-    const [modalOpen, setModalOpen] = useState(false);
-    const { setDocument: setLocation } = useFirestore("locations");
-    const { setDocument: setInterests, getDocumentByIdNoCache: getInterests } =
-        useFirestore("interests");
-
     useEffect(() => {
+        if (!loading && !user) {
+            router.push("/");
+        }
         if (user?.uid)
             getInterests(user.uid).then((document) => {
                 if (document.exists()) {
@@ -93,6 +90,17 @@ const EditProfile = () => {
             });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user?.uid]);
+
+    const { t } = useTranslation("editprofile");
+    const { setShow, setTheme, setMessage } = useAlertContext();
+    const [imgLoading, setimgLoading] = useState(false);
+    const [formLoading, setformLoading] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
+    const { setDocument: setLocation, getDocumentById: getLocation } =
+        useFirestore("locations");
+    const { setDocument: setInterests, getDocumentByIdNoCache: getInterests } =
+        useFirestore("interests");
+    const location = getLocation(user?.uid);
 
     return (
         <div className='flex flex-col md:px-14 px-4 lg:px-48  flex-wrap mt-8'>
@@ -115,6 +123,9 @@ const EditProfile = () => {
                             uid: user.uid,
                             updateUser,
                         });
+                        setShow(true);
+                        setTheme("success-light");
+                        setMessage(t("successChanges"));
                         setimgLoading(false);
                     }}
                 />
@@ -152,10 +163,17 @@ const EditProfile = () => {
                     );
                     setTimeout(() => {
                         setformLoading(false);
+                        setShow(true);
+                        setTheme("success");
+                        setMessage(t("successChanges"));
                     }, 1000);
                 }}
             >
-                <EditProfileForm t={t} />
+                <EditProfileForm
+                    t={t}
+                    name={user?.displayName}
+                    location={location?.location}
+                />
                 <Interests
                     clickedInterests={clickedInterests}
                     setClickedInterests={setClickedInterests}

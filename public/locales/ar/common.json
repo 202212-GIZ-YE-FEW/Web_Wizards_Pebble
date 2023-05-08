@@ -10,5 +10,8 @@
     "viewEvents": "فعالياتُك",
     "viewProfile": "اطلع على حسابك",
     "viewSettings": "الإعدادت",
-    "logOut": "تسجيل خروج"
+    "logOut": "تسجيل خروج",
+    "madeBy": "صنع بحب بواسطة سحرة الويب",
+    "successChanges": "تم حفظ التغييرات بنجاح!",
+    "incorrectPassword": "كلمة المرور غير صحيحة!"
 }

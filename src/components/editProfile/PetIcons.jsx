@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ItemsGroup, Loading } from "react-flatifycss";
 
+import { useAlertContext } from "@/context/AlertContext";
 import { useAuthContext } from "@/context/AuthContext";
 
 import { cat, checkMark, dog, rabbit } from "~/library/svgs";
@@ -10,6 +11,7 @@ export default function PetIcons(props) {
     const { updateUser } = useAuthContext();
     const [pet, setPet] = useState("cat");
     const [loading, setLoading] = useState(false);
+    const { setShow, setTheme, setMessage } = useAlertContext();
     return (
         <>
             <ItemsGroup
@@ -58,6 +60,9 @@ export default function PetIcons(props) {
                             photoURL: `/library/${pet}.jpg`,
                         });
                         setLoading(false);
+                        setShow(true);
+                        setTheme("success-light");
+                        setMessage(t("successChanges"));
                         return;
                     }
                     setPet(_pet);

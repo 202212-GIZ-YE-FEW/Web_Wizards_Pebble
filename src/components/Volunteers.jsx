@@ -26,14 +26,14 @@ export default function Volunteers(props) {
         <section className='container text-center mt-40'>
             <Title>{t("volunteersTitle")}</Title>
             <div className='flex flex-col gap-y-10 md:flex-row md:gap-y-0 justify-center my-32 gap-x-5'>
-                {[0, 1, 2].map((i) => {
+                {[1, 2, 3].map((i) => {
                     return (
                         <Volunteer
-                            name={t("volunteerName")}
-                            occupation={t("volunteerOccupation")}
+                            name={t(`volunteerName${i}`)}
+                            occupation={t(`volunteerOccupation${i}`)}
                             imageSrc={volunteerImage}
                             imageAlt='Person with hand on face'
-                            description={t("volunteerDescription")}
+                            description={t(`volunteerDescription${i}`)}
                             key={i}
                         />
                     );
