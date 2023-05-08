@@ -128,10 +128,8 @@ function Events() {
                 event?.interests?.some((i) => selectedInterests.includes(i));
             const dateMatch =
                 !selectedDateRange ||
-                (new Date(event?.date?.seconds * 1000) >=
-                    selectedDateRange.startDate &&
-                    new Date(event?.date?.seconds * 1000) <=
-                        selectedDateRange.endDate);
+                (new Date(event?.date * 1000) >= selectedDateRange.startDate &&
+                    new Date(event?.date * 1000) <= selectedDateRange.endDate);
 
             return locationMatch && interestMatch && dateMatch;
         }
