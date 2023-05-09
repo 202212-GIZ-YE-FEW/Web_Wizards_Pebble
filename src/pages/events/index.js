@@ -365,8 +365,6 @@ function Events() {
 
             {/* PAGINATION SECTION AT TABLET AND DESKTOP */}
             <div className='col-span-12 pagination desktop'>
-                <Button handleClick={getNextPage}></Button>
-                <Button handleClick={getPrevPage}></Button>
                 <Pagination
                     handleNextPage={getNextPage}
                     handlePrevPage={getPrevPage}
