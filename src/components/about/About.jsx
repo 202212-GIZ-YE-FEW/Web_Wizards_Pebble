@@ -29,7 +29,7 @@ const About = (props) => {
         <section id='about'>
             <div className='relative'>
                 <Image
-                    src='/images/about.png'
+                    src='/Images/about.png'
                     alt='About Page Image'
                     width={100}
                     height={100}
