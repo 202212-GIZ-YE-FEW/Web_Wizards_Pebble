@@ -15,7 +15,6 @@ import YemenCities from "@/components/LocationSelector/YemenCities";
 
 import { useAuthContext } from "@/context/AuthContext";
 import useFirestore from "@/firebase/firestore";
-import { ArrowButton } from "react-flatifycss";
 
 const interests = [
     "All",
@@ -134,10 +133,8 @@ function Events() {
                 event?.interests?.some((i) => selectedInterests.includes(i));
             const dateMatch =
                 !selectedDateRange ||
-                (new Date(event?.date?.seconds * 1000) >=
-                    selectedDateRange.startDate &&
-                    new Date(event?.date?.seconds * 1000) <=
-                        selectedDateRange.endDate);
+                (new Date(event?.date * 1000) >= selectedDateRange.startDate &&
+                    new Date(event?.date * 1000) <= selectedDateRange.endDate);
 
             return locationMatch && interestMatch && dateMatch;
         }
@@ -173,11 +170,6 @@ function Events() {
                     <div
                         className='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
                         tabIndex='-1'
-                        style={{
-                            borderRadius: "20px 20px 0px 0px",
-                            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-                            borderTop: "2px solid rgba(0, 0, 0, 0.1)",
-                        }}
                         id='offcanvasInterest'
                         aria-labelledby='offcanvasInterestLabel'
                         data-te-offcanvas-init
@@ -223,11 +215,6 @@ function Events() {
                     <div
                         className='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
                         tabIndex='-1'
-                        style={{
-                            borderRadius: "20px 20px 0px 0px",
-                            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-                            borderTop: "2px solid rgba(0, 0, 0, 0.1)",
-                        }}
                         id='offcanvasLocation'
                         aria-labelledby='offcanvasLocationLabel'
                         data-te-offcanvas-init
@@ -273,11 +260,6 @@ function Events() {
                     <div
                         className='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
                         tabIndex='-1'
-                        style={{
-                            borderRadius: "20px 20px 0px 0px",
-                            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-                            borderTop: "2px solid rgba(0, 0, 0, 0.1)",
-                        }}
                         id='offcanvasDate'
                         aria-labelledby='offcanvasDateLabel'
                         data-te-offcanvas-init
@@ -303,7 +285,10 @@ function Events() {
 
             {/* PAGINATION SECTION AT MOBILE */}
             <div className='col-span-12 mobile'>
-                <Pagination />
+                <Pagination
+                    handleNextPage={getNextPage}
+                    handlePrevPage={getPrevPage}
+                />
             </div>
 
             {/* PAGE FILTER SECTION AT TABLET AND DESKTOP */}

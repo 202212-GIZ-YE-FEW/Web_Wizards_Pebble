@@ -115,19 +115,19 @@ exports[`renders correctly 1`] = `
       className="flex -space-x-2 overflow-hidden"
     >
       <a
-        className="inline-block w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900  "
+        className="inline-block flex justify-center !no-underline !text-white w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900"
         href="#"
       >
         S
       </a>
       <a
-        className="inline-block w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900  "
+        className="inline-block flex justify-center !no-underline !text-white w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900"
         href="#"
       >
         A
       </a>
       <a
-        className="inline-block w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900  "
+        className="inline-block flex justify-center !no-underline !text-white w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900"
         href="#"
       >
         A
