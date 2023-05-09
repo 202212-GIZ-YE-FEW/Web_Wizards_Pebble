@@ -55,12 +55,13 @@ function DateRangePicker({ onDateRangeUpdate }) {
     return (
         <div>
             <DateRange
+                className='w-3/4 lg:w-full sm:w-5/6'
                 editableDateInputs={true}
                 onChange={(item) => handleDateRangeUpdate(item.selection)}
                 moveRangeOnFirstSelection={false}
                 ranges={state}
             />
-            <div className='flex justify-between mt-3'>
+            <div className='flex md:justify-between mt-3 w-3/4 lg:w-full sm:w-5/6'>
                 <Button className='w-5/12' onClick={handleThisWeekClick}>
                     This Week
                 </Button>
