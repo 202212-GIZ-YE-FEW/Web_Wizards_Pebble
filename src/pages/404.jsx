@@ -10,7 +10,7 @@ export default function NotFoundPage() {
     return (
         <div className='flex flex-col items-center h-screen'>
             <Image
-                src='/images/404.png'
+                src='/Images/404.png'
                 alt='About Page Image'
                 width={800}
                 height={800}
