@@ -1,0 +1,82 @@
+[
+    {
+        "id": "1",
+        "name": "HTML",
+        "image": "html.png"
+    },
+    {
+        "id": "2",
+        "name": "JavaScript",
+        "image": "js.png"
+    },
+    {
+        "id": "3",
+        "name": "React",
+        "image": "react.png"
+    },
+    {
+        "id": "4",
+        "name": "Next",
+        "image": "next.png"
+    },
+    {
+        "id": "5",
+        "name": "I18next",
+        "image": "i18next.png"
+    },
+    {
+        "id": "6",
+        "name": "CSS",
+        "image": "css.png"
+    },
+    {
+        "id": "7",
+        "name": "TailwindCSS",
+        "image": "tailwind.png"
+    },
+    {
+        "id": "8",
+        "name": "FlatifyCSS",
+        "image": "flatify.png"
+    },
+    {
+        "id": "9",
+        "name": "Font Awesome",
+        "image": "fa.png"
+    },
+    {
+        "id": "10",
+        "name": "Node",
+        "image": "node.png"
+    },
+    {
+        "id": "11",
+        "name": "npm",
+        "image": "npm.png"
+    },
+    {
+        "id": "12",
+        "name": "Firebase",
+        "image": "firebase.png"
+    },
+    {
+        "id": "13",
+        "name": "JSON",
+        "image": "json.png"
+    },
+    {
+        "id": "15",
+        "name": "Jest",
+        "image": "jest.png"
+    },
+    {
+        "id": "16",
+        "name": "Git",
+        "image": "git.png"
+    },
+    {
+        "id": "15",
+        "name": "Github",
+        "image": "github.png"
+    }
+]

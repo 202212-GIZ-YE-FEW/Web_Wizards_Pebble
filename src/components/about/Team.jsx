@@ -37,15 +37,14 @@ const Team = (props) => {
         );
     });
     return (
-        <section
-            id='team'
-            className='m-4 p-5 min-h-[320px] rounded-3xl bg-[#fef1e6] md:m-20 md:min-h-[900px] lg:m-8'
-        >
-            <h5 className='text-center mb-4'>{t("ourTeam")}</h5>
-            <h2 className='p-4 text-center text-2xl md:p-8 md:text-4xl font-bold lg:p-12 lg:text-5xl lg:font-bold m-1 md:m-4 font-sans'>
-                Web Wizard
-            </h2>
-            <div className='flex flex-wrap justify-around'>{teamCard}</div>
+        <section id='team' className='relative'>
+            <div className='m-4 p-5 min-h-[320px] rounded-3xl bg-[#fef1e6] md:m-20 md:min-h-[900px] lg:m-8'>
+                <h5 className='text-center mb-4'>{t("ourTeam")}</h5>
+                <h2 className='p-4 text-center text-2xl md:p-8 md:text-4xl font-bold lg:p-12 lg:text-5xl lg:font-bold m-1 md:m-4 font-sans'>
+                    Web Wizard
+                </h2>
+                <div className='flex flex-wrap justify-around'>{teamCard}</div>
+            </div>
         </section>
     );
 };

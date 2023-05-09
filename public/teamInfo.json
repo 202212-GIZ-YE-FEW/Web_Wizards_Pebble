@@ -77,12 +77,12 @@
     },
     {
         "id": "5",
-        "name": "Bakeel Hamad",
-        "image": "bakeel.png",
+        "name": "Hamad Bakeel",
+        "image": "hamad.png",
         "links": [
             {
                 "name": "github",
-                "link": "https://github.com/HamadBakeel/HamadBakeel"
+                "link": "https://github.com/HamadBakeel"
             },
             {
                 "name": "discord",

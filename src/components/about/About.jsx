@@ -7,7 +7,7 @@ function Brief(props) {
             <div className='flex h-full w-full flex-col items-center justify-center'>
                 <h2
                     className='
-                    m-1 text-center text-xl font-black md:m-4 md:text-2xl  lg:text-4xl font-sans'
+                    m-1 text-center text-xl font-black md:m-4 md:text-2xl lg:text-4xl font-sans'
                 >
                     {head}
                 </h2>

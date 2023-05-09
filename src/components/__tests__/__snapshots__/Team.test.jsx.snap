@@ -2,310 +2,314 @@
 
 exports[`renders correctly 1`] = `
 <section
-  className="m-4 p-5 min-h-[320px] rounded-3xl bg-[#fef1e6] md:m-20 md:min-h-[900px] lg:m-8"
+  className="relative"
   id="team"
 >
-  <h5
-    className="text-center mb-4"
-  >
-    ourTeam
-  </h5>
-  <h2
-    className="p-4 text-center text-2xl md:p-8 md:text-4xl font-bold lg:p-12 lg:text-5xl lg:font-bold m-1 md:m-4 font-sans"
-  >
-    Web Wizard
-  </h2>
   <div
-    className="flex flex-wrap justify-around"
+    className="m-4 p-5 min-h-[320px] rounded-3xl bg-[#fef1e6] md:m-20 md:min-h-[900px] lg:m-8"
   >
-    <div
-      className="m-2 h-28 w-28 rounded-2xl lg:bg-secondary-100 bg-[#29C5E6] md:m-4 md:h-56 md:w-56 lg:m-8 lg:h-72 lg:w-72"
+    <h5
+      className="text-center mb-4"
     >
-      <img
-        alt="Abdullah Binsaed"
-        className="w-10 h-10 md:w-20 md:h-20 md:my-4 lg:w-32 lg:h-32 lg:my-6 mx-auto rounded-full mt-2"
-        data-nimg="1"
-        decoding="async"
-        height={100}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="/_next/image?url=%2Fimages%2Fteam%2Fabdullah.png&w=256&q=75"
-        srcSet="/_next/image?url=%2Fimages%2Fteam%2Fabdullah.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fabdullah.png&w=256&q=75 2x"
-        style={
-          Object {
-            "color": "transparent",
-          }
-        }
-        width={100}
-      />
-      <h4
-        className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
-      >
-        Abdullah Binsaed
-      </h4>
+      ourTeam
+    </h5>
+    <h2
+      className="p-4 text-center text-2xl md:p-8 md:text-4xl font-bold lg:p-12 lg:text-5xl lg:font-bold m-1 md:m-4 font-sans"
+    >
+      Web Wizard
+    </h2>
+    <div
+      className="flex flex-wrap justify-around"
+    >
       <div
-        className="flex justify-center"
+        className="m-2 h-28 w-28 rounded-2xl lg:bg-secondary-100 bg-[#29C5E6] md:m-4 md:h-56 md:w-56 lg:m-8 lg:h-72 lg:w-72"
       >
-        <a
-          href="https://github.com/iiAbady"
+        <img
+          alt="Abdullah Binsaed"
+          className="w-10 h-10 md:w-20 md:h-20 md:my-4 lg:w-32 lg:h-32 lg:my-6 mx-auto rounded-full mt-2"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Fteam%2Fabdullah.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fteam%2Fabdullah.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fabdullah.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+        <h4
+          className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
         >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-github text-white text-lg md:text-2xl mx-2"
-            title="Abdullah Binsaed's github Profile"
-          />
-        </a>
-        <a
-          href="http://"
+          Abdullah Binsaed
+        </h4>
+        <div
+          className="flex justify-center"
         >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-discord text-white text-lg md:text-2xl mx-2"
-            title="Abdullah Binsaed's discord Profile"
-          />
-        </a>
-        <a
-          href="http://"
-        >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-linkedin text-white text-lg md:text-2xl mx-2"
-            title="Abdullah Binsaed's linkedin Profile"
-          />
-        </a>
+          <a
+            href="https://github.com/iiAbady"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-github text-white text-lg md:text-2xl mx-2"
+              title="Abdullah Binsaed's github Profile"
+            />
+          </a>
+          <a
+            href="http://"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-discord text-white text-lg md:text-2xl mx-2"
+              title="Abdullah Binsaed's discord Profile"
+            />
+          </a>
+          <a
+            href="http://"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-linkedin text-white text-lg md:text-2xl mx-2"
+              title="Abdullah Binsaed's linkedin Profile"
+            />
+          </a>
+        </div>
       </div>
-    </div>
-    <div
-      className="m-2 h-28 w-28 rounded-2xl lg:bg-secondary-100 bg-[#29C5E6] md:m-4 md:h-56 md:w-56 lg:m-8 lg:h-72 lg:w-72"
-    >
-      <img
-        alt="Sufyan Basurra"
-        className="w-10 h-10 md:w-20 md:h-20 md:my-4 lg:w-32 lg:h-32 lg:my-6 mx-auto rounded-full mt-2"
-        data-nimg="1"
-        decoding="async"
-        height={100}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="/_next/image?url=%2Fimages%2Fteam%2Fsufyan.png&w=256&q=75"
-        srcSet="/_next/image?url=%2Fimages%2Fteam%2Fsufyan.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fsufyan.png&w=256&q=75 2x"
-        style={
-          Object {
-            "color": "transparent",
-          }
-        }
-        width={100}
-      />
-      <h4
-        className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
-      >
-        Sufyan Basurra
-      </h4>
       <div
-        className="flex justify-center"
+        className="m-2 h-28 w-28 rounded-2xl lg:bg-secondary-100 bg-[#29C5E6] md:m-4 md:h-56 md:w-56 lg:m-8 lg:h-72 lg:w-72"
       >
-        <a
-          href="https://github.com/SufyanCS"
+        <img
+          alt="Sufyan Basurra"
+          className="w-10 h-10 md:w-20 md:h-20 md:my-4 lg:w-32 lg:h-32 lg:my-6 mx-auto rounded-full mt-2"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Fteam%2Fsufyan.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fteam%2Fsufyan.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fsufyan.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+        <h4
+          className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
         >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-github text-white text-lg md:text-2xl mx-2"
-            title="Sufyan Basurra's github Profile"
-          />
-        </a>
-        <a
-          href="http://"
+          Sufyan Basurra
+        </h4>
+        <div
+          className="flex justify-center"
         >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-facebook text-white text-lg md:text-2xl mx-2"
-            title="Sufyan Basurra's facebook Profile"
-          />
-        </a>
-        <a
-          href="http://"
-        >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-linkedin text-white text-lg md:text-2xl mx-2"
-            title="Sufyan Basurra's linkedin Profile"
-          />
-        </a>
+          <a
+            href="https://github.com/SufyanCS"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-github text-white text-lg md:text-2xl mx-2"
+              title="Sufyan Basurra's github Profile"
+            />
+          </a>
+          <a
+            href="http://"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-facebook text-white text-lg md:text-2xl mx-2"
+              title="Sufyan Basurra's facebook Profile"
+            />
+          </a>
+          <a
+            href="http://"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-linkedin text-white text-lg md:text-2xl mx-2"
+              title="Sufyan Basurra's linkedin Profile"
+            />
+          </a>
+        </div>
       </div>
-    </div>
-    <div
-      className="m-2 h-28 w-28 rounded-2xl lg:bg-secondary-100 bg-[#29C5E6] md:m-4 md:h-56 md:w-56 lg:m-8 lg:h-72 lg:w-72"
-    >
-      <img
-        alt="Adeeb Abdulsamad"
-        className="w-10 h-10 md:w-20 md:h-20 md:my-4 lg:w-32 lg:h-32 lg:my-6 mx-auto rounded-full mt-2"
-        data-nimg="1"
-        decoding="async"
-        height={100}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="/_next/image?url=%2Fimages%2Fteam%2Fadeeb.png&w=256&q=75"
-        srcSet="/_next/image?url=%2Fimages%2Fteam%2Fadeeb.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fadeeb.png&w=256&q=75 2x"
-        style={
-          Object {
-            "color": "transparent",
-          }
-        }
-        width={100}
-      />
-      <h4
-        className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
-      >
-        Adeeb Abdulsamad
-      </h4>
       <div
-        className="flex justify-center"
+        className="m-2 h-28 w-28 rounded-2xl lg:bg-secondary-100 bg-[#29C5E6] md:m-4 md:h-56 md:w-56 lg:m-8 lg:h-72 lg:w-72"
       >
-        <a
-          href="https://github.com/adeeb-samad"
+        <img
+          alt="Adeeb Abdulsamad"
+          className="w-10 h-10 md:w-20 md:h-20 md:my-4 lg:w-32 lg:h-32 lg:my-6 mx-auto rounded-full mt-2"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Fteam%2Fadeeb.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fteam%2Fadeeb.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fadeeb.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+        <h4
+          className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
         >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-github text-white text-lg md:text-2xl mx-2"
-            title="Adeeb Abdulsamad's github Profile"
-          />
-        </a>
-        <a
-          href="http://"
+          Adeeb Abdulsamad
+        </h4>
+        <div
+          className="flex justify-center"
         >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-instagram text-white text-lg md:text-2xl mx-2"
-            title="Adeeb Abdulsamad's instagram Profile"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/adeeb-samad/"
-        >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-linkedin text-white text-lg md:text-2xl mx-2"
-            title="Adeeb Abdulsamad's linkedin Profile"
-          />
-        </a>
+          <a
+            href="https://github.com/adeeb-samad"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-github text-white text-lg md:text-2xl mx-2"
+              title="Adeeb Abdulsamad's github Profile"
+            />
+          </a>
+          <a
+            href="http://"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-instagram text-white text-lg md:text-2xl mx-2"
+              title="Adeeb Abdulsamad's instagram Profile"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/adeeb-samad/"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-linkedin text-white text-lg md:text-2xl mx-2"
+              title="Adeeb Abdulsamad's linkedin Profile"
+            />
+          </a>
+        </div>
       </div>
-    </div>
-    <div
-      className="m-2 h-28 w-28 rounded-2xl lg:bg-secondary-100 bg-[#29C5E6] md:m-4 md:h-56 md:w-56 lg:m-8 lg:h-72 lg:w-72"
-    >
-      <img
-        alt="Azzam Al-Sulmi"
-        className="w-10 h-10 md:w-20 md:h-20 md:my-4 lg:w-32 lg:h-32 lg:my-6 mx-auto rounded-full mt-2"
-        data-nimg="1"
-        decoding="async"
-        height={100}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="/_next/image?url=%2Fimages%2Fteam%2Fazzam.png&w=256&q=75"
-        srcSet="/_next/image?url=%2Fimages%2Fteam%2Fazzam.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fazzam.png&w=256&q=75 2x"
-        style={
-          Object {
-            "color": "transparent",
-          }
-        }
-        width={100}
-      />
-      <h4
-        className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
-      >
-        Azzam Al-Sulmi
-      </h4>
       <div
-        className="flex justify-center"
+        className="m-2 h-28 w-28 rounded-2xl lg:bg-secondary-100 bg-[#29C5E6] md:m-4 md:h-56 md:w-56 lg:m-8 lg:h-72 lg:w-72"
       >
-        <a
-          href="http://github.com/sulmi24"
+        <img
+          alt="Azzam Al-Sulmi"
+          className="w-10 h-10 md:w-20 md:h-20 md:my-4 lg:w-32 lg:h-32 lg:my-6 mx-auto rounded-full mt-2"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Fteam%2Fazzam.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fteam%2Fazzam.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fazzam.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+        <h4
+          className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
         >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-github text-white text-lg md:text-2xl mx-2"
-            title="Azzam Al-Sulmi's github Profile"
-          />
-        </a>
-        <a
-          href="http://"
+          Azzam Al-Sulmi
+        </h4>
+        <div
+          className="flex justify-center"
         >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-twitter text-white text-lg md:text-2xl mx-2"
-            title="Azzam Al-Sulmi's twitter Profile"
-          />
-        </a>
-        <a
-          href="http://linkedin.com/in/a-sulmi24"
-        >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-linkedin text-white text-lg md:text-2xl mx-2"
-            title="Azzam Al-Sulmi's linkedin Profile"
-          />
-        </a>
+          <a
+            href="http://github.com/sulmi24"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-github text-white text-lg md:text-2xl mx-2"
+              title="Azzam Al-Sulmi's github Profile"
+            />
+          </a>
+          <a
+            href="http://"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-twitter text-white text-lg md:text-2xl mx-2"
+              title="Azzam Al-Sulmi's twitter Profile"
+            />
+          </a>
+          <a
+            href="http://linkedin.com/in/a-sulmi24"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-linkedin text-white text-lg md:text-2xl mx-2"
+              title="Azzam Al-Sulmi's linkedin Profile"
+            />
+          </a>
+        </div>
       </div>
-    </div>
-    <div
-      className="m-2 h-28 w-28 rounded-2xl lg:bg-secondary-100 bg-[#29C5E6] md:m-4 md:h-56 md:w-56 lg:m-8 lg:h-72 lg:w-72"
-    >
-      <img
-        alt="Bakeel Hamad"
-        className="w-10 h-10 md:w-20 md:h-20 md:my-4 lg:w-32 lg:h-32 lg:my-6 mx-auto rounded-full mt-2"
-        data-nimg="1"
-        decoding="async"
-        height={100}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="/_next/image?url=%2Fimages%2Fteam%2Fbakeel.png&w=256&q=75"
-        srcSet="/_next/image?url=%2Fimages%2Fteam%2Fbakeel.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fbakeel.png&w=256&q=75 2x"
-        style={
-          Object {
-            "color": "transparent",
-          }
-        }
-        width={100}
-      />
-      <h4
-        className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
-      >
-        Bakeel Hamad
-      </h4>
       <div
-        className="flex justify-center"
+        className="m-2 h-28 w-28 rounded-2xl lg:bg-secondary-100 bg-[#29C5E6] md:m-4 md:h-56 md:w-56 lg:m-8 lg:h-72 lg:w-72"
       >
-        <a
-          href="https://github.com/HamadBakeel/HamadBakeel"
+        <img
+          alt="Hamad Bakeel"
+          className="w-10 h-10 md:w-20 md:h-20 md:my-4 lg:w-32 lg:h-32 lg:my-6 mx-auto rounded-full mt-2"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Fteam%2Fhamad.png&w=256&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fteam%2Fhamad.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fhamad.png&w=256&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={100}
+        />
+        <h4
+          className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
         >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-github text-white text-lg md:text-2xl mx-2"
-            title="Bakeel Hamad's github Profile"
-          />
-        </a>
-        <a
-          href="http://"
+          Hamad Bakeel
+        </h4>
+        <div
+          className="flex justify-center"
         >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-discord text-white text-lg md:text-2xl mx-2"
-            title="Bakeel Hamad's discord Profile"
-          />
-        </a>
-        <a
-          href="http://"
-        >
-          <i
-            aria-hidden="true"
-            className="fa-brands fa-linkedin text-white text-lg md:text-2xl mx-2"
-            title="Bakeel Hamad's linkedin Profile"
-          />
-        </a>
+          <a
+            href="https://github.com/HamadBakeel"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-github text-white text-lg md:text-2xl mx-2"
+              title="Hamad Bakeel's github Profile"
+            />
+          </a>
+          <a
+            href="http://"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-discord text-white text-lg md:text-2xl mx-2"
+              title="Hamad Bakeel's discord Profile"
+            />
+          </a>
+          <a
+            href="http://"
+          >
+            <i
+              aria-hidden="true"
+              className="fa-brands fa-linkedin text-white text-lg md:text-2xl mx-2"
+              title="Hamad Bakeel's linkedin Profile"
+            />
+          </a>
+        </div>
       </div>
     </div>
   </div>
