@@ -80,12 +80,12 @@ function PaginationNav1({
                             />{" "}
                         </div>
                     }
-                    onClick={goPrevPage}
+                    disabled={!canPreviousPage}
+                    onClick={() => gotoPage(0)}
                 />
-                {/* disabled={!canPreviousPage} */}
-                {/* onClick={() => gotoPage(0)} */}
+                {/* onClick={goPrevPage} */}
             </li>
-            {/* {renderPageLinks()} */}
+            {renderPageLinks()}
             <li>
                 <Button2
                     classes='!rounded-full bg-[#1A1A1A40] hover:bg-[#1A1A1AB2] !text-white border-none ml-3'
