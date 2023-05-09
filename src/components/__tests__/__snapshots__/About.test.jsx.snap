@@ -5,27 +5,47 @@ exports[`renders correctly 1`] = `
   id="about"
 >
   <div
-    className="relative overflow-hidden  bg-no-repeat  bg-cover w-full top-[-40px] brightness-200 h-[214px] sm:h-[489px] lg:h-[689px] xl:h-[789px] 2xl:h-[889px] before:absolute before:inset-0 before:bg-zinc-50 before:opacity-10"
-    style={
-      Object {
-        "backgroundImage": "url(/images/about.png)",
-        "backgroundPosition": "center",
-      }
-    }
-  />
-  <div
-    className="absolute inset-0 mx-auto translate-y-1/2 w-11/12 md:w-2/3 lg:w-full lg:mb-40 flex-col items-center justify-center lg:relative"
+    className="relative"
   >
-    <h2
-      className=" m-1 text-center text-xl md:text-3xl font-bold md:m-4  md:font-bold lg:text-5xl lg:font-bold"
+    <img
+      alt="About Page Image"
+      className="w-full -mt-10"
+      data-nimg="1"
+      decoding="async"
+      height={100}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      sizes="100vw"
+      src="/_next/image?url=%2Fimages%2Fabout.png&w=3840&q=75"
+      srcSet="/_next/image?url=%2Fimages%2Fabout.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fabout.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fabout.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fabout.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fabout.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fabout.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fabout.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fabout.png&w=3840&q=75 3840w"
+      style={
+        Object {
+          "color": "transparent",
+          "height": "auto",
+          "width": "100%",
+        }
+      }
+      width={100}
+    />
+    <div
+      className="absolute inset-0 lg:relative lg:my-28"
     >
-      about
-    </h2>
-    <p
-      className=" text-sm md:text-2xl mr-12 ml-12 text-center md:ml-24 md:mr-24  lg:ml-32 lg:mr-32 lg:text-4xl"
-    >
-      brief
-    </p>
+      <div
+        className="flex h-full w-full flex-col items-center justify-center"
+      >
+        <h2
+          className=" m-1 text-center text-xl font-black md:m-4 md:text-2xl lg:text-4xl font-sans"
+        >
+          about
+        </h2>
+        <p
+          className=" text-md mx-12 text-center md:mx-24 md:text-2xl lg:mx-32 lg:text-2xl font-sans"
+        >
+          brief
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 `;
