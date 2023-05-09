@@ -17,7 +17,7 @@ const Tech = (props) => {
                         {techs.map((tech) => (
                             <div key={tech.id} className='m-6'>
                                 <Image
-                                    src={`/images/tech/${tech.image}`}
+                                    src={`/Images/tech/${tech.image}`}
                                     alt={tech.name}
                                     width={100}
                                     height={100}
