@@ -10,13 +10,6 @@ class MyDocument extends Document {
         return (
             <Html lang='en' dir='ltr'>
                 <Head>
-                    {/* <link
-                        rel='preload'
-                        href='/fonts/inter-var-latin.woff2'
-                        as='font'
-                        type='font/woff2'
-                        crossOrigin='anonymous'
-                    /> */}
                     <link
                         rel='stylesheet'
                         href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'

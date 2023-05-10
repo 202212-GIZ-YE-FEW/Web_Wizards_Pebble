@@ -4,7 +4,9 @@ exports[`renders correctly 1`] = `
 <div
   className="flex items-center"
 >
-  <span>
+  <span
+    className="ml-2"
+  >
     Invalid Date
   </span>
 </div>

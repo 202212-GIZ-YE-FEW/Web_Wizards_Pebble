@@ -41,7 +41,7 @@ export const AuthContextProvider = (props) => {
     };
 
     return (
-        <AuthContext.Provider value={{ user, updateUser }}>
+        <AuthContext.Provider value={{ user, updateUser, loading }}>
             {loading && (
                 <div className='fixed h-screen w-screen bg-slate-50 bg-opacity-[97%] z-50'>
                     <div className='absolute h-full w-full top-2/4 left-2/4'>

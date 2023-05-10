@@ -22,8 +22,8 @@
     "lifeOnLand": "Life on Land",
     "peaceJustice": "Peace, Justice and Strong Institutions",
     "changePassword": "Change Password",
+    "currentPassword": "Current Password",
     "newPassword": "New Password",
-    "confirmPassword": "Confirm Password",
     "cancel": "Cancel",
     "submit": "Submit",
     "yourInterests": "Your Interests",
@@ -33,5 +33,6 @@
     "rabbitSubtitle": "Amazing R-r-r-rabit!",
     "dogTitle": "Pebble's Dog",
     "dogSubtitle": "Woofy Dog!",
-    "petsCredit": "Pets made by Rachmat Budiaji."
+    "petsCredit": "Pets made by Rachmat Budiaji.",
+    "successChanges": "Updated changes successfully!"
 }

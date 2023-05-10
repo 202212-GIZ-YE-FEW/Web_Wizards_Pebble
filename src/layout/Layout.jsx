@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import NotVerified from "@/components/NotVerified";
 
+import { AlertContextProvider } from "@/context/AlertContext";
 import { useAuthContext } from "@/context/AuthContext";
 
 // TODO: figure out why fallback doesn't work with rubik and noto.
@@ -23,8 +24,10 @@ export default function Layout({ children }) {
         <div className={`${rubik.variable} font-sans`}>
             {user && !user.emailVerified && <NotVerified />}
             <Navbar />
-            {children}
-            <Footer />
+            <AlertContextProvider>
+                {children}
+                <Footer />
+            </AlertContextProvider>
         </div>
     );
 }

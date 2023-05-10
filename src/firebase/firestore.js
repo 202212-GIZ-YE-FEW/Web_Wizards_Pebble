@@ -3,11 +3,18 @@ import {
     collection,
     deleteDoc,
     doc,
+    getDoc,
+    getDocs,
     getFirestore,
     onSnapshot,
+    orderBy,
     query,
     setDoc,
+    limit,
     updateDoc,
+    startAfter,
+    endBefore,
+    limitToLast,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
@@ -20,17 +27,91 @@ import app from "@/firebase/firebase.config";
 
 const useFirestore = (collectionPath) => {
     const [documents, setDocuments] = useState([]);
+    const [lastVisible, setLastVisible] = useState(null); // Define a variable to keep track of the last visible document
+    const [firstVisible, setFirstVisible] = useState(null); // Define a variable to keep track of the last visible document
+    const pageSize = 10;
     const firestore = getFirestore(app);
+
+    const getFirstPage = async () => {
+        const first = query(
+            collection(firestore, collectionPath),
+            orderBy("date"),
+            limit(pageSize)
+        );
+        const querySnapshot = await getDocs(first);
+        const fetchedDocuments = [];
+        querySnapshot.forEach((doc) => {
+            fetchedDocuments.push({ ...doc.data(), id: doc.id });
+        });
+        setDocuments(fetchedDocuments);
+        setLastVisible(querySnapshot.docs[querySnapshot.docs.length - 1]);
+        setFirstVisible(querySnapshot.docs[0]);
+    };
+
+    const getNextPage = async () => {
+        // If it's not the first call, use the last visible document from the previous call to query for the next set of documents
+        const next = query(
+            collection(firestore, collectionPath),
+            orderBy("date"),
+            limit(pageSize),
+            startAfter(lastVisible)
+        );
+        const querySnapshot = await getDocs(next);
+        const fetchedDocuments = [];
+        querySnapshot.forEach((doc) => {
+            fetchedDocuments.push({ ...doc.data(), id: doc.id });
+        });
+
+        // Update the last visible document
+        setLastVisible(querySnapshot.docs[querySnapshot.docs.length - 1]);
+        setFirstVisible(querySnapshot.docs[0]);
+
+        // Stop fetching when there are no more documents
+        if (querySnapshot.docs.length < 1) {
+            console.log("no more documents");
+        } else {
+            setDocuments(fetchedDocuments);
+        }
+    };
+
+    const getPrevPage = async () => {
+        const prev = query(
+            collection(firestore, collectionPath),
+            orderBy("date"),
+            limit(pageSize),
+            endBefore(firstVisible)
+        );
+        const querySnapshot = await getDocs(prev);
+        const fetchedDocuments = [];
+        querySnapshot.forEach((doc) => {
+            fetchedDocuments.push({ ...doc.data(), id: doc.id });
+        });
+        setFirstVisible(querySnapshot.docs[0]);
+        setLastVisible(querySnapshot.docs[querySnapshot.docs.length - 1]);
+
+        // Stop fetching when there are no more documents
+        if (querySnapshot.docs.length < 1) {
+            console.log("no more documents");
+        } else {
+            setDocuments(fetchedDocuments);
+        }
+    };
 
     // this is so that if the document is updated, we get the updated version of the data at real time
     useEffect(() => {
-        const q = query(collection(firestore, collectionPath));
+        const q = query(
+            collection(firestore, collectionPath),
+            orderBy("date"),
+            limit(2)
+        );
+
         const unsubscribe = onSnapshot(q, (snapshot) => {
             const fetchedDocuments = [];
             snapshot.forEach((doc) => {
                 fetchedDocuments.push({ ...doc.data(), id: doc.id });
             });
-            setDocuments(fetchedDocuments);
+            if (collectionPath === "events") getFirstPage();
+            else setDocuments(fetchedDocuments);
         });
 
         return () => {
@@ -87,13 +168,21 @@ const useFirestore = (collectionPath) => {
         return documents.find((doc) => doc.id === id);
     };
 
+    const getDocumentByIdNoCache = async (id) => {
+        const docRef = doc(firestore, collectionPath, id);
+        return await getDoc(docRef);
+    };
+
     return {
         documents,
+        getNextPage,
+        getPrevPage,
         addDocument,
         updateDocumentById,
         deleteDocument,
         getDocumentById,
         setDocument,
+        getDocumentByIdNoCache,
     };
 };
 

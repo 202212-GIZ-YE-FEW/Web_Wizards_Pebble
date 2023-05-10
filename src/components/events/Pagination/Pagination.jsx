@@ -27,6 +27,8 @@ function Button2({ content, onClick, active, disabled, classes }) {
 
 function PaginationNav1({
     gotoPage,
+    goNextPage,
+    goPrevPage,
     canPreviousPage,
     canNextPage,
     pageCount,
@@ -78,9 +80,10 @@ function PaginationNav1({
                             />{" "}
                         </div>
                     }
-                    onClick={() => gotoPage(0)}
                     disabled={!canPreviousPage}
+                    onClick={() => gotoPage(0)}
                 />
+                {/* onClick={goPrevPage} */}
             </li>
             {renderPageLinks()}
             <li>
@@ -95,15 +98,16 @@ function PaginationNav1({
                             />
                         </div>
                     }
-                    onClick={() => gotoPage(pageCount - 1)}
-                    disabled={!canNextPage}
+                    onClick={goNextPage}
                 />
+                {/* onClick={() => gotoPage(pageCount - 1)} */}
+                {/* disabled={!canNextPage} */}
             </li>
         </ul>
     );
 }
 
-function Pagination() {
+function Pagination({ handleNextPage, handlePrevPage }) {
     const [pageIndex, setPageIndex] = useState(0);
     const pageCount = 10;
     return (
@@ -114,6 +118,8 @@ function Pagination() {
                 canNextPage={pageIndex < pageCount - 1}
                 pageCount={pageCount}
                 pageIndex={pageIndex}
+                goNextPage={handleNextPage}
+                goPrevPage={handlePrevPage}
             />
         </div>
     );

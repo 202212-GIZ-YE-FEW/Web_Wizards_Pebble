@@ -23,8 +23,8 @@
     "lifeOnLand": "الحياة على اليابسة",
     "peaceJustice": "السلام والعدالة والمؤسسات القوية",
     "changePassword": "تغيير كلمة المرور",
+    "currentPassword": "كلمة المرور الحالية",
     "newPassword": "كلمة مرور جديدة",
-    "confirmPassword": "تأكيد كلمة المرور",
     "cancel": "إلغاء",
     "submit": "إرسال",
     "catTitle": "قطة بيبل",
@@ -33,5 +33,6 @@
     "rabbitSubtitle": "أرنب رائع!",
     "dogTitle": "كلب بيبل",
     "dogSubtitle": "كلب وفي!",
-    "petsCredit": "تم صنع الحيوانات الإلفية بواسطة رشامت بوداجي."
+    "petsCredit": "تم صنع الحيوانات الإلفية بواسطة رشامت بوداجي.",
+    "successChanges": "تم حفظ التغييرات بنجاح!"
 }

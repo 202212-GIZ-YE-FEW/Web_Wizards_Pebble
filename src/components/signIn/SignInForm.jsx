@@ -7,8 +7,9 @@ import SignButton from "@/components/shared/SignButton";
 import SignOptions from "@/components/shared/SignOptions";
 import SignTitle from "@/components/shared/SignTitle";
 
+import { useAlertContext } from "@/context/AlertContext";
 import { useAuthContext } from "@/context/AuthContext";
-import { signIn } from "@/firebase/auth";
+import { sendPasswordResetEmail, signIn } from "@/firebase/auth";
 
 import AuthErrorBox from "../shared/AuthErrorBox";
 
@@ -19,6 +20,7 @@ const SignInForm = ({ t }) => {
     useEffect(() => {
         if (user && user.emailVerified) router.push("/");
     }, [user, router]);
+    const { setShow, setTheme, setMessage } = useAlertContext();
     const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState([]);
     const handleSubmit = async (e) => {
@@ -27,6 +29,22 @@ const SignInForm = ({ t }) => {
         const formData = new FormData(e.target);
         const email = formData.get("email");
         const password = formData.get("password");
+        if (!password) {
+            const emailSent = await sendPasswordResetEmail(email);
+            setShow(true);
+            if (!emailSent) {
+                setTheme("warning-light");
+                setMessage(
+                    "Password reset email is not sent, please re-enter your email."
+                );
+            } else {
+                setTheme("success-light");
+                setMessage(
+                    "Password reset email is sent successfully, please check your email."
+                );
+            }
+            return;
+        }
         setLoading(true);
         try {
             await signIn(email, password);
@@ -65,11 +83,11 @@ const SignInForm = ({ t }) => {
                             id='password'
                             type='password'
                             hasFloatingLabel
-                            isRequired
                             togglePasswordLabel='Show/Hide password'
                             togglePassword='true'
                         />
                         <FormFooter
+                            t={t}
                             message={t("haveAccount")}
                             linkHref='/signup'
                             linkText={t("signUp")}

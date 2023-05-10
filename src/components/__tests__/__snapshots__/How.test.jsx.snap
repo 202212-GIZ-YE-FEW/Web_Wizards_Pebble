@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <section
   className="container mt-40"
-  id="howitworks"
+  id="how_it_works"
 >
   <h2
     className="text-center text-black-100 text-4xl font-sans pb-32"

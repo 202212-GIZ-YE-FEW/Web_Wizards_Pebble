@@ -1,9 +1,9 @@
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import About from "@/components/About";
-import Team from "@/components/Team";
-import Tech from "@/components/Tech";
+import About from "@/components/about/About";
+import Team from "@/components/about/Team";
+import Tech from "@/components/about/Tech";
 
 export default function AboutPage() {
     const { t } = useTranslation("about");

@@ -11,11 +11,10 @@ import Divider from "@/components/Divider";
 import DateRangePicker from "@/components/events/DatePicker/DateRangePicker";
 import EventCard from "@/components/events/EventCard/EventCard";
 import Pagination from "@/components/events/Pagination/Pagination";
+import YemenCities from "@/components/LocationSelector/YemenCities";
 
 import { useAuthContext } from "@/context/AuthContext";
 import useFirestore from "@/firebase/firestore";
-
-const locations = ["İzmir, TR", "İzmir, TRT"];
 
 const interests = [
     "All",
@@ -38,12 +37,19 @@ const interests = [
 ];
 
 function Events() {
-    const { documents } = useFirestore("events");
+    const [limit, setLimit] = useState(10);
+    const [offset, setOffset] = useState(0);
+    const { documents, getNextPage, getPrevPage } = useFirestore("events");
     const events = documents;
     const [selectedLocations, setSelectedLocations] = useState([]);
     const [selectedInterests, setSelectedInterests] = useState(["All"]);
-
+    const [selectedDateRange, setSelectedDateRange] = useState(null);
     const { t } = useTranslation("events");
+    const handlePageChange = (pageIndex) => {
+        setOffset(pageIndex * limit);
+    };
+
+    //! Filter by location
 
     const handleLocationsFilterUpdate = (eventOrLocation) => {
         let interest;
@@ -64,6 +70,8 @@ function Events() {
             setSelectedLocations([...selectedLocations, interest]);
         }
     };
+
+    // ! Filter by Interests
 
     const handleInterestsFilterUpdate = (eventOrInterest) => {
         let interest;
@@ -97,24 +105,38 @@ function Events() {
         }
     };
 
+    //! Filter By Date
+
+    const handleDateRangeUpdate = (dateRange) => {
+        setSelectedDateRange(dateRange);
+    };
+
     const { user } = useAuthContext();
     const firstName = user?.displayName.split(" ")[0];
+
+    //!Filter Match Event
     const filteredEvents = events.filter((event) => {
         if (
             selectedLocations.length === 0 &&
-            selectedInterests.includes("All")
+            selectedInterests.includes("All") &&
+            !selectedDateRange
         ) {
             // If no filters are selected, show all events
             return true;
         } else {
-            // Otherwise, check if event matches selected locations and interests
+            // Otherwise, check if event matches selected locations and interests and Date
             const locationMatch =
                 selectedLocations.length === 0 ||
                 (event?.location && selectedLocations.includes(event.location));
             const interestMatch =
                 selectedInterests.includes("All") ||
                 event?.interests?.some((i) => selectedInterests.includes(i));
-            return locationMatch && interestMatch;
+            const dateMatch =
+                !selectedDateRange ||
+                (new Date(event?.date * 1000) >= selectedDateRange.startDate &&
+                    new Date(event?.date * 1000) <= selectedDateRange.endDate);
+
+            return locationMatch && interestMatch && dateMatch;
         }
     });
     return (
@@ -148,11 +170,6 @@ function Events() {
                     <div
                         className='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
                         tabIndex='-1'
-                        style={{
-                            borderRadius: "20px 20px 0px 0px",
-                            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-                            borderTop: "2px solid rgba(0, 0, 0, 0.1)",
-                        }}
                         id='offcanvasInterest'
                         aria-labelledby='offcanvasInterestLabel'
                         data-te-offcanvas-init
@@ -198,11 +215,6 @@ function Events() {
                     <div
                         className='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
                         tabIndex='-1'
-                        style={{
-                            borderRadius: "20px 20px 0px 0px",
-                            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-                            borderTop: "2px solid rgba(0, 0, 0, 0.1)",
-                        }}
                         id='offcanvasLocation'
                         aria-labelledby='offcanvasLocationLabel'
                         data-te-offcanvas-init
@@ -216,7 +228,7 @@ function Events() {
                             </h3>
                         </div>
                         <div className='small flex-grow overflow-y-auto px-12'>
-                            {locations.map((interest, index) => (
+                            {YemenCities.map((interest, index) => (
                                 <label className='checkbox-wrapper' key={index}>
                                     <input
                                         id={interest}
@@ -248,11 +260,6 @@ function Events() {
                     <div
                         className='invisible rounded fixed bottom-0 left-0 right-0 z-[1045] flex h-[40%] max-h-full max-w-full translate-y-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none'
                         tabIndex='-1'
-                        style={{
-                            borderRadius: "20px 20px 0px 0px",
-                            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-                            borderTop: "2px solid rgba(0, 0, 0, 0.1)",
-                        }}
                         id='offcanvasDate'
                         aria-labelledby='offcanvasDateLabel'
                         data-te-offcanvas-init
@@ -266,7 +273,9 @@ function Events() {
                             </h3>
                         </div>
                         <div className='small flex-grow overflow-y-auto px-12'>
-                            <DateRangePicker />
+                            <DateRangePicker
+                                onDateRangeUpdate={handleDateRangeUpdate}
+                            />
                         </div>
                     </div>
                 </div>
@@ -276,12 +285,15 @@ function Events() {
 
             {/* PAGINATION SECTION AT MOBILE */}
             <div className='col-span-12 mobile'>
-                <Pagination />
+                <Pagination
+                    handleNextPage={getNextPage}
+                    handlePrevPage={getPrevPage}
+                />
             </div>
 
             {/* PAGE FILTER SECTION AT TABLET AND DESKTOP */}
             <div className='col-span-4 flex flex-col gap-6 items-center desktop'>
-                <DateRangePicker />
+                <DateRangePicker onDateRangeUpdate={handleDateRangeUpdate} />
 
                 <Divider />
 
@@ -289,7 +301,7 @@ function Events() {
                     <h4 className='text-center font-bold underline mb-3'>
                         {t("changeLocation")}
                     </h4>
-                    {locations.map((location, index) => (
+                    {YemenCities.map((location, index) => (
                         <Button
                             handleClick={handleLocationsFilterUpdate}
                             classes={`w-full ${
@@ -338,7 +350,10 @@ function Events() {
 
             {/* PAGINATION SECTION AT TABLET AND DESKTOP */}
             <div className='col-span-12 pagination desktop'>
-                <Pagination />
+                <Pagination
+                    handleNextPage={getNextPage}
+                    handlePrevPage={getPrevPage}
+                />
             </div>
         </div>
     );
