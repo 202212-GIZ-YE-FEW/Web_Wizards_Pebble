@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="px-0 xs:px-12 flex xs:flex-col sm:flex-col lg:flex-wrap md:flex-wrap"
+  className=" xs:px-12 flex xs:flex-col sm:flex-col "
 >
   <div
     className="lg:w-full md:w-1/2 sm:w-full mb-4 xs:w-full py-2"
@@ -39,7 +39,7 @@ exports[`renders correctly 1`] = `
       <span
         className="inline-block"
       >
-        Izmir, Turkey ,Yemen
+        undefined, Izmir, Turkey
       </span>
     </h3>
   </div>
@@ -72,25 +72,25 @@ exports[`renders correctly 1`] = `
     </span>
   </div>
   <div
-    className="flex -space-x-3 overflow-hidden mt-4"
+    className="flex -space-x-3 overflow-hidden mt-4 py-2"
   >
     <div
       className="flex -space-x-2 overflow-hidden"
     >
       <a
-        className="inline-block flex justify-center !no-underline !text-white w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900"
+        className="inline-block flex items-center justify-center !no-underline !text-white h-8 w-8 rounded-full ring-2 ring-white bg-black-100"
         href="#"
       >
         S
       </a>
       <a
-        className="inline-block flex justify-center !no-underline !text-white w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900"
+        className="inline-block flex items-center justify-center !no-underline !text-white h-8 w-8 rounded-full ring-2 ring-white bg-black-100"
         href="#"
       >
         A
       </a>
       <a
-        className="inline-block flex justify-center !no-underline !text-white w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900"
+        className="inline-block flex items-center justify-center !no-underline !text-white h-8 w-8 rounded-full ring-2 ring-white bg-black-100"
         href="#"
       >
         A
@@ -115,9 +115,11 @@ exports[`renders correctly 1`] = `
         className="mr-2 inline-block"
       >
         <div
-          className="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center text-white text-xs"
+          className="py-2"
         >
-          <span>
+          <span
+            className="py-2 inline-block flex items-center justify-center !no-underline !text-white h-8 w-8 rounded-full ring-2 ring-white bg-black-100"
+          >
             S
           </span>
         </div>

@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="order-1 lg:w-7/12 w-full px-2 font-sans text-black-100 mb:2 "
+  className="order-1 lg:w-7/12 w-full px-2 font-sans text-black-100"
 >
   <h2
     className="text-2xl font-sans text-black-100  font-semibold mb-2 "

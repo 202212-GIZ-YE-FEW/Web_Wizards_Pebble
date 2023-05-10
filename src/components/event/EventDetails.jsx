@@ -11,30 +11,27 @@ const EventDetails = (props) => {
 
     const eventData = props?.eventData;
     return (
-        <div className='px-0 xs:px-12 flex xs:flex-col sm:flex-col lg:flex-wrap md:flex-wrap'>
+        <div className=' xs:px-12 flex xs:flex-col sm:flex-col '>
             <SingleDetail
-                text={eventData?.location + " ,Yemen"}
+                text={`${eventData?.address}, ${eventData?.location}`}
                 icon={<MdLocationPin size={30} />}
             />
-            {/* <SingleDetail
-                text={eventData?.address}
-                icon={<MdLocationPin size={30} />}
-            /> */}
-
             <EventDate
                 eventDate={eventData?.date}
                 icon={
                     <AiFillClockCircle size={30} className='text-black-100' />
                 }
             />
-            <div className='flex -space-x-3 overflow-hidden mt-4'>
+            <div className='flex -space-x-3 overflow-hidden mt-4 py-2'>
                 <EventAttendees attendees={eventData?.attendees} t={t} />
             </div>
             <SingleDetail
                 text={`Organized by ${eventData?.organizer}`}
                 icon={
-                    <div className='h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center text-white text-xs'>
-                        <span>{eventData?.organizer?.charAt(0)}</span>
+                    <div className='py-2'>
+                        <span className='py-2 inline-block flex items-center justify-center !no-underline !text-white h-8 w-8 rounded-full ring-2 ring-white bg-black-100'>
+                            {eventData?.organizer?.charAt(0)}
+                        </span>
                     </div>
                 }
             />

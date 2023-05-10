@@ -6,6 +6,7 @@ const EventImage = ({ imageUrl }) => {
     return (
         <div className='order-1 w-full lg:w-1/2 flex-shrink-0'>
             <Image
+                priority={true}
                 id='sitting-img'
                 src={imageUrl ? imageUrl : Wave}
                 width={720}

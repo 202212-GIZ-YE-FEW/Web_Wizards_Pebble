@@ -36,14 +36,14 @@ const Event = () => {
     }
 
     return (
-        <div className='lg:px-28 px-12 '>
+        <div className='lg:px-24 px-12 '>
             <div className=' lg:text-3xl text-2xl font-sans font-semibold text-black-100 tracking-wide'>
                 <h2>{event?.title}</h2>
             </div>
 
             <div className='flex lg:flex-row flex-col'>
                 <EventImage imageUrl={event?.image} />
-                <div className='order-2 flex flex-col justify-start lg:items-start lg:px-16 lg:py-16 py-8'>
+                <div className='order-2 flex flex-col justify-start lg:items-start  md:px-4 px-8  md:py-16 py-8 md:ml-10'>
                     <EventDetails eventData={event} />
                     <JoinButton eventId={event?.id} />
                 </div>
