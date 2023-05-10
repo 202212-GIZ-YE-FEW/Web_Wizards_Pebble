@@ -14,7 +14,9 @@ const FormFooter = ({ message, linkText, linkHref, t }) => {
                     </Link>
                 )}
             </p>
-            <BorderlessButton>{t("forgetPassword")}</BorderlessButton>
+            <BorderlessButton hidden={linkHref === "/signin"}>
+                {t("forgetPassword")}
+            </BorderlessButton>
         </div>
     );
 };
