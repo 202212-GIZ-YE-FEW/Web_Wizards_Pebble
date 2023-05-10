@@ -15,6 +15,7 @@ export const AuthContextProvider = (props) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             saveUser(user);
+            console.log(user);
             setLoading(false);
         });
         return () => unsubscribe();
@@ -34,7 +35,9 @@ export const AuthContextProvider = (props) => {
         }
         setUser({
             uid: _user.uid,
-            displayName: _user.displayName,
+            displayName: _user.displayName
+                ? _user.displayName
+                : _user.email.split("@")[0],
             photoURL: _user.photoURL,
             emailVerified: _user.emailVerified,
         });

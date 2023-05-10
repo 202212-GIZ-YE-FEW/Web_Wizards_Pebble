@@ -30,8 +30,8 @@ exports[`renders correctly 1`] = `
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="/_next/image?url=%2Fimages%2Fteam%2Fabdullah.png&w=256&q=75"
-        srcSet="/_next/image?url=%2Fimages%2Fteam%2Fabdullah.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fabdullah.png&w=256&q=75 2x"
+        src="/_next/image?url=%2FImages%2Fteam%2Fabdullah.png&w=256&q=75"
+        srcSet="/_next/image?url=%2FImages%2Fteam%2Fabdullah.png&w=128&q=75 1x, /_next/image?url=%2FImages%2Fteam%2Fabdullah.png&w=256&q=75 2x"
         style={
           Object {
             "color": "transparent",
@@ -88,8 +88,8 @@ exports[`renders correctly 1`] = `
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="/_next/image?url=%2Fimages%2Fteam%2Fsufyan.png&w=256&q=75"
-        srcSet="/_next/image?url=%2Fimages%2Fteam%2Fsufyan.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fsufyan.png&w=256&q=75 2x"
+        src="/_next/image?url=%2FImages%2Fteam%2Fsufyan.png&w=256&q=75"
+        srcSet="/_next/image?url=%2FImages%2Fteam%2Fsufyan.png&w=128&q=75 1x, /_next/image?url=%2FImages%2Fteam%2Fsufyan.png&w=256&q=75 2x"
         style={
           Object {
             "color": "transparent",
@@ -146,8 +146,8 @@ exports[`renders correctly 1`] = `
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="/_next/image?url=%2Fimages%2Fteam%2Fadeeb.png&w=256&q=75"
-        srcSet="/_next/image?url=%2Fimages%2Fteam%2Fadeeb.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fadeeb.png&w=256&q=75 2x"
+        src="/_next/image?url=%2FImages%2Fteam%2Fadeeb.png&w=256&q=75"
+        srcSet="/_next/image?url=%2FImages%2Fteam%2Fadeeb.png&w=128&q=75 1x, /_next/image?url=%2FImages%2Fteam%2Fadeeb.png&w=256&q=75 2x"
         style={
           Object {
             "color": "transparent",
@@ -204,8 +204,8 @@ exports[`renders correctly 1`] = `
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="/_next/image?url=%2Fimages%2Fteam%2Fazzam.png&w=256&q=75"
-        srcSet="/_next/image?url=%2Fimages%2Fteam%2Fazzam.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fazzam.png&w=256&q=75 2x"
+        src="/_next/image?url=%2FImages%2Fteam%2Fazzam.png&w=256&q=75"
+        srcSet="/_next/image?url=%2FImages%2Fteam%2Fazzam.png&w=128&q=75 1x, /_next/image?url=%2FImages%2Fteam%2Fazzam.png&w=256&q=75 2x"
         style={
           Object {
             "color": "transparent",
@@ -262,8 +262,8 @@ exports[`renders correctly 1`] = `
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="/_next/image?url=%2Fimages%2Fteam%2Fbakeel.png&w=256&q=75"
-        srcSet="/_next/image?url=%2Fimages%2Fteam%2Fbakeel.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fteam%2Fbakeel.png&w=256&q=75 2x"
+        src="/_next/image?url=%2FImages%2Fteam%2Fbakeel.png&w=256&q=75"
+        srcSet="/_next/image?url=%2FImages%2Fteam%2Fbakeel.png&w=128&q=75 1x, /_next/image?url=%2FImages%2Fteam%2Fbakeel.png&w=256&q=75 2x"
         style={
           Object {
             "color": "transparent",
