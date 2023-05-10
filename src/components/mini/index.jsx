@@ -2,12 +2,9 @@ import Image from "next/image";
 import { Button } from "react-flatifycss";
 
 export function BorderlessButton(props) {
-    const { children, hidden = false } = props;
+    const { children } = props;
     return (
-        <Button
-            hidden
-            className='!rounded-none !text-black-100 !bg-transparent !shadow-none !border-none after:content-[url("/arrow.svg")] after:mt-[1px] ltr:after:ml-4 after:absolute rtl:after:rotate-180 rtl:after:mr-4'
-        >
+        <Button className='!rounded-none !text-black-100 !bg-transparent !shadow-none !border-none after:content-[url("/arrow.svg")] after:mt-[1px] ltr:after:ml-4 after:absolute rtl:after:rotate-180 rtl:after:mr-4'>
             {children}
         </Button>
     );
