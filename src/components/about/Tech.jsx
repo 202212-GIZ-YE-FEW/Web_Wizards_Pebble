@@ -10,8 +10,7 @@ const Tech = (props) => {
                 {t("techTitle")}
             </h2>
             <p className='text-center'>
-                React.js/Next.js for coding, TailwindCSS for styyling and Jest
-                for testing
+                Next.js, TailwindCSS, Flatifycss, next-i18next and Firebase.
             </p>
         </section>
     );

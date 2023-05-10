@@ -23,7 +23,7 @@ const Team = (props) => {
                 className='m-2 h-28 w-28 rounded-2xl lg:bg-secondary-100 bg-[#29C5E6] md:m-4 md:h-56 md:w-56 lg:m-8 lg:h-72 lg:w-72'
             >
                 <Image
-                    src={`/images/team/${member.image}`}
+                    src={`/Images/team/${member.image}`}
                     alt={member.name}
                     width={100}
                     height={100}
