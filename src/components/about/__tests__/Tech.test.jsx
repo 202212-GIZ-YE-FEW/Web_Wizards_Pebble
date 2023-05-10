@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer";
 
-import Team from "../about/Team";
+import Tech from "../Tech";
 
 it("renders correctly", () => {
-    const tree = renderer.create(<Team t={(str) => str} />).toJSON();
+    const tree = renderer.create(<Tech t={(str) => str} />).toJSON();
     expect(tree).toMatchSnapshot();
 });
