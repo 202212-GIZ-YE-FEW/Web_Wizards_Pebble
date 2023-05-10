@@ -4,7 +4,7 @@ import { ItemsGroup, Loading } from "react-flatifycss";
 import { useAlertContext } from "@/context/AlertContext";
 import { useAuthContext } from "@/context/AuthContext";
 
-import { cat, checkMark, dog, rabbit } from "~/Images/library/svgs";
+import { cat, checkMark, dog, rabbit } from "~/library/svgs";
 
 export default function PetIcons(props) {
     const { hidden, t } = props;
