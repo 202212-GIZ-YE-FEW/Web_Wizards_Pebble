@@ -7,6 +7,7 @@ import SignButton from "@/components/shared/SignButton";
 import SignOptions from "@/components/shared/SignOptions";
 import SignTitle from "@/components/shared/SignTitle";
 
+import { useAlertContext } from "@/context/AlertContext";
 import { useAuthContext } from "@/context/AuthContext";
 // TODO: use dynamic path once testing doesnt conflicts paths.
 import { signUp } from "@/firebase/auth";
@@ -16,6 +17,7 @@ import AuthErrorBox from "../shared/AuthErrorBox";
 const SignUpForm = ({ t }) => {
     const router = useRouter();
     const { user } = useAuthContext();
+    const { setShow, setTheme, setMessage } = useAlertContext();
 
     const [errors, setErrors] = useState([]);
     useEffect(() => {
@@ -41,7 +43,8 @@ const SignUpForm = ({ t }) => {
             });
         } catch (error) {
             setLoading(false);
-            setErrors(error.code || "auth/unknown");
+            setTheme("warning");
+            setMessage(error.code);
             return;
         }
         setLoading(false);

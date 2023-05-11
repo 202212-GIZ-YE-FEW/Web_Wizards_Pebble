@@ -23,6 +23,7 @@ const SignInForm = ({ t }) => {
     const { setShow, setTheme, setMessage } = useAlertContext();
     const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState([]);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (user && user.emailVerified) return;
@@ -31,16 +32,13 @@ const SignInForm = ({ t }) => {
         const password = formData.get("password");
         if (!password) {
             const emailSent = await sendPasswordResetEmail(email);
-            setShow(true);
             if (!emailSent) {
-                setTheme("warning-light");
-                setMessage(
-                    "Password reset email is not sent, please re-enter your email."
-                );
+                setTheme("warning");
+                setMessage("Email not sent. Please try again.");
             } else {
-                setTheme("success-light");
+                setTheme("success");
                 setMessage(
-                    "Password reset email is sent successfully, please check your email."
+                    "Password reset email sent. Please check your email."
                 );
             }
             return;
@@ -50,7 +48,8 @@ const SignInForm = ({ t }) => {
             await signIn(email, password);
         } catch (error) {
             setLoading(false);
-            setErrors(error.code || "auth/unknown");
+            setTheme("warning");
+            setMessage("Invalid email or password. Please try again.");
             return;
         }
         setLoading(false);
