@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 
+import { useAlertContext } from "@/context/AlertContext";
 import useFirebaseStorage from "@/firebase/firestorage";
 import useFirestore from "@/firebase/firestore";
 
@@ -10,6 +11,7 @@ import Interests from "../editProfile/Interests";
 
 const EventCreation = ({ label, t, user }) => {
     const router = useRouter();
+    const { setTheme, setMessage } = useAlertContext();
 
     const uploadButtonRef = useRef();
     const [selectedInterests, setSelectedInterests] = useState([]);
@@ -92,7 +94,6 @@ const EventCreation = ({ label, t, user }) => {
 
     const handleFileChange = (e) => {
         const file = e.target.files[0];
-        console.log("file", file);
         setSelectedFile(file);
         if (file) {
             setIsUploading(true);
@@ -112,7 +113,8 @@ const EventCreation = ({ label, t, user }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!eventData.address || !eventData.title) {
-            console.error("Please fill out all the required fields.");
+            setTheme("warning");
+            setMessage("Please fill out all the required fields.");
             return;
         }
 
@@ -120,9 +122,14 @@ const EventCreation = ({ label, t, user }) => {
         const result = await addDocument(eventDataWithLocation, eventData);
 
         if (result.success) {
+            setTheme("success");
+            setMessage(
+                "Thank you for creating an event to help others! Your kindness will make a difference. Keep up the good work!"
+            );
             router.push(`/events/${result.id}`);
         } else {
-            console.error("Error adding event:", result.error);
+            setTheme("warning");
+            setMessage("something went wrong please try again later");
         }
     };
 
@@ -171,7 +178,7 @@ const EventCreation = ({ label, t, user }) => {
                                 htmlFor='location'
                                 className='text-6xl md:text-6xl font-semibold mb-2 text-black-100'
                             >
-                                {locationName ? locationName : label || "izmir"}
+                                {locationName ? locationName : label}
                             </label>
                             <a
                                 href='#'
