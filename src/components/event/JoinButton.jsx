@@ -12,6 +12,7 @@ const JoinButton = ({ eventId }) => {
     const [error, setError] = useState();
     const { setTheme, setShow, setMessage } = useAlertContext();
     const eventsHook = useFirestore("events");
+
     useEffect(() => {
         const checkIfJoined = async () => {
             const event = await eventsHook.getDocumentById(eventId);
@@ -36,10 +37,11 @@ const JoinButton = ({ eventId }) => {
             }
 
             setIsJoining(false);
-            setShow(true);
-            setMessage(
+            localStorage.setItem(
+                "message",
                 "Thanks for lending a hand! Your contribution to the event is invaluable and will make a real impact"
             );
+            window.location.reload();
         } catch (error) {
             setError(error);
             setShow(true);
@@ -62,16 +64,26 @@ const JoinButton = ({ eventId }) => {
             setIsJoined(false);
 
             setIsLeaving(false);
-            setShow(true);
-            setMessage(
+            localStorage.setItem(
+                "message",
                 "We are sorry to see you go, but we understand and appreciate your decision"
             );
+            window.location.reload();
         } catch (error) {
             setError(error);
             setShow(true);
             setIsLeaving(false);
         }
     };
+
+    useEffect(() => {
+        const message = localStorage.getItem("message");
+        if (message) {
+            setShow(true);
+            setMessage(message);
+            localStorage.removeItem("message");
+        }
+    }, [setShow, setMessage]);
 
     return (
         <>
