@@ -21,7 +21,7 @@ import useFirestore from "@/firebase/firestore";
 /**
  * @param {import('react').SyntheticEvent} e
  */
-async function handleEditProfileSubmit(data, user, firebase) {
+async function handleEditProfileSubmit(data, user, firebase, setAlert) {
     const { e, clickedInterests: selectedInterests } = data;
     const { locations, interests } = firebase;
     e.preventDefault();
@@ -37,9 +37,17 @@ async function handleEditProfileSubmit(data, user, firebase) {
         locations.setLocation(user.uid, { location });
     }
     interests.setInterests(user.uid, { selectedInterests });
+    setAlert({
+        theme: "success",
+        message: "Changes saved.",
+    });
 }
 
-async function handleUploadImage({ target: { files } }, { uid, updateUser }) {
+async function handleUploadImage(
+    { target: { files } },
+    { uid, updateUser },
+    setAlert
+) {
     const image = files[0];
     const storage = getStorage(app);
     const extension = image.name.split(".")[1];
@@ -54,6 +62,10 @@ async function handleUploadImage({ target: { files } }, { uid, updateUser }) {
 
     updateUser({
         photoURL: imageURL,
+    });
+    setAlert({
+        theme: "success",
+        message: "Profile picture updated.",
     });
 }
 
@@ -92,7 +104,7 @@ const EditProfile = () => {
     }, [user?.uid]);
 
     const { t } = useTranslation("editprofile");
-    const { setShow, setTheme, setMessage } = useAlertContext();
+    const { setTheme, setMessage } = useAlertContext();
     const [imgLoading, setimgLoading] = useState(false);
     const [formLoading, setformLoading] = useState(false);
     const [modalOpen, setModalOpen] = useState(false);
@@ -101,6 +113,11 @@ const EditProfile = () => {
     const { setDocument: setInterests, getDocumentByIdNoCache: getInterests } =
         useFirestore("interests");
     const location = getLocation(user?.uid);
+
+    const setAlert = ({ theme, message }) => {
+        setTheme(theme);
+        setMessage(message);
+    };
 
     return (
         <div className='flex flex-col md:px-14 px-4 lg:px-48  flex-wrap mt-8'>
@@ -119,13 +136,14 @@ const EditProfile = () => {
                     accept='image/*'
                     onChange={async (e) => {
                         setimgLoading(true);
-                        await handleUploadImage(e, {
-                            uid: user.uid,
-                            updateUser,
-                        });
-                        setShow(true);
-                        setTheme("success-light");
-                        setMessage(t("successChanges"));
+                        await handleUploadImage(
+                            e,
+                            {
+                                uid: user.uid,
+                                updateUser,
+                            },
+                            setAlert
+                        );
                         setimgLoading(false);
                     }}
                 />
@@ -159,13 +177,11 @@ const EditProfile = () => {
                             interests: {
                                 setInterests,
                             },
-                        }
+                        },
+                        setAlert
                     );
                     setTimeout(() => {
                         setformLoading(false);
-                        setShow(true);
-                        setTheme("success");
-                        setMessage(t("successChanges"));
                     }, 1000);
                 }}
             >

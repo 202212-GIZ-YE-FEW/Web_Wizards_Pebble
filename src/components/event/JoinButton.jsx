@@ -41,10 +41,10 @@ const JoinButton = ({ eventId }) => {
                 "message",
                 "Thanks for lending a hand! Your contribution to the event is invaluable and will make a real impact"
             );
+            localStorage.setItem("theme", "success");
             window.location.reload();
         } catch (error) {
             setError(error);
-            setShow(true);
             setIsJoining(false);
         }
     };
@@ -68,22 +68,28 @@ const JoinButton = ({ eventId }) => {
                 "message",
                 "We are sorry to see you go, but we understand and appreciate your decision"
             );
+            localStorage.setItem("theme", "default");
             window.location.reload();
         } catch (error) {
             setError(error);
-            setShow(true);
             setIsLeaving(false);
         }
     };
 
     useEffect(() => {
         const message = localStorage.getItem("message");
+        const theme = localStorage.getItem("theme");
+
         if (message) {
-            setShow(true);
             setMessage(message);
             localStorage.removeItem("message");
         }
-    }, [setShow, setMessage]);
+
+        if (theme) {
+            setTheme(theme);
+            localStorage.removeItem("theme");
+        }
+    }, [setMessage, setTheme]);
 
     return (
         <>
