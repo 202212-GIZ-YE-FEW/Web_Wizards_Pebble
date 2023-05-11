@@ -135,7 +135,7 @@ exports[`renders correctly 1`] = `
         organizeDescription
       </p>
       <a
-        href="/"
+        href="/events/create"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onTouchStart={[Function]}
