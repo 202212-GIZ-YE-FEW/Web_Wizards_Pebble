@@ -39,7 +39,7 @@ function Cards(props) {
                 width={216}
                 alt='Girl with a speaker'
                 buttonText={`${t("organizeButton")}`}
-                buttonTo='/'
+                buttonTo='/events/create'
             />
         </div>
     );
