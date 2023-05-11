@@ -2,10 +2,10 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="px-0 xs:px-12 flex xs:flex-col sm:flex-col lg:flex-wrap md:flex-wrap"
+  className=" xs:px-12 flex xs:flex-col sm:flex-col "
 >
   <div
-    className="lg:w-full md:w-1/2 sm:w-full mb-4 xs:w-full"
+    className="lg:w-full md:w-1/2 sm:w-full mb-4 xs:w-full py-2"
   >
     <h3
       className=" font-sans text-black-100 lg:text-lg text-md"
@@ -39,45 +39,8 @@ exports[`renders correctly 1`] = `
       <span
         className="inline-block"
       >
-        Izmir, Turkey ,Yemen
+        undefined, Izmir, Turkey
       </span>
-    </h3>
-  </div>
-  <div
-    className="lg:w-full md:w-1/2 sm:w-full mb-4 xs:w-full"
-  >
-    <h3
-      className=" font-sans text-black-100 lg:text-lg text-md"
-    >
-      <span
-        className="mr-2 inline-block"
-      >
-        <svg
-          fill="currentColor"
-          height={30}
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width={30}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-          />
-          <path
-            d="M12 2C8.13 2 5 5.13 5 9c0 1.74.5 3.37 1.41 4.84.95 1.54 2.2 2.86 3.16 4.4.47.75.81 1.45 1.17 2.26.26.55.47 1.5 1.26 1.5s1-.95 1.25-1.5c.37-.81.7-1.51 1.17-2.26.96-1.53 2.21-2.85 3.16-4.4C18.5 12.37 19 10.74 19 9c0-3.87-3.13-7-7-7zm0 9.75a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"
-          />
-        </svg>
-      </span>
-      <span
-        className="inline-block"
-      />
     </h3>
   </div>
   <div
@@ -109,25 +72,25 @@ exports[`renders correctly 1`] = `
     </span>
   </div>
   <div
-    className="flex -space-x-3 overflow-hidden mt-4"
+    className="flex -space-x-3 overflow-hidden mt-4 py-2"
   >
     <div
       className="flex -space-x-2 overflow-hidden"
     >
       <a
-        className="inline-block flex justify-center !no-underline !text-white w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900"
+        className="inline-block flex items-center justify-center !no-underline !text-white h-8 w-8 rounded-full ring-2 ring-white bg-black-100"
         href="#"
       >
         S
       </a>
       <a
-        className="inline-block flex justify-center !no-underline !text-white w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900"
+        className="inline-block flex items-center justify-center !no-underline !text-white h-8 w-8 rounded-full ring-2 ring-white bg-black-100"
         href="#"
       >
         A
       </a>
       <a
-        className="inline-block flex justify-center !no-underline !text-white w-6 h-6 md:h-7 md:w-7 rounded-full ring-2 ring-white bg-gray-900"
+        className="inline-block flex items-center justify-center !no-underline !text-white h-8 w-8 rounded-full ring-2 ring-white bg-black-100"
         href="#"
       >
         A
@@ -143,7 +106,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="lg:w-full md:w-1/2 sm:w-full mb-4 xs:w-full"
+    className="lg:w-full md:w-1/2 sm:w-full mb-4 xs:w-full py-2"
   >
     <h3
       className=" font-sans text-black-100 lg:text-lg text-md"
@@ -152,9 +115,11 @@ exports[`renders correctly 1`] = `
         className="mr-2 inline-block"
       >
         <div
-          className="h-8 w-8 rounded-full bg-gray-900 flex items-center justify-center text-white text-xs"
+          className="py-2"
         >
-          <span>
+          <span
+            className="py-2 inline-block flex items-center justify-center !no-underline !text-white h-8 w-8 rounded-full ring-2 ring-white bg-black-100"
+          >
             S
           </span>
         </div>

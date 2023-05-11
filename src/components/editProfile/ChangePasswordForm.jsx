@@ -10,7 +10,7 @@ import { changePassword, confirmCurrentPassword } from "@/firebase/auth";
 
 async function handlePasswordChange(
     e,
-    { setShow, setMessage, setTheme },
+    { setMessage, setTheme },
     { success, fail }
 ) {
     const form = e.target;
@@ -20,10 +20,9 @@ async function handlePasswordChange(
     const currentPasswordConfirmed = await confirmCurrentPassword(
         currentPassword
     );
-    setShow(true);
 
     if (!currentPasswordConfirmed) {
-        setTheme("warning-light");
+        setTheme("warning");
         setMessage(fail);
     } else {
         setTheme("success-light");
@@ -33,7 +32,7 @@ async function handlePasswordChange(
 }
 
 const ChangePasswordForm = ({ t }) => {
-    const { setShow, setMessage, setTheme } = useAlertContext();
+    const { setMessage, setTheme } = useAlertContext();
     const [passwordLoading, setPasswordLoading] = useState(false);
     return (
         <div className='w-11/12 mx-auto rounded-3xl flex flex-col justify-center bg-[#d4f3fa] md:px-10 px-2 py-10'>
@@ -45,7 +44,6 @@ const ChangePasswordForm = ({ t }) => {
                     await handlePasswordChange(
                         e,
                         {
-                            setShow,
                             setTheme,
                             setMessage,
                         },

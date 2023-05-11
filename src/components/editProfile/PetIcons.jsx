@@ -11,7 +11,7 @@ export default function PetIcons(props) {
     const { updateUser } = useAuthContext();
     const [pet, setPet] = useState("cat");
     const [loading, setLoading] = useState(false);
-    const { setShow, setTheme, setMessage } = useAlertContext();
+    const { setTheme, setMessage } = useAlertContext();
     return (
         <>
             <ItemsGroup
@@ -60,8 +60,7 @@ export default function PetIcons(props) {
                             photoURL: `/library/${pet}.jpg`,
                         });
                         setLoading(false);
-                        setShow(true);
-                        setTheme("success-light");
+                        setTheme("success");
                         setMessage(t("successChanges"));
                         return;
                     }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import { useAlertContext } from "@/context/AlertContext";
 import { useAuthContext } from "@/context/AuthContext";
 import useFirestore from "@/firebase/firestore";
 
@@ -9,7 +10,9 @@ const JoinButton = ({ eventId }) => {
     const [isLeaving, setIsLeaving] = useState(false);
     const [isJoined, setIsJoined] = useState(false);
     const [error, setError] = useState();
+    const { setTheme, setShow, setMessage } = useAlertContext();
     const eventsHook = useFirestore("events");
+
     useEffect(() => {
         const checkIfJoined = async () => {
             const event = await eventsHook.getDocumentById(eventId);
@@ -34,8 +37,13 @@ const JoinButton = ({ eventId }) => {
             }
 
             setIsJoining(false);
+            localStorage.setItem(
+                "message",
+                "Thanks for lending a hand! Your contribution to the event is invaluable and will make a real impact"
+            );
+            localStorage.setItem("theme", "success");
+            window.location.reload();
         } catch (error) {
-            console.error("Error joining Eevent", error);
             setError(error);
             setIsJoining(false);
         }
@@ -56,12 +64,32 @@ const JoinButton = ({ eventId }) => {
             setIsJoined(false);
 
             setIsLeaving(false);
+            localStorage.setItem(
+                "message",
+                "We are sorry to see you go, but we understand and appreciate your decision"
+            );
+            localStorage.setItem("theme", "default");
+            window.location.reload();
         } catch (error) {
-            console.error("Error leaving event", error);
             setError(error);
             setIsLeaving(false);
         }
     };
+
+    useEffect(() => {
+        const message = localStorage.getItem("message");
+        const theme = localStorage.getItem("theme");
+
+        if (message) {
+            setMessage(message);
+            localStorage.removeItem("message");
+        }
+
+        if (theme) {
+            setTheme(theme);
+            localStorage.removeItem("theme");
+        }
+    }, [setMessage, setTheme]);
 
     return (
         <>

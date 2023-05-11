@@ -17,16 +17,6 @@ const Event = () => {
 
     const eventsHook = useFirestore("events");
     const event = eventsHook.getDocumentById(id);
-    console.log("event", event);
-    // const eventData = {
-    //     title: "Meeting Brainstorm Energy CIeccan lzmir",
-    //     location: "Izmir, Turkey",
-    //     date: "ahhallsei 26 Augest Kapisi",
-    //     organizer: "Sufyan",
-    //     attendees: ["Sufyan", "Adeeb", "Abdullah", "Azzam", "Hamad"],
-    //     description:
-    //         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,",
-    // };
     const { user } = useAuthContext();
     useEffect(() => {
         // Check if the code is running on the client-side
@@ -46,14 +36,14 @@ const Event = () => {
     }
 
     return (
-        <div className='lg:px-28 px-12 '>
+        <div className='lg:px-24 px-12 '>
             <div className=' lg:text-3xl text-2xl font-sans font-semibold text-black-100 tracking-wide'>
                 <h2>{event?.title}</h2>
             </div>
 
             <div className='flex lg:flex-row flex-col'>
                 <EventImage imageUrl={event?.image} />
-                <div className='order-2 flex flex-col justify-start lg:items-start lg:px-16 lg:py-16 py-8'>
+                <div className='order-2 flex flex-col justify-start lg:items-start  md:px-4 px-8  md:py-16 py-8 md:ml-10'>
                     <EventDetails eventData={event} />
                     <JoinButton eventId={event?.id} />
                 </div>

@@ -11,6 +11,9 @@ exports[`renders correctly 1`] = `
   </div>
   <p
     className="text-sm font-semibold"
-  />
+  >
+     
+    .
+  </p>
 </div>
 `;

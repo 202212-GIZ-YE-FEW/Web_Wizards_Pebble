@@ -3,18 +3,17 @@ import {
     collection,
     deleteDoc,
     doc,
+    endBefore,
     getDoc,
     getDocs,
     getFirestore,
+    limit,
     onSnapshot,
     orderBy,
     query,
     setDoc,
-    limit,
-    updateDoc,
     startAfter,
-    endBefore,
-    limitToLast,
+    updateDoc,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
